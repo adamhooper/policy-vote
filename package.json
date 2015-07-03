@@ -2,10 +2,6 @@
   "name": "policy-vote",
   "version": "0.0.1",
   "description": "Crowd-decide which policy proposals are best",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/adamhooper/policy-vote.git"
