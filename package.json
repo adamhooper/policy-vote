@@ -1,0 +1,51 @@
+{
+  "name": "policy-vote",
+  "version": "0.0.1",
+  "description": "Crowd-decide which policy proposals are best",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamhooper/policy-vote.git"
+  },
+  "keywords": [
+    "canada",
+    "policy",
+    "election",
+    "vote",
+    "proposal",
+    "party"
+  ],
+  "author": "Adam Hooper <adam@adamhooper.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/adamhooper/policy-vote/issues"
+  },
+  "homepage": "https://github.com/adamhooper/policy-vote",
+  "devDependencies": {
+    "backbone": "^1.2.1",
+    "browserify": "^10.2.4",
+    "coffeeify": "^1.1.0",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.2.4",
+    "jquery": "^2.1.4",
+    "lodash.assign": "^3.2.0",
+    "mocha": "^2.2.5",
+    "node-csvify": "0.0.4",
+    "underscore": "^1.8.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.3"
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "express": "^4.13.0"
+  }
+}

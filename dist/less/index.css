@@ -1,0 +1,7 @@
+body {
+  max-width: 25em;
+  padding: 1em;
+}
+.question a {
+  display: block;
+}
