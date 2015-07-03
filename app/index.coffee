@@ -4,4 +4,6 @@ app = express()
 
 app.use(express.static('dist'))
 
-server = app.listen(3000)
+port = process.env['PORT'] || '3000'
+
+server = app.listen(port)
