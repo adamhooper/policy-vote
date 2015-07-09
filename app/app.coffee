@@ -23,8 +23,8 @@ databaseOptions = if process.env.NODE_ENV == 'test'
   usersCsvOutputStream: new IgnoreWritable
   votesCsvOutputStream: new IgnoreWritable
 else
-  usersCsvOutputStream: process.stdout
-  votesCsvOutputStream: process.stdout
+  usersCsvOutputStream: fs.createWriteStream('./data/users.csv')
+  votesCsvOutputStream: fs.createWriteStream('./data/votes.csv')
 
 app.database = new Database(databaseOptions)
 

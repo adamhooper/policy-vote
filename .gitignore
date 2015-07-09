@@ -1,2 +1,4 @@
 node_modules
 config/client-session-secret.txt
+data/users.csv
+data/votes.csv
