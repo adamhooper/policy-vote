@@ -21,9 +21,10 @@ app = require('./app')
 #   will append as expected -- tested on Ubuntu 15.04.)
 # * Worst-case, a read from step 3 misses a write from step 4. The data isn't
 #   *lost*, it just isn't *loaded*. At worst, we read a vote that has no user:
-#   the app will crash and come right back online after a second.
+#   the app will crash, but we won't lose data. To recover, we'll need to add
+#   a row to users.csv (or delete a vote from votes.csv).
 #
-# ... but these are worst-case scenarios. Normally, all will be well.
+# ... but these are worst-case scenarios. We don't expect them to ever happen.
 app.database.load fs.createReadStream('./data/users.csv'), fs.createReadStream('./data/votes.csv'), (err) ->
   throw err if err?
   port = process.env['PORT'] || '3000'
