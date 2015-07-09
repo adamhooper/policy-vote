@@ -8,7 +8,15 @@ Database = require('./Database')
 
 app = express()
 
-app.database = new Database()
+databaseOptions = if process.env.NODE_ENV == 'test'
+  IgnoreWritable = require('ignore-writable')
+  usersCsvOutputStream: new IgnoreWritable
+  votesCsvOutputStream: new IgnoreWritable
+else
+  usersCsvOutputStream: process.stdout
+  votesCsvOutputStream: process.stdout
+
+app.database = new Database(databaseOptions)
 
 app.use(bodyParser.json())
 app.use(sessions({
