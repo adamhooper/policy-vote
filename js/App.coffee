@@ -27,4 +27,11 @@ module.exports = class App extends Backbone.View
 
   _onUserPrefersPolicy: (policy, otherPolicy) ->
     console.log("User prefers #{policy.id} to #{otherPolicy.id}")
+    Backbone.ajax
+      type: 'POST'
+      url: '/votes'
+      data: JSON.stringify(betterPolicyId: +policy.id, worsePolicyId: +otherPolicy.id)
+      contentType: 'application/json'
+      success: -> console.log('Voted!')
+      error: (xhr, textStatus, errorThrown) -> console.log('Error during vote', textStatus, errorThrown)
     @questionView.render()

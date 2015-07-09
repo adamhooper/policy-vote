@@ -1374,6 +1374,21 @@ module.exports = App = (function(superClass) {
 
   App.prototype._onUserPrefersPolicy = function(policy, otherPolicy) {
     console.log("User prefers " + policy.id + " to " + otherPolicy.id);
+    Backbone.ajax({
+      type: 'POST',
+      url: '/votes',
+      data: JSON.stringify({
+        betterPolicyId: +policy.id,
+        worsePolicyId: +otherPolicy.id
+      }),
+      contentType: 'application/json',
+      success: function() {
+        return console.log('Voted!');
+      },
+      error: function(xhr, textStatus, errorThrown) {
+        return console.log('Error during vote', textStatus, errorThrown);
+      }
+    });
     return this.questionView.render();
   };
 
