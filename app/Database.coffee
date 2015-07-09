@@ -20,8 +20,11 @@ bufferToVote = (buf) ->
   new Vote(createdAt, betterPolicyId, worsePolicyId)
 
 jsonToUser = (json) ->
-  votes = for i in [ 0 ... json.votesBuffer.length ] by 8
-    bufferToVote(json.votesBuffer.slice(i))
+  votes = if json.votesBuffer.length > 0
+    for i in [ 0 ... json.votesBuffer.length ] by 8
+      bufferToVote(json.votesBuffer.slice(i))
+  else
+    []
   user = new User(json.id, new Date(json.createdAt), votes)
 
 module.exports = class Database
@@ -29,24 +32,24 @@ module.exports = class Database
     @userIdToIndex = {}
     @userJsons = []
 
-  addVote: (userId, betterPolicyId, worsePolicyId) ->
+  _insertOrGetUser: (userId) ->
     index = @userIdToIndex[userId]
-    voteBuffer = buildVoteBuffer(new Date(), betterPolicyId, worsePolicyId)
-
-    if index?
-      userJson = @userJsons[index]
-      userJson.votesBuffer = Buffer.concat([ userJson.votesBuffer, voteBuffer ])
+    if index? # 0 is a valid index
+      @userJsons[index]
     else
       index = @userIdToIndex[userId] = @userJsons.length
-      userJson = @userJsons[index] = { id: userId, createdAt: new Date().toISOString(), votesBuffer: voteBuffer }
+      @userJsons[index] = { id: userId, createdAt: new Date().toISOString(), votesBuffer: new Buffer(0) }
+
+  addVote: (userId, betterPolicyId, worsePolicyId) ->
+    voteBuffer = buildVoteBuffer(new Date(), betterPolicyId, worsePolicyId)
+    userJson = @_insertOrGetUser(userId)
+    userJson.votesBuffer = Buffer.concat([ userJson.votesBuffer, voteBuffer ])
 
     undefined
 
   getUser: (userId) ->
-    index = @userIdToIndex[userId]
-    json = @userJsons[index]
-    jsonToUser(json)
+    userJson = @_insertOrGetUser(userId)
+    jsonToUser(userJson)
 
   getUsers: ->
-    console.log(@userJsons)
     @userJsons.map(jsonToUser)

@@ -42,3 +42,10 @@ describe 'database', ->
       expect(users[1].votes).to.have.length(1)
       expect(users[1].votes[0]).to.have.property('betterPolicyId', 234)
       expect(users[1].votes[0]).to.have.property('worsePolicyId', 123)
+
+  describe 'getUser', ->
+    it 'should return an empty User if the User does not exist', ->
+      user = @database.getUser(@userId1)
+      expect(user.id).to.eq(@userId1)
+      expect(user.createdAt).to.be.at.most(new Date())
+      expect(user.votes).to.be.empty
