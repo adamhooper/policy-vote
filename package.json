@@ -23,6 +23,7 @@
   "devDependencies": {
     "backbone": "^1.2.1",
     "browserify": "^10.2.4",
+    "chai": "^3.0.0",
     "coffeeify": "^1.1.0",
     "gulp": "^3.9.0",
     "gulp-less": "^3.0.3",
@@ -35,13 +36,20 @@
     "lodash.assign": "^3.2.0",
     "mocha": "^2.2.5",
     "node-csvify": "0.0.4",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0",
+    "supertest": "^1.0.1",
+    "supertest-as-promised": "^2.0.2",
     "underscore": "^1.8.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.3"
   },
   "dependencies": {
+    "body-parser": "^1.13.2",
+    "client-sessions": "^0.7.0",
     "coffee-script": "^1.9.3",
-    "express": "^4.13.0"
+    "express": "^4.13.0",
+    "node-uuid": "^1.4.3"
   }
 }

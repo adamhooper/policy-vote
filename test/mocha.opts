@@ -1,0 +1,2 @@
+--require test/setup
+--compilers coffee:coffee-script/register
