@@ -1,12 +1,22 @@
+process.env.NODE_ENV ||= 'dev'
+
 express = require('express')
 bodyParser = require('body-parser')
 fs = require('fs')
+morgan = require('morgan')
 sessions = require('client-sessions')
 uuid = require('node-uuid')
 
 Database = require('./Database')
 
 app = express()
+
+if process.env.NODE_ENV == 'test'
+  # Don't log anything
+else if process.env.NODE_ENV == 'dev'
+  app.use(morgan('dev'))
+else
+  app.use(morgan('short'))
 
 databaseOptions = if process.env.NODE_ENV == 'test'
   IgnoreWritable = require('ignore-writable')
