@@ -1,5 +1,9 @@
 streamBuffers = require('stream-buffers')
 Database = require('../app/Database')
+Readable = require('stream').Readable
+
+User = require('../app/models/User')
+Vote = require('../app/models/Vote')
 
 describe 'database', ->
   beforeEach ->
@@ -95,6 +99,47 @@ describe 'database', ->
   describe 'getUser', ->
     it 'should return an empty User if the User does not exist', ->
       user = @database.getUser(@userId1)
-      expect(user.id).to.eq(@userId1)
+      expect(user).to.deep.eq(new User(@userId1, user.createdAt, []))
       expect(user.createdAt).to.be.at.most(new Date())
-      expect(user.votes).to.be.empty
+
+  describe 'load', ->
+    it 'should populate Users', (done) ->
+      usersCsv = new Readable()
+      usersCsv._read = -> {}
+      votesCsv = new Readable()
+      votesCsv._read = -> {}
+      @database.load usersCsv, votesCsv, (err) =>
+        expect(err).not.to.exist
+        expect(@database.getUsers()).to.have.length(2)
+        # Test with getUser(), because that tests the mapping from ID to User
+        expect(@database.getUser(@userId1)).to.deep.eq(new User(@userId1, new Date('2015-07-09T18:18:10.123Z'), []))
+        expect(@database.getUser(@userId2)).to.deep.eq(new User(@userId2, new Date('2015-07-09T18:18:10.124Z'), []))
+        done()
+      usersCsv.push("#{@userId1},2015-07-09T18:18:10.123Z\n")
+      usersCsv.push("#{@userId2},2015-07-09T18:18:10.124Z\n")
+      usersCsv.push(null)
+      votesCsv.push(null)
+
+    it 'should populate votes', (done) ->
+      usersCsv = new Readable()
+      usersCsv._read = -> {}
+      votesCsv = new Readable()
+      votesCsv._read = -> {}
+      @database.load usersCsv, votesCsv, (err) =>
+        expect(err).not.to.exist
+        # Remember: the way we store dates, all milliseconds go to 0
+        expect(@database.getUser(@userId1).votes).to.deep.eq([
+          new Vote(new Date('2015-07-09T18:18:11.000Z'), 123, 234)
+          new Vote(new Date('2015-07-09T18:18:13.000Z'), 124, 235)
+        ])
+        expect(@database.getUser(@userId2).votes).to.deep.eq([
+          new Vote(new Date('2015-07-09T18:18:12.000Z'), 123, 235)
+        ])
+        done()
+      usersCsv.push("#{@userId1},2015-07-09T18:18:10.123Z\n")
+      usersCsv.push("#{@userId2},2015-07-09T18:18:10.124Z\n")
+      usersCsv.push(null)
+      votesCsv.push("#{@userId1},2015-07-09T18:18:11.000Z,123,234\n")
+      votesCsv.push("#{@userId2},2015-07-09T18:18:12.001Z,123,235\n")
+      votesCsv.push("#{@userId1},2015-07-09T18:18:13.002Z,124,235\n")
+      votesCsv.push(null)

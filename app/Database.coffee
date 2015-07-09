@@ -1,4 +1,6 @@
-# Stores all our data that is editable by users or editors.
+readline = require('readline')
+Lazy = require('lazy')
+
 User = require('./models/User')
 Vote = require('./models/Vote')
 
@@ -96,3 +98,33 @@ module.exports = class Database
 
   getUsers: ->
     @userJsons.map(jsonToUser)
+
+  # Populates the database from previously-written CSV files.
+  #
+  # This method is asynchronous. You probably mean to run it on app startup; in
+  # that case, don't respond to users until the loading is finished.
+  load: (usersCsv, votesCsv, done) ->
+    throw new Error('The database is not empty. DO NOT call load() now.') if @userJsons.length
+    @_loadUsersCsv usersCsv, =>
+      @_loadVotesCsv(votesCsv, done)
+
+  _loadUsersCsv: (usersCsv, done) ->
+    index = 0
+    new Lazy(usersCsv)
+      .lines
+      .forEach (line) =>
+        [ userId, createdAt ] = line.toString('utf8').split(',')
+        userJson = { id: userId, createdAt: createdAt, votesBuffer: new Buffer(0) }
+        @userJsons.push(userJson)
+        @userIdToIndex[userJson.id] = index++
+    usersCsv.on('end', done)
+
+  _loadVotesCsv: (votesCsv, done) ->
+    new Lazy(votesCsv)
+      .lines
+      .forEach (line) =>
+        [ userId, createdAt, betterPolicyId, worsePolicyId ] = line.toString('utf8').split(',')
+        voteBuffer = buildVoteBuffer(new Date(createdAt), +betterPolicyId, +worsePolicyId)
+        userJson = @userJsons[@userIdToIndex[userId]]
+        userJson.votesBuffer = Buffer.concat([ userJson.votesBuffer, voteBuffer ])
+    votesCsv.on('end', done)
