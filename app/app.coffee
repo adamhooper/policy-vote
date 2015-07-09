@@ -46,6 +46,7 @@ app.use (req, res, next) ->
     req.policyVoteSession.userId ||= uuid.v1()
   next()
 
+app.use(express.static('data')) # FIXME remove this! Just for showing stuff to clients
 app.use('/votes', require('./vote')(app.database))
 app.use(express.static('dist'))
 
