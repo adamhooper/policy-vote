@@ -47,7 +47,7 @@ app.use (req, res, next) ->
   next()
 
 app.use(express.static('data')) # FIXME remove this! Just for showing stuff to clients
-app.use('/votes', require('./vote')(app.database))
+app.use('/votes', require('./votes')(app.database))
 app.use(express.static('dist'))
 
 module.exports = app
