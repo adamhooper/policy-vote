@@ -1524,13 +1524,15 @@ module.exports = DoneView = (function(superClass) {
 
 
 },{"backbone":11,"underscore":14}],7:[function(require,module,exports){
-var Backbone, ForAgainstView, _,
+var $, Backbone, ForAgainstView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
 _ = require('underscore');
 
 Backbone = require('backbone');
+
+$ = Backbone.$;
 
 module.exports = ForAgainstView = (function(superClass) {
   extend(ForAgainstView, superClass);
@@ -1543,7 +1545,12 @@ module.exports = ForAgainstView = (function(superClass) {
 
   ForAgainstView.prototype.templates = {
     main: _.template('<h2>Your choices, by party:</h2>\n<table class="parties">\n  <thead>\n    <tr>\n      <th class="party">Party</th>\n      <th class="against">nay</th>\n      <th class="for">yay</th>\n    </tr>\n  </thead>\n  <tbody>\n    <% parties.forEach(function(party) { %>\n      <tr>\n        <th class="party"><%- party.name %></th>\n        <td class="against">\n          <ul class="policy-list">\n            <%= party.against.map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n        <td class="for">\n          <ul class="policy-list">\n            <%= party["for"].map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n      </li>\n    <% }) %>\n  </tbody>\n</ul>'),
-    policy: _.template('<li class="policy">\n  <div class="policy-marker"></div>\n  <div class="policy-details">\n    <h4 class="policy-policy"><%- policy.get(\'policy\') %></h4>\n    <div class="policy-party">Proposed by <strong><%- policy.get(\'party\') %></strong></div>\n    <% if (policy.betterThanPolicies.length) { %>\n      <div class="policy-better-than">\n        <p>You chose this policy over:</p>\n        <ul>\n          <% policy.betterThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'policy\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n    <% if (policy.worseThanPolicies.length) { %>\n      <div class="policy-worse-than">\n        <p>You disliked this policy compared to:</p>\n        <ul>\n          <% policy.worseThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'policy\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n  </div>\n</li>')
+    policy: _.template('<li class="policy">\n  <a class="policy-marker">&nbsp;</a>\n  <div class="policy-details">\n    <h4 class="policy-policy"><%- policy.get(\'policy\') %></h4>\n    <div class="policy-party">Proposed by <strong><%- policy.get(\'party\') %></strong></div>\n    <% if (policy.betterThanPolicies.length) { %>\n      <div class="policy-better-than">\n        <p>You chose this policy over:</p>\n        <ul>\n          <% policy.betterThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'policy\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n    <% if (policy.worseThanPolicies.length) { %>\n      <div class="policy-worse-than">\n        <p>You disliked this policy compared to:</p>\n        <ul>\n          <% policy.worseThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'policy\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n  </div>\n</li>')
+  };
+
+  ForAgainstView.prototype.events = {
+    'click .policy-marker': '_onClickPolicyMarker',
+    'click .policy-details': '_onClickPolicyDetails'
   };
 
   ForAgainstView.prototype.initialize = function(options) {
@@ -1554,7 +1561,12 @@ module.exports = ForAgainstView = (function(superClass) {
       throw 'must pass options.votes, an Array[[Policy,Policy]] of better/worse policies';
     }
     this.policies = options.policies;
-    return this.votes = options.votes;
+    this.votes = options.votes;
+    return $(document).on('click.for-against-view', (function(_this) {
+      return function(e) {
+        return _this._onClickDocument(e);
+      };
+    })(this));
   };
 
   ForAgainstView.prototype.render = function() {
@@ -1595,7 +1607,40 @@ module.exports = ForAgainstView = (function(superClass) {
       renderPolicy: this.templates.policy
     });
     this.$el.html(html);
+    this._expandedEl = null;
     return this;
+  };
+
+  ForAgainstView.prototype.remove = function() {
+    $(document).off('click.for-against-view');
+    return ForAgainstView.__super__.remove.apply(this, arguments).remove();
+  };
+
+  ForAgainstView.prototype._onClickPolicyMarker = function(e) {
+    var el;
+    console.log(e);
+    el = $(e.currentTarget).closest('li.policy').get(0);
+    if (this._expandedEl != null) {
+      this._expandedEl.className = 'policy';
+    }
+    if (el === this._expandedEl) {
+      this._expandedEl = null;
+    } else {
+      el.className = 'policy expanded';
+      this._expandedEl = el;
+    }
+    return e.stopPropagation();
+  };
+
+  ForAgainstView.prototype._onClickPolicyDetails = function(e) {
+    return e.stopPropagation();
+  };
+
+  ForAgainstView.prototype._onClickDocument = function(e) {
+    if (this._expandedEl != null) {
+      this._expandedEl.className = 'policy';
+      return this._expandedEl = null;
+    }
   };
 
   return ForAgainstView;

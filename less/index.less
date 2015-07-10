@@ -10,6 +10,11 @@ body {
 
 #main {
   position: relative;
+  padding: 1rem;
+}
+
+h1, h2 {
+  margin-top: 0;
 }
 
 .question {
@@ -36,9 +41,11 @@ body {
 .statistics {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   min-height: 30rem;
   background: #f7f7f7;
+  padding: 1rem;
 }
 
 .for-against {
@@ -47,15 +54,26 @@ body {
   table {
     width: 100%;
     border-collapse: collapse;
-    line-height: 1rem;
   }
 
   thead th {
     border-bottom: 1px solid #999;
+    &.for { text-align: left; }
+    &.against { text-align: right; }
   }
 
-  th, td {
-    padding: .5rem .5rem .25rem;
+  th {
+    padding: .5rem;
+  }
+
+  tbody th.party {
+    padding-bottom: 1.5rem; // Big space between parties
+  }
+
+  td {
+    // Each li.policy has its own .5rem margin-bottom, so instead of a 1.5rem
+    // padding here we'll use a 1rem padding.
+    padding: .5rem .5rem 1rem;
   }
 
   th.party {
@@ -65,15 +83,6 @@ body {
     white-space: nowrap;
   }
 
-  tbody th.party {
-    // Each little .policy has a .25rem margin at the bottom, which adds on to
-    // its td's .25rem. Total: .5rem.
-    //
-    // If you change this logic, test what it looks like when there are enough
-    // policies to wrap.
-    padding-bottom: .5rem;
-  }
-
   th.against, td.against {
     border-right: 1px solid #999;
   }
@@ -81,7 +90,7 @@ body {
   td.for {
     .policy {
       float: left;
-      margin: 0 0 .25rem .25rem;
+      margin-left: .5rem;
     }
     .policy-marker { background: #8a8; }
   }
@@ -89,7 +98,7 @@ body {
   td.against {
     .policy {
       float: right;
-      margin: 0 .25rem .25rem 0;
+      margin-right: .5rem;
     }
     .policy-marker { background: #a88; }
   }
@@ -102,17 +111,17 @@ body {
 
   li.policy {
     display: inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
 
     .policy-marker {
-      width: 1rem;
-      height: 1rem;
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
       border: 1px solid #666;
       border-radius: .25rem;
-      // It looks too high because it's on top of the baseline. Move it down.
-      position: relative;
-      top: 2px;
+      cursor: pointer;
     }
 
     .policy-details {
@@ -122,12 +131,12 @@ body {
       border-radius: .5rem;
       box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.6);
       position: absolute;
-      width: 75%;
+      width: 90%;
       background: white;
       padding: 1rem;
       z-index: 1;
       margin-top: .75rem;
-      left: 12.5%;
+      left: 5%;
 
       line-height: 1.5rem;
 
@@ -158,7 +167,7 @@ body {
       }
     }
 
-    &:hover {
+    &.expanded {
       .policy-marker {
         border: 2px solid black;
       }
@@ -166,11 +175,10 @@ body {
         content: "";
         display: block;
         position: relative;
-        top: 1rem;
         margin-top: -2px;
         border-left: 2px solid black;
-        left: .5rem;
-        margin-left: -2px;
+        left: .75rem;
+        margin-left: -3px; // not sure why 3px, but it certainly *looks* right
         height: .75rem;
       }
       .policy-details { display: block; }

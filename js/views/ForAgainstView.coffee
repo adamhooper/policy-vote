@@ -1,5 +1,6 @@
 _ = require('underscore')
 Backbone = require('backbone')
+$ = Backbone.$
 
 module.exports = class ForAgainstView extends Backbone.View
   className: 'for-against'
@@ -36,7 +37,7 @@ module.exports = class ForAgainstView extends Backbone.View
 
     policy: _.template('''
       <li class="policy">
-        <div class="policy-marker"></div>
+        <a class="policy-marker">&nbsp;</a>
         <div class="policy-details">
           <h4 class="policy-policy"><%- policy.get('policy') %></h4>
           <div class="policy-party">Proposed by <strong><%- policy.get('party') %></strong></div>
@@ -64,12 +65,18 @@ module.exports = class ForAgainstView extends Backbone.View
       </li>
     ''')
 
+  events:
+    'click .policy-marker': '_onClickPolicyMarker'
+    'click .policy-details': '_onClickPolicyDetails'
+
   initialize: (options) ->
     throw 'must pass options.policies, a Policies' if !options.policies
     throw 'must pass options.votes, an Array[[Policy,Policy]] of better/worse policies' if !options.votes
 
     @policies = options.policies
     @votes = options.votes
+
+    $(document).on('click.for-against-view', (e) => @_onClickDocument(e))
 
   render: ->
     # We'll pass in an Array of parties that look like:
@@ -103,4 +110,32 @@ module.exports = class ForAgainstView extends Backbone.View
       renderPolicy: @templates.policy
 
     @$el.html(html)
+    @_expandedEl = null # li.policy HTMLElement, or null
     @
+
+  remove: ->
+    $(document).off('click.for-against-view')
+    super.remove()
+
+  _onClickPolicyMarker: (e) ->
+    console.log(e)
+    el = $(e.currentTarget).closest('li.policy').get(0)
+
+    @_expandedEl.className = 'policy' if @_expandedEl? # un-expand old one
+    if el == @_expandedEl
+      # don't expand anything
+      @_expandedEl = null
+    else
+      # expand a new one
+      el.className = 'policy expanded'
+      @_expandedEl = el
+
+    e.stopPropagation() # don't trigger _onClickDocument
+
+  _onClickPolicyDetails: (e) -> e.stopPropagation() # don't trigger _onClickDocument
+
+  _onClickDocument: (e) ->
+    # Hide expanded policy
+    if @_expandedEl?
+      @_expandedEl.className = 'policy'
+      @_expandedEl = null
