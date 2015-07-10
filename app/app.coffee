@@ -43,7 +43,7 @@ app.use(sessions({
 # Set policyVoteSession.userId when users first visit the page
 app.use (req, res, next) ->
   if req.path == '/'
-    req.policyVoteSession.userId ||= uuid.v1()
+    req.policyVoteSession.userId = uuid.v1()
   next()
 
 app.use(express.static('data')) # FIXME remove this! Just for showing stuff to clients
