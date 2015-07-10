@@ -8,6 +8,10 @@ body {
   box-sizing: border-box;
 }
 
+#main {
+  position: relative;
+}
+
 .question {
   button {
     display: block;
@@ -26,5 +30,150 @@ body {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.5rem;
+  }
+}
+
+.statistics {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 30rem;
+  background: #f7f7f7;
+}
+
+.for-against {
+  position: relative;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 1rem;
+  }
+
+  thead th {
+    border-bottom: 1px solid #999;
+  }
+
+  th, td {
+    padding: .5rem .5rem .25rem;
+  }
+
+  th.party {
+    text-align: left;
+    // As thin as possible
+    width: 0;
+    white-space: nowrap;
+  }
+
+  tbody th.party {
+    // Each little .policy has a .25rem margin at the bottom, which adds on to
+    // its td's .25rem. Total: .5rem.
+    //
+    // If you change this logic, test what it looks like when there are enough
+    // policies to wrap.
+    padding-bottom: .5rem;
+  }
+
+  th.against, td.against {
+    border-right: 1px solid #999;
+  }
+
+  td.for {
+    .policy {
+      float: left;
+      margin: 0 0 .25rem .25rem;
+    }
+    .policy-marker { background: #8a8; }
+  }
+
+  td.against {
+    .policy {
+      float: right;
+      margin: 0 .25rem .25rem 0;
+    }
+    .policy-marker { background: #a88; }
+  }
+
+  .policy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li.policy {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+
+    .policy-marker {
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid #666;
+      border-radius: .25rem;
+      // It looks too high because it's on top of the baseline. Move it down.
+      position: relative;
+      top: 2px;
+    }
+
+    .policy-details {
+      display: none;
+      border: 1px solid black;
+      border-top-width: 2px;
+      border-radius: .5rem;
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.6);
+      position: absolute;
+      width: 75%;
+      background: white;
+      padding: 1rem;
+      z-index: 1;
+      margin-top: .75rem;
+      left: 12.5%;
+
+      line-height: 1.5rem;
+
+      h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+      }
+
+      .policy-party {
+        opacity: .75;
+        font-size: .8rem;
+      }
+
+      .policy-better-than, .policy-worse-than {
+        padding-top: 1rem;
+        font-size: .9rem;
+      }
+
+      ul, li, p {
+        display: inline;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        font-style: italic;
+      }
+    }
+
+    &:hover {
+      .policy-marker {
+        border: 2px solid black;
+      }
+      .policy-marker::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: 1rem;
+        margin-top: -2px;
+        border-left: 2px solid black;
+        left: .5rem;
+        margin-left: -2px;
+        height: .75rem;
+      }
+      .policy-details { display: block; }
+    }
   }
 }

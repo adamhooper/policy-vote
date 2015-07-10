@@ -3,12 +3,14 @@ Backbone = require('backbone')
 HeadingView = require('./views/HeadingView')
 QuestionView = require('./views/QuestionView')
 DoneView = require('./views/DoneView')
+StatisticsView = require('./views/StatisticsView')
 
 module.exports = class App extends Backbone.View
   initialize: (options) ->
     throw new Error('Must pass options.policies, a Policies') if !options.policies?
 
     @policies = options.policies
+    @votes = [] # Array of [ betterPolicy, worsePolicy ]
 
     @headingView = new HeadingView()
     @questionView = new QuestionView(policies: @policies)
@@ -17,6 +19,7 @@ module.exports = class App extends Backbone.View
     @childViews = [ @headingView, @questionView, @doneView ]
 
     @listenTo(@questionView, 'user-prefers-policy', @_onUserPrefersPolicy)
+    @listenTo(@doneView, 'show-statistics', @showStatistics)
 
   render: ->
     @$el.empty()
@@ -24,9 +27,11 @@ module.exports = class App extends Backbone.View
       childView.render()
       childView.el
     @$el.append($els)
+    @overlay = null
+    @
 
   _onUserPrefersPolicy: (policy, otherPolicy) ->
-    console.log("User prefers #{policy.id} to #{otherPolicy.id}")
+    @votes.push([ policy, otherPolicy ])
     Backbone.ajax
       type: 'POST'
       url: '/votes'
@@ -35,3 +40,10 @@ module.exports = class App extends Backbone.View
       success: -> console.log('Voted!')
       error: (xhr, textStatus, errorThrown) -> console.log('Error during vote', textStatus, errorThrown)
     @questionView.render()
+
+  showStatistics: ->
+    return if @overlay?
+    view = new StatisticsView(policies: @policies, votes: @votes)
+    view.render()
+    @$el.append(view.el)
+    @overlay = view

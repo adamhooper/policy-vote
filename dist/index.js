@@ -1322,7 +1322,7 @@ module.exports = [
   }
 ];
 },{}],2:[function(require,module,exports){
-var App, Backbone, DoneView, HeadingView, QuestionView,
+var App, Backbone, DoneView, HeadingView, QuestionView, StatisticsView,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
@@ -1333,6 +1333,8 @@ HeadingView = require('./views/HeadingView');
 QuestionView = require('./views/QuestionView');
 
 DoneView = require('./views/DoneView');
+
+StatisticsView = require('./views/StatisticsView');
 
 module.exports = App = (function(superClass) {
   extend(App, superClass);
@@ -1346,13 +1348,15 @@ module.exports = App = (function(superClass) {
       throw new Error('Must pass options.policies, a Policies');
     }
     this.policies = options.policies;
+    this.votes = [];
     this.headingView = new HeadingView();
     this.questionView = new QuestionView({
       policies: this.policies
     });
     this.doneView = new DoneView();
     this.childViews = [this.headingView, this.questionView, this.doneView];
-    return this.listenTo(this.questionView, 'user-prefers-policy', this._onUserPrefersPolicy);
+    this.listenTo(this.questionView, 'user-prefers-policy', this._onUserPrefersPolicy);
+    return this.listenTo(this.doneView, 'show-statistics', this.showStatistics);
   };
 
   App.prototype.render = function() {
@@ -1369,11 +1373,13 @@ module.exports = App = (function(superClass) {
       }
       return results;
     }).call(this);
-    return this.$el.append($els);
+    this.$el.append($els);
+    this.overlay = null;
+    return this;
   };
 
   App.prototype._onUserPrefersPolicy = function(policy, otherPolicy) {
-    console.log("User prefers " + policy.id + " to " + otherPolicy.id);
+    this.votes.push([policy, otherPolicy]);
     Backbone.ajax({
       type: 'POST',
       url: '/votes',
@@ -1392,12 +1398,26 @@ module.exports = App = (function(superClass) {
     return this.questionView.render();
   };
 
+  App.prototype.showStatistics = function() {
+    var view;
+    if (this.overlay != null) {
+      return;
+    }
+    view = new StatisticsView({
+      policies: this.policies,
+      votes: this.votes
+    });
+    view.render();
+    this.$el.append(view.el);
+    return this.overlay = view;
+  };
+
   return App;
 
 })(Backbone.View);
 
 
-},{"./views/DoneView":6,"./views/HeadingView":7,"./views/QuestionView":8,"backbone":9}],3:[function(require,module,exports){
+},{"./views/DoneView":6,"./views/HeadingView":8,"./views/QuestionView":9,"./views/StatisticsView":10,"backbone":11}],3:[function(require,module,exports){
 var Backbone, Policies, Policy,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1420,7 +1440,7 @@ module.exports = Policies = (function(superClass) {
 })(Backbone.Collection);
 
 
-},{"../models/Policy":5,"backbone":9}],4:[function(require,module,exports){
+},{"../models/Policy":5,"backbone":11}],4:[function(require,module,exports){
 var $, App, Policies;
 
 $ = require('jquery');
@@ -1441,7 +1461,7 @@ $(function() {
 });
 
 
-},{"../data/policies.csv":1,"./App":2,"./collections/Policies":3,"jquery":11}],5:[function(require,module,exports){
+},{"../data/policies.csv":1,"./App":2,"./collections/Policies":3,"jquery":13}],5:[function(require,module,exports){
 var Backbone, Policy,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1466,7 +1486,7 @@ module.exports = Policy = (function(superClass) {
 })(Backbone.Model);
 
 
-},{"backbone":9}],6:[function(require,module,exports){
+},{"backbone":11}],6:[function(require,module,exports){
 var Backbone, DoneView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1484,10 +1504,18 @@ module.exports = DoneView = (function(superClass) {
 
   DoneView.prototype.tagName = 'footer';
 
-  DoneView.prototype.template = _.template('<p>[TODO: add button here for when user is done choosing]</p>');
+  DoneView.prototype.template = _.template('<button class="show-statistics">I\'m done. Party time!</button>');
+
+  DoneView.prototype.events = {
+    'click button.show-statistics': '_onClickShowStatistics'
+  };
 
   DoneView.prototype.render = function() {
     return this.$el.html(this.template());
+  };
+
+  DoneView.prototype._onClickShowStatistics = function() {
+    return this.trigger('show-statistics');
   };
 
   return DoneView;
@@ -1495,7 +1523,87 @@ module.exports = DoneView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":9,"underscore":12}],7:[function(require,module,exports){
+},{"backbone":11,"underscore":14}],7:[function(require,module,exports){
+var Backbone, ForAgainstView, _,
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
+
+_ = require('underscore');
+
+Backbone = require('backbone');
+
+module.exports = ForAgainstView = (function(superClass) {
+  extend(ForAgainstView, superClass);
+
+  function ForAgainstView() {
+    return ForAgainstView.__super__.constructor.apply(this, arguments);
+  }
+
+  ForAgainstView.prototype.className = 'for-against';
+
+  ForAgainstView.prototype.templates = {
+    main: _.template('<h2>Your choices, by party:</h2>\n<table class="parties">\n  <thead>\n    <tr>\n      <th class="party">Party</th>\n      <th class="against">nay</th>\n      <th class="for">yay</th>\n    </tr>\n  </thead>\n  <tbody>\n    <% parties.forEach(function(party) { %>\n      <tr>\n        <th class="party"><%- party.name %></th>\n        <td class="against">\n          <ul class="policy-list">\n            <%= party.against.map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n        <td class="for">\n          <ul class="policy-list">\n            <%= party["for"].map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n      </li>\n    <% }) %>\n  </tbody>\n</ul>'),
+    policy: _.template('<li class="policy">\n  <div class="policy-marker"></div>\n  <div class="policy-details">\n    <h4 class="policy-policy"><%- policy.get(\'policy\') %></h4>\n    <div class="policy-party">Proposed by <strong><%- policy.get(\'party\') %></strong></div>\n    <% if (policy.betterThanPolicies.length) { %>\n      <div class="policy-better-than">\n        <p>You chose this policy over:</p>\n        <ul>\n          <% policy.betterThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'policy\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n    <% if (policy.worseThanPolicies.length) { %>\n      <div class="policy-worse-than">\n        <p>You disliked this policy compared to:</p>\n        <ul>\n          <% policy.worseThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'policy\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n  </div>\n</li>')
+  };
+
+  ForAgainstView.prototype.initialize = function(options) {
+    if (!options.policies) {
+      throw 'must pass options.policies, a Policies';
+    }
+    if (!options.votes) {
+      throw 'must pass options.votes, an Array[[Policy,Policy]] of better/worse policies';
+    }
+    this.policies = options.policies;
+    return this.votes = options.votes;
+  };
+
+  ForAgainstView.prototype.render = function() {
+    var better, html, i, j, len, len1, name, parties, party, partyByName, ref, ref1, worse;
+    parties = (function() {
+      var i, len, ref, results;
+      ref = _.uniq(this.policies.pluck('party')).sort();
+      results = [];
+      for (i = 0, len = ref.length; i < len; i++) {
+        name = ref[i];
+        results.push({
+          name: name,
+          against: [],
+          "for": []
+        });
+      }
+      return results;
+    }).call(this);
+    partyByName = {};
+    for (i = 0, len = parties.length; i < len; i++) {
+      party = parties[i];
+      partyByName[party.name] = party;
+    }
+    this.policies.forEach(function(policy) {
+      policy.betterThanPolicies = [];
+      return policy.worseThanPolicies = [];
+    });
+    ref = this.votes;
+    for (j = 0, len1 = ref.length; j < len1; j++) {
+      ref1 = ref[j], better = ref1[0], worse = ref1[1];
+      better.betterThanPolicies.push(worse);
+      worse.worseThanPolicies.push(better);
+      partyByName[better.get('party')]["for"].push(better);
+      partyByName[worse.get('party')].against.push(worse);
+    }
+    html = this.templates.main({
+      parties: parties,
+      renderPolicy: this.templates.policy
+    });
+    this.$el.html(html);
+    return this;
+  };
+
+  return ForAgainstView;
+
+})(Backbone.View);
+
+
+},{"backbone":11,"underscore":14}],8:[function(require,module,exports){
 var Backbone, HeadingView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1524,7 +1632,7 @@ module.exports = HeadingView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":9,"underscore":12}],8:[function(require,module,exports){
+},{"backbone":11,"underscore":14}],9:[function(require,module,exports){
 var $, Backbone, QuestionView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1583,7 +1691,52 @@ module.exports = QuestionView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":9,"underscore":12}],9:[function(require,module,exports){
+},{"backbone":11,"underscore":14}],10:[function(require,module,exports){
+var Backbone, ForAgainstView, StatisticsView,
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
+
+Backbone = require('backbone');
+
+ForAgainstView = require('./ForAgainstView');
+
+module.exports = StatisticsView = (function(superClass) {
+  extend(StatisticsView, superClass);
+
+  function StatisticsView() {
+    return StatisticsView.__super__.constructor.apply(this, arguments);
+  }
+
+  StatisticsView.prototype.className = 'statistics';
+
+  StatisticsView.prototype.initialize = function(options) {
+    if (!options.policies) {
+      throw 'must pass options.policies, a Policies';
+    }
+    if (!options.votes) {
+      throw 'must pass options.votes, an Array[[Policy,Policy]] of better/worse policies';
+    }
+    this.policies = options.policies;
+    return this.votes = options.votes;
+  };
+
+  StatisticsView.prototype.render = function() {
+    var forAgainstView;
+    forAgainstView = new ForAgainstView({
+      policies: this.policies,
+      votes: this.votes
+    });
+    forAgainstView.render();
+    this.$el.append(forAgainstView.el);
+    return this;
+  };
+
+  return StatisticsView;
+
+})(Backbone.View);
+
+
+},{"./ForAgainstView":7,"backbone":11}],11:[function(require,module,exports){
 (function (global){
 //     Backbone.js 1.2.1
 
@@ -3461,7 +3614,7 @@ module.exports = QuestionView = (function(superClass) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"jquery":11,"underscore":10}],10:[function(require,module,exports){
+},{"jquery":13,"underscore":12}],12:[function(require,module,exports){
 //     Underscore.js 1.8.3
 //     http://underscorejs.org
 //     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -5011,7 +5164,7 @@ module.exports = QuestionView = (function(superClass) {
   }
 }.call(this));
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -14223,9 +14376,9 @@ return jQuery;
 
 }));
 
-},{}],12:[function(require,module,exports){
-arguments[4][10][0].apply(exports,arguments)
-},{"dup":10}]},{},[4])
+},{}],14:[function(require,module,exports){
+arguments[4][12][0].apply(exports,arguments)
+},{"dup":12}]},{},[4])
 
 
 //# sourceMappingURL=index.js.map
