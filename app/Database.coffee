@@ -27,10 +27,15 @@ jsonToUser = (json) ->
       bufferToVote(json.votesBuffer.slice(i))
   else
     []
-  user = new User(json.id, new Date(json.createdAt), votes)
+  user = new User(json.id, new Date(json.createdAt), json.languageCode, json.provinceCode, votes)
 
 userJsonToCsvBuffer = (userJson) ->
-  new Buffer([ userJson.id, userJson.createdAt ].join(',') + '\n', 'utf8')
+  new Buffer([
+    userJson.id
+    userJson.createdAt
+    userJson.languageCode
+    userJson.provinceCode || ''
+  ].join(',') + '\n', 'utf8')
 
 voteToCsvBuffer = (userId, timestamp, betterPolicyId, worsePolicyId) ->
   new Buffer([ userId, timestamp.toISOString(), betterPolicyId, worsePolicyId ].join(',') + '\n', 'utf8')
@@ -71,31 +76,62 @@ module.exports = class Database
     @usersCsvOutputStream = options.usersCsvOutputStream
     @votesCsvOutputStream = options.votesCsvOutputStream
 
-  _insertOrGetUser: (userId) ->
+  _getUserJson = (userId) ->
     index = @userIdToIndex[userId]
     if index? # 0 is a valid index
       @userJsons[index]
     else
-      userJson = { id: userId, createdAt: new Date().toISOString(), votesBuffer: new Buffer(0) }
-      @userIdToIndex[userId] = @userJsons.length
-      @userJsons.push(userJson)
-      @usersCsvOutputStream.write(userJsonToCsvBuffer(userJson))
-      userJson
+      null
 
+  # Adds a Vote to the database for the given User.
   addVote: (userId, betterPolicyId, worsePolicyId) ->
     timestamp = new Date()
+    userJson = @_getUserJson(userId) ? throw new Error("User #{userId} does not exist")
     voteBuffer = buildVoteBuffer(timestamp, betterPolicyId, worsePolicyId)
-    userJson = @_insertOrGetUser(userId)
     userJson.votesBuffer = Buffer.concat([ userJson.votesBuffer, voteBuffer ])
 
     @votesCsvOutputStream.write(voteToCsvBuffer(userId, timestamp, betterPolicyId, worsePolicyId))
 
     undefined
 
+  # Returns the User with the given ID.
+  #
+  # If the user does not exist, that means the database was wiped but the
+  # client's cookie persisted. Return null.
   getUser: (userId) ->
-    userJson = @_insertOrGetUser(userId)
-    jsonToUser(userJson)
+    userJson = @_getUserJson(userId)
+    userJson && jsonToUser(userJson) || null
 
+  # Adds userJson to @userIdToIndex and @userJsons.
+  #
+  # Does not write to output CSV.
+  _addUserJson: (userJson) ->
+    @userIdToIndex[userJson.id] = @userJsons.length
+    @userJsons.push(userJson)
+
+  _getUserJson: (userId) ->
+    index = @userIdToIndex[userId]
+    if index?
+      @userJsons[index]
+    else
+      null
+
+  # Modifies a User in the database.
+  addUser: (userId, languageCode, provinceCode) ->
+    throw new Error("User #{userId} already exists") if @userIdToIndex[userId]?
+    userJson =
+      id: userId
+      createdAt: new Date().toISOString()
+      votesBuffer: new Buffer(0)
+      languageCode: languageCode
+      provinceCode: provinceCode
+    @_addUserJson(userJson)
+    @usersCsvOutputStream.write(userJsonToCsvBuffer(userJson))
+    undefined
+
+  # Gets all User objects.
+  #
+  # Useful for testing. Not so much on production.
   getUsers: ->
     @userJsons.map(jsonToUser)
 
@@ -113,10 +149,14 @@ module.exports = class Database
     new Lazy(usersCsv)
       .lines
       .forEach (line) =>
-        [ userId, createdAt ] = line.toString('utf8').split(',')
-        userJson = { id: userId, createdAt: createdAt, votesBuffer: new Buffer(0) }
-        @userJsons.push(userJson)
-        @userIdToIndex[userJson.id] = index++
+        [ userId, createdAt, languageCode, provinceCode ] = line.toString('utf8').split(',')
+        userJson =
+          id: userId
+          createdAt: createdAt
+          votesBuffer: new Buffer(0)
+          languageCode: languageCode
+          provinceCode: provinceCode || null
+        @_addUserJson(userJson)
     usersCsv.on('end', done)
 
   _loadVotesCsv: (votesCsv, done) ->

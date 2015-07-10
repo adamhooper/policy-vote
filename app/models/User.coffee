@@ -1,2 +1,2 @@
 module.exports = class User
-  constructor: (@id, @createdAt, @votes) ->
+  constructor: (@id, @createdAt, @languageCode, @provinceCode, @votes) ->

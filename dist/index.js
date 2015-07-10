@@ -1,4 +1,33 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var Province, all, byCode, i, len, province;
+
+Province = (function() {
+  function Province(code, en, fr) {
+    this.code = code;
+    this.en = en;
+    this.fr = fr;
+  }
+
+  return Province;
+
+})();
+
+all = [new Province('ab', 'Alberta', 'Alberta'), new Province('bc', 'British Columbia', 'Colombie-Britannique'), new Province('mb', 'Manitoba', 'Manitoba'), new Province('nb', 'New Brunswick', 'Nouveau-Brunswick'), new Province('nl', 'Newfoundland and Labrador', 'Terre-Neuve-et-Labrador'), new Province('ns', 'Nova Scotia', 'Nouvelle-Écosse'), new Province('nt', 'Northwest Territories', 'Territoires du Nord-Ouest'), new Province('nu', 'Nunavut', 'Nunavut'), new Province('on', 'Ontario', 'Ontario'), new Province('pe', 'Prince Edward Island', 'Île-du-Prince-Édouard'), new Province('qc', 'Quebec', 'Québec'), new Province('sk', 'Saskatchewan', 'Saskatchewan'), new Province('yt', 'Yukon', 'Yukon')];
+
+byCode = {};
+
+for (i = 0, len = all.length; i < len; i++) {
+  province = all[i];
+  byCode[province.code] = province;
+}
+
+module.exports = {
+  all: all,
+  byCode: byCode
+};
+
+
+},{}],2:[function(require,module,exports){
 module.exports = [
   {
     "id": "1",
@@ -1321,8 +1350,8 @@ module.exports = [
     "QS": ""
   }
 ];
-},{}],2:[function(require,module,exports){
-var App, Backbone, DoneView, HeadingView, QuestionView, StatisticsView,
+},{}],3:[function(require,module,exports){
+var App, Backbone, DoneView, HeadingView, QuestionView, StatisticsView, UserProfileView,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
@@ -1335,6 +1364,8 @@ QuestionView = require('./views/QuestionView');
 DoneView = require('./views/DoneView');
 
 StatisticsView = require('./views/StatisticsView');
+
+UserProfileView = require('./views/UserProfileView');
 
 module.exports = App = (function(superClass) {
   extend(App, superClass);
@@ -1349,6 +1380,11 @@ module.exports = App = (function(superClass) {
     }
     this.policies = options.policies;
     this.votes = [];
+    this.userProfile = {
+      languageCode: null,
+      provinceCode: null
+    };
+    this.userProfileView = new UserProfileView();
     this.headingView = new HeadingView();
     this.questionView = new QuestionView({
       policies: this.policies
@@ -1356,25 +1392,31 @@ module.exports = App = (function(superClass) {
     this.doneView = new DoneView();
     this.childViews = [this.headingView, this.questionView, this.doneView];
     this.listenTo(this.questionView, 'user-prefers-policy', this._onUserPrefersPolicy);
-    return this.listenTo(this.doneView, 'show-statistics', this.showStatistics);
+    this.listenTo(this.doneView, 'show-statistics', this.showStatistics);
+    return this.listenTo(this.userProfileView, 'user-set-profile', this._onUserSetProfile);
   };
 
   App.prototype.render = function() {
     var $els, childView;
     this.$el.empty();
-    $els = (function() {
-      var i, len, ref, results;
-      ref = this.childViews;
-      results = [];
-      for (i = 0, len = ref.length; i < len; i++) {
-        childView = ref[i];
-        childView.render();
-        results.push(childView.el);
-      }
-      return results;
-    }).call(this);
-    this.$el.append($els);
-    this.overlay = null;
+    if (this.userProfile.languageCode == null) {
+      this.userProfileView.render();
+      this.$el.append(this.userProfileView.el);
+    } else {
+      $els = (function() {
+        var i, len, ref, results;
+        ref = this.childViews;
+        results = [];
+        for (i = 0, len = ref.length; i < len; i++) {
+          childView = ref[i];
+          childView.render();
+          results.push(childView.el);
+        }
+        return results;
+      }).call(this);
+      this.$el.append($els);
+      this.overlay = null;
+    }
     return this;
   };
 
@@ -1388,14 +1430,17 @@ module.exports = App = (function(superClass) {
         worsePolicyId: +otherPolicy.id
       }),
       contentType: 'application/json',
-      success: function() {
-        return console.log('Voted!');
-      },
+      success: function() {},
       error: function(xhr, textStatus, errorThrown) {
         return console.log('Error during vote', textStatus, errorThrown);
       }
     });
     return this.questionView.render();
+  };
+
+  App.prototype._onUserSetProfile = function(profile) {
+    this.userProfile = profile;
+    return this.render();
   };
 
   App.prototype.showStatistics = function() {
@@ -1417,7 +1462,7 @@ module.exports = App = (function(superClass) {
 })(Backbone.View);
 
 
-},{"./views/DoneView":6,"./views/HeadingView":8,"./views/QuestionView":9,"./views/StatisticsView":10,"backbone":11}],3:[function(require,module,exports){
+},{"./views/DoneView":7,"./views/HeadingView":9,"./views/QuestionView":10,"./views/StatisticsView":11,"./views/UserProfileView":12,"backbone":13}],4:[function(require,module,exports){
 var Backbone, Policies, Policy,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1440,7 +1485,7 @@ module.exports = Policies = (function(superClass) {
 })(Backbone.Collection);
 
 
-},{"../models/Policy":5,"backbone":11}],4:[function(require,module,exports){
+},{"../models/Policy":6,"backbone":13}],5:[function(require,module,exports){
 var $, App, Policies;
 
 $ = require('jquery');
@@ -1461,7 +1506,7 @@ $(function() {
 });
 
 
-},{"../data/policies.csv":1,"./App":2,"./collections/Policies":3,"jquery":13}],5:[function(require,module,exports){
+},{"../data/policies.csv":2,"./App":3,"./collections/Policies":4,"jquery":15}],6:[function(require,module,exports){
 var Backbone, Policy,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1486,7 +1531,7 @@ module.exports = Policy = (function(superClass) {
 })(Backbone.Model);
 
 
-},{"backbone":11}],6:[function(require,module,exports){
+},{"backbone":13}],7:[function(require,module,exports){
 var Backbone, DoneView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1523,7 +1568,7 @@ module.exports = DoneView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":11,"underscore":14}],7:[function(require,module,exports){
+},{"backbone":13,"underscore":16}],8:[function(require,module,exports){
 var $, Backbone, ForAgainstView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1648,7 +1693,7 @@ module.exports = ForAgainstView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":11,"underscore":14}],8:[function(require,module,exports){
+},{"backbone":13,"underscore":16}],9:[function(require,module,exports){
 var Backbone, HeadingView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1677,7 +1722,7 @@ module.exports = HeadingView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":11,"underscore":14}],9:[function(require,module,exports){
+},{"backbone":13,"underscore":16}],10:[function(require,module,exports){
 var $, Backbone, QuestionView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1736,7 +1781,7 @@ module.exports = QuestionView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":11,"underscore":14}],10:[function(require,module,exports){
+},{"backbone":13,"underscore":16}],11:[function(require,module,exports){
 var Backbone, ForAgainstView, StatisticsView,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1781,7 +1826,81 @@ module.exports = StatisticsView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"./ForAgainstView":7,"backbone":11}],11:[function(require,module,exports){
+},{"./ForAgainstView":8,"backbone":13}],12:[function(require,module,exports){
+var Backbone, Provinces, UserProfileView, _,
+  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
+
+_ = require('underscore');
+
+Backbone = require('backbone');
+
+Provinces = require('../../app/provinces').all;
+
+module.exports = UserProfileView = (function(superClass) {
+  extend(UserProfileView, superClass);
+
+  function UserProfileView() {
+    return UserProfileView.__super__.constructor.apply(this, arguments);
+  }
+
+  UserProfileView.prototype.tagName = 'form';
+
+  UserProfileView.prototype.className = 'user-profile';
+
+  UserProfileView.prototype.template = _.template("<fieldset class=\"language-code\">\n  <legend>Your language / votre langue</legend>\n  <ul class=\"language-code\">\n    <li>\n      <input id=\"language-code-en\" type=\"radio\" name=\"languageCode\" value=\"en\">\n      <label for=\"language-code-en\">I prefer English</label>\n    </li>\n    <li>\n      <input id=\"language-code-fr\" type=\"radio\" name=\"languageCode\" value=\"en\">\n      <label for=\"language-code-fr\">Je préfère le français</label>\n    </li>\n  </ul>\n</fieldset>\n<fieldset class=\"province-code\" disabled>\n  <legend>Where you live</legend>\n\n  <ul class=\"province-code\">\n    <% provinces.forEach(function(province) { %>\n      <li>\n        <input id=\"province-code-<%- province.code %>\" type=\"radio\" name=\"provinceCode\" value=\"<%- province.code %>\">\n        <label for=\"province-code-<%- province.code %>\"><%- province.en %></label>\n      </li>\n    <% }); %>\n    <li class=\"province-code-null\">\n      <input id=\"province-code-null\" type=\"radio\" name=\"provinceCode\" value=\"\">\n      <label for=\"province-code-null\">I'm not Canadian / I prefer not to say</label>\n    </li>\n  </ul>\n  </label>\n</fieldset>\n<fieldset class=\"actions\" disabled>\n  <button type=\"submit\" class=\"submit\">I'm ready</button>\n</fieldset>\n<div class=\"spinner-overlay\">\n  <div class=\"spinner-loader\">\n  </div>\n</div>");
+
+  UserProfileView.prototype.events = {
+    'change input[name="languageCode"]': '_onChangeLanguageCode',
+    'change input[name="provinceCode"]': '_onChangeProvinceCode',
+    'click button.submit': '_onSubmit'
+  };
+
+  UserProfileView.prototype.render = function() {
+    this.$el.html(this.template({
+      provinces: Provinces
+    }));
+    return this;
+  };
+
+  UserProfileView.prototype._onChangeLanguageCode = function() {
+    return this.$('fieldset.province-code').prop('disabled', false);
+  };
+
+  UserProfileView.prototype._onChangeProvinceCode = function() {
+    return this.$('fieldset.actions').prop('disabled', false);
+  };
+
+  UserProfileView.prototype._onSubmit = function(e) {
+    var profile;
+    e.preventDefault();
+    this.$el.addClass('saving');
+    profile = {
+      languageCode: this.$('input[name="languageCode"]:checked').val(),
+      provinceCode: this.$('input[name="provinceCode"]:checked').val()
+    };
+    return Backbone.ajax({
+      type: 'POST',
+      url: '/user',
+      data: JSON.stringify(profile),
+      contentType: 'application/json',
+      success: (function(_this) {
+        return function() {
+          return _this.trigger('user-set-profile', profile);
+        };
+      })(this),
+      error: function(xhr, textStatus, errorThrown) {
+        return console.log('Error saving profile', textStatus, errorThrown);
+      }
+    });
+  };
+
+  return UserProfileView;
+
+})(Backbone.View);
+
+
+},{"../../app/provinces":1,"backbone":13,"underscore":16}],13:[function(require,module,exports){
 (function (global){
 //     Backbone.js 1.2.1
 
@@ -3659,7 +3778,7 @@ module.exports = StatisticsView = (function(superClass) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"jquery":13,"underscore":12}],12:[function(require,module,exports){
+},{"jquery":15,"underscore":14}],14:[function(require,module,exports){
 //     Underscore.js 1.8.3
 //     http://underscorejs.org
 //     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -5209,7 +5328,7 @@ module.exports = StatisticsView = (function(superClass) {
   }
 }.call(this));
 
-},{}],13:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -14421,9 +14540,9 @@ return jQuery;
 
 }));
 
-},{}],14:[function(require,module,exports){
-arguments[4][12][0].apply(exports,arguments)
-},{"dup":12}]},{},[4])
+},{}],16:[function(require,module,exports){
+arguments[4][14][0].apply(exports,arguments)
+},{"dup":14}]},{},[5])
 
 
 //# sourceMappingURL=index.js.map
