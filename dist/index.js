@@ -31,1323 +31,783 @@ module.exports = {
 module.exports = [
   {
     "id": "1",
-    "category": "Laïcité",
-    "party": "PLQ",
-    "policy": "Faire en sorte que les services de l'État soient strictement donnés et reçus à visage découvert",
-    "PQ": "0.25",
-    "PLQ": "0.25",
-    "CAQ": "0.25",
-    "QS": "0.25"
+    "en": "EN - Faire en sorte que les services de l'État soient strictement donnés et reçus à visage découvert",
+    "fr": "Faire en sorte que les services de l'État soient strictement donnés et reçus à visage découvert",
+    "parties": "PQ,PLQ,CAQ,QS"
   },
   {
     "id": "2",
-    "category": "Laïcité",
-    "party": "PLQ",
-    "policy": "Définir et encadrer les accommodements raisonnables",
-    "PQ": "0.25",
-    "PLQ": "0.25",
-    "CAQ": "0.25",
-    "QS": "0.25"
+    "en": "EN - Définir et encadrer les accommodements raisonnables",
+    "fr": "Définir et encadrer les accommodements raisonnables",
+    "parties": "PQ,PLQ,CAQ,QS"
   },
   {
     "id": "3",
-    "category": "Français",
-    "party": "CAQ",
-    "policy": "Renforcer le rôle et les pouvoirs de l’Office québécois de la langue française",
-    "PQ": "0.33",
-    "PLQ": "",
-    "CAQ": "0.33",
-    "QS": "0.33"
+    "en": "EN - Renforcer le rôle et les pouvoirs de l’Office québécois de la langue française",
+    "fr": "Renforcer le rôle et les pouvoirs de l’Office québécois de la langue française",
+    "parties": "PQ,PLQ,CAQ,QS"
   },
   {
     "id": "4",
-    "category": "Laïcité",
-    "party": "PQ",
-    "policy": "Maintenir le crucifix à l'Assemblée nationale",
-    "PQ": "",
-    "PLQ": "0.5",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Maintenir le crucifix à l'Assemblée nationale",
+    "fr": "Maintenir le crucifix à l'Assemblée nationale",
+    "parties": "PQ,CAQ,QS"
   },
   {
     "id": "5",
-    "category": "Laïcité",
-    "party": "CAQ",
-    "policy": "Interdire le port de signes religieux par des employés de l'État qui disposent d'un pouvoir coercitif",
-    "PQ": "0.33",
-    "PLQ": "",
-    "CAQ": "0.33",
-    "QS": "0.33"
+    "en": "EN - Interdire le port de signes religieux par des employés de l'État qui disposent d'un pouvoir coercitif",
+    "fr": "Interdire le port de signes religieux par des employés de l'État qui disposent d'un pouvoir coercitif",
+    "parties": "PLQ,CAQ"
   },
   {
     "id": "6",
-    "category": "Gouvernance",
-    "party": "PQ",
-    "policy": "Abolir les primes de départ des députés qui quittent en cours de mandat",
-    "PQ": "0.33",
-    "PLQ": "",
-    "CAQ": "0.33",
-    "QS": "0.33"
+    "en": "EN - Abolir les primes de départ des députés qui quittent en cours de mandat",
+    "fr": "Abolir les primes de départ des députés qui quittent en cours de mandat",
+    "parties": "PQ,CAQ,QS"
   },
   {
     "id": "7",
-    "category": "Gouvernance",
-    "party": "PQ",
-    "policy": "S'opposer à l'imposition d'un péage sur le pont Champlain",
-    "PQ": "0.33",
-    "PLQ": "",
-    "CAQ": "0.33",
-    "QS": "0.33"
+    "en": "EN - S'opposer à l'imposition d'un péage sur le pont Champlain",
+    "fr": "S'opposer à l'imposition d'un péage sur le pont Champlain",
+    "parties": "PQ,CAQ,QS"
   },
   {
     "id": "8",
-    "category": "Gouvernance",
-    "party": "QS",
-    "policy": "Améliorer la protection des dénonciateurs au sein de la fonction publique",
-    "PQ": "0.33",
-    "PLQ": "",
-    "CAQ": "0.33",
-    "QS": "0.33"
+    "en": "EN - Améliorer la protection des dénonciateurs au sein de la fonction publique",
+    "fr": "Améliorer la protection des dénonciateurs au sein de la fonction publique",
+    "parties": "PQ,CAQ,QS"
   },
   {
     "id": "9",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Abolir la taxe santé",
-    "PQ": "",
-    "PLQ": "0.33",
-    "CAQ": "0.33",
-    "QS": "0.33"
+    "en": "EN - Abolir la taxe santé",
+    "fr": "Abolir la taxe santé",
+    "parties": "PQ,CAQ,QS"
   },
   {
     "id": "10",
-    "category": "Santé",
-    "party": "CAQ",
-    "policy": "Augmenter le salaire des omnipraticiens afin de les encourager à pratiquer la médicine familiale",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": "0.5"
+    "en": "EN - Augmenter le salaire des omnipraticiens afin de les encourager à pratiquer la médicine familiale",
+    "fr": "Augmenter le salaire des omnipraticiens afin de les encourager à pratiquer la médicine familiale",
+    "parties": "PLQ,CAQ,QS"
   },
   {
     "id": "11",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "Faire la promotion des produits alimentaires québécois afin d’augmenter significativement l'achat local",
-    "PQ": "0.33",
-    "PLQ": "",
-    "CAQ": "0.33",
-    "QS": "0.33"
+    "en": "EN - Faire la promotion des produits alimentaires québécois afin d’augmenter significativement l'achat local",
+    "fr": "Faire la promotion des produits alimentaires québécois afin d’augmenter significativement l'achat local",
+    "parties": "CAQ,QS"
   },
   {
     "id": "12",
-    "category": "Santé",
-    "party": "PQ",
-    "policy": "Légaliser l’aide médicale à mourir pour répondre aux besoins des personnes en fin de vie",
-    "PQ": "0.33",
-    "PLQ": "",
-    "CAQ": "0.33",
-    "QS": "0.33"
+    "en": "EN - Légaliser l’aide médicale à mourir pour répondre aux besoins des personnes en fin de vie",
+    "fr": "Légaliser l’aide médicale à mourir pour répondre aux besoins des personnes en fin de vie",
+    "parties": "PQ,CAQ,QS"
   },
   {
     "id": "13",
-    "category": "Santé",
-    "party": "PLQ",
-    "policy": "Miser davantage sur les infirmières pour améliorer l’accessibilité à des soins de santé",
-    "PQ": "0.33",
-    "PLQ": "0.33",
-    "CAQ": "0.33",
-    "QS": ""
+    "en": "EN - Miser davantage sur les infirmières pour améliorer l’accessibilité à des soins de santé",
+    "fr": "Miser davantage sur les infirmières pour améliorer l’accessibilité à des soins de santé",
+    "parties": "PQ,CAQ,QS"
   },
   {
     "id": "14",
-    "category": "Français",
-    "party": "PQ",
-    "policy": "Interdire le recours aux écoles passerelles afin d’obtenir le droit d’accès à l’école publique anglaise",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Interdire le recours aux écoles passerelles afin d’obtenir le droit d’accès à l’école publique anglaise",
+    "fr": "Interdire le recours aux écoles passerelles afin d’obtenir le droit d’accès à l’école publique anglaise",
+    "parties": "PQ,PLQ,CAQ"
   },
   {
     "id": "15",
-    "category": "Immigration",
-    "party": "PQ",
-    "policy": "Instaurer une nouvelle façon de choisir les immigrants basée sur une déclaration d'intérêt",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Instaurer une nouvelle façon de choisir les immigrants basée sur une déclaration d'intérêt",
+    "fr": "Instaurer une nouvelle façon de choisir les immigrants basée sur une déclaration d'intérêt",
+    "parties": "PQ,CAQ"
   },
   {
     "id": "16",
-    "category": "Immigration",
-    "party": "CAQ",
-    "policy": "Arriver à une entente avec le gouvernement fédéral afin d'obtenir un plus grand contrôle sur le processus d’immigration",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Arriver à une entente avec le gouvernement fédéral afin d'obtenir un plus grand contrôle sur le processus d’immigration",
+    "fr": "Arriver à une entente avec le gouvernement fédéral afin d'obtenir un plus grand contrôle sur le processus d’immigration",
+    "parties": "PQ,CAQ"
   },
   {
     "id": "17",
-    "category": "Immigration",
-    "party": "PQ",
-    "policy": "Investir davantage dans l’intégration et la francisation des immigrants",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Investir davantage dans l’intégration et la francisation des immigrants",
+    "fr": "Investir davantage dans l’intégration et la francisation des immigrants",
+    "parties": "PQ,CAQ"
   },
   {
     "id": "18",
-    "category": "Gouvernance",
-    "party": "PQ",
-    "policy": "Limiter à 2 le nombre de mandats consécutifs du premier ministre",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Limiter à 2 le nombre de mandats consécutifs du premier ministre",
+    "fr": "Limiter à 2 le nombre de mandats consécutifs du premier ministre",
+    "parties": "PQ,CAQ"
   },
   {
     "id": "19",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Atteindre l'équilibre budgétaire en 2015",
-    "PQ": "",
-    "PLQ": "0.5",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Atteindre l'équilibre budgétaire en 2015",
+    "fr": "Atteindre l'équilibre budgétaire en 2015",
+    "parties": "PQ,CAQ"
   },
   {
     "id": "20",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Limiter la hausse des tarifs d'Hydro-Québec au taux d'inflation",
-    "PQ": "",
-    "PLQ": "0.5",
-    "CAQ": "0.5",
-    "QS": ""
-  },
-  {
-    "id": "21",
-    "category": "",
-    "party": "",
-    "policy": "",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Limiter la hausse des tarifs d'Hydro-Québec au taux d'inflation",
+    "fr": "Limiter la hausse des tarifs d'Hydro-Québec au taux d'inflation",
+    "parties": "PLQ,CAQ"
   },
   {
     "id": "22",
-    "category": "Société",
-    "party": "PLQ",
-    "policy": "Indexer les tarifs de services de garde subventionnés en fonction du coût de la vie",
-    "PQ": "",
-    "PLQ": "0.5",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Indexer les tarifs de services de garde subventionnés en fonction du coût de la vie",
+    "fr": "Indexer les tarifs de services de garde subventionnés en fonction du coût de la vie",
+    "parties": "PLQ"
   },
   {
     "id": "23",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "Augmenter la flexibilité des horaires des CPE",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Augmenter la flexibilité des horaires des CPE",
+    "fr": "Augmenter la flexibilité des horaires des CPE",
+    "parties": "PLQ,CAQ"
   },
   {
     "id": "24",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "Rendre l’étiquetage obligatoire pour tous les produits contenant des OGM",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": "0.5"
+    "en": "EN - Rendre l’étiquetage obligatoire pour tous les produits contenant des OGM",
+    "fr": "Rendre l’étiquetage obligatoire pour tous les produits contenant des OGM",
+    "parties": "PQ,CAQ"
   },
   {
     "id": "25",
-    "category": "Santé",
-    "party": "CAQ",
-    "policy": "Réviser le régime d’assurance médicaments afin de miser davantage sur les médicaments génériques, qui sont moins coûteux",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": "0.5"
+    "en": "EN - Réviser le régime d’assurance médicaments afin de miser davantage sur les médicaments génériques, qui sont moins coûteux",
+    "fr": "Réviser le régime d’assurance médicaments afin de miser davantage sur les médicaments génériques, qui sont moins coûteux",
+    "parties": "CAQ,QS"
   },
   {
     "id": "26",
-    "category": "Relations intergouv.",
-    "party": "CAQ",
-    "policy": "Reconnaître la municipalité comme une instance démocratiquement élue et lui conférer plus d'autonomie",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Reconnaître la municipalité comme une instance démocratiquement élue et lui conférer plus d'autonomie",
+    "fr": "Reconnaître la municipalité comme une instance démocratiquement élue et lui conférer plus d'autonomie",
+    "parties": "CAQ,QS"
   },
   {
     "id": "27",
-    "category": "Immigration",
-    "party": "CAQ",
-    "policy": "Limiter le nombre de nouveaux immigrants au Québec à 45 000 par année pour 2 ans",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Limiter le nombre de nouveaux immigrants au Québec à 45 000 par année pour 2 ans",
+    "fr": "Limiter le nombre de nouveaux immigrants au Québec à 45 000 par année pour 2 ans",
+    "parties": "CAQ"
   },
   {
     "id": "28",
-    "category": "Gouvernance",
-    "party": "CAQ",
-    "policy": "Limiter le nombre de mandats consécutifs des maires des municipalités de plus de 5 000 habitants",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Limiter le nombre de mandats consécutifs des maires des municipalités de plus de 5 000 habitants",
+    "fr": "Limiter le nombre de mandats consécutifs des maires des municipalités de plus de 5 000 habitants",
+    "parties": "CAQ"
   },
   {
     "id": "29",
-    "category": "Gouvernance",
-    "party": "CAQ",
-    "policy": "Intenter des procédures judiciaires pour restituer les sommes perçues par des entreprises qui se sont incriminées devant la commission Charbonneau",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Intenter des procédures judiciaires pour restituer les sommes perçues par des entreprises qui se sont incriminées devant la commission Charbonneau",
+    "fr": "Intenter des procédures judiciaires pour restituer les sommes perçues par des entreprises qui se sont incriminées devant la commission Charbonneau",
+    "parties": "PQ,CAQ"
   },
   {
     "id": "30",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Abolir la taxe scolaire",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Abolir la taxe scolaire",
+    "fr": "Abolir la taxe scolaire",
+    "parties": "CAQ"
   },
   {
     "id": "31",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Investir dans la création de zones d’innovation inspirées par la Silicon Valley, en Californie",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Investir dans la création de zones d’innovation inspirées par la Silicon Valley, en Californie",
+    "fr": "Investir dans la création de zones d’innovation inspirées par la Silicon Valley, en Californie",
+    "parties": "CAQ"
   },
   {
     "id": "32",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Décontaminer des terrains pollués sur les rives du fleuve Saint-Laurent pour y accueillir des entreprises",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Décontaminer des terrains pollués sur les rives du fleuve Saint-Laurent pour y accueillir des entreprises",
+    "fr": "Décontaminer des terrains pollués sur les rives du fleuve Saint-Laurent pour y accueillir des entreprises",
+    "parties": "CAQ"
   },
   {
     "id": "33",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Augmenter le pourcentage des placements de la Caisse de dépôt faits dans des entreprises québécoises",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Augmenter le pourcentage des placements de la Caisse de dépôt faits dans des entreprises québécoises",
+    "fr": "Augmenter le pourcentage des placements de la Caisse de dépôt faits dans des entreprises québécoises",
+    "parties": "CAQ"
   },
   {
     "id": "34",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Créer un fonds administré par la Caisse de dépôt qui prendrait des participations minoritaires dans des projets d’exploitation des ressources naturelles",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Créer un fonds administré par la Caisse de dépôt qui prendrait des participations minoritaires dans des projets d’exploitation des ressources naturelles",
+    "fr": "Créer un fonds administré par la Caisse de dépôt qui prendrait des participations minoritaires dans des projets d’exploitation des ressources naturelles",
+    "parties": "PQ,CAQ"
   },
   {
     "id": "35",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Bonifier les incitatifs fiscaux pour les entreprises qui investissent en technologie",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Bonifier les incitatifs fiscaux pour les entreprises qui investissent en technologie",
+    "fr": "Bonifier les incitatifs fiscaux pour les entreprises qui investissent en technologie",
+    "parties": "CAQ"
   },
   {
     "id": "36",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Limiter toute augmentation des impôts, taxes et tarifs au taux d’inflation",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Limiter toute augmentation des impôts, taxes et tarifs au taux d’inflation",
+    "fr": "Limiter toute augmentation des impôts, taxes et tarifs au taux d’inflation",
+    "parties": "CAQ"
   },
   {
     "id": "37",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Geler jusqu’en 2017 le nombre total d’employés du secteur public au niveau de 2013",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Geler jusqu’en 2017 le nombre total d’employés du secteur public au niveau de 2013",
+    "fr": "Geler jusqu’en 2017 le nombre total d’employés du secteur public au niveau de 2013",
+    "parties": "CAQ"
   },
   {
     "id": "38",
-    "category": "Économie",
-    "party": "CAQ",
-    "policy": "Affecter 100 % des redevances générées par l'exploitation des ressources naturelles non renouvelables à la réduction de la dette",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Affecter 100 % des redevances générées par l'exploitation des ressources naturelles non renouvelables à la réduction de la dette",
+    "fr": "Affecter 100 % des redevances générées par l'exploitation des ressources naturelles non renouvelables à la réduction de la dette",
+    "parties": "CAQ"
   },
   {
     "id": "39",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "Faire preuve d’une plus grande sévérité face aux crimes violents contre la personne et pour les criminels de la route",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Faire preuve d’une plus grande sévérité face aux crimes violents contre la personne et pour les criminels de la route",
+    "fr": "Faire preuve d’une plus grande sévérité face aux crimes violents contre la personne et pour les criminels de la route",
+    "parties": "CAQ"
   },
   {
     "id": "40",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "S’assurer que les nouvelles places subventionnées en garderie soient d’abord créées dans les milieux défavorisés",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - S’assurer que les nouvelles places subventionnées en garderie soient d’abord créées dans les milieux défavorisés",
+    "fr": "S’assurer que les nouvelles places subventionnées en garderie soient d’abord créées dans les milieux défavorisés",
+    "parties": "CAQ"
   },
   {
     "id": "41",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "Rendre obligatoire le recours au vote à scrutin secret pour l’accréditation syndicale",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Rendre obligatoire le recours au vote à scrutin secret pour l’accréditation syndicale",
+    "fr": "Rendre obligatoire le recours au vote à scrutin secret pour l’accréditation syndicale",
+    "parties": "CAQ"
   },
   {
     "id": "42",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "Proscrire l'utilisation de cotisations syndicales à des fins autres que la représentation des travailleurs",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Proscrire l'utilisation de cotisations syndicales à des fins autres que la représentation des travailleurs",
+    "fr": "Proscrire l'utilisation de cotisations syndicales à des fins autres que la représentation des travailleurs",
+    "parties": "CAQ"
   },
   {
     "id": "43",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "Exiger des syndicats la divulgation publique de leurs états financiers",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Exiger des syndicats la divulgation publique de leurs états financiers",
+    "fr": "Exiger des syndicats la divulgation publique de leurs états financiers",
+    "parties": "CAQ"
   },
   {
     "id": "44",
-    "category": "Santé",
-    "party": "CAQ",
-    "policy": "Augmenter les budgets consacrés aux soins et au maintien à domicile des personnes agées",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Augmenter les budgets consacrés aux soins et au maintien à domicile des personnes agées",
+    "fr": "Augmenter les budgets consacrés aux soins et au maintien à domicile des personnes agées",
+    "parties": "CAQ"
   },
   {
     "id": "45",
-    "category": "Santé",
-    "party": "CAQ",
-    "policy": "Obliger les médecins de famille à augmenter leur charge de travail afin de combler le manque de soins de première ligne",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Obliger les médecins de famille à augmenter leur charge de travail afin de combler le manque de soins de première ligne",
+    "fr": "Obliger les médecins de famille à augmenter leur charge de travail afin de combler le manque de soins de première ligne",
+    "parties": "CAQ"
   },
   {
     "id": "46",
-    "category": "Santé",
-    "party": "CAQ",
-    "policy": "Abolir les agences de santé et de services sociaux",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Abolir les agences de santé et de services sociaux",
+    "fr": "Abolir les agences de santé et de services sociaux",
+    "parties": "CAQ"
   },
   {
     "id": "47",
-    "category": "Santé",
-    "party": "CAQ",
-    "policy": "Informatiser les dossiers patients",
-    "PQ": "0.25",
-    "PLQ": "0.25",
-    "CAQ": "0.25",
-    "QS": "0.25"
+    "en": "EN - Informatiser les dossiers patients",
+    "fr": "Informatiser les dossiers patients",
+    "parties": "CAQ"
   },
   {
     "id": "48",
-    "category": "Santé",
-    "party": "CAQ",
-    "policy": "Instaurer un projet-pilote qui permettrait aux médecins de travailler à la fois dans les secteurs privé et public",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Instaurer un projet-pilote qui permettrait aux médecins de travailler à la fois dans les secteurs privé et public",
+    "fr": "Instaurer un projet-pilote qui permettrait aux médecins de travailler à la fois dans les secteurs privé et public",
+    "parties": "PQ,PLQ,CAQ,QS"
   },
   {
     "id": "49",
-    "category": "Français",
-    "party": "QS",
-    "policy": "Donner des crédits d'impôt aux PME qui mettent sur pied des programmes de francisation",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Donner des crédits d'impôt aux PME qui mettent sur pied des programmes de francisation",
+    "fr": "Donner des crédits d'impôt aux PME qui mettent sur pied des programmes de francisation",
+    "parties": "CAQ"
   },
   {
     "id": "50",
-    "category": "Français",
-    "party": "QS",
-    "policy": "Bloquer l'accès aux subventions aux entreprises qui sont soumises à la Charte de la langue française, mais qui ne s'y conforment pas",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Bloquer l'accès aux subventions aux entreprises qui sont soumises à la Charte de la langue française, mais qui ne s'y conforment pas",
+    "fr": "Bloquer l'accès aux subventions aux entreprises qui sont soumises à la Charte de la langue française, mais qui ne s'y conforment pas",
+    "parties": "QS"
   },
   {
     "id": "51",
-    "category": "Français",
-    "party": "QS",
-    "policy": "Rendre l'Office québécois de la langue française indépendant du gouvernement en le faisant relever de l'Assemblée nationale",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Rendre l'Office québécois de la langue française indépendant du gouvernement en le faisant relever de l'Assemblée nationale",
+    "fr": "Rendre l'Office québécois de la langue française indépendant du gouvernement en le faisant relever de l'Assemblée nationale",
+    "parties": "QS"
   },
   {
     "id": "52",
-    "category": "Français",
-    "party": "PQ",
-    "policy": "Étendre la loi 101 aux entreprises de 26 à 49 employés",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Étendre la loi 101 aux entreprises de 26 à 49 employés",
+    "fr": "Étendre la loi 101 aux entreprises de 26 à 49 employés",
+    "parties": "QS"
   },
   {
     "id": "53",
-    "category": "Français",
-    "party": "PQ",
-    "policy": "Retirer le statut bilingue aux municipalités et arrondissements qui n'ont plus assez d'habitants anglophones pour remplir cette condition",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Retirer le statut bilingue aux municipalités et arrondissements qui n'ont plus assez d'habitants anglophones pour remplir cette condition",
+    "fr": "Retirer le statut bilingue aux municipalités et arrondissements qui n'ont plus assez d'habitants anglophones pour remplir cette condition",
+    "parties": "PQ"
   },
   {
     "id": "54",
-    "category": "Français",
-    "party": "PQ",
-    "policy": "Instaurer une épreuve uniforme de français pour l'obtention du diplôme d'études secondaires",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Instaurer une épreuve uniforme de français pour l'obtention du diplôme d'études secondaires",
+    "fr": "Instaurer une épreuve uniforme de français pour l'obtention du diplôme d'études secondaires",
+    "parties": "PQ"
   },
   {
     "id": "55",
-    "category": "Transport",
-    "party": "PLQ",
-    "policy": "Améliorer l'offre de services des traversiers pour moderniser le tourisme maritime au Québec",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Améliorer l'offre de services des traversiers pour moderniser le tourisme maritime au Québec",
+    "fr": "Améliorer l'offre de services des traversiers pour moderniser le tourisme maritime au Québec",
+    "parties": "PQ"
   },
   {
     "id": "56",
-    "category": "Transport",
-    "party": "PLQ",
-    "policy": "Utiliser le fleuve Saint-Laurent pour transporter les marchandises de manière plus sécuritaire et écologique",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Utiliser le fleuve Saint-Laurent pour transporter les marchandises de manière plus sécuritaire et écologique",
+    "fr": "Utiliser le fleuve Saint-Laurent pour transporter les marchandises de manière plus sécuritaire et écologique",
+    "parties": "PLQ"
   },
   {
     "id": "57",
-    "category": "Transport",
-    "party": "PLQ",
-    "policy": "Recouvrir en partie l'autoroute Ville-Marie à Montréal pour relier le centre-ville au fleuve, à pied et à vélo",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Recouvrir en partie l'autoroute Ville-Marie à Montréal pour relier le centre-ville au fleuve, à pied et à vélo",
+    "fr": "Recouvrir en partie l'autoroute Ville-Marie à Montréal pour relier le centre-ville au fleuve, à pied et à vélo",
+    "parties": "PLQ"
   },
   {
     "id": "58",
-    "category": "Transport",
-    "party": "PLQ",
-    "policy": "Mettre en place un Bureau de l'offre touristique maritime pour instaurer des partenariats d'affaires public-privé ou privé-privé",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Mettre en place un Bureau de l'offre touristique maritime pour instaurer des partenariats d'affaires public-privé ou privé-privé",
+    "fr": "Mettre en place un Bureau de l'offre touristique maritime pour instaurer des partenariats d'affaires public-privé ou privé-privé",
+    "parties": "PLQ"
   },
   {
     "id": "59",
-    "category": "Transport",
-    "party": "PQ",
-    "policy": "Renforcer le leadership régional et bonifier l'aide au transport collectif en milieu rural",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Renforcer le leadership régional et bonifier l'aide au transport collectif en milieu rural",
+    "fr": "Renforcer le leadership régional et bonifier l'aide au transport collectif en milieu rural",
+    "parties": "PLQ"
   },
   {
     "id": "60",
-    "category": "Transport",
-    "party": "QS",
-    "policy": "Électrifier le réseau de transport en commun",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "0.5"
+    "en": "EN - Électrifier le réseau de transport en commun",
+    "fr": "Électrifier le réseau de transport en commun",
+    "parties": "PQ"
   },
   {
     "id": "61",
-    "category": "Transport",
-    "party": "QS",
-    "policy": "Créer un lien de transport électrique entre Montréal et Québec",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Créer un lien de transport électrique entre Montréal et Québec",
+    "fr": "Créer un lien de transport électrique entre Montréal et Québec",
+    "parties": "PQ,QS"
   },
   {
     "id": "62",
-    "category": "Relations intergouv.",
-    "party": "PQ",
-    "policy": "Créer un livre blanc sur l’avenir du Québec, suivi d’une consultation publique, en vue de la tenue d’un référendum sur la souveraineté",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Créer un livre blanc sur l’avenir du Québec, suivi d’une consultation publique, en vue de la tenue d’un référendum sur la souveraineté",
+    "fr": "Créer un livre blanc sur l’avenir du Québec, suivi d’une consultation publique, en vue de la tenue d’un référendum sur la souveraineté",
+    "parties": "QS"
   },
   {
     "id": "63",
-    "category": "Relations intergouv.",
-    "party": "PQ",
-    "policy": "Faire en sorte que Québec récupère les sommes dépensées par Ottawa dans le secteur de la santé, soit 210 millions de dollars par an",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Faire en sorte que Québec récupère les sommes dépensées par Ottawa dans le secteur de la santé, soit 210 millions de dollars par an",
+    "fr": "Faire en sorte que Québec récupère les sommes dépensées par Ottawa dans le secteur de la santé, soit 210 millions de dollars par an",
+    "parties": "PQ"
   },
   {
     "id": "64",
-    "category": "Relations intergouv.",
-    "party": "PLQ",
-    "policy": "Faire adhérer le Québec à la Constitution canadienne en 2017 pour marquer les 150 ans de la Confédération",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Faire adhérer le Québec à la Constitution canadienne en 2017 pour marquer les 150 ans de la Confédération",
+    "fr": "Faire adhérer le Québec à la Constitution canadienne en 2017 pour marquer les 150 ans de la Confédération",
+    "parties": "PQ"
   },
   {
     "id": "65",
-    "category": "Laïcité",
-    "party": "QS",
-    "policy": "Déplacer le crucifix de l’Assemblée nationale ailleurs dans l’édifice du Parlement",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Déplacer le crucifix de l’Assemblée nationale ailleurs dans l’édifice du Parlement",
+    "fr": "Déplacer le crucifix de l’Assemblée nationale ailleurs dans l’édifice du Parlement",
+    "parties": "PLQ"
   },
   {
     "id": "66",
-    "category": "Laïcité",
-    "party": "QS",
-    "policy": "Exiger la neutralité religieuse et l’absence de prosélytisme des employés de l’État lorsqu'ils dispensent des services",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "0.5"
+    "en": "EN - Exiger la neutralité religieuse et l’absence de prosélytisme des employés de l’État lorsqu'ils dispensent des services",
+    "fr": "Exiger la neutralité religieuse et l’absence de prosélytisme des employés de l’État lorsqu'ils dispensent des services",
+    "parties": "QS"
   },
   {
     "id": "67",
-    "category": "Laïcité",
-    "party": "QS",
-    "policy": "Proscrire la récitation de textes religieux aux conseils municipaux et à l’Assemblée nationale",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Proscrire la récitation de textes religieux aux conseils municipaux et à l’Assemblée nationale",
+    "fr": "Proscrire la récitation de textes religieux aux conseils municipaux et à l’Assemblée nationale",
+    "parties": "PQ,QS"
   },
   {
     "id": "68",
-    "category": "Laïcité",
-    "party": "PQ",
-    "policy": "Interdire le port de signes religieux ostentatoires dans la fonction publique",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Interdire le port de signes religieux ostentatoires dans la fonction publique",
+    "fr": "Interdire le port de signes religieux ostentatoires dans la fonction publique",
+    "parties": "QS"
   },
   {
     "id": "69",
-    "category": "Laïcité",
-    "party": "PLQ",
-    "policy": "Renforcer les règles relatives aux unions pour éliminer les mariages forcés",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Renforcer les règles relatives aux unions pour éliminer les mariages forcés",
+    "fr": "Renforcer les règles relatives aux unions pour éliminer les mariages forcés",
+    "parties": "PQ"
   },
   {
     "id": "70",
-    "category": "Laïcité",
-    "party": "PLQ",
-    "policy": "Mettre en place des ressources destinées aux victimes de violence basée sur l’honneur",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Mettre en place des ressources destinées aux victimes de violence basée sur l’honneur",
+    "fr": "Mettre en place des ressources destinées aux victimes de violence basée sur l’honneur",
+    "parties": "PLQ"
   },
   {
     "id": "71",
-    "category": "Gouvernance",
-    "party": "PQ",
-    "policy": "Tenir le même jour les élections municipales et les élections scolaires",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Tenir le même jour les élections municipales et les élections scolaires",
+    "fr": "Tenir le même jour les élections municipales et les élections scolaires",
+    "parties": "PLQ"
   },
   {
     "id": "72",
-    "category": "Gouvernance",
-    "party": "PQ",
-    "policy": "Créer une agence des infrastructures de transport pour une saine gestion des investissements publics dans les projets routiers",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Créer une agence des infrastructures de transport pour une saine gestion des investissements publics dans les projets routiers",
+    "fr": "Créer une agence des infrastructures de transport pour une saine gestion des investissements publics dans les projets routiers",
+    "parties": "PQ"
   },
   {
     "id": "73",
-    "category": "Gouvernance",
-    "party": "PLQ",
-    "policy": "Rendre accessibles dans Internet les notes de frais des fonctionnaires, députés et ministres",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Rendre accessibles dans Internet les notes de frais des fonctionnaires, députés et ministres",
+    "fr": "Rendre accessibles dans Internet les notes de frais des fonctionnaires, députés et ministres",
+    "parties": "PQ"
   },
   {
     "id": "74",
-    "category": "Gouvernance",
-    "party": "PLQ",
-    "policy": "Exiger que le Vérificateur général mette à jour les finances publiques au déclenchement des élections",
-    "PQ": "",
-    "PLQ": "0.5",
-    "CAQ": "0.5",
-    "QS": ""
+    "en": "EN - Exiger que le Vérificateur général mette à jour les finances publiques au déclenchement des élections",
+    "fr": "Exiger que le Vérificateur général mette à jour les finances publiques au déclenchement des élections",
+    "parties": "PLQ"
   },
   {
     "id": "75",
-    "category": "Économie",
-    "party": "QS",
-    "policy": "Réduire le nombre de crédits d’impôt qui favorisent les plus fortunés",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Réduire le nombre de crédits d’impôt qui favorisent les plus fortunés",
+    "fr": "Réduire le nombre de crédits d’impôt qui favorisent les plus fortunés",
+    "parties": "PLQ,CAQ"
   },
   {
     "id": "76",
-    "category": "Économie",
-    "party": "QS",
-    "policy": "Réintroduire la taxe sur le capital des entreprises financières",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Réintroduire la taxe sur le capital des entreprises financières",
+    "fr": "Réintroduire la taxe sur le capital des entreprises financières",
+    "parties": "QS"
   },
   {
     "id": "77",
-    "category": "Économie",
-    "party": "QS",
-    "policy": "Limiter à 10 % les réductions sur les livres neufs pendant 9 mois pour assurer une équité entre les libraires indépendants et les grandes surfaces",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "0.5"
+    "en": "EN - Limiter à 10 % les réductions sur les livres neufs pendant 9 mois pour assurer une équité entre les libraires indépendants et les grandes surfaces",
+    "fr": "Limiter à 10 % les réductions sur les livres neufs pendant 9 mois pour assurer une équité entre les libraires indépendants et les grandes surfaces",
+    "parties": "QS"
   },
   {
     "id": "78",
-    "category": "Économie",
-    "party": "QS",
-    "policy": "Éliminer l’incorporation des médecins, une économie d'impôt qui prive le fisc de millions de dollars",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Éliminer l’incorporation des médecins, une économie d'impôt qui prive le fisc de millions de dollars",
+    "fr": "Éliminer l’incorporation des médecins, une économie d'impôt qui prive le fisc de millions de dollars",
+    "parties": "PQ,QS"
   },
   {
     "id": "79",
-    "category": "Économie",
-    "party": "QS",
-    "policy": "Augmenter l’impôt des plus riches",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Augmenter l’impôt des plus riches",
+    "fr": "Augmenter l’impôt des plus riches",
+    "parties": "QS"
   },
   {
     "id": "80",
-    "category": "Économie",
-    "party": "QS",
-    "policy": "Augmenter le RRQ pour s'assurer qu'employés et employeurs contribuent aux retraites",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Augmenter le RRQ pour s'assurer qu'employés et employeurs contribuent aux retraites",
+    "fr": "Augmenter le RRQ pour s'assurer qu'employés et employeurs contribuent aux retraites",
+    "parties": "QS"
   },
   {
     "id": "81",
-    "category": "Économie",
-    "party": "QS",
-    "policy": "Épargner collectivement pour que tous les travailleurs reçoivent 60 % de leur salaire à la retraite",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Épargner collectivement pour que tous les travailleurs reçoivent 60 % de leur salaire à la retraite",
+    "fr": "Épargner collectivement pour que tous les travailleurs reçoivent 60 % de leur salaire à la retraite",
+    "parties": "QS"
   },
   {
     "id": "82",
-    "category": "Économie",
-    "party": "QS",
-    "policy": "Geler les tarifs des services publics",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Geler les tarifs des services publics",
+    "fr": "Geler les tarifs des services publics",
+    "parties": "QS"
   },
   {
     "id": "83",
-    "category": "Économie",
-    "party": "PQ",
-    "policy": "Obliger le partage des coûts, à parts égales, entre employeurs et participants actifs des régimes de retraite du secteur public",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Obliger le partage des coûts, à parts égales, entre employeurs et participants actifs des régimes de retraite du secteur public",
+    "fr": "Obliger le partage des coûts, à parts égales, entre employeurs et participants actifs des régimes de retraite du secteur public",
+    "parties": "QS"
   },
   {
     "id": "84",
-    "category": "Économie",
-    "party": "PQ",
-    "policy": "Créer la Banque de développement économique du Québec, qui regrouperait Investissement Québec et les agences régionales de développement économique",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Créer la Banque de développement économique du Québec, qui regrouperait Investissement Québec et les agences régionales de développement économique",
+    "fr": "Créer la Banque de développement économique du Québec, qui regrouperait Investissement Québec et les agences régionales de développement économique",
+    "parties": "PQ"
   },
   {
     "id": "85",
-    "category": "Économie",
-    "party": "PQ",
-    "policy": "Atteindre l'équilibre budgétaire en 2016",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
-  },
-  {
-    "id": "86",
-    "category": "",
-    "party": "",
-    "policy": "",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Atteindre l'équilibre budgétaire en 2016",
+    "fr": "Atteindre l'équilibre budgétaire en 2016",
+    "parties": "PQ"
   },
   {
     "id": "87",
-    "category": "Économie",
-    "party": "PQ",
-    "policy": "Maintenir la taxe santé modulée en fonction des revenus",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Maintenir la taxe santé modulée en fonction des revenus",
+    "fr": "Maintenir la taxe santé modulée en fonction des revenus",
+    "parties": "PQ"
   },
   {
     "id": "88",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Moderniser les infrastructures du secteur de la pêche et les procédés de fabrication des usines de transformation",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Moderniser les infrastructures du secteur de la pêche et les procédés de fabrication des usines de transformation",
+    "fr": "Moderniser les infrastructures du secteur de la pêche et les procédés de fabrication des usines de transformation",
+    "parties": "PQ"
   },
   {
     "id": "89",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Implanter des programmes de formation technique et professionnelle pour faciliter l'accès aux femmes à des métiers non traditionnels",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Implanter des programmes de formation technique et professionnelle pour faciliter l'accès aux femmes à des métiers non traditionnels",
+    "fr": "Implanter des programmes de formation technique et professionnelle pour faciliter l'accès aux femmes à des métiers non traditionnels",
+    "parties": "PLQ"
   },
   {
     "id": "90",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Instaurer un programme qui encourage la représentation féminine dans la haute direction et les conseils d'administration des entreprises cotées en bourse",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Instaurer un programme qui encourage la représentation féminine dans la haute direction et les conseils d'administration des entreprises cotées en bourse",
+    "fr": "Instaurer un programme qui encourage la représentation féminine dans la haute direction et les conseils d'administration des entreprises cotées en bourse",
+    "parties": "PLQ"
   },
   {
     "id": "91",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Diminuer l'impôt sur le revenu pour augmenter la taxe à la consommation",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Diminuer l'impôt sur le revenu pour augmenter la taxe à la consommation",
+    "fr": "Diminuer l'impôt sur le revenu pour augmenter la taxe à la consommation",
+    "parties": "PLQ"
   },
   {
     "id": "92",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Réduire la taxe sur la masse salariale pour rendre la fiscalité des entreprises plus compétitive",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Réduire la taxe sur la masse salariale pour rendre la fiscalité des entreprises plus compétitive",
+    "fr": "Réduire la taxe sur la masse salariale pour rendre la fiscalité des entreprises plus compétitive",
+    "parties": "PLQ"
   },
   {
     "id": "93",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Introduire un crédit d'impôt pour la rénovation domiciliaire",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Introduire un crédit d'impôt pour la rénovation domiciliaire",
+    "fr": "Introduire un crédit d'impôt pour la rénovation domiciliaire",
+    "parties": "PLQ"
   },
   {
     "id": "94",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Dépolitiser l'achat ou la vente d'entreprises québécoises en donnant plus d'autorité aux conseils d'administration",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Dépolitiser l'achat ou la vente d'entreprises québécoises en donnant plus d'autorité aux conseils d'administration",
+    "fr": "Dépolitiser l'achat ou la vente d'entreprises québécoises en donnant plus d'autorité aux conseils d'administration",
+    "parties": "PLQ"
   },
   {
     "id": "95",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Instaurer une déduction fiscale pour toute réserve créée par les exploitants de navires québécois dans le but de moderniser et de réparer leur flotte",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Instaurer une déduction fiscale pour toute réserve créée par les exploitants de navires québécois dans le but de moderniser et de réparer leur flotte",
+    "fr": "Instaurer une déduction fiscale pour toute réserve créée par les exploitants de navires québécois dans le but de moderniser et de réparer leur flotte",
+    "parties": "PLQ"
   },
   {
     "id": "96",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Réviser en profondeur le régime fiscal dans le but d'encourager les particuliers à améliorer leurs revenus (et de le simplifier pour les entreprises)",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Réviser en profondeur le régime fiscal dans le but d'encourager les particuliers à améliorer leurs revenus (et de le simplifier pour les entreprises)",
+    "fr": "Réviser en profondeur le régime fiscal dans le but d'encourager les particuliers à améliorer leurs revenus (et de le simplifier pour les entreprises)",
+    "parties": "PLQ"
   },
   {
     "id": "97",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Mettre en oeuvre une stratégie d'exportation agressive pour tirer avantage des accords de libre-échange avec l'Union européenne et les États-Unis",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Mettre en oeuvre une stratégie d'exportation agressive pour tirer avantage des accords de libre-échange avec l'Union européenne et les États-Unis",
+    "fr": "Mettre en oeuvre une stratégie d'exportation agressive pour tirer avantage des accords de libre-échange avec l'Union européenne et les États-Unis",
+    "parties": "PLQ"
   },
   {
     "id": "98",
-    "category": "Société",
-    "party": "QS",
-    "policy": "Interdire les disparités de traitement relatives aux avantages sociaux en fonction de la date d’embauche",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Interdire les disparités de traitement relatives aux avantages sociaux en fonction de la date d’embauche",
+    "fr": "Interdire les disparités de traitement relatives aux avantages sociaux en fonction de la date d’embauche",
+    "parties": "PLQ"
   },
   {
     "id": "99",
-    "category": "Société",
-    "party": "QS",
-    "policy": "Interdire tout recours à des briseurs de grève",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Interdire tout recours à des briseurs de grève",
+    "fr": "Interdire tout recours à des briseurs de grève",
+    "parties": "QS"
   },
   {
     "id": "100",
-    "category": "Société",
-    "party": "QS",
-    "policy": "Exclure les pensions alimentaires pour enfant du calcul du revenu des femmes quand il s’agit de l’aide sociale, de l’aide financière aux études ou de l’aide juridique",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Exclure les pensions alimentaires pour enfant du calcul du revenu des femmes quand il s’agit de l’aide sociale, de l’aide financière aux études ou de l’aide juridique",
+    "fr": "Exclure les pensions alimentaires pour enfant du calcul du revenu des femmes quand il s’agit de l’aide sociale, de l’aide financière aux études ou de l’aide juridique",
+    "parties": "QS"
   },
   {
     "id": "101",
-    "category": "Société",
-    "party": "QS",
-    "policy": "Réduire la taille de l’échangeur Turcot et lui donner davantage de couloirs réservés au transport en commun",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Réduire la taille de l’échangeur Turcot et lui donner davantage de couloirs réservés au transport en commun",
+    "fr": "Réduire la taille de l’échangeur Turcot et lui donner davantage de couloirs réservés au transport en commun",
+    "parties": "QS"
   },
   {
     "id": "102",
-    "category": "Société",
-    "party": "QS",
-    "policy": "Construire davantage de logements sociaux",
-    "PQ": "0.5",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "0.5"
+    "en": "EN - Construire davantage de logements sociaux",
+    "fr": "Construire davantage de logements sociaux",
+    "parties": "QS"
   },
   {
     "id": "103",
-    "category": "Société",
-    "party": "PQ",
-    "policy": "Créer un «service civique» rémunéré et destiné aux jeunes qui ne sont ni au travail ni aux études",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Créer un «service civique» rémunéré et destiné aux jeunes qui ne sont ni au travail ni aux études",
+    "fr": "Créer un «service civique» rémunéré et destiné aux jeunes qui ne sont ni au travail ni aux études",
+    "parties": "PQ,QS"
   },
   {
     "id": "104",
-    "category": "Société",
-    "party": "PQ",
-    "policy": "Encourager la conciliation travail-famille-études en offrant aux étudiants universitaires des services de garde atypiques",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Encourager la conciliation travail-famille-études en offrant aux étudiants universitaires des services de garde atypiques",
+    "fr": "Encourager la conciliation travail-famille-études en offrant aux étudiants universitaires des services de garde atypiques",
+    "parties": "PQ"
   },
   {
     "id": "105",
-    "category": "Société",
-    "party": "PQ",
-    "policy": "Faire passer à 8 $ par jour les tarifs de services de garde subventionnés en 2014, puis à 9 $ en 2015, et indexer annuellement par la suite",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Faire passer à 8 $ par jour les tarifs de services de garde subventionnés en 2014, puis à 9 $ en 2015, et indexer annuellement par la suite",
+    "fr": "Faire passer à 8 $ par jour les tarifs de services de garde subventionnés en 2014, puis à 9 $ en 2015, et indexer annuellement par la suite",
+    "parties": "PQ"
   },
   {
     "id": "106",
-    "category": "Société",
-    "party": "PQ",
-    "policy": "Prolonger la ligne jaune du métro sur la Rive-Sud de Montréal",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Prolonger la ligne jaune du métro sur la Rive-Sud de Montréal",
+    "fr": "Prolonger la ligne jaune du métro sur la Rive-Sud de Montréal",
+    "parties": "PQ"
   },
   {
     "id": "107",
-    "category": "Société",
-    "party": "PQ",
-    "policy": "Brancher les citoyens de toutes les municipalités du Québec à Internet haute vitesse",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Brancher les citoyens de toutes les municipalités du Québec à Internet haute vitesse",
+    "fr": "Brancher les citoyens de toutes les municipalités du Québec à Internet haute vitesse",
+    "parties": "PQ"
   },
   {
     "id": "108",
-    "category": "Société",
-    "party": "QS",
-    "policy": "Rédiger une constitution québécoise sur les principes fondamentaux et les institutions politiques qui sera soumise à un référendum",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Rédiger une constitution québécoise sur les principes fondamentaux et les institutions politiques qui sera soumise à un référendum",
+    "fr": "Rédiger une constitution québécoise sur les principes fondamentaux et les institutions politiques qui sera soumise à un référendum",
+    "parties": "PQ"
   },
   {
     "id": "109",
-    "category": "Santé",
-    "party": "QS",
-    "policy": "Investir jusqu’à 5 % du budget de recherche et de développement pour la création de nouveaux produits pharmaceutiques",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Investir jusqu’à 5 % du budget de recherche et de développement pour la création de nouveaux produits pharmaceutiques",
+    "fr": "Investir jusqu’à 5 % du budget de recherche et de développement pour la création de nouveaux produits pharmaceutiques",
+    "parties": "QS"
   },
   {
     "id": "110",
-    "category": "Santé",
-    "party": "QS",
-    "policy": "Implanter et exploiter, sous contrôle public, des installations de production de médicaments génériques et de vaccins",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Implanter et exploiter, sous contrôle public, des installations de production de médicaments génériques et de vaccins",
+    "fr": "Implanter et exploiter, sous contrôle public, des installations de production de médicaments génériques et de vaccins",
+    "parties": "QS"
   },
   {
     "id": "111",
-    "category": "Santé",
-    "party": "QS",
-    "policy": "Remplacer l’actuel système à deux vitesses d’assurance médicaments par un système universel d'assurance médicaments",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Remplacer l’actuel système à deux vitesses d’assurance médicaments par un système universel d'assurance médicaments",
+    "fr": "Remplacer l’actuel système à deux vitesses d’assurance médicaments par un système universel d'assurance médicaments",
+    "parties": "QS"
   },
   {
     "id": "112",
-    "category": "Santé",
-    "party": "QS",
-    "policy": "Faire des CLSC une première ligne accessible 24 heures sur 24, 7 jours sur 7",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Faire des CLSC une première ligne accessible 24 heures sur 24, 7 jours sur 7",
+    "fr": "Faire des CLSC une première ligne accessible 24 heures sur 24, 7 jours sur 7",
+    "parties": "QS"
   },
   {
     "id": "113",
-    "category": "Santé",
-    "party": "QS",
-    "policy": "Assurer la gratuité pour tout soin et service médicalement requis",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Assurer la gratuité pour tout soin et service médicalement requis",
+    "fr": "Assurer la gratuité pour tout soin et service médicalement requis",
+    "parties": "QS"
   },
   {
     "id": "114",
-    "category": "",
-    "party": "",
-    "policy": "S’opposer au recours du secteur privé dans les soins et les services à domicile",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - S’opposer au recours du secteur privé dans les soins et les services à domicile",
+    "fr": "S’opposer au recours du secteur privé dans les soins et les services à domicile",
+    "parties": "QS"
   },
   {
     "id": "115",
-    "category": "Santé",
-    "party": "QS",
-    "policy": "Créer des guichets uniques régionaux pour les interventions non urgentes afin de diminuer le temps d'attente dans les urgences",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Créer des guichets uniques régionaux pour les interventions non urgentes afin de diminuer le temps d'attente dans les urgences",
+    "fr": "Créer des guichets uniques régionaux pour les interventions non urgentes afin de diminuer le temps d'attente dans les urgences",
+    "parties": "QS"
   },
   {
     "id": "116",
-    "category": "Santé",
-    "party": "QS",
-    "policy": "Prolonger les heures d'ouverture des salles d'opération et des plateaux de diagnostics pour diminuer l’attente aux urgences",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Prolonger les heures d'ouverture des salles d'opération et des plateaux de diagnostics pour diminuer l’attente aux urgences",
+    "fr": "Prolonger les heures d'ouverture des salles d'opération et des plateaux de diagnostics pour diminuer l’attente aux urgences",
+    "parties": "QS"
   },
   {
     "id": "117",
-    "category": "Santé",
-    "party": "QS",
-    "policy": "Créer de nouvelles places dans les résidences publiques pour les personnes âgées",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": "1"
+    "en": "EN - Créer de nouvelles places dans les résidences publiques pour les personnes âgées",
+    "fr": "Créer de nouvelles places dans les résidences publiques pour les personnes âgées",
+    "parties": "QS"
   },
   {
     "id": "118",
-    "category": "Santé",
-    "party": "PQ",
-    "policy": "Mettre sur pied un régime d'assurance autonomie pour améliorer les services à domicile ou dans les résidences privées pour personnes âgées",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Mettre sur pied un régime d'assurance autonomie pour améliorer les services à domicile ou dans les résidences privées pour personnes âgées",
+    "fr": "Mettre sur pied un régime d'assurance autonomie pour améliorer les services à domicile ou dans les résidences privées pour personnes âgées",
+    "parties": "QS"
   },
   {
     "id": "119",
-    "category": "Santé",
-    "party": "PQ",
-    "policy": "Augmenter le nombre de groupes de médecine familiale",
-    "PQ": "0.5",
-    "PLQ": "0.5",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Augmenter le nombre de groupes de médecine familiale",
+    "fr": "Augmenter le nombre de groupes de médecine familiale",
+    "parties": "PQ"
   },
   {
     "id": "120",
-    "category": "Santé",
-    "party": "PQ",
-    "policy": "Soutenir les proches aidants en reconnaissant leur travail et en offrant des mesures de soutien et de répit",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Soutenir les proches aidants en reconnaissant leur travail et en offrant des mesures de soutien et de répit",
+    "fr": "Soutenir les proches aidants en reconnaissant leur travail et en offrant des mesures de soutien et de répit",
+    "parties": "PQ,PLQ"
   },
   {
     "id": "121",
-    "category": "Santé",
-    "party": "PQ",
-    "policy": "Étaler sur une plus longue période les augmentations de salaire des médecins, initialement prévues pour les 2 prochaines années",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Étaler sur une plus longue période les augmentations de salaire des médecins, initialement prévues pour les 2 prochaines années",
+    "fr": "Étaler sur une plus longue période les augmentations de salaire des médecins, initialement prévues pour les 2 prochaines années",
+    "parties": "PQ"
   },
   {
     "id": "122",
-    "category": "Santé",
-    "party": "PLQ",
-    "policy": "Mettre sur pied un réseau de 50 supercliniques ouvertes 7 jours sur 7 qui offrent une multitude de services pour faciliter l'accès aux médecins de famille",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Mettre sur pied un réseau de 50 supercliniques ouvertes 7 jours sur 7 qui offrent une multitude de services pour faciliter l'accès aux médecins de famille",
+    "fr": "Mettre sur pied un réseau de 50 supercliniques ouvertes 7 jours sur 7 qui offrent une multitude de services pour faciliter l'accès aux médecins de famille",
+    "parties": "PQ"
   },
   {
     "id": "123",
-    "category": "Santé",
-    "party": "PLQ",
-    "policy": "Faire une plus grande place au privé dans le réseau de la santé, notamment pour de petites chirurgies et de l'imagerie",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Faire une plus grande place au privé dans le réseau de la santé, notamment pour de petites chirurgies et de l'imagerie",
+    "fr": "Faire une plus grande place au privé dans le réseau de la santé, notamment pour de petites chirurgies et de l'imagerie",
+    "parties": "PLQ"
   },
   {
     "id": "124",
-    "category": "Culture",
-    "party": "PQ",
-    "policy": "Doter Télé-Québec d’une salle de nouvelles avec des antennes régionales",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Doter Télé-Québec d’une salle de nouvelles avec des antennes régionales",
+    "fr": "Doter Télé-Québec d’une salle de nouvelles avec des antennes régionales",
+    "parties": "PLQ"
   },
   {
     "id": "125",
-    "category": "Société",
-    "party": "CAQ",
-    "policy": "Reconnaître les services de garde comme un service essentiel afin de baliser le droit de grève et de lock-out",
-    "PQ": "",
-    "PLQ": "",
-    "CAQ": "1",
-    "QS": ""
+    "en": "EN - Reconnaître les services de garde comme un service essentiel afin de baliser le droit de grève et de lock-out",
+    "fr": "Reconnaître les services de garde comme un service essentiel afin de baliser le droit de grève et de lock-out",
+    "parties": "PQ"
   },
   {
     "id": "126",
-    "category": "Autres",
-    "party": "PQ",
-    "policy": "Exiger le rapatriement de la part québécoise du budget de l’Agence canadienne de développement international et créer une agence québécoise de coopération et de solidarité internationales",
-    "PQ": "1",
-    "PLQ": "",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Exiger le rapatriement de la part québécoise du budget de l’Agence canadienne de développement international et créer une agence québécoise de coopération et de solidarité internationales",
+    "fr": "Exiger le rapatriement de la part québécoise du budget de l’Agence canadienne de développement international et créer une agence québécoise de coopération et de solidarité internationales",
+    "parties": "CAQ"
   },
   {
     "id": "127",
-    "category": "Autres",
-    "party": "PLQ",
-    "policy": "Forcer la Société des alcools du Québec à faire la promotion des produits québécois",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Forcer la Société des alcools du Québec à faire la promotion des produits québécois",
+    "fr": "Forcer la Société des alcools du Québec à faire la promotion des produits québécois",
+    "parties": "PQ"
   },
   {
     "id": "128",
-    "category": "Autres",
-    "party": "PLQ",
-    "policy": "Modifier la Loi sur les permis d'alcool pour permettre aux supermarchés et aux restaurateurs de vendre des boissons alcoolisées fabriquées au Québec",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Modifier la Loi sur les permis d'alcool pour permettre aux supermarchés et aux restaurateurs de vendre des boissons alcoolisées fabriquées au Québec",
+    "fr": "Modifier la Loi sur les permis d'alcool pour permettre aux supermarchés et aux restaurateurs de vendre des boissons alcoolisées fabriquées au Québec",
+    "parties": "PLQ"
   },
   {
     "id": "129",
-    "category": "Autres",
-    "party": "PLQ",
-    "policy": "Moderniser le Parc olympique de Montréal",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Moderniser le Parc olympique de Montréal",
+    "fr": "Moderniser le Parc olympique de Montréal",
+    "parties": "PLQ"
   },
   {
     "id": "130",
-    "category": "Autres",
-    "party": "PLQ",
-    "policy": "Mettre en place un programme de régulation de l'impôt foncier pour aider les aînés propriétaires d'une résidence à acquitter leurs taxes foncières",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Mettre en place un programme de régulation de l'impôt foncier pour aider les aînés propriétaires d'une résidence à acquitter leurs taxes foncières",
+    "fr": "Mettre en place un programme de régulation de l'impôt foncier pour aider les aînés propriétaires d'une résidence à acquitter leurs taxes foncières",
+    "parties": "PLQ"
   },
   {
     "id": "131",
-    "category": "Transport",
-    "party": "PLQ",
-    "policy": "Instaurer un traversier reliant Montréal à la Rive-Sud",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Instaurer un traversier reliant Montréal à la Rive-Sud",
+    "fr": "Instaurer un traversier reliant Montréal à la Rive-Sud",
+    "parties": "PLQ"
   },
   {
     "id": "132",
-    "category": "Économie",
-    "party": "PLQ",
-    "policy": "Exempter d'impôt le transfert d'entreprises et de fermes aux enfants et aux employés",
-    "PQ": "",
-    "PLQ": "1",
-    "CAQ": "",
-    "QS": ""
+    "en": "EN - Exempter d'impôt le transfert d'entreprises et de fermes aux enfants et aux employés",
+    "fr": "Exempter d'impôt le transfert d'entreprises et de fermes aux enfants et aux employés",
+    "parties": "PLQ"
   }
 ];
 },{}],3:[function(require,module,exports){
@@ -1497,7 +957,9 @@ Policies = require('./collections/Policies');
 $(function() {
   var $main, app, policies;
   $main = $('<div id="main"></div>').appendTo('body');
-  policies = new Policies(require('../data/policies.csv'));
+  policies = new Policies(require('../data/policies.csv'), {
+    parse: true
+  });
   app = new App({
     el: $main,
     policies: policies
@@ -1521,9 +983,18 @@ module.exports = Policy = (function(superClass) {
   }
 
   Policy.prototype.defaults = {
-    category: '',
-    party: '',
-    policy: ''
+    en: '',
+    fr: '',
+    parties: []
+  };
+
+  Policy.prototype.parse = function(json) {
+    return {
+      id: json.id,
+      en: json.en,
+      fr: json.fr,
+      parties: json.parties.split(/,/)
+    };
   };
 
   return Policy;
@@ -1590,7 +1061,7 @@ module.exports = ForAgainstView = (function(superClass) {
 
   ForAgainstView.prototype.templates = {
     main: _.template('<h2>Your choices, by party:</h2>\n<table class="parties">\n  <thead>\n    <tr>\n      <th class="party">Party</th>\n      <th class="against">nay</th>\n      <th class="for">yay</th>\n    </tr>\n  </thead>\n  <tbody>\n    <% parties.forEach(function(party) { %>\n      <tr>\n        <th class="party"><%- party.name %></th>\n        <td class="against">\n          <ul class="policy-list">\n            <%= party.against.map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n        <td class="for">\n          <ul class="policy-list">\n            <%= party["for"].map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n      </li>\n    <% }) %>\n  </tbody>\n</ul>'),
-    policy: _.template('<li class="policy">\n  <a class="policy-marker">&nbsp;</a>\n  <div class="policy-details">\n    <h4 class="policy-policy"><%- policy.get(\'policy\') %></h4>\n    <div class="policy-party">Proposed by <strong><%- policy.get(\'party\') %></strong></div>\n    <% if (policy.betterThanPolicies.length) { %>\n      <div class="policy-better-than">\n        <p>You chose this policy over:</p>\n        <ul>\n          <% policy.betterThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'policy\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n    <% if (policy.worseThanPolicies.length) { %>\n      <div class="policy-worse-than">\n        <p>You disliked this policy compared to:</p>\n        <ul>\n          <% policy.worseThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'policy\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n  </div>\n</li>')
+    policy: _.template('<li class="policy">\n  <a class="policy-marker">&nbsp;</a>\n  <div class="policy-details">\n    <h4 class="policy-policy"><%- policy.get(\'policy\') %></h4>\n    <div class="policy-party">Promised by <strong><%- policy.get(\'parties\').join(\', \') %></strong></div>\n    <% if (policy.betterThanPolicies.length) { %>\n      <div class="policy-better-than">\n        <p>You chose this policy over:</p>\n        <ul>\n          <% policy.betterThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'en\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n    <% if (policy.worseThanPolicies.length) { %>\n      <div class="policy-worse-than">\n        <p>You disliked this policy compared to:</p>\n        <ul>\n          <% policy.worseThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'en\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n  </div>\n</li>')
   };
 
   ForAgainstView.prototype.events = {
@@ -1615,10 +1086,10 @@ module.exports = ForAgainstView = (function(superClass) {
   };
 
   ForAgainstView.prototype.render = function() {
-    var better, html, i, j, len, len1, name, parties, party, partyByName, ref, ref1, worse;
+    var better, html, i, j, k, l, len, len1, len2, len3, name, p, parties, party, partyByName, ref, ref1, ref2, ref3, worse;
     parties = (function() {
       var i, len, ref, results;
-      ref = _.uniq(this.policies.pluck('party')).sort();
+      ref = _.uniq(_.flatten(this.policies.pluck('parties'))).sort();
       results = [];
       for (i = 0, len = ref.length; i < len; i++) {
         name = ref[i];
@@ -1644,8 +1115,16 @@ module.exports = ForAgainstView = (function(superClass) {
       ref1 = ref[j], better = ref1[0], worse = ref1[1];
       better.betterThanPolicies.push(worse);
       worse.worseThanPolicies.push(better);
-      partyByName[better.get('party')]["for"].push(better);
-      partyByName[worse.get('party')].against.push(worse);
+      ref2 = better.get('parties');
+      for (k = 0, len2 = ref2.length; k < len2; k++) {
+        p = ref2[k];
+        partyByName[p]["for"].push(better);
+      }
+      ref3 = worse.get('parties');
+      for (l = 0, len3 = ref3.length; l < len3; l++) {
+        p = ref3[l];
+        partyByName[p].against.push(worse);
+      }
     }
     html = this.templates.main({
       parties: parties,
@@ -1742,7 +1221,7 @@ module.exports = QuestionView = (function(superClass) {
 
   QuestionView.prototype.className = 'question';
 
-  QuestionView.prototype.template = _.template('<button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">\n  <span class="inner">\n    <%- policy1.get(\'policy\') %>\n  </a>\n</button>\n<button class="choice" data-policy-id="<%- policy2.id %>" data-other-policy-id="<%- policy1.id %>">\n  <span class="inner">\n    <%- policy2.get(\'policy\') %>\n  </span>\n</button>');
+  QuestionView.prototype.template = _.template('<button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">\n  <span class="inner">\n    <%- policy1.get(\'en\') %>\n  </a>\n</button>\n<button class="choice" data-policy-id="<%- policy2.id %>" data-other-policy-id="<%- policy1.id %>">\n  <span class="inner">\n    <%- policy2.get(\'en\') %>\n  </span>\n</button>');
 
   QuestionView.prototype.events = {
     'click button': '_onClickButton'

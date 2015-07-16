@@ -40,13 +40,13 @@ module.exports = class ForAgainstView extends Backbone.View
         <a class="policy-marker">&nbsp;</a>
         <div class="policy-details">
           <h4 class="policy-policy"><%- policy.get('policy') %></h4>
-          <div class="policy-party">Proposed by <strong><%- policy.get('party') %></strong></div>
+          <div class="policy-party">Promised by <strong><%- policy.get('parties').join(', ') %></strong></div>
           <% if (policy.betterThanPolicies.length) { %>
             <div class="policy-better-than">
               <p>You chose this policy over:</p>
               <ul>
                 <% policy.betterThanPolicies.forEach(function(otherPolicy) { %>
-                  <li><%- otherPolicy.get('policy') %></li>
+                  <li><%- otherPolicy.get('en') %></li>
                 <% }) %>
               </ul>
             </div>
@@ -56,7 +56,7 @@ module.exports = class ForAgainstView extends Backbone.View
               <p>You disliked this policy compared to:</p>
               <ul>
                 <% policy.worseThanPolicies.forEach(function(otherPolicy) { %>
-                  <li><%- otherPolicy.get('policy') %></li>
+                  <li><%- otherPolicy.get('en') %></li>
                 <% }) %>
               </ul>
             </div>
@@ -86,7 +86,7 @@ module.exports = class ForAgainstView extends Backbone.View
     #       for: [ policy, policy, policy, ... ]
     #       against: [ policy, policy, policy, ... ]
     #     }
-    parties = for name in _.uniq(@policies.pluck('party')).sort()
+    parties = for name in _.uniq(_.flatten(@policies.pluck('parties'))).sort()
       name: name
       against: [] # what the _user_ is against
       for: []     # what the _user_ is for
@@ -102,8 +102,8 @@ module.exports = class ForAgainstView extends Backbone.View
       better.betterThanPolicies.push(worse)
       worse.worseThanPolicies.push(better)
 
-      partyByName[better.get('party')].for.push(better)
-      partyByName[worse.get('party')].against.push(worse)
+      partyByName[p].for.push(better) for p in better.get('parties')
+      partyByName[p].against.push(worse) for p in worse.get('parties')
 
     html = @templates.main
       parties: parties

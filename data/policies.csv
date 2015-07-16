@@ -1,133 +1,131 @@
-id,category,party,policy,PQ,PLQ,CAQ,QS
-1,Laïcité,PLQ,Faire en sorte que les services de l'État soient strictement donnés et reçus à visage découvert,0.25,0.25,0.25,0.25
-2,Laïcité,PLQ,Définir et encadrer les accommodements raisonnables,0.25,0.25,0.25,0.25
-3,Français,CAQ,Renforcer le rôle et les pouvoirs de l’Office québécois de la langue française,0.33,,0.33,0.33
-4,Laïcité,PQ,Maintenir le crucifix à l'Assemblée nationale,,0.5,0.5,
-5,Laïcité,CAQ,Interdire le port de signes religieux par des employés de l'État qui disposent d'un pouvoir coercitif,0.33,,0.33,0.33
-6,Gouvernance,PQ,Abolir les primes de départ des députés qui quittent en cours de mandat,0.33,,0.33,0.33
-7,Gouvernance,PQ,S'opposer à l'imposition d'un péage sur le pont Champlain,0.33,,0.33,0.33
-8,Gouvernance,QS,Améliorer la protection des dénonciateurs au sein de la fonction publique,0.33,,0.33,0.33
-9,Économie,PLQ,Abolir la taxe santé,,0.33,0.33,0.33
-10,Santé,CAQ,Augmenter le salaire des omnipraticiens afin de les encourager à pratiquer la médicine familiale,,,0.5,0.5
-11,Société,CAQ,Faire la promotion des produits alimentaires québécois afin d’augmenter significativement l'achat local,0.33,,0.33,0.33
-12,Santé,PQ,Légaliser l’aide médicale à mourir pour répondre aux besoins des personnes en fin de vie,0.33,,0.33,0.33
-13,Santé,PLQ,Miser davantage sur les infirmières pour améliorer l’accessibilité à des soins de santé,0.33,0.33,0.33,
-14,Français,PQ,Interdire le recours aux écoles passerelles afin d’obtenir le droit d’accès à l’école publique anglaise,0.5,,0.5,
-15,Immigration,PQ,Instaurer une nouvelle façon de choisir les immigrants basée sur une déclaration d'intérêt,0.5,,0.5,
-16,Immigration,CAQ,Arriver à une entente avec le gouvernement fédéral afin d'obtenir un plus grand contrôle sur le processus d’immigration,0.5,,0.5,
-17,Immigration,PQ,Investir davantage dans l’intégration et la francisation des immigrants,0.5,,0.5,
-18,Gouvernance,PQ,Limiter à 2 le nombre de mandats consécutifs du premier ministre,0.5,,0.5,
-19,Économie,PLQ,Atteindre l'équilibre budgétaire en 2015,,0.5,0.5,
-20,Économie,PLQ,Limiter la hausse des tarifs d'Hydro-Québec au taux d'inflation,,0.5,0.5,
-21,,,,,,,
-22,Société,PLQ,Indexer les tarifs de services de garde subventionnés en fonction du coût de la vie,,0.5,0.5,
-23,Société,CAQ,Augmenter la flexibilité des horaires des CPE,0.5,,0.5,
-24,Société,CAQ,Rendre l’étiquetage obligatoire pour tous les produits contenant des OGM,,,0.5,0.5
-25,Santé,CAQ,"Réviser le régime d’assurance médicaments afin de miser davantage sur les médicaments génériques, qui sont moins coûteux",,,0.5,0.5
-26,Relations intergouv.,CAQ,Reconnaître la municipalité comme une instance démocratiquement élue et lui conférer plus d'autonomie,,,1,
-27,Immigration,CAQ,Limiter le nombre de nouveaux immigrants au Québec à 45 000 par année pour 2 ans,,,1,
-28,Gouvernance,CAQ,Limiter le nombre de mandats consécutifs des maires des municipalités de plus de 5 000 habitants,0.5,,0.5,
-29,Gouvernance,CAQ,Intenter des procédures judiciaires pour restituer les sommes perçues par des entreprises qui se sont incriminées devant la commission Charbonneau,,,1,
-30,Économie,CAQ,Abolir la taxe scolaire,,,1,
-31,Économie,CAQ,"Investir dans la création de zones d’innovation inspirées par la Silicon Valley, en Californie",,,1,
-32,Économie,CAQ,Décontaminer des terrains pollués sur les rives du fleuve Saint-Laurent pour y accueillir des entreprises,,,1,
-33,Économie,CAQ,Augmenter le pourcentage des placements de la Caisse de dépôt faits dans des entreprises québécoises,0.5,,0.5,
-34,Économie,CAQ,Créer un fonds administré par la Caisse de dépôt qui prendrait des participations minoritaires dans des projets d’exploitation des ressources naturelles,,,1,
-35,Économie,CAQ,Bonifier les incitatifs fiscaux pour les entreprises qui investissent en technologie,,,1,
-36,Économie,CAQ,"Limiter toute augmentation des impôts, taxes et tarifs au taux d’inflation",,,1,
-37,Économie,CAQ,Geler jusqu’en 2017 le nombre total d’employés du secteur public au niveau de 2013,,,1,
-38,Économie,CAQ,Affecter 100 % des redevances générées par l'exploitation des ressources naturelles non renouvelables à la réduction de la dette,,,1,
-39,Société,CAQ,Faire preuve d’une plus grande sévérité face aux crimes violents contre la personne et pour les criminels de la route,,,1,
-40,Société,CAQ,S’assurer que les nouvelles places subventionnées en garderie soient d’abord créées dans les milieux défavorisés,,,1,
-41,Société,CAQ,Rendre obligatoire le recours au vote à scrutin secret pour l’accréditation syndicale,,,1,
-42,Société,CAQ,Proscrire l'utilisation de cotisations syndicales à des fins autres que la représentation des travailleurs,,,1,
-43,Société,CAQ,Exiger des syndicats la divulgation publique de leurs états financiers,,,1,
-44,Santé,CAQ,Augmenter les budgets consacrés aux soins et au maintien à domicile des personnes agées,,,1,
-45,Santé,CAQ,Obliger les médecins de famille à augmenter leur charge de travail afin de combler le manque de soins de première ligne,,,1,
-46,Santé,CAQ,Abolir les agences de santé et de services sociaux,,,1,
-47,Santé,CAQ,Informatiser les dossiers patients,0.25,0.25,0.25,0.25
-48,Santé,CAQ,Instaurer un projet-pilote qui permettrait aux médecins de travailler à la fois dans les secteurs privé et public,,,1,
-49,Français,QS,Donner des crédits d'impôt aux PME qui mettent sur pied des programmes de francisation,,,,1
-50,Français,QS,"Bloquer l'accès aux subventions aux entreprises qui sont soumises à la Charte de la langue française, mais qui ne s'y conforment pas",,,,1
-51,Français,QS,Rendre l'Office québécois de la langue française indépendant du gouvernement en le faisant relever de l'Assemblée nationale,,,,1
-52,Français,PQ,Étendre la loi 101 aux entreprises de 26 à 49 employés,1,,,
-53,Français,PQ,Retirer le statut bilingue aux municipalités et arrondissements qui n'ont plus assez d'habitants anglophones pour remplir cette condition,1,,,
-54,Français,PQ,Instaurer une épreuve uniforme de français pour l'obtention du diplôme d'études secondaires,1,,,
-55,Transport,PLQ,Améliorer l'offre de services des traversiers pour moderniser le tourisme maritime au Québec,,1,,
-56,Transport,PLQ,Utiliser le fleuve Saint-Laurent pour transporter les marchandises de manière plus sécuritaire et écologique,,1,,
-57,Transport,PLQ,"Recouvrir en partie l'autoroute Ville-Marie à Montréal pour relier le centre-ville au fleuve, à pied et à vélo",,1,,
-58,Transport,PLQ,Mettre en place un Bureau de l'offre touristique maritime pour instaurer des partenariats d'affaires public-privé ou privé-privé,,1,,
-59,Transport,PQ,Renforcer le leadership régional et bonifier l'aide au transport collectif en milieu rural,1,,,
-60,Transport,QS,Électrifier le réseau de transport en commun,0.5,,,0.5
-61,Transport,QS,Créer un lien de transport électrique entre Montréal et Québec,,,,1
-62,Relations intergouv.,PQ,"Créer un livre blanc sur l’avenir du Québec, suivi d’une consultation publique, en vue de la tenue d’un référendum sur la souveraineté",1,,,
-63,Relations intergouv.,PQ,"Faire en sorte que Québec récupère les sommes dépensées par Ottawa dans le secteur de la santé, soit 210 millions de dollars par an",1,,,
-64,Relations intergouv.,PLQ,Faire adhérer le Québec à la Constitution canadienne en 2017 pour marquer les 150 ans de la Confédération,,1,,
-65,Laïcité,QS,Déplacer le crucifix de l’Assemblée nationale ailleurs dans l’édifice du Parlement,,,,1
-66,Laïcité,QS,Exiger la neutralité religieuse et l’absence de prosélytisme des employés de l’État lorsqu'ils dispensent des services,0.5,,,0.5
-67,Laïcité,QS,Proscrire la récitation de textes religieux aux conseils municipaux et à l’Assemblée nationale,,,,1
-68,Laïcité,PQ,Interdire le port de signes religieux ostentatoires dans la fonction publique,1,,,
-69,Laïcité,PLQ,Renforcer les règles relatives aux unions pour éliminer les mariages forcés,,1,,
-70,Laïcité,PLQ,Mettre en place des ressources destinées aux victimes de violence basée sur l’honneur,,1,,
-71,Gouvernance,PQ,Tenir le même jour les élections municipales et les élections scolaires,1,,,
-72,Gouvernance,PQ,Créer une agence des infrastructures de transport pour une saine gestion des investissements publics dans les projets routiers,1,,,
-73,Gouvernance,PLQ,"Rendre accessibles dans Internet les notes de frais des fonctionnaires, députés et ministres",,1,,
-74,Gouvernance,PLQ,Exiger que le Vérificateur général mette à jour les finances publiques au déclenchement des élections,,0.5,0.5,
-75,Économie,QS,Réduire le nombre de crédits d’impôt qui favorisent les plus fortunés,,,,1
-76,Économie,QS,Réintroduire la taxe sur le capital des entreprises financières,,,,1
-77,Économie,QS,Limiter à 10 % les réductions sur les livres neufs pendant 9 mois pour assurer une équité entre les libraires indépendants et les grandes surfaces,0.5,,,0.5
-78,Économie,QS,"Éliminer l’incorporation des médecins, une économie d'impôt qui prive le fisc de millions de dollars",,,,1
-79,Économie,QS,Augmenter l’impôt des plus riches,,,,1
-80,Économie,QS,Augmenter le RRQ pour s'assurer qu'employés et employeurs contribuent aux retraites,,,,1
-81,Économie,QS,Épargner collectivement pour que tous les travailleurs reçoivent 60 % de leur salaire à la retraite,,,,1
-82,Économie,QS,Geler les tarifs des services publics,,,,1
-83,Économie,PQ,"Obliger le partage des coûts, à parts égales, entre employeurs et participants actifs des régimes de retraite du secteur public",1,,,
-84,Économie,PQ,"Créer la Banque de développement économique du Québec, qui regrouperait Investissement Québec et les agences régionales de développement économique",1,,,
-85,Économie,PQ,Atteindre l'équilibre budgétaire en 2016,1,,,
-86,,,,,,,
-87,Économie,PQ,Maintenir la taxe santé modulée en fonction des revenus,1,,,
-88,Économie,PLQ,Moderniser les infrastructures du secteur de la pêche et les procédés de fabrication des usines de transformation,,1,,
-89,Économie,PLQ,Implanter des programmes de formation technique et professionnelle pour faciliter l'accès aux femmes à des métiers non traditionnels,,1,,
-90,Économie,PLQ,Instaurer un programme qui encourage la représentation féminine dans la haute direction et les conseils d'administration des entreprises cotées en bourse,,1,,
-91,Économie,PLQ,Diminuer l'impôt sur le revenu pour augmenter la taxe à la consommation,,1,,
-92,Économie,PLQ,Réduire la taxe sur la masse salariale pour rendre la fiscalité des entreprises plus compétitive,,1,,
-93,Économie,PLQ,Introduire un crédit d'impôt pour la rénovation domiciliaire,,1,,
-94,Économie,PLQ,Dépolitiser l'achat ou la vente d'entreprises québécoises en donnant plus d'autorité aux conseils d'administration,,1,,
-95,Économie,PLQ,Instaurer une déduction fiscale pour toute réserve créée par les exploitants de navires québécois dans le but de moderniser et de réparer leur flotte,,1,,
-96,Économie,PLQ,Réviser en profondeur le régime fiscal dans le but d'encourager les particuliers à améliorer leurs revenus (et de le simplifier pour les entreprises),,1,,
-97,Économie,PLQ,Mettre en oeuvre une stratégie d'exportation agressive pour tirer avantage des accords de libre-échange avec l'Union européenne et les États-Unis,,1,,
-98,Société,QS,Interdire les disparités de traitement relatives aux avantages sociaux en fonction de la date d’embauche,,,,1
-99,Société,QS,Interdire tout recours à des briseurs de grève,,,,1
-100,Société,QS,"Exclure les pensions alimentaires pour enfant du calcul du revenu des femmes quand il s’agit de l’aide sociale, de l’aide financière aux études ou de l’aide juridique",,,,1
-101,Société,QS,Réduire la taille de l’échangeur Turcot et lui donner davantage de couloirs réservés au transport en commun,,,,1
-102,Société,QS,Construire davantage de logements sociaux,0.5,,,0.5
-103,Société,PQ,Créer un «service civique» rémunéré et destiné aux jeunes qui ne sont ni au travail ni aux études,1,,,
-104,Société,PQ,Encourager la conciliation travail-famille-études en offrant aux étudiants universitaires des services de garde atypiques,1,,,
-105,Société,PQ,"Faire passer à 8 $ par jour les tarifs de services de garde subventionnés en 2014, puis à 9 $ en 2015, et indexer annuellement par la suite",1,,,
-106,Société,PQ,Prolonger la ligne jaune du métro sur la Rive-Sud de Montréal,1,,,
-107,Société,PQ,Brancher les citoyens de toutes les municipalités du Québec à Internet haute vitesse,1,,,
-108,Société,QS,Rédiger une constitution québécoise sur les principes fondamentaux et les institutions politiques qui sera soumise à un référendum,,,,1
-109,Santé,QS,Investir jusqu’à 5 % du budget de recherche et de développement pour la création de nouveaux produits pharmaceutiques,,,,1
-110,Santé,QS,"Implanter et exploiter, sous contrôle public, des installations de production de médicaments génériques et de vaccins",,,,1
-111,Santé,QS,Remplacer l’actuel système à deux vitesses d’assurance médicaments par un système universel d'assurance médicaments,,,,1
-112,Santé,QS,"Faire des CLSC une première ligne accessible 24 heures sur 24, 7 jours sur 7",,,,1
-113,Santé,QS,Assurer la gratuité pour tout soin et service médicalement requis,,,,1
-114,,,S’opposer au recours du secteur privé dans les soins et les services à domicile,,,,1
-115,Santé,QS,Créer des guichets uniques régionaux pour les interventions non urgentes afin de diminuer le temps d'attente dans les urgences,,,,1
-116,Santé,QS,Prolonger les heures d'ouverture des salles d'opération et des plateaux de diagnostics pour diminuer l’attente aux urgences,,,,1
-117,Santé,QS,Créer de nouvelles places dans les résidences publiques pour les personnes âgées,,,,1
-118,Santé,PQ,Mettre sur pied un régime d'assurance autonomie pour améliorer les services à domicile ou dans les résidences privées pour personnes âgées,1,,,
-119,Santé,PQ,Augmenter le nombre de groupes de médecine familiale,0.5,0.5,,
-120,Santé,PQ,Soutenir les proches aidants en reconnaissant leur travail et en offrant des mesures de soutien et de répit,1,,,
-121,Santé,PQ,"Étaler sur une plus longue période les augmentations de salaire des médecins, initialement prévues pour les 2 prochaines années",1,,,
-122,Santé,PLQ,Mettre sur pied un réseau de 50 supercliniques ouvertes 7 jours sur 7 qui offrent une multitude de services pour faciliter l'accès aux médecins de famille,,1,,
-123,Santé,PLQ,"Faire une plus grande place au privé dans le réseau de la santé, notamment pour de petites chirurgies et de l'imagerie",,1,,
-124,Culture,PQ,Doter Télé-Québec d’une salle de nouvelles avec des antennes régionales,1,,,
-125,Société,CAQ,Reconnaître les services de garde comme un service essentiel afin de baliser le droit de grève et de lock-out,,,1,
-126,Autres,PQ,Exiger le rapatriement de la part québécoise du budget de l’Agence canadienne de développement international et créer une agence québécoise de coopération et de solidarité internationales,1,,,
-127,Autres,PLQ,Forcer la Société des alcools du Québec à faire la promotion des produits québécois,,1,,
-128,Autres,PLQ,Modifier la Loi sur les permis d'alcool pour permettre aux supermarchés et aux restaurateurs de vendre des boissons alcoolisées fabriquées au Québec,,1,,
-129,Autres,PLQ,Moderniser le Parc olympique de Montréal,,1,,
-130,Autres,PLQ,Mettre en place un programme de régulation de l'impôt foncier pour aider les aînés propriétaires d'une résidence à acquitter leurs taxes foncières,,1,,
-131,Transport,PLQ,Instaurer un traversier reliant Montréal à la Rive-Sud,,1,,
-132,Économie,PLQ,Exempter d'impôt le transfert d'entreprises et de fermes aux enfants et aux employés,,1,,
+id,en,fr,parties
+1,EN - Faire en sorte que les services de l'État soient strictement donnés et reçus à visage découvert,Faire en sorte que les services de l'État soient strictement donnés et reçus à visage découvert,"PQ,PLQ,CAQ,QS"
+2,EN - Définir et encadrer les accommodements raisonnables,Définir et encadrer les accommodements raisonnables,"PQ,PLQ,CAQ,QS"
+3,EN - Renforcer le rôle et les pouvoirs de l’Office québécois de la langue française,Renforcer le rôle et les pouvoirs de l’Office québécois de la langue française,"PQ,PLQ,CAQ,QS"
+4,EN - Maintenir le crucifix à l'Assemblée nationale,Maintenir le crucifix à l'Assemblée nationale,"PQ,CAQ,QS"
+5,EN - Interdire le port de signes religieux par des employés de l'État qui disposent d'un pouvoir coercitif,Interdire le port de signes religieux par des employés de l'État qui disposent d'un pouvoir coercitif,"PLQ,CAQ"
+6,EN - Abolir les primes de départ des députés qui quittent en cours de mandat,Abolir les primes de départ des députés qui quittent en cours de mandat,"PQ,CAQ,QS"
+7,EN - S'opposer à l'imposition d'un péage sur le pont Champlain,S'opposer à l'imposition d'un péage sur le pont Champlain,"PQ,CAQ,QS"
+8,EN - Améliorer la protection des dénonciateurs au sein de la fonction publique,Améliorer la protection des dénonciateurs au sein de la fonction publique,"PQ,CAQ,QS"
+9,EN - Abolir la taxe santé,Abolir la taxe santé,"PQ,CAQ,QS"
+10,EN - Augmenter le salaire des omnipraticiens afin de les encourager à pratiquer la médicine familiale,Augmenter le salaire des omnipraticiens afin de les encourager à pratiquer la médicine familiale,"PLQ,CAQ,QS"
+11,EN - Faire la promotion des produits alimentaires québécois afin d’augmenter significativement l'achat local,Faire la promotion des produits alimentaires québécois afin d’augmenter significativement l'achat local,"CAQ,QS"
+12,EN - Légaliser l’aide médicale à mourir pour répondre aux besoins des personnes en fin de vie,Légaliser l’aide médicale à mourir pour répondre aux besoins des personnes en fin de vie,"PQ,CAQ,QS"
+13,EN - Miser davantage sur les infirmières pour améliorer l’accessibilité à des soins de santé,Miser davantage sur les infirmières pour améliorer l’accessibilité à des soins de santé,"PQ,CAQ,QS"
+14,EN - Interdire le recours aux écoles passerelles afin d’obtenir le droit d’accès à l’école publique anglaise,Interdire le recours aux écoles passerelles afin d’obtenir le droit d’accès à l’école publique anglaise,"PQ,PLQ,CAQ"
+15,EN - Instaurer une nouvelle façon de choisir les immigrants basée sur une déclaration d'intérêt,Instaurer une nouvelle façon de choisir les immigrants basée sur une déclaration d'intérêt,"PQ,CAQ"
+16,EN - Arriver à une entente avec le gouvernement fédéral afin d'obtenir un plus grand contrôle sur le processus d’immigration,Arriver à une entente avec le gouvernement fédéral afin d'obtenir un plus grand contrôle sur le processus d’immigration,"PQ,CAQ"
+17,EN - Investir davantage dans l’intégration et la francisation des immigrants,Investir davantage dans l’intégration et la francisation des immigrants,"PQ,CAQ"
+18,EN - Limiter à 2 le nombre de mandats consécutifs du premier ministre,Limiter à 2 le nombre de mandats consécutifs du premier ministre,"PQ,CAQ"
+19,EN - Atteindre l'équilibre budgétaire en 2015,Atteindre l'équilibre budgétaire en 2015,"PQ,CAQ"
+20,EN - Limiter la hausse des tarifs d'Hydro-Québec au taux d'inflation,Limiter la hausse des tarifs d'Hydro-Québec au taux d'inflation,"PLQ,CAQ"
+22,EN - Indexer les tarifs de services de garde subventionnés en fonction du coût de la vie,Indexer les tarifs de services de garde subventionnés en fonction du coût de la vie,PLQ
+23,EN - Augmenter la flexibilité des horaires des CPE,Augmenter la flexibilité des horaires des CPE,"PLQ,CAQ"
+24,EN - Rendre l’étiquetage obligatoire pour tous les produits contenant des OGM,Rendre l’étiquetage obligatoire pour tous les produits contenant des OGM,"PQ,CAQ"
+25,"EN - Réviser le régime d’assurance médicaments afin de miser davantage sur les médicaments génériques, qui sont moins coûteux","Réviser le régime d’assurance médicaments afin de miser davantage sur les médicaments génériques, qui sont moins coûteux","CAQ,QS"
+26,EN - Reconnaître la municipalité comme une instance démocratiquement élue et lui conférer plus d'autonomie,Reconnaître la municipalité comme une instance démocratiquement élue et lui conférer plus d'autonomie,"CAQ,QS"
+27,EN - Limiter le nombre de nouveaux immigrants au Québec à 45 000 par année pour 2 ans,Limiter le nombre de nouveaux immigrants au Québec à 45 000 par année pour 2 ans,CAQ
+28,EN - Limiter le nombre de mandats consécutifs des maires des municipalités de plus de 5 000 habitants,Limiter le nombre de mandats consécutifs des maires des municipalités de plus de 5 000 habitants,CAQ
+29,EN - Intenter des procédures judiciaires pour restituer les sommes perçues par des entreprises qui se sont incriminées devant la commission Charbonneau,Intenter des procédures judiciaires pour restituer les sommes perçues par des entreprises qui se sont incriminées devant la commission Charbonneau,"PQ,CAQ"
+30,EN - Abolir la taxe scolaire,Abolir la taxe scolaire,CAQ
+31,"EN - Investir dans la création de zones d’innovation inspirées par la Silicon Valley, en Californie","Investir dans la création de zones d’innovation inspirées par la Silicon Valley, en Californie",CAQ
+32,EN - Décontaminer des terrains pollués sur les rives du fleuve Saint-Laurent pour y accueillir des entreprises,Décontaminer des terrains pollués sur les rives du fleuve Saint-Laurent pour y accueillir des entreprises,CAQ
+33,EN - Augmenter le pourcentage des placements de la Caisse de dépôt faits dans des entreprises québécoises,Augmenter le pourcentage des placements de la Caisse de dépôt faits dans des entreprises québécoises,CAQ
+34,EN - Créer un fonds administré par la Caisse de dépôt qui prendrait des participations minoritaires dans des projets d’exploitation des ressources naturelles,Créer un fonds administré par la Caisse de dépôt qui prendrait des participations minoritaires dans des projets d’exploitation des ressources naturelles,"PQ,CAQ"
+35,EN - Bonifier les incitatifs fiscaux pour les entreprises qui investissent en technologie,Bonifier les incitatifs fiscaux pour les entreprises qui investissent en technologie,CAQ
+36,"EN - Limiter toute augmentation des impôts, taxes et tarifs au taux d’inflation","Limiter toute augmentation des impôts, taxes et tarifs au taux d’inflation",CAQ
+37,EN - Geler jusqu’en 2017 le nombre total d’employés du secteur public au niveau de 2013,Geler jusqu’en 2017 le nombre total d’employés du secteur public au niveau de 2013,CAQ
+38,EN - Affecter 100 % des redevances générées par l'exploitation des ressources naturelles non renouvelables à la réduction de la dette,Affecter 100 % des redevances générées par l'exploitation des ressources naturelles non renouvelables à la réduction de la dette,CAQ
+39,EN - Faire preuve d’une plus grande sévérité face aux crimes violents contre la personne et pour les criminels de la route,Faire preuve d’une plus grande sévérité face aux crimes violents contre la personne et pour les criminels de la route,CAQ
+40,EN - S’assurer que les nouvelles places subventionnées en garderie soient d’abord créées dans les milieux défavorisés,S’assurer que les nouvelles places subventionnées en garderie soient d’abord créées dans les milieux défavorisés,CAQ
+41,EN - Rendre obligatoire le recours au vote à scrutin secret pour l’accréditation syndicale,Rendre obligatoire le recours au vote à scrutin secret pour l’accréditation syndicale,CAQ
+42,EN - Proscrire l'utilisation de cotisations syndicales à des fins autres que la représentation des travailleurs,Proscrire l'utilisation de cotisations syndicales à des fins autres que la représentation des travailleurs,CAQ
+43,EN - Exiger des syndicats la divulgation publique de leurs états financiers,Exiger des syndicats la divulgation publique de leurs états financiers,CAQ
+44,EN - Augmenter les budgets consacrés aux soins et au maintien à domicile des personnes agées,Augmenter les budgets consacrés aux soins et au maintien à domicile des personnes agées,CAQ
+45,EN - Obliger les médecins de famille à augmenter leur charge de travail afin de combler le manque de soins de première ligne,Obliger les médecins de famille à augmenter leur charge de travail afin de combler le manque de soins de première ligne,CAQ
+46,EN - Abolir les agences de santé et de services sociaux,Abolir les agences de santé et de services sociaux,CAQ
+47,EN - Informatiser les dossiers patients,Informatiser les dossiers patients,CAQ
+48,EN - Instaurer un projet-pilote qui permettrait aux médecins de travailler à la fois dans les secteurs privé et public,Instaurer un projet-pilote qui permettrait aux médecins de travailler à la fois dans les secteurs privé et public,"PQ,PLQ,CAQ,QS"
+49,EN - Donner des crédits d'impôt aux PME qui mettent sur pied des programmes de francisation,Donner des crédits d'impôt aux PME qui mettent sur pied des programmes de francisation,CAQ
+50,"EN - Bloquer l'accès aux subventions aux entreprises qui sont soumises à la Charte de la langue française, mais qui ne s'y conforment pas","Bloquer l'accès aux subventions aux entreprises qui sont soumises à la Charte de la langue française, mais qui ne s'y conforment pas",QS
+51,EN - Rendre l'Office québécois de la langue française indépendant du gouvernement en le faisant relever de l'Assemblée nationale,Rendre l'Office québécois de la langue française indépendant du gouvernement en le faisant relever de l'Assemblée nationale,QS
+52,EN - Étendre la loi 101 aux entreprises de 26 à 49 employés,Étendre la loi 101 aux entreprises de 26 à 49 employés,QS
+53,EN - Retirer le statut bilingue aux municipalités et arrondissements qui n'ont plus assez d'habitants anglophones pour remplir cette condition,Retirer le statut bilingue aux municipalités et arrondissements qui n'ont plus assez d'habitants anglophones pour remplir cette condition,PQ
+54,EN - Instaurer une épreuve uniforme de français pour l'obtention du diplôme d'études secondaires,Instaurer une épreuve uniforme de français pour l'obtention du diplôme d'études secondaires,PQ
+55,EN - Améliorer l'offre de services des traversiers pour moderniser le tourisme maritime au Québec,Améliorer l'offre de services des traversiers pour moderniser le tourisme maritime au Québec,PQ
+56,EN - Utiliser le fleuve Saint-Laurent pour transporter les marchandises de manière plus sécuritaire et écologique,Utiliser le fleuve Saint-Laurent pour transporter les marchandises de manière plus sécuritaire et écologique,PLQ
+57,"EN - Recouvrir en partie l'autoroute Ville-Marie à Montréal pour relier le centre-ville au fleuve, à pied et à vélo","Recouvrir en partie l'autoroute Ville-Marie à Montréal pour relier le centre-ville au fleuve, à pied et à vélo",PLQ
+58,EN - Mettre en place un Bureau de l'offre touristique maritime pour instaurer des partenariats d'affaires public-privé ou privé-privé,Mettre en place un Bureau de l'offre touristique maritime pour instaurer des partenariats d'affaires public-privé ou privé-privé,PLQ
+59,EN - Renforcer le leadership régional et bonifier l'aide au transport collectif en milieu rural,Renforcer le leadership régional et bonifier l'aide au transport collectif en milieu rural,PLQ
+60,EN - Électrifier le réseau de transport en commun,Électrifier le réseau de transport en commun,PQ
+61,EN - Créer un lien de transport électrique entre Montréal et Québec,Créer un lien de transport électrique entre Montréal et Québec,"PQ,QS"
+62,"EN - Créer un livre blanc sur l’avenir du Québec, suivi d’une consultation publique, en vue de la tenue d’un référendum sur la souveraineté","Créer un livre blanc sur l’avenir du Québec, suivi d’une consultation publique, en vue de la tenue d’un référendum sur la souveraineté",QS
+63,"EN - Faire en sorte que Québec récupère les sommes dépensées par Ottawa dans le secteur de la santé, soit 210 millions de dollars par an","Faire en sorte que Québec récupère les sommes dépensées par Ottawa dans le secteur de la santé, soit 210 millions de dollars par an",PQ
+64,EN - Faire adhérer le Québec à la Constitution canadienne en 2017 pour marquer les 150 ans de la Confédération,Faire adhérer le Québec à la Constitution canadienne en 2017 pour marquer les 150 ans de la Confédération,PQ
+65,EN - Déplacer le crucifix de l’Assemblée nationale ailleurs dans l’édifice du Parlement,Déplacer le crucifix de l’Assemblée nationale ailleurs dans l’édifice du Parlement,PLQ
+66,EN - Exiger la neutralité religieuse et l’absence de prosélytisme des employés de l’État lorsqu'ils dispensent des services,Exiger la neutralité religieuse et l’absence de prosélytisme des employés de l’État lorsqu'ils dispensent des services,QS
+67,EN - Proscrire la récitation de textes religieux aux conseils municipaux et à l’Assemblée nationale,Proscrire la récitation de textes religieux aux conseils municipaux et à l’Assemblée nationale,"PQ,QS"
+68,EN - Interdire le port de signes religieux ostentatoires dans la fonction publique,Interdire le port de signes religieux ostentatoires dans la fonction publique,QS
+69,EN - Renforcer les règles relatives aux unions pour éliminer les mariages forcés,Renforcer les règles relatives aux unions pour éliminer les mariages forcés,PQ
+70,EN - Mettre en place des ressources destinées aux victimes de violence basée sur l’honneur,Mettre en place des ressources destinées aux victimes de violence basée sur l’honneur,PLQ
+71,EN - Tenir le même jour les élections municipales et les élections scolaires,Tenir le même jour les élections municipales et les élections scolaires,PLQ
+72,EN - Créer une agence des infrastructures de transport pour une saine gestion des investissements publics dans les projets routiers,Créer une agence des infrastructures de transport pour une saine gestion des investissements publics dans les projets routiers,PQ
+73,"EN - Rendre accessibles dans Internet les notes de frais des fonctionnaires, députés et ministres","Rendre accessibles dans Internet les notes de frais des fonctionnaires, députés et ministres",PQ
+74,EN - Exiger que le Vérificateur général mette à jour les finances publiques au déclenchement des élections,Exiger que le Vérificateur général mette à jour les finances publiques au déclenchement des élections,PLQ
+75,EN - Réduire le nombre de crédits d’impôt qui favorisent les plus fortunés,Réduire le nombre de crédits d’impôt qui favorisent les plus fortunés,"PLQ,CAQ"
+76,EN - Réintroduire la taxe sur le capital des entreprises financières,Réintroduire la taxe sur le capital des entreprises financières,QS
+77,EN - Limiter à 10 % les réductions sur les livres neufs pendant 9 mois pour assurer une équité entre les libraires indépendants et les grandes surfaces,Limiter à 10 % les réductions sur les livres neufs pendant 9 mois pour assurer une équité entre les libraires indépendants et les grandes surfaces,QS
+78,"EN - Éliminer l’incorporation des médecins, une économie d'impôt qui prive le fisc de millions de dollars","Éliminer l’incorporation des médecins, une économie d'impôt qui prive le fisc de millions de dollars","PQ,QS"
+79,EN - Augmenter l’impôt des plus riches,Augmenter l’impôt des plus riches,QS
+80,EN - Augmenter le RRQ pour s'assurer qu'employés et employeurs contribuent aux retraites,Augmenter le RRQ pour s'assurer qu'employés et employeurs contribuent aux retraites,QS
+81,EN - Épargner collectivement pour que tous les travailleurs reçoivent 60 % de leur salaire à la retraite,Épargner collectivement pour que tous les travailleurs reçoivent 60 % de leur salaire à la retraite,QS
+82,EN - Geler les tarifs des services publics,Geler les tarifs des services publics,QS
+83,"EN - Obliger le partage des coûts, à parts égales, entre employeurs et participants actifs des régimes de retraite du secteur public","Obliger le partage des coûts, à parts égales, entre employeurs et participants actifs des régimes de retraite du secteur public",QS
+84,"EN - Créer la Banque de développement économique du Québec, qui regrouperait Investissement Québec et les agences régionales de développement économique","Créer la Banque de développement économique du Québec, qui regrouperait Investissement Québec et les agences régionales de développement économique",PQ
+85,EN - Atteindre l'équilibre budgétaire en 2016,Atteindre l'équilibre budgétaire en 2016,PQ
+87,EN - Maintenir la taxe santé modulée en fonction des revenus,Maintenir la taxe santé modulée en fonction des revenus,PQ
+88,EN - Moderniser les infrastructures du secteur de la pêche et les procédés de fabrication des usines de transformation,Moderniser les infrastructures du secteur de la pêche et les procédés de fabrication des usines de transformation,PQ
+89,EN - Implanter des programmes de formation technique et professionnelle pour faciliter l'accès aux femmes à des métiers non traditionnels,Implanter des programmes de formation technique et professionnelle pour faciliter l'accès aux femmes à des métiers non traditionnels,PLQ
+90,EN - Instaurer un programme qui encourage la représentation féminine dans la haute direction et les conseils d'administration des entreprises cotées en bourse,Instaurer un programme qui encourage la représentation féminine dans la haute direction et les conseils d'administration des entreprises cotées en bourse,PLQ
+91,EN - Diminuer l'impôt sur le revenu pour augmenter la taxe à la consommation,Diminuer l'impôt sur le revenu pour augmenter la taxe à la consommation,PLQ
+92,EN - Réduire la taxe sur la masse salariale pour rendre la fiscalité des entreprises plus compétitive,Réduire la taxe sur la masse salariale pour rendre la fiscalité des entreprises plus compétitive,PLQ
+93,EN - Introduire un crédit d'impôt pour la rénovation domiciliaire,Introduire un crédit d'impôt pour la rénovation domiciliaire,PLQ
+94,EN - Dépolitiser l'achat ou la vente d'entreprises québécoises en donnant plus d'autorité aux conseils d'administration,Dépolitiser l'achat ou la vente d'entreprises québécoises en donnant plus d'autorité aux conseils d'administration,PLQ
+95,EN - Instaurer une déduction fiscale pour toute réserve créée par les exploitants de navires québécois dans le but de moderniser et de réparer leur flotte,Instaurer une déduction fiscale pour toute réserve créée par les exploitants de navires québécois dans le but de moderniser et de réparer leur flotte,PLQ
+96,EN - Réviser en profondeur le régime fiscal dans le but d'encourager les particuliers à améliorer leurs revenus (et de le simplifier pour les entreprises),Réviser en profondeur le régime fiscal dans le but d'encourager les particuliers à améliorer leurs revenus (et de le simplifier pour les entreprises),PLQ
+97,EN - Mettre en oeuvre une stratégie d'exportation agressive pour tirer avantage des accords de libre-échange avec l'Union européenne et les États-Unis,Mettre en oeuvre une stratégie d'exportation agressive pour tirer avantage des accords de libre-échange avec l'Union européenne et les États-Unis,PLQ
+98,EN - Interdire les disparités de traitement relatives aux avantages sociaux en fonction de la date d’embauche,Interdire les disparités de traitement relatives aux avantages sociaux en fonction de la date d’embauche,PLQ
+99,EN - Interdire tout recours à des briseurs de grève,Interdire tout recours à des briseurs de grève,QS
+100,"EN - Exclure les pensions alimentaires pour enfant du calcul du revenu des femmes quand il s’agit de l’aide sociale, de l’aide financière aux études ou de l’aide juridique","Exclure les pensions alimentaires pour enfant du calcul du revenu des femmes quand il s’agit de l’aide sociale, de l’aide financière aux études ou de l’aide juridique",QS
+101,EN - Réduire la taille de l’échangeur Turcot et lui donner davantage de couloirs réservés au transport en commun,Réduire la taille de l’échangeur Turcot et lui donner davantage de couloirs réservés au transport en commun,QS
+102,EN - Construire davantage de logements sociaux,Construire davantage de logements sociaux,QS
+103,EN - Créer un «service civique» rémunéré et destiné aux jeunes qui ne sont ni au travail ni aux études,Créer un «service civique» rémunéré et destiné aux jeunes qui ne sont ni au travail ni aux études,"PQ,QS"
+104,EN - Encourager la conciliation travail-famille-études en offrant aux étudiants universitaires des services de garde atypiques,Encourager la conciliation travail-famille-études en offrant aux étudiants universitaires des services de garde atypiques,PQ
+105,"EN - Faire passer à 8 $ par jour les tarifs de services de garde subventionnés en 2014, puis à 9 $ en 2015, et indexer annuellement par la suite","Faire passer à 8 $ par jour les tarifs de services de garde subventionnés en 2014, puis à 9 $ en 2015, et indexer annuellement par la suite",PQ
+106,EN - Prolonger la ligne jaune du métro sur la Rive-Sud de Montréal,Prolonger la ligne jaune du métro sur la Rive-Sud de Montréal,PQ
+107,EN - Brancher les citoyens de toutes les municipalités du Québec à Internet haute vitesse,Brancher les citoyens de toutes les municipalités du Québec à Internet haute vitesse,PQ
+108,EN - Rédiger une constitution québécoise sur les principes fondamentaux et les institutions politiques qui sera soumise à un référendum,Rédiger une constitution québécoise sur les principes fondamentaux et les institutions politiques qui sera soumise à un référendum,PQ
+109,EN - Investir jusqu’à 5 % du budget de recherche et de développement pour la création de nouveaux produits pharmaceutiques,Investir jusqu’à 5 % du budget de recherche et de développement pour la création de nouveaux produits pharmaceutiques,QS
+110,"EN - Implanter et exploiter, sous contrôle public, des installations de production de médicaments génériques et de vaccins","Implanter et exploiter, sous contrôle public, des installations de production de médicaments génériques et de vaccins",QS
+111,EN - Remplacer l’actuel système à deux vitesses d’assurance médicaments par un système universel d'assurance médicaments,Remplacer l’actuel système à deux vitesses d’assurance médicaments par un système universel d'assurance médicaments,QS
+112,"EN - Faire des CLSC une première ligne accessible 24 heures sur 24, 7 jours sur 7","Faire des CLSC une première ligne accessible 24 heures sur 24, 7 jours sur 7",QS
+113,EN - Assurer la gratuité pour tout soin et service médicalement requis,Assurer la gratuité pour tout soin et service médicalement requis,QS
+114,EN - S’opposer au recours du secteur privé dans les soins et les services à domicile,S’opposer au recours du secteur privé dans les soins et les services à domicile,QS
+115,EN - Créer des guichets uniques régionaux pour les interventions non urgentes afin de diminuer le temps d'attente dans les urgences,Créer des guichets uniques régionaux pour les interventions non urgentes afin de diminuer le temps d'attente dans les urgences,QS
+116,EN - Prolonger les heures d'ouverture des salles d'opération et des plateaux de diagnostics pour diminuer l’attente aux urgences,Prolonger les heures d'ouverture des salles d'opération et des plateaux de diagnostics pour diminuer l’attente aux urgences,QS
+117,EN - Créer de nouvelles places dans les résidences publiques pour les personnes âgées,Créer de nouvelles places dans les résidences publiques pour les personnes âgées,QS
+118,EN - Mettre sur pied un régime d'assurance autonomie pour améliorer les services à domicile ou dans les résidences privées pour personnes âgées,Mettre sur pied un régime d'assurance autonomie pour améliorer les services à domicile ou dans les résidences privées pour personnes âgées,QS
+119,EN - Augmenter le nombre de groupes de médecine familiale,Augmenter le nombre de groupes de médecine familiale,PQ
+120,EN - Soutenir les proches aidants en reconnaissant leur travail et en offrant des mesures de soutien et de répit,Soutenir les proches aidants en reconnaissant leur travail et en offrant des mesures de soutien et de répit,"PQ,PLQ"
+121,"EN - Étaler sur une plus longue période les augmentations de salaire des médecins, initialement prévues pour les 2 prochaines années","Étaler sur une plus longue période les augmentations de salaire des médecins, initialement prévues pour les 2 prochaines années",PQ
+122,EN - Mettre sur pied un réseau de 50 supercliniques ouvertes 7 jours sur 7 qui offrent une multitude de services pour faciliter l'accès aux médecins de famille,Mettre sur pied un réseau de 50 supercliniques ouvertes 7 jours sur 7 qui offrent une multitude de services pour faciliter l'accès aux médecins de famille,PQ
+123,"EN - Faire une plus grande place au privé dans le réseau de la santé, notamment pour de petites chirurgies et de l'imagerie","Faire une plus grande place au privé dans le réseau de la santé, notamment pour de petites chirurgies et de l'imagerie",PLQ
+124,EN - Doter Télé-Québec d’une salle de nouvelles avec des antennes régionales,Doter Télé-Québec d’une salle de nouvelles avec des antennes régionales,PLQ
+125,EN - Reconnaître les services de garde comme un service essentiel afin de baliser le droit de grève et de lock-out,Reconnaître les services de garde comme un service essentiel afin de baliser le droit de grève et de lock-out,PQ
+126,EN - Exiger le rapatriement de la part québécoise du budget de l’Agence canadienne de développement international et créer une agence québécoise de coopération et de solidarité internationales,Exiger le rapatriement de la part québécoise du budget de l’Agence canadienne de développement international et créer une agence québécoise de coopération et de solidarité internationales,CAQ
+127,EN - Forcer la Société des alcools du Québec à faire la promotion des produits québécois,Forcer la Société des alcools du Québec à faire la promotion des produits québécois,PQ
+128,EN - Modifier la Loi sur les permis d'alcool pour permettre aux supermarchés et aux restaurateurs de vendre des boissons alcoolisées fabriquées au Québec,Modifier la Loi sur les permis d'alcool pour permettre aux supermarchés et aux restaurateurs de vendre des boissons alcoolisées fabriquées au Québec,PLQ
+129,EN - Moderniser le Parc olympique de Montréal,Moderniser le Parc olympique de Montréal,PLQ
+130,EN - Mettre en place un programme de régulation de l'impôt foncier pour aider les aînés propriétaires d'une résidence à acquitter leurs taxes foncières,Mettre en place un programme de régulation de l'impôt foncier pour aider les aînés propriétaires d'une résidence à acquitter leurs taxes foncières,PLQ
+131,EN - Instaurer un traversier reliant Montréal à la Rive-Sud,Instaurer un traversier reliant Montréal à la Rive-Sud,PLQ
+132,EN - Exempter d'impôt le transfert d'entreprises et de fermes aux enfants et aux employés,Exempter d'impôt le transfert d'entreprises et de fermes aux enfants et aux employés,PLQ

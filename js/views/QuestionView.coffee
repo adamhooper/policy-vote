@@ -7,12 +7,12 @@ module.exports = class QuestionView extends Backbone.View
   template: _.template('''
     <button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">
       <span class="inner">
-        <%- policy1.get('policy') %>
+        <%- policy1.get('en') %>
       </a>
     </button>
     <button class="choice" data-policy-id="<%- policy2.id %>" data-other-policy-id="<%- policy1.id %>">
       <span class="inner">
-        <%- policy2.get('policy') %>
+        <%- policy2.get('en') %>
       </span>
     </button>
   ''')
