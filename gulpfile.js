@@ -4,11 +4,13 @@ var assign = require('lodash.assign');
 var browserify = require('browserify');
 var buffer = require('vinyl-buffer');
 var gulp = require('gulp');
+var rename = require('gulp-rename');
 var gutil = require('gulp-util');
 var less = require('gulp-less');
 var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 var source = require('vinyl-source-stream');
+var request = require('request');
 var watchify = require('watchify');
 var watch = require('gulp-watch');
 
@@ -25,7 +27,7 @@ var b = watchify(browserify(opts));
 b.transform(require('coffeeify'));
 b.transform(require('node-csvify'));
 
-gulp.task('js', bundle); // so you can run `gulp js` to build the file
+gulp.task('js', [ 'policies-csv' ], bundle); // so you can run `gulp js` to build the file
 b.on('update', bundle); // on any dep update, runs the bundler
 b.on('log', gutil.log); // output build logs to terminal
 
@@ -42,6 +44,13 @@ function bundle() {
     .pipe(sourcemaps.write('./')) // writes .map file
     .pipe(gulp.dest('./dist'));
 }
+
+gulp.task('policies-csv', function() {
+  var url = 'https://docs.google.com/spreadsheets/d/1pwNglbBgZG9-x_gEypBBFeL-gahBas0ZSuHNoOVpn8c/pub?gid=1636922037&single=true&output=csv';
+  request(url)
+    .pipe(source('policies.csv'))
+    .pipe(gulp.dest('./data'));
+});
 
 gulp.task('less', function() {
   return gulp.src('./less/index.less')
