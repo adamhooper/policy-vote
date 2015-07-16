@@ -64,7 +64,7 @@ module.exports = class UserProfileView extends Backbone.View
 
     profile =
       languageCode: @$('input[name="languageCode"]:checked').val()
-      provinceCode: @$('input[name="provinceCode"]:checked').val()
+      provinceCode: @$('input[name="provinceCode"]:checked').val() || null
     Backbone.ajax
       type: 'POST'
       url: '/user'

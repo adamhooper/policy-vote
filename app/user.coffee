@@ -12,10 +12,11 @@ module.exports = (database) ->
     userId = req.policyVoteSession.userId
     languageCode = req.body?.languageCode
     provinceCode = req.body?.provinceCode
+    provinceCode = null if provinceCode == ''
 
     return res.status(400).send(code: 'cookie-not-set') if !userId
 
-    if languageCode not of ValidLanguageCodes || provinceCode not of ValidProvinceCodes
+    if languageCode not of ValidLanguageCodes || (provinceCode != null && provinceCode not of ValidProvinceCodes)
       return res.status(400).send(code: 'illegal-arguments')
 
     if !database.getUser(userId)

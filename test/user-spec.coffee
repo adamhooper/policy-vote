@@ -37,9 +37,6 @@ describe '/user', ->
       it 'should return BadRequest when languageCode is not set', ->
         @agent.testInvalidJson(provinceCode: 'qc')
 
-      it 'should return BadRequest when provinceCode is not set', ->
-        @agent.testInvalidJson(languageCode: 'en')
-
       it 'should call database.postUser() when languageCode and provinceCode are valid', ->
         @agent.postJson(languageCode: 'en', provinceCode: 'qc')
           .expect(201)
@@ -47,6 +44,14 @@ describe '/user', ->
             stub = app.database.addUser
             expect(stub).to.have.been.called
             expect(stub.args[0].slice(1)).to.deep.eq([ 'en', 'qc' ])
+
+      it 'should call database.postUser() when provinceCode is not set', ->
+        @agent.postJson(languageCode: 'en', provinceCode: null)
+          .expect(201)
+          .then (res) ->
+            stub = app.database.addUser
+            expect(stub).to.have.been.called
+            expect(stub.args[0].slice(1)).to.deep.eq([ 'en', null ])
 
       it 'should not accept a languageCode other than `en` or `fr`', ->
         @agent.testInvalidJson(languageCode: 'sp', provinceCode: 'qc')
