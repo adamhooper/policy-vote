@@ -6,14 +6,14 @@ module.exports = class StatisticsView extends Backbone.View
   className: 'statistics'
 
   initialize: (options) ->
-    throw 'must pass options.policies, a Policies' if !options.policies
+    throw 'must pass options.province, the user\'s Province' if 'province' not of options
     throw 'must pass options.votes, an Array[[Policy,Policy]] of better/worse policies' if !options.votes
 
-    @policies = options.policies
+    @province = options.province
     @votes = options.votes
 
   render: ->
-    forAgainstView = new ForAgainstView(policies: @policies, votes: @votes)
+    forAgainstView = new ForAgainstView(province: @province, votes: @votes)
     forAgainstView.render()
     @$el.append(forAgainstView.el)
     @

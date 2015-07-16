@@ -1,6 +1,6 @@
-id,en,fr,onlyInProvinces
-L,Liberal,libéral,
+id,en,fr,onlyInProvinceCode
+B,Bloc,bloc,qc
 C,Conservative,conservateur,
 G,Green,vert,
+L,Liberal,libéral,
 N,NDP,NPD,
-B,Bloc,Bloc,qc

@@ -6,24 +6,21 @@ DoneView = require('./views/DoneView')
 StatisticsView = require('./views/StatisticsView')
 UserProfileView = require('./views/UserProfileView')
 
+Provinces = require('../app/provinces')
+
 module.exports = class App extends Backbone.View
   initialize: (options) ->
-    throw new Error('Must pass options.policies, a Policies') if !options.policies?
-
-    @policies = options.policies
     @votes = [] # Array of [ betterPolicy, worsePolicy ]
     @userProfile = { languageCode: null, provinceCode: null } # languageCode=null means user hasn't chosen
 
     @userProfileView = new UserProfileView()
-    @headingView = new HeadingView()
-    @questionView = new QuestionView(policies: @policies)
-    @doneView = new DoneView()
-
-    @childViews = [ @headingView, @questionView, @doneView ]
-
-    @listenTo(@questionView, 'user-prefers-policy', @_onUserPrefersPolicy)
-    @listenTo(@doneView, 'show-statistics', @showStatistics)
     @listenTo(@userProfileView, 'user-set-profile', @_onUserSetProfile)
+
+  getUserProvince: ->
+    if @userProfile.provinceCode?
+      Provinces.byCode[@userProfile.provinceCode]
+    else
+      null
 
   render: ->
     @$el.empty()
@@ -32,7 +29,15 @@ module.exports = class App extends Backbone.View
       @userProfileView.render()
       @$el.append(@userProfileView.el)
     else
-      $els = for childView in @childViews
+      @headingView?.remove()
+      @questionView?.remove()
+      @doneView?.remove()
+      @headingView = new HeadingView()
+      @questionView = new QuestionView(province: @getUserProvince())
+      @doneView = new DoneView()
+      @listenTo(@questionView, 'user-prefers-policy', @_onUserPrefersPolicy)
+      @listenTo(@doneView, 'show-statistics', @showStatistics)
+      $els = for childView in [ @headingView, @questionView, @doneView ]
         childView.render()
         childView.el
       @$el.append($els)
@@ -48,7 +53,7 @@ module.exports = class App extends Backbone.View
       contentType: 'application/json'
       success: -> #console.log('Voted!')
       error: (xhr, textStatus, errorThrown) -> console.log('Error during vote', textStatus, errorThrown)
-    @questionView.render()
+    @questionView?.render()
 
   _onUserSetProfile: (profile) ->
     @userProfile = profile
@@ -56,7 +61,7 @@ module.exports = class App extends Backbone.View
 
   showStatistics: ->
     return if @overlay?
-    view = new StatisticsView(policies: @policies, votes: @votes)
+    view = new StatisticsView(province: @getUserProvince(), votes: @votes)
     view.render()
     @$el.append(view.el)
     @overlay = view

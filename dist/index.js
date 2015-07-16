@@ -30,788 +30,821 @@ module.exports = {
 },{}],2:[function(require,module,exports){
 module.exports = [
   {
+    "id": "B",
+    "en": "Bloc",
+    "fr": "bloc",
+    "onlyInProvinceCode": "qc"
+  },
+  {
+    "id": "C",
+    "en": "Conservative",
+    "fr": "conservateur",
+    "onlyInProvinceCode": ""
+  },
+  {
+    "id": "G",
+    "en": "Green",
+    "fr": "vert",
+    "onlyInProvinceCode": ""
+  },
+  {
+    "id": "L",
+    "en": "Liberal",
+    "fr": "libéral",
+    "onlyInProvinceCode": ""
+  },
+  {
+    "id": "N",
+    "en": "NDP",
+    "fr": "NPD",
+    "onlyInProvinceCode": ""
+  }
+];
+},{}],3:[function(require,module,exports){
+module.exports = [
+  {
     "id": "1",
     "en": "EN - Faire en sorte que les services de l'État soient strictement donnés et reçus à visage découvert",
     "fr": "Faire en sorte que les services de l'État soient strictement donnés et reçus à visage découvert",
-    "parties": "PQ,PLQ,CAQ,QS"
+    "partyIds": "B,L,C,N"
   },
   {
     "id": "2",
     "en": "EN - Définir et encadrer les accommodements raisonnables",
     "fr": "Définir et encadrer les accommodements raisonnables",
-    "parties": "PQ,PLQ,CAQ,QS"
+    "partyIds": "B,L,C,N"
   },
   {
     "id": "3",
     "en": "EN - Renforcer le rôle et les pouvoirs de l’Office québécois de la langue française",
     "fr": "Renforcer le rôle et les pouvoirs de l’Office québécois de la langue française",
-    "parties": "PQ,PLQ,CAQ,QS"
+    "partyIds": "B,L,C,N"
   },
   {
     "id": "4",
     "en": "EN - Maintenir le crucifix à l'Assemblée nationale",
     "fr": "Maintenir le crucifix à l'Assemblée nationale",
-    "parties": "PQ,CAQ,QS"
+    "partyIds": "B,C,N"
   },
   {
     "id": "5",
     "en": "EN - Interdire le port de signes religieux par des employés de l'État qui disposent d'un pouvoir coercitif",
     "fr": "Interdire le port de signes religieux par des employés de l'État qui disposent d'un pouvoir coercitif",
-    "parties": "PLQ,CAQ"
+    "partyIds": "L,C"
   },
   {
     "id": "6",
     "en": "EN - Abolir les primes de départ des députés qui quittent en cours de mandat",
     "fr": "Abolir les primes de départ des députés qui quittent en cours de mandat",
-    "parties": "PQ,CAQ,QS"
+    "partyIds": "B,C,N"
   },
   {
     "id": "7",
     "en": "EN - S'opposer à l'imposition d'un péage sur le pont Champlain",
     "fr": "S'opposer à l'imposition d'un péage sur le pont Champlain",
-    "parties": "PQ,CAQ,QS"
+    "partyIds": "B,C,N"
   },
   {
     "id": "8",
     "en": "EN - Améliorer la protection des dénonciateurs au sein de la fonction publique",
     "fr": "Améliorer la protection des dénonciateurs au sein de la fonction publique",
-    "parties": "PQ,CAQ,QS"
+    "partyIds": "B,C,N"
   },
   {
     "id": "9",
     "en": "EN - Abolir la taxe santé",
     "fr": "Abolir la taxe santé",
-    "parties": "PQ,CAQ,QS"
+    "partyIds": "B,C,N"
   },
   {
     "id": "10",
     "en": "EN - Augmenter le salaire des omnipraticiens afin de les encourager à pratiquer la médicine familiale",
     "fr": "Augmenter le salaire des omnipraticiens afin de les encourager à pratiquer la médicine familiale",
-    "parties": "PLQ,CAQ,QS"
+    "partyIds": "L,C,N"
   },
   {
     "id": "11",
     "en": "EN - Faire la promotion des produits alimentaires québécois afin d’augmenter significativement l'achat local",
     "fr": "Faire la promotion des produits alimentaires québécois afin d’augmenter significativement l'achat local",
-    "parties": "CAQ,QS"
+    "partyIds": "C,N"
   },
   {
     "id": "12",
     "en": "EN - Légaliser l’aide médicale à mourir pour répondre aux besoins des personnes en fin de vie",
     "fr": "Légaliser l’aide médicale à mourir pour répondre aux besoins des personnes en fin de vie",
-    "parties": "PQ,CAQ,QS"
+    "partyIds": "B,C,N"
   },
   {
     "id": "13",
     "en": "EN - Miser davantage sur les infirmières pour améliorer l’accessibilité à des soins de santé",
     "fr": "Miser davantage sur les infirmières pour améliorer l’accessibilité à des soins de santé",
-    "parties": "PQ,CAQ,QS"
+    "partyIds": "B,C,N"
   },
   {
     "id": "14",
     "en": "EN - Interdire le recours aux écoles passerelles afin d’obtenir le droit d’accès à l’école publique anglaise",
     "fr": "Interdire le recours aux écoles passerelles afin d’obtenir le droit d’accès à l’école publique anglaise",
-    "parties": "PQ,PLQ,CAQ"
+    "partyIds": "B,L,C"
   },
   {
     "id": "15",
     "en": "EN - Instaurer une nouvelle façon de choisir les immigrants basée sur une déclaration d'intérêt",
     "fr": "Instaurer une nouvelle façon de choisir les immigrants basée sur une déclaration d'intérêt",
-    "parties": "PQ,CAQ"
+    "partyIds": "B,C"
   },
   {
     "id": "16",
     "en": "EN - Arriver à une entente avec le gouvernement fédéral afin d'obtenir un plus grand contrôle sur le processus d’immigration",
     "fr": "Arriver à une entente avec le gouvernement fédéral afin d'obtenir un plus grand contrôle sur le processus d’immigration",
-    "parties": "PQ,CAQ"
+    "partyIds": "B,C"
   },
   {
     "id": "17",
     "en": "EN - Investir davantage dans l’intégration et la francisation des immigrants",
     "fr": "Investir davantage dans l’intégration et la francisation des immigrants",
-    "parties": "PQ,CAQ"
+    "partyIds": "B,C"
   },
   {
     "id": "18",
     "en": "EN - Limiter à 2 le nombre de mandats consécutifs du premier ministre",
     "fr": "Limiter à 2 le nombre de mandats consécutifs du premier ministre",
-    "parties": "PQ,CAQ"
+    "partyIds": "B,C"
   },
   {
     "id": "19",
     "en": "EN - Atteindre l'équilibre budgétaire en 2015",
     "fr": "Atteindre l'équilibre budgétaire en 2015",
-    "parties": "PQ,CAQ"
+    "partyIds": "B,C"
   },
   {
     "id": "20",
     "en": "EN - Limiter la hausse des tarifs d'Hydro-Québec au taux d'inflation",
     "fr": "Limiter la hausse des tarifs d'Hydro-Québec au taux d'inflation",
-    "parties": "PLQ,CAQ"
+    "partyIds": "L,C"
   },
   {
     "id": "22",
     "en": "EN - Indexer les tarifs de services de garde subventionnés en fonction du coût de la vie",
     "fr": "Indexer les tarifs de services de garde subventionnés en fonction du coût de la vie",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "23",
     "en": "EN - Augmenter la flexibilité des horaires des CPE",
     "fr": "Augmenter la flexibilité des horaires des CPE",
-    "parties": "PLQ,CAQ"
+    "partyIds": "L,C"
   },
   {
     "id": "24",
     "en": "EN - Rendre l’étiquetage obligatoire pour tous les produits contenant des OGM",
     "fr": "Rendre l’étiquetage obligatoire pour tous les produits contenant des OGM",
-    "parties": "PQ,CAQ"
+    "partyIds": "B,C"
   },
   {
     "id": "25",
     "en": "EN - Réviser le régime d’assurance médicaments afin de miser davantage sur les médicaments génériques, qui sont moins coûteux",
     "fr": "Réviser le régime d’assurance médicaments afin de miser davantage sur les médicaments génériques, qui sont moins coûteux",
-    "parties": "CAQ,QS"
+    "partyIds": "C,N"
   },
   {
     "id": "26",
     "en": "EN - Reconnaître la municipalité comme une instance démocratiquement élue et lui conférer plus d'autonomie",
     "fr": "Reconnaître la municipalité comme une instance démocratiquement élue et lui conférer plus d'autonomie",
-    "parties": "CAQ,QS"
+    "partyIds": "C,N"
   },
   {
     "id": "27",
     "en": "EN - Limiter le nombre de nouveaux immigrants au Québec à 45 000 par année pour 2 ans",
     "fr": "Limiter le nombre de nouveaux immigrants au Québec à 45 000 par année pour 2 ans",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "28",
     "en": "EN - Limiter le nombre de mandats consécutifs des maires des municipalités de plus de 5 000 habitants",
     "fr": "Limiter le nombre de mandats consécutifs des maires des municipalités de plus de 5 000 habitants",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "29",
     "en": "EN - Intenter des procédures judiciaires pour restituer les sommes perçues par des entreprises qui se sont incriminées devant la commission Charbonneau",
     "fr": "Intenter des procédures judiciaires pour restituer les sommes perçues par des entreprises qui se sont incriminées devant la commission Charbonneau",
-    "parties": "PQ,CAQ"
+    "partyIds": "B,C"
   },
   {
     "id": "30",
     "en": "EN - Abolir la taxe scolaire",
     "fr": "Abolir la taxe scolaire",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "31",
     "en": "EN - Investir dans la création de zones d’innovation inspirées par la Silicon Valley, en Californie",
     "fr": "Investir dans la création de zones d’innovation inspirées par la Silicon Valley, en Californie",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "32",
     "en": "EN - Décontaminer des terrains pollués sur les rives du fleuve Saint-Laurent pour y accueillir des entreprises",
     "fr": "Décontaminer des terrains pollués sur les rives du fleuve Saint-Laurent pour y accueillir des entreprises",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "33",
     "en": "EN - Augmenter le pourcentage des placements de la Caisse de dépôt faits dans des entreprises québécoises",
     "fr": "Augmenter le pourcentage des placements de la Caisse de dépôt faits dans des entreprises québécoises",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "34",
     "en": "EN - Créer un fonds administré par la Caisse de dépôt qui prendrait des participations minoritaires dans des projets d’exploitation des ressources naturelles",
     "fr": "Créer un fonds administré par la Caisse de dépôt qui prendrait des participations minoritaires dans des projets d’exploitation des ressources naturelles",
-    "parties": "PQ,CAQ"
+    "partyIds": "B,C"
   },
   {
     "id": "35",
     "en": "EN - Bonifier les incitatifs fiscaux pour les entreprises qui investissent en technologie",
     "fr": "Bonifier les incitatifs fiscaux pour les entreprises qui investissent en technologie",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "36",
     "en": "EN - Limiter toute augmentation des impôts, taxes et tarifs au taux d’inflation",
     "fr": "Limiter toute augmentation des impôts, taxes et tarifs au taux d’inflation",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "37",
     "en": "EN - Geler jusqu’en 2017 le nombre total d’employés du secteur public au niveau de 2013",
     "fr": "Geler jusqu’en 2017 le nombre total d’employés du secteur public au niveau de 2013",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "38",
     "en": "EN - Affecter 100 % des redevances générées par l'exploitation des ressources naturelles non renouvelables à la réduction de la dette",
     "fr": "Affecter 100 % des redevances générées par l'exploitation des ressources naturelles non renouvelables à la réduction de la dette",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "39",
     "en": "EN - Faire preuve d’une plus grande sévérité face aux crimes violents contre la personne et pour les criminels de la route",
     "fr": "Faire preuve d’une plus grande sévérité face aux crimes violents contre la personne et pour les criminels de la route",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "40",
     "en": "EN - S’assurer que les nouvelles places subventionnées en garderie soient d’abord créées dans les milieux défavorisés",
     "fr": "S’assurer que les nouvelles places subventionnées en garderie soient d’abord créées dans les milieux défavorisés",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "41",
     "en": "EN - Rendre obligatoire le recours au vote à scrutin secret pour l’accréditation syndicale",
     "fr": "Rendre obligatoire le recours au vote à scrutin secret pour l’accréditation syndicale",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "42",
     "en": "EN - Proscrire l'utilisation de cotisations syndicales à des fins autres que la représentation des travailleurs",
     "fr": "Proscrire l'utilisation de cotisations syndicales à des fins autres que la représentation des travailleurs",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "43",
     "en": "EN - Exiger des syndicats la divulgation publique de leurs états financiers",
     "fr": "Exiger des syndicats la divulgation publique de leurs états financiers",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "44",
     "en": "EN - Augmenter les budgets consacrés aux soins et au maintien à domicile des personnes agées",
     "fr": "Augmenter les budgets consacrés aux soins et au maintien à domicile des personnes agées",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "45",
     "en": "EN - Obliger les médecins de famille à augmenter leur charge de travail afin de combler le manque de soins de première ligne",
     "fr": "Obliger les médecins de famille à augmenter leur charge de travail afin de combler le manque de soins de première ligne",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "46",
     "en": "EN - Abolir les agences de santé et de services sociaux",
     "fr": "Abolir les agences de santé et de services sociaux",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "47",
     "en": "EN - Informatiser les dossiers patients",
     "fr": "Informatiser les dossiers patients",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "48",
     "en": "EN - Instaurer un projet-pilote qui permettrait aux médecins de travailler à la fois dans les secteurs privé et public",
     "fr": "Instaurer un projet-pilote qui permettrait aux médecins de travailler à la fois dans les secteurs privé et public",
-    "parties": "PQ,PLQ,CAQ,QS"
+    "partyIds": "B,L,C,N"
   },
   {
     "id": "49",
     "en": "EN - Donner des crédits d'impôt aux PME qui mettent sur pied des programmes de francisation",
     "fr": "Donner des crédits d'impôt aux PME qui mettent sur pied des programmes de francisation",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "50",
     "en": "EN - Bloquer l'accès aux subventions aux entreprises qui sont soumises à la Charte de la langue française, mais qui ne s'y conforment pas",
     "fr": "Bloquer l'accès aux subventions aux entreprises qui sont soumises à la Charte de la langue française, mais qui ne s'y conforment pas",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "51",
     "en": "EN - Rendre l'Office québécois de la langue française indépendant du gouvernement en le faisant relever de l'Assemblée nationale",
     "fr": "Rendre l'Office québécois de la langue française indépendant du gouvernement en le faisant relever de l'Assemblée nationale",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "52",
     "en": "EN - Étendre la loi 101 aux entreprises de 26 à 49 employés",
     "fr": "Étendre la loi 101 aux entreprises de 26 à 49 employés",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "53",
     "en": "EN - Retirer le statut bilingue aux municipalités et arrondissements qui n'ont plus assez d'habitants anglophones pour remplir cette condition",
     "fr": "Retirer le statut bilingue aux municipalités et arrondissements qui n'ont plus assez d'habitants anglophones pour remplir cette condition",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "54",
     "en": "EN - Instaurer une épreuve uniforme de français pour l'obtention du diplôme d'études secondaires",
     "fr": "Instaurer une épreuve uniforme de français pour l'obtention du diplôme d'études secondaires",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "55",
     "en": "EN - Améliorer l'offre de services des traversiers pour moderniser le tourisme maritime au Québec",
     "fr": "Améliorer l'offre de services des traversiers pour moderniser le tourisme maritime au Québec",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "56",
     "en": "EN - Utiliser le fleuve Saint-Laurent pour transporter les marchandises de manière plus sécuritaire et écologique",
     "fr": "Utiliser le fleuve Saint-Laurent pour transporter les marchandises de manière plus sécuritaire et écologique",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "57",
     "en": "EN - Recouvrir en partie l'autoroute Ville-Marie à Montréal pour relier le centre-ville au fleuve, à pied et à vélo",
     "fr": "Recouvrir en partie l'autoroute Ville-Marie à Montréal pour relier le centre-ville au fleuve, à pied et à vélo",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "58",
     "en": "EN - Mettre en place un Bureau de l'offre touristique maritime pour instaurer des partenariats d'affaires public-privé ou privé-privé",
     "fr": "Mettre en place un Bureau de l'offre touristique maritime pour instaurer des partenariats d'affaires public-privé ou privé-privé",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "59",
     "en": "EN - Renforcer le leadership régional et bonifier l'aide au transport collectif en milieu rural",
     "fr": "Renforcer le leadership régional et bonifier l'aide au transport collectif en milieu rural",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "60",
     "en": "EN - Électrifier le réseau de transport en commun",
     "fr": "Électrifier le réseau de transport en commun",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "61",
     "en": "EN - Créer un lien de transport électrique entre Montréal et Québec",
     "fr": "Créer un lien de transport électrique entre Montréal et Québec",
-    "parties": "PQ,QS"
+    "partyIds": "B,N"
   },
   {
     "id": "62",
     "en": "EN - Créer un livre blanc sur l’avenir du Québec, suivi d’une consultation publique, en vue de la tenue d’un référendum sur la souveraineté",
     "fr": "Créer un livre blanc sur l’avenir du Québec, suivi d’une consultation publique, en vue de la tenue d’un référendum sur la souveraineté",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "63",
     "en": "EN - Faire en sorte que Québec récupère les sommes dépensées par Ottawa dans le secteur de la santé, soit 210 millions de dollars par an",
     "fr": "Faire en sorte que Québec récupère les sommes dépensées par Ottawa dans le secteur de la santé, soit 210 millions de dollars par an",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "64",
     "en": "EN - Faire adhérer le Québec à la Constitution canadienne en 2017 pour marquer les 150 ans de la Confédération",
     "fr": "Faire adhérer le Québec à la Constitution canadienne en 2017 pour marquer les 150 ans de la Confédération",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "65",
     "en": "EN - Déplacer le crucifix de l’Assemblée nationale ailleurs dans l’édifice du Parlement",
     "fr": "Déplacer le crucifix de l’Assemblée nationale ailleurs dans l’édifice du Parlement",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "66",
     "en": "EN - Exiger la neutralité religieuse et l’absence de prosélytisme des employés de l’État lorsqu'ils dispensent des services",
     "fr": "Exiger la neutralité religieuse et l’absence de prosélytisme des employés de l’État lorsqu'ils dispensent des services",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "67",
     "en": "EN - Proscrire la récitation de textes religieux aux conseils municipaux et à l’Assemblée nationale",
     "fr": "Proscrire la récitation de textes religieux aux conseils municipaux et à l’Assemblée nationale",
-    "parties": "PQ,QS"
+    "partyIds": "B,N"
   },
   {
     "id": "68",
     "en": "EN - Interdire le port de signes religieux ostentatoires dans la fonction publique",
     "fr": "Interdire le port de signes religieux ostentatoires dans la fonction publique",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "69",
     "en": "EN - Renforcer les règles relatives aux unions pour éliminer les mariages forcés",
     "fr": "Renforcer les règles relatives aux unions pour éliminer les mariages forcés",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "70",
     "en": "EN - Mettre en place des ressources destinées aux victimes de violence basée sur l’honneur",
     "fr": "Mettre en place des ressources destinées aux victimes de violence basée sur l’honneur",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "71",
     "en": "EN - Tenir le même jour les élections municipales et les élections scolaires",
     "fr": "Tenir le même jour les élections municipales et les élections scolaires",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "72",
     "en": "EN - Créer une agence des infrastructures de transport pour une saine gestion des investissements publics dans les projets routiers",
     "fr": "Créer une agence des infrastructures de transport pour une saine gestion des investissements publics dans les projets routiers",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "73",
     "en": "EN - Rendre accessibles dans Internet les notes de frais des fonctionnaires, députés et ministres",
     "fr": "Rendre accessibles dans Internet les notes de frais des fonctionnaires, députés et ministres",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "74",
     "en": "EN - Exiger que le Vérificateur général mette à jour les finances publiques au déclenchement des élections",
     "fr": "Exiger que le Vérificateur général mette à jour les finances publiques au déclenchement des élections",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "75",
     "en": "EN - Réduire le nombre de crédits d’impôt qui favorisent les plus fortunés",
     "fr": "Réduire le nombre de crédits d’impôt qui favorisent les plus fortunés",
-    "parties": "PLQ,CAQ"
+    "partyIds": "L,C"
   },
   {
     "id": "76",
     "en": "EN - Réintroduire la taxe sur le capital des entreprises financières",
     "fr": "Réintroduire la taxe sur le capital des entreprises financières",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "77",
     "en": "EN - Limiter à 10 % les réductions sur les livres neufs pendant 9 mois pour assurer une équité entre les libraires indépendants et les grandes surfaces",
     "fr": "Limiter à 10 % les réductions sur les livres neufs pendant 9 mois pour assurer une équité entre les libraires indépendants et les grandes surfaces",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "78",
     "en": "EN - Éliminer l’incorporation des médecins, une économie d'impôt qui prive le fisc de millions de dollars",
     "fr": "Éliminer l’incorporation des médecins, une économie d'impôt qui prive le fisc de millions de dollars",
-    "parties": "PQ,QS"
+    "partyIds": "B,N"
   },
   {
     "id": "79",
     "en": "EN - Augmenter l’impôt des plus riches",
     "fr": "Augmenter l’impôt des plus riches",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "80",
     "en": "EN - Augmenter le RRQ pour s'assurer qu'employés et employeurs contribuent aux retraites",
     "fr": "Augmenter le RRQ pour s'assurer qu'employés et employeurs contribuent aux retraites",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "81",
     "en": "EN - Épargner collectivement pour que tous les travailleurs reçoivent 60 % de leur salaire à la retraite",
     "fr": "Épargner collectivement pour que tous les travailleurs reçoivent 60 % de leur salaire à la retraite",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "82",
     "en": "EN - Geler les tarifs des services publics",
     "fr": "Geler les tarifs des services publics",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "83",
     "en": "EN - Obliger le partage des coûts, à parts égales, entre employeurs et participants actifs des régimes de retraite du secteur public",
     "fr": "Obliger le partage des coûts, à parts égales, entre employeurs et participants actifs des régimes de retraite du secteur public",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "84",
     "en": "EN - Créer la Banque de développement économique du Québec, qui regrouperait Investissement Québec et les agences régionales de développement économique",
     "fr": "Créer la Banque de développement économique du Québec, qui regrouperait Investissement Québec et les agences régionales de développement économique",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "85",
     "en": "EN - Atteindre l'équilibre budgétaire en 2016",
     "fr": "Atteindre l'équilibre budgétaire en 2016",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "87",
     "en": "EN - Maintenir la taxe santé modulée en fonction des revenus",
     "fr": "Maintenir la taxe santé modulée en fonction des revenus",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "88",
     "en": "EN - Moderniser les infrastructures du secteur de la pêche et les procédés de fabrication des usines de transformation",
     "fr": "Moderniser les infrastructures du secteur de la pêche et les procédés de fabrication des usines de transformation",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "89",
     "en": "EN - Implanter des programmes de formation technique et professionnelle pour faciliter l'accès aux femmes à des métiers non traditionnels",
     "fr": "Implanter des programmes de formation technique et professionnelle pour faciliter l'accès aux femmes à des métiers non traditionnels",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "90",
     "en": "EN - Instaurer un programme qui encourage la représentation féminine dans la haute direction et les conseils d'administration des entreprises cotées en bourse",
     "fr": "Instaurer un programme qui encourage la représentation féminine dans la haute direction et les conseils d'administration des entreprises cotées en bourse",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "91",
     "en": "EN - Diminuer l'impôt sur le revenu pour augmenter la taxe à la consommation",
     "fr": "Diminuer l'impôt sur le revenu pour augmenter la taxe à la consommation",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "92",
     "en": "EN - Réduire la taxe sur la masse salariale pour rendre la fiscalité des entreprises plus compétitive",
     "fr": "Réduire la taxe sur la masse salariale pour rendre la fiscalité des entreprises plus compétitive",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "93",
     "en": "EN - Introduire un crédit d'impôt pour la rénovation domiciliaire",
     "fr": "Introduire un crédit d'impôt pour la rénovation domiciliaire",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "94",
     "en": "EN - Dépolitiser l'achat ou la vente d'entreprises québécoises en donnant plus d'autorité aux conseils d'administration",
     "fr": "Dépolitiser l'achat ou la vente d'entreprises québécoises en donnant plus d'autorité aux conseils d'administration",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "95",
     "en": "EN - Instaurer une déduction fiscale pour toute réserve créée par les exploitants de navires québécois dans le but de moderniser et de réparer leur flotte",
     "fr": "Instaurer une déduction fiscale pour toute réserve créée par les exploitants de navires québécois dans le but de moderniser et de réparer leur flotte",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "96",
     "en": "EN - Réviser en profondeur le régime fiscal dans le but d'encourager les particuliers à améliorer leurs revenus (et de le simplifier pour les entreprises)",
     "fr": "Réviser en profondeur le régime fiscal dans le but d'encourager les particuliers à améliorer leurs revenus (et de le simplifier pour les entreprises)",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "97",
     "en": "EN - Mettre en oeuvre une stratégie d'exportation agressive pour tirer avantage des accords de libre-échange avec l'Union européenne et les États-Unis",
     "fr": "Mettre en oeuvre une stratégie d'exportation agressive pour tirer avantage des accords de libre-échange avec l'Union européenne et les États-Unis",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "98",
     "en": "EN - Interdire les disparités de traitement relatives aux avantages sociaux en fonction de la date d’embauche",
     "fr": "Interdire les disparités de traitement relatives aux avantages sociaux en fonction de la date d’embauche",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "99",
     "en": "EN - Interdire tout recours à des briseurs de grève",
     "fr": "Interdire tout recours à des briseurs de grève",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "100",
     "en": "EN - Exclure les pensions alimentaires pour enfant du calcul du revenu des femmes quand il s’agit de l’aide sociale, de l’aide financière aux études ou de l’aide juridique",
     "fr": "Exclure les pensions alimentaires pour enfant du calcul du revenu des femmes quand il s’agit de l’aide sociale, de l’aide financière aux études ou de l’aide juridique",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "101",
     "en": "EN - Réduire la taille de l’échangeur Turcot et lui donner davantage de couloirs réservés au transport en commun",
     "fr": "Réduire la taille de l’échangeur Turcot et lui donner davantage de couloirs réservés au transport en commun",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "102",
     "en": "EN - Construire davantage de logements sociaux",
     "fr": "Construire davantage de logements sociaux",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "103",
     "en": "EN - Créer un «service civique» rémunéré et destiné aux jeunes qui ne sont ni au travail ni aux études",
     "fr": "Créer un «service civique» rémunéré et destiné aux jeunes qui ne sont ni au travail ni aux études",
-    "parties": "PQ,QS"
+    "partyIds": "B,N"
   },
   {
     "id": "104",
     "en": "EN - Encourager la conciliation travail-famille-études en offrant aux étudiants universitaires des services de garde atypiques",
     "fr": "Encourager la conciliation travail-famille-études en offrant aux étudiants universitaires des services de garde atypiques",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "105",
     "en": "EN - Faire passer à 8 $ par jour les tarifs de services de garde subventionnés en 2014, puis à 9 $ en 2015, et indexer annuellement par la suite",
     "fr": "Faire passer à 8 $ par jour les tarifs de services de garde subventionnés en 2014, puis à 9 $ en 2015, et indexer annuellement par la suite",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "106",
     "en": "EN - Prolonger la ligne jaune du métro sur la Rive-Sud de Montréal",
     "fr": "Prolonger la ligne jaune du métro sur la Rive-Sud de Montréal",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "107",
     "en": "EN - Brancher les citoyens de toutes les municipalités du Québec à Internet haute vitesse",
     "fr": "Brancher les citoyens de toutes les municipalités du Québec à Internet haute vitesse",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "108",
     "en": "EN - Rédiger une constitution québécoise sur les principes fondamentaux et les institutions politiques qui sera soumise à un référendum",
     "fr": "Rédiger une constitution québécoise sur les principes fondamentaux et les institutions politiques qui sera soumise à un référendum",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "109",
     "en": "EN - Investir jusqu’à 5 % du budget de recherche et de développement pour la création de nouveaux produits pharmaceutiques",
     "fr": "Investir jusqu’à 5 % du budget de recherche et de développement pour la création de nouveaux produits pharmaceutiques",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "110",
     "en": "EN - Implanter et exploiter, sous contrôle public, des installations de production de médicaments génériques et de vaccins",
     "fr": "Implanter et exploiter, sous contrôle public, des installations de production de médicaments génériques et de vaccins",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "111",
     "en": "EN - Remplacer l’actuel système à deux vitesses d’assurance médicaments par un système universel d'assurance médicaments",
     "fr": "Remplacer l’actuel système à deux vitesses d’assurance médicaments par un système universel d'assurance médicaments",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "112",
     "en": "EN - Faire des CLSC une première ligne accessible 24 heures sur 24, 7 jours sur 7",
     "fr": "Faire des CLSC une première ligne accessible 24 heures sur 24, 7 jours sur 7",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "113",
     "en": "EN - Assurer la gratuité pour tout soin et service médicalement requis",
     "fr": "Assurer la gratuité pour tout soin et service médicalement requis",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "114",
     "en": "EN - S’opposer au recours du secteur privé dans les soins et les services à domicile",
     "fr": "S’opposer au recours du secteur privé dans les soins et les services à domicile",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "115",
     "en": "EN - Créer des guichets uniques régionaux pour les interventions non urgentes afin de diminuer le temps d'attente dans les urgences",
     "fr": "Créer des guichets uniques régionaux pour les interventions non urgentes afin de diminuer le temps d'attente dans les urgences",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "116",
     "en": "EN - Prolonger les heures d'ouverture des salles d'opération et des plateaux de diagnostics pour diminuer l’attente aux urgences",
     "fr": "Prolonger les heures d'ouverture des salles d'opération et des plateaux de diagnostics pour diminuer l’attente aux urgences",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "117",
     "en": "EN - Créer de nouvelles places dans les résidences publiques pour les personnes âgées",
     "fr": "Créer de nouvelles places dans les résidences publiques pour les personnes âgées",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "118",
     "en": "EN - Mettre sur pied un régime d'assurance autonomie pour améliorer les services à domicile ou dans les résidences privées pour personnes âgées",
     "fr": "Mettre sur pied un régime d'assurance autonomie pour améliorer les services à domicile ou dans les résidences privées pour personnes âgées",
-    "parties": "QS"
+    "partyIds": "N"
   },
   {
     "id": "119",
     "en": "EN - Augmenter le nombre de groupes de médecine familiale",
     "fr": "Augmenter le nombre de groupes de médecine familiale",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "120",
     "en": "EN - Soutenir les proches aidants en reconnaissant leur travail et en offrant des mesures de soutien et de répit",
     "fr": "Soutenir les proches aidants en reconnaissant leur travail et en offrant des mesures de soutien et de répit",
-    "parties": "PQ,PLQ"
+    "partyIds": "B,L"
   },
   {
     "id": "121",
     "en": "EN - Étaler sur une plus longue période les augmentations de salaire des médecins, initialement prévues pour les 2 prochaines années",
     "fr": "Étaler sur une plus longue période les augmentations de salaire des médecins, initialement prévues pour les 2 prochaines années",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "122",
     "en": "EN - Mettre sur pied un réseau de 50 supercliniques ouvertes 7 jours sur 7 qui offrent une multitude de services pour faciliter l'accès aux médecins de famille",
     "fr": "Mettre sur pied un réseau de 50 supercliniques ouvertes 7 jours sur 7 qui offrent une multitude de services pour faciliter l'accès aux médecins de famille",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "123",
     "en": "EN - Faire une plus grande place au privé dans le réseau de la santé, notamment pour de petites chirurgies et de l'imagerie",
     "fr": "Faire une plus grande place au privé dans le réseau de la santé, notamment pour de petites chirurgies et de l'imagerie",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "124",
     "en": "EN - Doter Télé-Québec d’une salle de nouvelles avec des antennes régionales",
     "fr": "Doter Télé-Québec d’une salle de nouvelles avec des antennes régionales",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "125",
     "en": "EN - Reconnaître les services de garde comme un service essentiel afin de baliser le droit de grève et de lock-out",
     "fr": "Reconnaître les services de garde comme un service essentiel afin de baliser le droit de grève et de lock-out",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "126",
     "en": "EN - Exiger le rapatriement de la part québécoise du budget de l’Agence canadienne de développement international et créer une agence québécoise de coopération et de solidarité internationales",
     "fr": "Exiger le rapatriement de la part québécoise du budget de l’Agence canadienne de développement international et créer une agence québécoise de coopération et de solidarité internationales",
-    "parties": "CAQ"
+    "partyIds": "C"
   },
   {
     "id": "127",
     "en": "EN - Forcer la Société des alcools du Québec à faire la promotion des produits québécois",
     "fr": "Forcer la Société des alcools du Québec à faire la promotion des produits québécois",
-    "parties": "PQ"
+    "partyIds": "B"
   },
   {
     "id": "128",
     "en": "EN - Modifier la Loi sur les permis d'alcool pour permettre aux supermarchés et aux restaurateurs de vendre des boissons alcoolisées fabriquées au Québec",
     "fr": "Modifier la Loi sur les permis d'alcool pour permettre aux supermarchés et aux restaurateurs de vendre des boissons alcoolisées fabriquées au Québec",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "129",
     "en": "EN - Moderniser le Parc olympique de Montréal",
     "fr": "Moderniser le Parc olympique de Montréal",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "130",
     "en": "EN - Mettre en place un programme de régulation de l'impôt foncier pour aider les aînés propriétaires d'une résidence à acquitter leurs taxes foncières",
     "fr": "Mettre en place un programme de régulation de l'impôt foncier pour aider les aînés propriétaires d'une résidence à acquitter leurs taxes foncières",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "131",
     "en": "EN - Instaurer un traversier reliant Montréal à la Rive-Sud",
     "fr": "Instaurer un traversier reliant Montréal à la Rive-Sud",
-    "parties": "PLQ"
+    "partyIds": "L"
   },
   {
     "id": "132",
     "en": "EN - Exempter d'impôt le transfert d'entreprises et de fermes aux enfants et aux employés",
     "fr": "Exempter d'impôt le transfert d'entreprises et de fermes aux enfants et aux employés",
-    "parties": "PLQ"
+    "partyIds": "L"
   }
 ];
-},{}],3:[function(require,module,exports){
-var App, Backbone, DoneView, HeadingView, QuestionView, StatisticsView, UserProfileView,
+},{}],4:[function(require,module,exports){
+var App, Backbone, DoneView, HeadingView, Provinces, QuestionView, StatisticsView, UserProfileView,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
@@ -827,6 +860,8 @@ StatisticsView = require('./views/StatisticsView');
 
 UserProfileView = require('./views/UserProfileView');
 
+Provinces = require('../app/provinces');
+
 module.exports = App = (function(superClass) {
   extend(App, superClass);
 
@@ -835,40 +870,52 @@ module.exports = App = (function(superClass) {
   }
 
   App.prototype.initialize = function(options) {
-    if (options.policies == null) {
-      throw new Error('Must pass options.policies, a Policies');
-    }
-    this.policies = options.policies;
     this.votes = [];
     this.userProfile = {
       languageCode: null,
       provinceCode: null
     };
     this.userProfileView = new UserProfileView();
-    this.headingView = new HeadingView();
-    this.questionView = new QuestionView({
-      policies: this.policies
-    });
-    this.doneView = new DoneView();
-    this.childViews = [this.headingView, this.questionView, this.doneView];
-    this.listenTo(this.questionView, 'user-prefers-policy', this._onUserPrefersPolicy);
-    this.listenTo(this.doneView, 'show-statistics', this.showStatistics);
     return this.listenTo(this.userProfileView, 'user-set-profile', this._onUserSetProfile);
   };
 
+  App.prototype.getUserProvince = function() {
+    if (this.userProfile.provinceCode != null) {
+      return Provinces.byCode[this.userProfile.provinceCode];
+    } else {
+      return null;
+    }
+  };
+
   App.prototype.render = function() {
-    var $els, childView;
+    var $els, childView, ref, ref1, ref2;
     this.$el.empty();
     if (this.userProfile.languageCode == null) {
       this.userProfileView.render();
       this.$el.append(this.userProfileView.el);
     } else {
+      if ((ref = this.headingView) != null) {
+        ref.remove();
+      }
+      if ((ref1 = this.questionView) != null) {
+        ref1.remove();
+      }
+      if ((ref2 = this.doneView) != null) {
+        ref2.remove();
+      }
+      this.headingView = new HeadingView();
+      this.questionView = new QuestionView({
+        province: this.getUserProvince()
+      });
+      this.doneView = new DoneView();
+      this.listenTo(this.questionView, 'user-prefers-policy', this._onUserPrefersPolicy);
+      this.listenTo(this.doneView, 'show-statistics', this.showStatistics);
       $els = (function() {
-        var i, len, ref, results;
-        ref = this.childViews;
+        var i, len, ref3, results;
+        ref3 = [this.headingView, this.questionView, this.doneView];
         results = [];
-        for (i = 0, len = ref.length; i < len; i++) {
-          childView = ref[i];
+        for (i = 0, len = ref3.length; i < len; i++) {
+          childView = ref3[i];
           childView.render();
           results.push(childView.el);
         }
@@ -881,6 +928,7 @@ module.exports = App = (function(superClass) {
   };
 
   App.prototype._onUserPrefersPolicy = function(policy, otherPolicy) {
+    var ref;
     this.votes.push([policy, otherPolicy]);
     Backbone.ajax({
       type: 'POST',
@@ -895,7 +943,7 @@ module.exports = App = (function(superClass) {
         return console.log('Error during vote', textStatus, errorThrown);
       }
     });
-    return this.questionView.render();
+    return (ref = this.questionView) != null ? ref.render() : void 0;
   };
 
   App.prototype._onUserSetProfile = function(profile) {
@@ -909,7 +957,7 @@ module.exports = App = (function(superClass) {
       return;
     }
     view = new StatisticsView({
-      policies: this.policies,
+      province: this.getUserProvince(),
       votes: this.votes
     });
     view.render();
@@ -922,87 +970,117 @@ module.exports = App = (function(superClass) {
 })(Backbone.View);
 
 
-},{"./views/DoneView":7,"./views/HeadingView":9,"./views/QuestionView":10,"./views/StatisticsView":11,"./views/UserProfileView":12,"backbone":13}],4:[function(require,module,exports){
-var Backbone, Policies, Policy,
-  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-  hasProp = {}.hasOwnProperty;
+},{"../app/provinces":1,"./views/DoneView":8,"./views/HeadingView":10,"./views/QuestionView":11,"./views/StatisticsView":12,"./views/UserProfileView":13,"backbone":14}],5:[function(require,module,exports){
+var All, ById, Party, Provinces, i, len, party;
 
-Backbone = require('backbone');
+Provinces = require('../app/provinces');
 
-Policy = require('../models/Policy');
-
-module.exports = Policies = (function(superClass) {
-  extend(Policies, superClass);
-
-  function Policies() {
-    return Policies.__super__.constructor.apply(this, arguments);
+Party = (function() {
+  function Party(id, en, fr, onlyInProvince1) {
+    this.id = id;
+    this.en = en;
+    this.fr = fr;
+    this.onlyInProvince = onlyInProvince1;
   }
 
-  Policies.prototype.model = Policy;
+  return Party;
 
-  return Policies;
+})();
 
-})(Backbone.Collection);
+All = require('../data/parties.csv').map(function(obj) {
+  var onlyInProvince;
+  onlyInProvince = (function() {
+    if (obj.onlyInProvinceCode) {
+      if (!(obj.onlyInProvinceCode in Provinces.byCode)) {
+        throw new Error("Invalid provinceCode " + obj.onlyInProvinceCode + " in parties.csv");
+      }
+      return Provinces.byCode[obj.onlyInProvinceCode];
+    } else {
+      return null;
+    }
+  })();
+  return new Party(obj.id, obj.en, obj.fr, onlyInProvince);
+});
+
+ById = {};
+
+for (i = 0, len = All.length; i < len; i++) {
+  party = All[i];
+  ById[party.id] = party;
+}
+
+module.exports = {
+  all: All,
+  byId: ById
+};
 
 
-},{"../models/Policy":6,"backbone":13}],5:[function(require,module,exports){
-var $, App, Policies;
+},{"../app/provinces":1,"../data/parties.csv":2}],6:[function(require,module,exports){
+var All, ById, Parties, Policy, j, len, policy;
+
+Parties = require('./Parties');
+
+Policy = (function() {
+  function Policy(id, en, fr, parties1) {
+    this.id = id;
+    this.en = en;
+    this.fr = fr;
+    this.parties = parties1;
+  }
+
+  return Policy;
+
+})();
+
+All = require('../data/policies.csv').map(function(obj, i) {
+  var parties, partyId;
+  parties = (function() {
+    var j, len, ref, results;
+    ref = obj.partyIds.split(',');
+    results = [];
+    for (j = 0, len = ref.length; j < len; j++) {
+      partyId = ref[j];
+      if (!(partyId in Parties.byId)) {
+        throw new Error("Invalid partyId " + partyId + " near row " + i + " of policies.csv");
+      }
+      results.push(Parties.byId[partyId]);
+    }
+    return results;
+  })();
+  return new Policy(obj.id, obj.en, obj.fr, parties);
+});
+
+ById = {};
+
+for (j = 0, len = All.length; j < len; j++) {
+  policy = All[j];
+  ById[policy.id] = policy;
+}
+
+module.exports = {
+  all: All,
+  byId: ById
+};
+
+
+},{"../data/policies.csv":3,"./Parties":5}],7:[function(require,module,exports){
+var $, App;
 
 $ = require('jquery');
 
 App = require('./App');
 
-Policies = require('./collections/Policies');
-
 $(function() {
-  var $main, app, policies;
+  var $main, app;
   $main = $('<div id="main"></div>').appendTo('body');
-  policies = new Policies(require('../data/policies.csv'), {
-    parse: true
-  });
   app = new App({
-    el: $main,
-    policies: policies
+    el: $main
   });
   return app.render();
 });
 
 
-},{"../data/policies.csv":2,"./App":3,"./collections/Policies":4,"jquery":15}],6:[function(require,module,exports){
-var Backbone, Policy,
-  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-  hasProp = {}.hasOwnProperty;
-
-Backbone = require('backbone');
-
-module.exports = Policy = (function(superClass) {
-  extend(Policy, superClass);
-
-  function Policy() {
-    return Policy.__super__.constructor.apply(this, arguments);
-  }
-
-  Policy.prototype.defaults = {
-    en: '',
-    fr: '',
-    parties: []
-  };
-
-  Policy.prototype.parse = function(json) {
-    return {
-      id: json.id,
-      en: json.en,
-      fr: json.fr,
-      parties: json.parties.split(/,/)
-    };
-  };
-
-  return Policy;
-
-})(Backbone.Model);
-
-
-},{"backbone":13}],7:[function(require,module,exports){
+},{"./App":4,"jquery":15}],8:[function(require,module,exports){
 var Backbone, DoneView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1039,8 +1117,8 @@ module.exports = DoneView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":13,"underscore":16}],8:[function(require,module,exports){
-var $, Backbone, ForAgainstView, _,
+},{"backbone":14,"underscore":16}],9:[function(require,module,exports){
+var $, Backbone, ForAgainstView, Parties, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
@@ -1049,6 +1127,8 @@ _ = require('underscore');
 Backbone = require('backbone');
 
 $ = Backbone.$;
+
+Parties = require('../Parties');
 
 module.exports = ForAgainstView = (function(superClass) {
   extend(ForAgainstView, superClass);
@@ -1060,8 +1140,8 @@ module.exports = ForAgainstView = (function(superClass) {
   ForAgainstView.prototype.className = 'for-against';
 
   ForAgainstView.prototype.templates = {
-    main: _.template('<h2>Your choices, by party:</h2>\n<table class="parties">\n  <thead>\n    <tr>\n      <th class="party">Party</th>\n      <th class="against">nay</th>\n      <th class="for">yay</th>\n    </tr>\n  </thead>\n  <tbody>\n    <% parties.forEach(function(party) { %>\n      <tr>\n        <th class="party"><%- party.name %></th>\n        <td class="against">\n          <ul class="policy-list">\n            <%= party.against.map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n        <td class="for">\n          <ul class="policy-list">\n            <%= party["for"].map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n      </li>\n    <% }) %>\n  </tbody>\n</ul>'),
-    policy: _.template('<li class="policy">\n  <a class="policy-marker">&nbsp;</a>\n  <div class="policy-details">\n    <h4 class="policy-policy"><%- policy.get(\'policy\') %></h4>\n    <div class="policy-party">Promised by <strong><%- policy.get(\'parties\').join(\', \') %></strong></div>\n    <% if (policy.betterThanPolicies.length) { %>\n      <div class="policy-better-than">\n        <p>You chose this policy over:</p>\n        <ul>\n          <% policy.betterThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'en\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n    <% if (policy.worseThanPolicies.length) { %>\n      <div class="policy-worse-than">\n        <p>You disliked this policy compared to:</p>\n        <ul>\n          <% policy.worseThanPolicies.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.get(\'en\') %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n  </div>\n</li>')
+    main: _.template('<h2>Your choices, by party:</h2>\n<table class="parties">\n  <thead>\n    <tr>\n      <th class="party">Party</th>\n      <th class="user-says-nay">nay</th>\n      <th class="user-says-yay">yay</th>\n    </tr>\n  </thead>\n  <tbody>\n    <% parties.forEach(function(party) { %>\n      <tr>\n        <th class="party"><%- party.en %></th>\n        <td class="user-says-nay">\n          <ul class="policy-list">\n            <%= party.userSaysNay.map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n        <td class="user-says-yay">\n          <ul class="policy-list">\n            <%= party.userSaysYay.map(function(policy) { return renderPolicy({ policy: policy }); }).join(\'\') %>\n          </ul>\n        </td>\n      </li>\n    <% }) %>\n  </tbody>\n</ul>'),
+    policy: _.template('<li class="policy">\n  <a class="policy-marker">&nbsp;</a>\n  <div class="policy-details">\n    <h4 class="policy-policy"><%- policy.en %></h4>\n    <div class="policy-party">Promised by <strong><%- policy.parties.map(function(p) { return p.en; }).join(\', \') %></strong></div>\n    <% if (policy.userSaysYayOver.length) { %>\n      <div class="policy-better-than">\n        <p>You chose this policy over:</p>\n        <ul>\n          <% policy.userSaysYayOver.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.en %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n    <% if (policy.userSaysNayOver.length) { %>\n      <div class="policy-worse-than">\n        <p>You disliked this policy compared to:</p>\n        <ul>\n          <% policy.userSaysNayOver.forEach(function(otherPolicy) { %>\n            <li><%- otherPolicy.en %></li>\n          <% }) %>\n        </ul>\n      </div>\n    <% } %>\n  </div>\n</li>')
   };
 
   ForAgainstView.prototype.events = {
@@ -1070,14 +1150,14 @@ module.exports = ForAgainstView = (function(superClass) {
   };
 
   ForAgainstView.prototype.initialize = function(options) {
-    if (!options.policies) {
-      throw 'must pass options.policies, a Policies';
+    if (!('province' in options)) {
+      throw 'must pass options.province, a Province';
     }
     if (!options.votes) {
       throw 'must pass options.votes, an Array[[Policy,Policy]] of better/worse policies';
     }
-    this.policies = options.policies;
     this.votes = options.votes;
+    this.province = options.province;
     return $(document).on('click.for-against-view', (function(_this) {
       return function(e) {
         return _this._onClickDocument(e);
@@ -1086,46 +1166,75 @@ module.exports = ForAgainstView = (function(superClass) {
   };
 
   ForAgainstView.prototype.render = function() {
-    var better, html, i, j, k, l, len, len1, len2, len3, name, p, parties, party, partyByName, ref, ref1, ref2, ref3, worse;
+    var __, augmentedPartiesById, augmentedPoliciesById, getOrSetAugmentedPolicy, html, i, j, k, l, len, len1, len2, len3, nayPolicy, parties, party, ref, ref1, ref2, ref3, ref4, yayPolicy;
+    augmentedPartiesById = {};
+    ref = Parties.all;
+    for (i = 0, len = ref.length; i < len; i++) {
+      party = ref[i];
+      if ((party.onlyInProvince != null) && party.onlyInProvince !== this.province) {
+        continue;
+      }
+      augmentedPartiesById[party.id] = {
+        id: party.id,
+        en: party.en,
+        fr: party.fr,
+        userSaysYay: [],
+        userSaysNay: []
+      };
+    }
+    augmentedPoliciesById = {};
+    getOrSetAugmentedPolicy = function(policy) {
+      var name;
+      return augmentedPoliciesById[name = policy.id] || (augmentedPoliciesById[name] = {
+        id: policy.id,
+        en: policy.en,
+        fr: policy.fr,
+        parties: (function() {
+          var j, len1, ref1, results;
+          ref1 = policy.parties;
+          results = [];
+          for (j = 0, len1 = ref1.length; j < len1; j++) {
+            party = ref1[j];
+            if (party.id in augmentedPartiesById) {
+              results.push(augmentedPartiesById[party.id]);
+            }
+          }
+          return results;
+        })(),
+        userSaysYayOver: [],
+        userSaysNayOver: []
+      });
+    };
+    ref1 = this.votes;
+    for (j = 0, len1 = ref1.length; j < len1; j++) {
+      ref2 = ref1[j], yayPolicy = ref2[0], nayPolicy = ref2[1];
+      yayPolicy = getOrSetAugmentedPolicy(yayPolicy);
+      nayPolicy = getOrSetAugmentedPolicy(nayPolicy);
+      ref3 = yayPolicy.parties;
+      for (k = 0, len2 = ref3.length; k < len2; k++) {
+        party = ref3[k];
+        party.userSaysYay.push(yayPolicy);
+      }
+      ref4 = nayPolicy.parties;
+      for (l = 0, len3 = ref4.length; l < len3; l++) {
+        party = ref4[l];
+        party.userSaysNay.push(nayPolicy);
+      }
+      yayPolicy.userSaysYayOver.push(nayPolicy);
+      nayPolicy.userSaysNayOver.push(yayPolicy);
+    }
     parties = (function() {
-      var i, len, ref, results;
-      ref = _.uniq(_.flatten(this.policies.pluck('parties'))).sort();
+      var results;
       results = [];
-      for (i = 0, len = ref.length; i < len; i++) {
-        name = ref[i];
-        results.push({
-          name: name,
-          against: [],
-          "for": []
-        });
+      for (__ in augmentedPartiesById) {
+        party = augmentedPartiesById[__];
+        results.push(party);
       }
       return results;
-    }).call(this);
-    partyByName = {};
-    for (i = 0, len = parties.length; i < len; i++) {
-      party = parties[i];
-      partyByName[party.name] = party;
-    }
-    this.policies.forEach(function(policy) {
-      policy.betterThanPolicies = [];
-      return policy.worseThanPolicies = [];
+    })();
+    parties.sort(function(a, b) {
+      return (b.userSaysYay.length - b.userSaysNay.length) - (a.userSaysYay.length - a.userSaysNay.length) || (b.userSaysYay.length - a.userSaysYay.length) || (a.id < b.id ? -1 : b.id < a.id ? 1 : 0);
     });
-    ref = this.votes;
-    for (j = 0, len1 = ref.length; j < len1; j++) {
-      ref1 = ref[j], better = ref1[0], worse = ref1[1];
-      better.betterThanPolicies.push(worse);
-      worse.worseThanPolicies.push(better);
-      ref2 = better.get('parties');
-      for (k = 0, len2 = ref2.length; k < len2; k++) {
-        p = ref2[k];
-        partyByName[p]["for"].push(better);
-      }
-      ref3 = worse.get('parties');
-      for (l = 0, len3 = ref3.length; l < len3; l++) {
-        p = ref3[l];
-        partyByName[p].against.push(worse);
-      }
-    }
     html = this.templates.main({
       parties: parties,
       renderPolicy: this.templates.policy
@@ -1172,7 +1281,7 @@ module.exports = ForAgainstView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":13,"underscore":16}],9:[function(require,module,exports){
+},{"../Parties":5,"backbone":14,"underscore":16}],10:[function(require,module,exports){
 var Backbone, HeadingView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1201,8 +1310,8 @@ module.exports = HeadingView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":13,"underscore":16}],10:[function(require,module,exports){
-var $, Backbone, QuestionView, _,
+},{"backbone":14,"underscore":16}],11:[function(require,module,exports){
+var $, Backbone, Policies, QuestionView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
@@ -1211,6 +1320,8 @@ Backbone = require('backbone');
 $ = Backbone.$;
 
 _ = require('underscore');
+
+Policies = require('../Policies');
 
 module.exports = QuestionView = (function(superClass) {
   extend(QuestionView, superClass);
@@ -1221,21 +1332,40 @@ module.exports = QuestionView = (function(superClass) {
 
   QuestionView.prototype.className = 'question';
 
-  QuestionView.prototype.template = _.template('<button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">\n  <span class="inner">\n    <%- policy1.get(\'en\') %>\n  </a>\n</button>\n<button class="choice" data-policy-id="<%- policy2.id %>" data-other-policy-id="<%- policy1.id %>">\n  <span class="inner">\n    <%- policy2.get(\'en\') %>\n  </span>\n</button>');
+  QuestionView.prototype.template = _.template('<button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">\n  <span class="inner">\n    <%- policy1.en %>\n  </a>\n</button>\n<button class="choice" data-policy-id="<%- policy2.id %>" data-other-policy-id="<%- policy1.id %>">\n  <span class="inner">\n    <%- policy2.en %>\n  </span>\n</button>');
 
   QuestionView.prototype.events = {
     'click button': '_onClickButton'
   };
 
   QuestionView.prototype.initialize = function(options) {
-    if (options.policies == null) {
-      throw new Error('Must pass options.policies, a Policies');
+    if (!('province' in options)) {
+      throw 'Must pass options.province, the user\'s Province';
     }
-    this.policies = options.policies;
-    return this.unseenPolicies = this.policies.shuffle();
+    this.province = options.province;
+    return this.unseenPolicies = [];
+  };
+
+  QuestionView.prototype._policyAppliesInProvince = function(policy) {
+    var i, len, party, ref;
+    ref = policy.parties;
+    for (i = 0, len = ref.length; i < len; i++) {
+      party = ref[i];
+      if ((party.onlyInProvince == null) || party.onlyInProvince === this.province) {
+        return true;
+      }
+    }
+    return false;
   };
 
   QuestionView.prototype.pick2 = function() {
+    if (this.unseenPolicies.length < 2) {
+      this.unseenPolicies = this.unseenPolicies.concat(_.shuffle(Policies.all.slice().filter((function(_this) {
+        return function(p) {
+          return _this._policyAppliesInProvince(p);
+        };
+      })(this))));
+    }
     return [this.unseenPolicies.pop(), this.unseenPolicies.pop()];
   };
 
@@ -1252,7 +1382,7 @@ module.exports = QuestionView = (function(superClass) {
     var otherPolicyId, policyId;
     policyId = $(e.currentTarget).attr('data-policy-id');
     otherPolicyId = $(e.currentTarget).attr('data-other-policy-id');
-    return this.trigger('user-prefers-policy', this.policies.get(policyId), this.policies.get(otherPolicyId));
+    return this.trigger('user-prefers-policy', Policies.byId[policyId], Policies.byId[otherPolicyId]);
   };
 
   return QuestionView;
@@ -1260,7 +1390,7 @@ module.exports = QuestionView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"backbone":13,"underscore":16}],11:[function(require,module,exports){
+},{"../Policies":6,"backbone":14,"underscore":16}],12:[function(require,module,exports){
 var Backbone, ForAgainstView, StatisticsView,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1279,20 +1409,20 @@ module.exports = StatisticsView = (function(superClass) {
   StatisticsView.prototype.className = 'statistics';
 
   StatisticsView.prototype.initialize = function(options) {
-    if (!options.policies) {
-      throw 'must pass options.policies, a Policies';
+    if (!('province' in options)) {
+      throw 'must pass options.province, the user\'s Province';
     }
     if (!options.votes) {
       throw 'must pass options.votes, an Array[[Policy,Policy]] of better/worse policies';
     }
-    this.policies = options.policies;
+    this.province = options.province;
     return this.votes = options.votes;
   };
 
   StatisticsView.prototype.render = function() {
     var forAgainstView;
     forAgainstView = new ForAgainstView({
-      policies: this.policies,
+      province: this.province,
       votes: this.votes
     });
     forAgainstView.render();
@@ -1305,7 +1435,7 @@ module.exports = StatisticsView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"./ForAgainstView":8,"backbone":13}],12:[function(require,module,exports){
+},{"./ForAgainstView":9,"backbone":14}],13:[function(require,module,exports){
 var Backbone, Provinces, UserProfileView, _,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
@@ -1356,7 +1486,7 @@ module.exports = UserProfileView = (function(superClass) {
     this.$el.addClass('saving');
     profile = {
       languageCode: this.$('input[name="languageCode"]:checked').val(),
-      provinceCode: this.$('input[name="provinceCode"]:checked').val()
+      provinceCode: this.$('input[name="provinceCode"]:checked').val() || null
     };
     return Backbone.ajax({
       type: 'POST',
@@ -1379,7 +1509,7 @@ module.exports = UserProfileView = (function(superClass) {
 })(Backbone.View);
 
 
-},{"../../app/provinces":1,"backbone":13,"underscore":16}],13:[function(require,module,exports){
+},{"../../app/provinces":1,"backbone":14,"underscore":16}],14:[function(require,module,exports){
 (function (global){
 //     Backbone.js 1.2.1
 
@@ -3257,1557 +3387,7 @@ module.exports = UserProfileView = (function(superClass) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"jquery":15,"underscore":14}],14:[function(require,module,exports){
-//     Underscore.js 1.8.3
-//     http://underscorejs.org
-//     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-//     Underscore may be freely distributed under the MIT license.
-
-(function() {
-
-  // Baseline setup
-  // --------------
-
-  // Establish the root object, `window` in the browser, or `exports` on the server.
-  var root = this;
-
-  // Save the previous value of the `_` variable.
-  var previousUnderscore = root._;
-
-  // Save bytes in the minified (but not gzipped) version:
-  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
-
-  // Create quick reference variables for speed access to core prototypes.
-  var
-    push             = ArrayProto.push,
-    slice            = ArrayProto.slice,
-    toString         = ObjProto.toString,
-    hasOwnProperty   = ObjProto.hasOwnProperty;
-
-  // All **ECMAScript 5** native function implementations that we hope to use
-  // are declared here.
-  var
-    nativeIsArray      = Array.isArray,
-    nativeKeys         = Object.keys,
-    nativeBind         = FuncProto.bind,
-    nativeCreate       = Object.create;
-
-  // Naked function reference for surrogate-prototype-swapping.
-  var Ctor = function(){};
-
-  // Create a safe reference to the Underscore object for use below.
-  var _ = function(obj) {
-    if (obj instanceof _) return obj;
-    if (!(this instanceof _)) return new _(obj);
-    this._wrapped = obj;
-  };
-
-  // Export the Underscore object for **Node.js**, with
-  // backwards-compatibility for the old `require()` API. If we're in
-  // the browser, add `_` as a global object.
-  if (typeof exports !== 'undefined') {
-    if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = _;
-    }
-    exports._ = _;
-  } else {
-    root._ = _;
-  }
-
-  // Current version.
-  _.VERSION = '1.8.3';
-
-  // Internal function that returns an efficient (for current engines) version
-  // of the passed-in callback, to be repeatedly applied in other Underscore
-  // functions.
-  var optimizeCb = function(func, context, argCount) {
-    if (context === void 0) return func;
-    switch (argCount == null ? 3 : argCount) {
-      case 1: return function(value) {
-        return func.call(context, value);
-      };
-      case 2: return function(value, other) {
-        return func.call(context, value, other);
-      };
-      case 3: return function(value, index, collection) {
-        return func.call(context, value, index, collection);
-      };
-      case 4: return function(accumulator, value, index, collection) {
-        return func.call(context, accumulator, value, index, collection);
-      };
-    }
-    return function() {
-      return func.apply(context, arguments);
-    };
-  };
-
-  // A mostly-internal function to generate callbacks that can be applied
-  // to each element in a collection, returning the desired result — either
-  // identity, an arbitrary callback, a property matcher, or a property accessor.
-  var cb = function(value, context, argCount) {
-    if (value == null) return _.identity;
-    if (_.isFunction(value)) return optimizeCb(value, context, argCount);
-    if (_.isObject(value)) return _.matcher(value);
-    return _.property(value);
-  };
-  _.iteratee = function(value, context) {
-    return cb(value, context, Infinity);
-  };
-
-  // An internal function for creating assigner functions.
-  var createAssigner = function(keysFunc, undefinedOnly) {
-    return function(obj) {
-      var length = arguments.length;
-      if (length < 2 || obj == null) return obj;
-      for (var index = 1; index < length; index++) {
-        var source = arguments[index],
-            keys = keysFunc(source),
-            l = keys.length;
-        for (var i = 0; i < l; i++) {
-          var key = keys[i];
-          if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
-        }
-      }
-      return obj;
-    };
-  };
-
-  // An internal function for creating a new object that inherits from another.
-  var baseCreate = function(prototype) {
-    if (!_.isObject(prototype)) return {};
-    if (nativeCreate) return nativeCreate(prototype);
-    Ctor.prototype = prototype;
-    var result = new Ctor;
-    Ctor.prototype = null;
-    return result;
-  };
-
-  var property = function(key) {
-    return function(obj) {
-      return obj == null ? void 0 : obj[key];
-    };
-  };
-
-  // Helper for collection methods to determine whether a collection
-  // should be iterated as an array or as an object
-  // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength
-  // Avoids a very nasty iOS 8 JIT bug on ARM-64. #2094
-  var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
-  var getLength = property('length');
-  var isArrayLike = function(collection) {
-    var length = getLength(collection);
-    return typeof length == 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
-  };
-
-  // Collection Functions
-  // --------------------
-
-  // The cornerstone, an `each` implementation, aka `forEach`.
-  // Handles raw objects in addition to array-likes. Treats all
-  // sparse array-likes as if they were dense.
-  _.each = _.forEach = function(obj, iteratee, context) {
-    iteratee = optimizeCb(iteratee, context);
-    var i, length;
-    if (isArrayLike(obj)) {
-      for (i = 0, length = obj.length; i < length; i++) {
-        iteratee(obj[i], i, obj);
-      }
-    } else {
-      var keys = _.keys(obj);
-      for (i = 0, length = keys.length; i < length; i++) {
-        iteratee(obj[keys[i]], keys[i], obj);
-      }
-    }
-    return obj;
-  };
-
-  // Return the results of applying the iteratee to each element.
-  _.map = _.collect = function(obj, iteratee, context) {
-    iteratee = cb(iteratee, context);
-    var keys = !isArrayLike(obj) && _.keys(obj),
-        length = (keys || obj).length,
-        results = Array(length);
-    for (var index = 0; index < length; index++) {
-      var currentKey = keys ? keys[index] : index;
-      results[index] = iteratee(obj[currentKey], currentKey, obj);
-    }
-    return results;
-  };
-
-  // Create a reducing function iterating left or right.
-  function createReduce(dir) {
-    // Optimized iterator function as using arguments.length
-    // in the main function will deoptimize the, see #1991.
-    function iterator(obj, iteratee, memo, keys, index, length) {
-      for (; index >= 0 && index < length; index += dir) {
-        var currentKey = keys ? keys[index] : index;
-        memo = iteratee(memo, obj[currentKey], currentKey, obj);
-      }
-      return memo;
-    }
-
-    return function(obj, iteratee, memo, context) {
-      iteratee = optimizeCb(iteratee, context, 4);
-      var keys = !isArrayLike(obj) && _.keys(obj),
-          length = (keys || obj).length,
-          index = dir > 0 ? 0 : length - 1;
-      // Determine the initial value if none is provided.
-      if (arguments.length < 3) {
-        memo = obj[keys ? keys[index] : index];
-        index += dir;
-      }
-      return iterator(obj, iteratee, memo, keys, index, length);
-    };
-  }
-
-  // **Reduce** builds up a single result from a list of values, aka `inject`,
-  // or `foldl`.
-  _.reduce = _.foldl = _.inject = createReduce(1);
-
-  // The right-associative version of reduce, also known as `foldr`.
-  _.reduceRight = _.foldr = createReduce(-1);
-
-  // Return the first value which passes a truth test. Aliased as `detect`.
-  _.find = _.detect = function(obj, predicate, context) {
-    var key;
-    if (isArrayLike(obj)) {
-      key = _.findIndex(obj, predicate, context);
-    } else {
-      key = _.findKey(obj, predicate, context);
-    }
-    if (key !== void 0 && key !== -1) return obj[key];
-  };
-
-  // Return all the elements that pass a truth test.
-  // Aliased as `select`.
-  _.filter = _.select = function(obj, predicate, context) {
-    var results = [];
-    predicate = cb(predicate, context);
-    _.each(obj, function(value, index, list) {
-      if (predicate(value, index, list)) results.push(value);
-    });
-    return results;
-  };
-
-  // Return all the elements for which a truth test fails.
-  _.reject = function(obj, predicate, context) {
-    return _.filter(obj, _.negate(cb(predicate)), context);
-  };
-
-  // Determine whether all of the elements match a truth test.
-  // Aliased as `all`.
-  _.every = _.all = function(obj, predicate, context) {
-    predicate = cb(predicate, context);
-    var keys = !isArrayLike(obj) && _.keys(obj),
-        length = (keys || obj).length;
-    for (var index = 0; index < length; index++) {
-      var currentKey = keys ? keys[index] : index;
-      if (!predicate(obj[currentKey], currentKey, obj)) return false;
-    }
-    return true;
-  };
-
-  // Determine if at least one element in the object matches a truth test.
-  // Aliased as `any`.
-  _.some = _.any = function(obj, predicate, context) {
-    predicate = cb(predicate, context);
-    var keys = !isArrayLike(obj) && _.keys(obj),
-        length = (keys || obj).length;
-    for (var index = 0; index < length; index++) {
-      var currentKey = keys ? keys[index] : index;
-      if (predicate(obj[currentKey], currentKey, obj)) return true;
-    }
-    return false;
-  };
-
-  // Determine if the array or object contains a given item (using `===`).
-  // Aliased as `includes` and `include`.
-  _.contains = _.includes = _.include = function(obj, item, fromIndex, guard) {
-    if (!isArrayLike(obj)) obj = _.values(obj);
-    if (typeof fromIndex != 'number' || guard) fromIndex = 0;
-    return _.indexOf(obj, item, fromIndex) >= 0;
-  };
-
-  // Invoke a method (with arguments) on every item in a collection.
-  _.invoke = function(obj, method) {
-    var args = slice.call(arguments, 2);
-    var isFunc = _.isFunction(method);
-    return _.map(obj, function(value) {
-      var func = isFunc ? method : value[method];
-      return func == null ? func : func.apply(value, args);
-    });
-  };
-
-  // Convenience version of a common use case of `map`: fetching a property.
-  _.pluck = function(obj, key) {
-    return _.map(obj, _.property(key));
-  };
-
-  // Convenience version of a common use case of `filter`: selecting only objects
-  // containing specific `key:value` pairs.
-  _.where = function(obj, attrs) {
-    return _.filter(obj, _.matcher(attrs));
-  };
-
-  // Convenience version of a common use case of `find`: getting the first object
-  // containing specific `key:value` pairs.
-  _.findWhere = function(obj, attrs) {
-    return _.find(obj, _.matcher(attrs));
-  };
-
-  // Return the maximum element (or element-based computation).
-  _.max = function(obj, iteratee, context) {
-    var result = -Infinity, lastComputed = -Infinity,
-        value, computed;
-    if (iteratee == null && obj != null) {
-      obj = isArrayLike(obj) ? obj : _.values(obj);
-      for (var i = 0, length = obj.length; i < length; i++) {
-        value = obj[i];
-        if (value > result) {
-          result = value;
-        }
-      }
-    } else {
-      iteratee = cb(iteratee, context);
-      _.each(obj, function(value, index, list) {
-        computed = iteratee(value, index, list);
-        if (computed > lastComputed || computed === -Infinity && result === -Infinity) {
-          result = value;
-          lastComputed = computed;
-        }
-      });
-    }
-    return result;
-  };
-
-  // Return the minimum element (or element-based computation).
-  _.min = function(obj, iteratee, context) {
-    var result = Infinity, lastComputed = Infinity,
-        value, computed;
-    if (iteratee == null && obj != null) {
-      obj = isArrayLike(obj) ? obj : _.values(obj);
-      for (var i = 0, length = obj.length; i < length; i++) {
-        value = obj[i];
-        if (value < result) {
-          result = value;
-        }
-      }
-    } else {
-      iteratee = cb(iteratee, context);
-      _.each(obj, function(value, index, list) {
-        computed = iteratee(value, index, list);
-        if (computed < lastComputed || computed === Infinity && result === Infinity) {
-          result = value;
-          lastComputed = computed;
-        }
-      });
-    }
-    return result;
-  };
-
-  // Shuffle a collection, using the modern version of the
-  // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
-  _.shuffle = function(obj) {
-    var set = isArrayLike(obj) ? obj : _.values(obj);
-    var length = set.length;
-    var shuffled = Array(length);
-    for (var index = 0, rand; index < length; index++) {
-      rand = _.random(0, index);
-      if (rand !== index) shuffled[index] = shuffled[rand];
-      shuffled[rand] = set[index];
-    }
-    return shuffled;
-  };
-
-  // Sample **n** random values from a collection.
-  // If **n** is not specified, returns a single random element.
-  // The internal `guard` argument allows it to work with `map`.
-  _.sample = function(obj, n, guard) {
-    if (n == null || guard) {
-      if (!isArrayLike(obj)) obj = _.values(obj);
-      return obj[_.random(obj.length - 1)];
-    }
-    return _.shuffle(obj).slice(0, Math.max(0, n));
-  };
-
-  // Sort the object's values by a criterion produced by an iteratee.
-  _.sortBy = function(obj, iteratee, context) {
-    iteratee = cb(iteratee, context);
-    return _.pluck(_.map(obj, function(value, index, list) {
-      return {
-        value: value,
-        index: index,
-        criteria: iteratee(value, index, list)
-      };
-    }).sort(function(left, right) {
-      var a = left.criteria;
-      var b = right.criteria;
-      if (a !== b) {
-        if (a > b || a === void 0) return 1;
-        if (a < b || b === void 0) return -1;
-      }
-      return left.index - right.index;
-    }), 'value');
-  };
-
-  // An internal function used for aggregate "group by" operations.
-  var group = function(behavior) {
-    return function(obj, iteratee, context) {
-      var result = {};
-      iteratee = cb(iteratee, context);
-      _.each(obj, function(value, index) {
-        var key = iteratee(value, index, obj);
-        behavior(result, value, key);
-      });
-      return result;
-    };
-  };
-
-  // Groups the object's values by a criterion. Pass either a string attribute
-  // to group by, or a function that returns the criterion.
-  _.groupBy = group(function(result, value, key) {
-    if (_.has(result, key)) result[key].push(value); else result[key] = [value];
-  });
-
-  // Indexes the object's values by a criterion, similar to `groupBy`, but for
-  // when you know that your index values will be unique.
-  _.indexBy = group(function(result, value, key) {
-    result[key] = value;
-  });
-
-  // Counts instances of an object that group by a certain criterion. Pass
-  // either a string attribute to count by, or a function that returns the
-  // criterion.
-  _.countBy = group(function(result, value, key) {
-    if (_.has(result, key)) result[key]++; else result[key] = 1;
-  });
-
-  // Safely create a real, live array from anything iterable.
-  _.toArray = function(obj) {
-    if (!obj) return [];
-    if (_.isArray(obj)) return slice.call(obj);
-    if (isArrayLike(obj)) return _.map(obj, _.identity);
-    return _.values(obj);
-  };
-
-  // Return the number of elements in an object.
-  _.size = function(obj) {
-    if (obj == null) return 0;
-    return isArrayLike(obj) ? obj.length : _.keys(obj).length;
-  };
-
-  // Split a collection into two arrays: one whose elements all satisfy the given
-  // predicate, and one whose elements all do not satisfy the predicate.
-  _.partition = function(obj, predicate, context) {
-    predicate = cb(predicate, context);
-    var pass = [], fail = [];
-    _.each(obj, function(value, key, obj) {
-      (predicate(value, key, obj) ? pass : fail).push(value);
-    });
-    return [pass, fail];
-  };
-
-  // Array Functions
-  // ---------------
-
-  // Get the first element of an array. Passing **n** will return the first N
-  // values in the array. Aliased as `head` and `take`. The **guard** check
-  // allows it to work with `_.map`.
-  _.first = _.head = _.take = function(array, n, guard) {
-    if (array == null) return void 0;
-    if (n == null || guard) return array[0];
-    return _.initial(array, array.length - n);
-  };
-
-  // Returns everything but the last entry of the array. Especially useful on
-  // the arguments object. Passing **n** will return all the values in
-  // the array, excluding the last N.
-  _.initial = function(array, n, guard) {
-    return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));
-  };
-
-  // Get the last element of an array. Passing **n** will return the last N
-  // values in the array.
-  _.last = function(array, n, guard) {
-    if (array == null) return void 0;
-    if (n == null || guard) return array[array.length - 1];
-    return _.rest(array, Math.max(0, array.length - n));
-  };
-
-  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
-  // Especially useful on the arguments object. Passing an **n** will return
-  // the rest N values in the array.
-  _.rest = _.tail = _.drop = function(array, n, guard) {
-    return slice.call(array, n == null || guard ? 1 : n);
-  };
-
-  // Trim out all falsy values from an array.
-  _.compact = function(array) {
-    return _.filter(array, _.identity);
-  };
-
-  // Internal implementation of a recursive `flatten` function.
-  var flatten = function(input, shallow, strict, startIndex) {
-    var output = [], idx = 0;
-    for (var i = startIndex || 0, length = getLength(input); i < length; i++) {
-      var value = input[i];
-      if (isArrayLike(value) && (_.isArray(value) || _.isArguments(value))) {
-        //flatten current level of array or arguments object
-        if (!shallow) value = flatten(value, shallow, strict);
-        var j = 0, len = value.length;
-        output.length += len;
-        while (j < len) {
-          output[idx++] = value[j++];
-        }
-      } else if (!strict) {
-        output[idx++] = value;
-      }
-    }
-    return output;
-  };
-
-  // Flatten out an array, either recursively (by default), or just one level.
-  _.flatten = function(array, shallow) {
-    return flatten(array, shallow, false);
-  };
-
-  // Return a version of the array that does not contain the specified value(s).
-  _.without = function(array) {
-    return _.difference(array, slice.call(arguments, 1));
-  };
-
-  // Produce a duplicate-free version of the array. If the array has already
-  // been sorted, you have the option of using a faster algorithm.
-  // Aliased as `unique`.
-  _.uniq = _.unique = function(array, isSorted, iteratee, context) {
-    if (!_.isBoolean(isSorted)) {
-      context = iteratee;
-      iteratee = isSorted;
-      isSorted = false;
-    }
-    if (iteratee != null) iteratee = cb(iteratee, context);
-    var result = [];
-    var seen = [];
-    for (var i = 0, length = getLength(array); i < length; i++) {
-      var value = array[i],
-          computed = iteratee ? iteratee(value, i, array) : value;
-      if (isSorted) {
-        if (!i || seen !== computed) result.push(value);
-        seen = computed;
-      } else if (iteratee) {
-        if (!_.contains(seen, computed)) {
-          seen.push(computed);
-          result.push(value);
-        }
-      } else if (!_.contains(result, value)) {
-        result.push(value);
-      }
-    }
-    return result;
-  };
-
-  // Produce an array that contains the union: each distinct element from all of
-  // the passed-in arrays.
-  _.union = function() {
-    return _.uniq(flatten(arguments, true, true));
-  };
-
-  // Produce an array that contains every item shared between all the
-  // passed-in arrays.
-  _.intersection = function(array) {
-    var result = [];
-    var argsLength = arguments.length;
-    for (var i = 0, length = getLength(array); i < length; i++) {
-      var item = array[i];
-      if (_.contains(result, item)) continue;
-      for (var j = 1; j < argsLength; j++) {
-        if (!_.contains(arguments[j], item)) break;
-      }
-      if (j === argsLength) result.push(item);
-    }
-    return result;
-  };
-
-  // Take the difference between one array and a number of other arrays.
-  // Only the elements present in just the first array will remain.
-  _.difference = function(array) {
-    var rest = flatten(arguments, true, true, 1);
-    return _.filter(array, function(value){
-      return !_.contains(rest, value);
-    });
-  };
-
-  // Zip together multiple lists into a single array -- elements that share
-  // an index go together.
-  _.zip = function() {
-    return _.unzip(arguments);
-  };
-
-  // Complement of _.zip. Unzip accepts an array of arrays and groups
-  // each array's elements on shared indices
-  _.unzip = function(array) {
-    var length = array && _.max(array, getLength).length || 0;
-    var result = Array(length);
-
-    for (var index = 0; index < length; index++) {
-      result[index] = _.pluck(array, index);
-    }
-    return result;
-  };
-
-  // Converts lists into objects. Pass either a single array of `[key, value]`
-  // pairs, or two parallel arrays of the same length -- one of keys, and one of
-  // the corresponding values.
-  _.object = function(list, values) {
-    var result = {};
-    for (var i = 0, length = getLength(list); i < length; i++) {
-      if (values) {
-        result[list[i]] = values[i];
-      } else {
-        result[list[i][0]] = list[i][1];
-      }
-    }
-    return result;
-  };
-
-  // Generator function to create the findIndex and findLastIndex functions
-  function createPredicateIndexFinder(dir) {
-    return function(array, predicate, context) {
-      predicate = cb(predicate, context);
-      var length = getLength(array);
-      var index = dir > 0 ? 0 : length - 1;
-      for (; index >= 0 && index < length; index += dir) {
-        if (predicate(array[index], index, array)) return index;
-      }
-      return -1;
-    };
-  }
-
-  // Returns the first index on an array-like that passes a predicate test
-  _.findIndex = createPredicateIndexFinder(1);
-  _.findLastIndex = createPredicateIndexFinder(-1);
-
-  // Use a comparator function to figure out the smallest index at which
-  // an object should be inserted so as to maintain order. Uses binary search.
-  _.sortedIndex = function(array, obj, iteratee, context) {
-    iteratee = cb(iteratee, context, 1);
-    var value = iteratee(obj);
-    var low = 0, high = getLength(array);
-    while (low < high) {
-      var mid = Math.floor((low + high) / 2);
-      if (iteratee(array[mid]) < value) low = mid + 1; else high = mid;
-    }
-    return low;
-  };
-
-  // Generator function to create the indexOf and lastIndexOf functions
-  function createIndexFinder(dir, predicateFind, sortedIndex) {
-    return function(array, item, idx) {
-      var i = 0, length = getLength(array);
-      if (typeof idx == 'number') {
-        if (dir > 0) {
-            i = idx >= 0 ? idx : Math.max(idx + length, i);
-        } else {
-            length = idx >= 0 ? Math.min(idx + 1, length) : idx + length + 1;
-        }
-      } else if (sortedIndex && idx && length) {
-        idx = sortedIndex(array, item);
-        return array[idx] === item ? idx : -1;
-      }
-      if (item !== item) {
-        idx = predicateFind(slice.call(array, i, length), _.isNaN);
-        return idx >= 0 ? idx + i : -1;
-      }
-      for (idx = dir > 0 ? i : length - 1; idx >= 0 && idx < length; idx += dir) {
-        if (array[idx] === item) return idx;
-      }
-      return -1;
-    };
-  }
-
-  // Return the position of the first occurrence of an item in an array,
-  // or -1 if the item is not included in the array.
-  // If the array is large and already in sort order, pass `true`
-  // for **isSorted** to use binary search.
-  _.indexOf = createIndexFinder(1, _.findIndex, _.sortedIndex);
-  _.lastIndexOf = createIndexFinder(-1, _.findLastIndex);
-
-  // Generate an integer Array containing an arithmetic progression. A port of
-  // the native Python `range()` function. See
-  // [the Python documentation](http://docs.python.org/library/functions.html#range).
-  _.range = function(start, stop, step) {
-    if (stop == null) {
-      stop = start || 0;
-      start = 0;
-    }
-    step = step || 1;
-
-    var length = Math.max(Math.ceil((stop - start) / step), 0);
-    var range = Array(length);
-
-    for (var idx = 0; idx < length; idx++, start += step) {
-      range[idx] = start;
-    }
-
-    return range;
-  };
-
-  // Function (ahem) Functions
-  // ------------------
-
-  // Determines whether to execute a function as a constructor
-  // or a normal function with the provided arguments
-  var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {
-    if (!(callingContext instanceof boundFunc)) return sourceFunc.apply(context, args);
-    var self = baseCreate(sourceFunc.prototype);
-    var result = sourceFunc.apply(self, args);
-    if (_.isObject(result)) return result;
-    return self;
-  };
-
-  // Create a function bound to a given object (assigning `this`, and arguments,
-  // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
-  // available.
-  _.bind = function(func, context) {
-    if (nativeBind && func.bind === nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
-    if (!_.isFunction(func)) throw new TypeError('Bind must be called on a function');
-    var args = slice.call(arguments, 2);
-    var bound = function() {
-      return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));
-    };
-    return bound;
-  };
-
-  // Partially apply a function by creating a version that has had some of its
-  // arguments pre-filled, without changing its dynamic `this` context. _ acts
-  // as a placeholder, allowing any combination of arguments to be pre-filled.
-  _.partial = function(func) {
-    var boundArgs = slice.call(arguments, 1);
-    var bound = function() {
-      var position = 0, length = boundArgs.length;
-      var args = Array(length);
-      for (var i = 0; i < length; i++) {
-        args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];
-      }
-      while (position < arguments.length) args.push(arguments[position++]);
-      return executeBound(func, bound, this, this, args);
-    };
-    return bound;
-  };
-
-  // Bind a number of an object's methods to that object. Remaining arguments
-  // are the method names to be bound. Useful for ensuring that all callbacks
-  // defined on an object belong to it.
-  _.bindAll = function(obj) {
-    var i, length = arguments.length, key;
-    if (length <= 1) throw new Error('bindAll must be passed function names');
-    for (i = 1; i < length; i++) {
-      key = arguments[i];
-      obj[key] = _.bind(obj[key], obj);
-    }
-    return obj;
-  };
-
-  // Memoize an expensive function by storing its results.
-  _.memoize = function(func, hasher) {
-    var memoize = function(key) {
-      var cache = memoize.cache;
-      var address = '' + (hasher ? hasher.apply(this, arguments) : key);
-      if (!_.has(cache, address)) cache[address] = func.apply(this, arguments);
-      return cache[address];
-    };
-    memoize.cache = {};
-    return memoize;
-  };
-
-  // Delays a function for the given number of milliseconds, and then calls
-  // it with the arguments supplied.
-  _.delay = function(func, wait) {
-    var args = slice.call(arguments, 2);
-    return setTimeout(function(){
-      return func.apply(null, args);
-    }, wait);
-  };
-
-  // Defers a function, scheduling it to run after the current call stack has
-  // cleared.
-  _.defer = _.partial(_.delay, _, 1);
-
-  // Returns a function, that, when invoked, will only be triggered at most once
-  // during a given window of time. Normally, the throttled function will run
-  // as much as it can, without ever going more than once per `wait` duration;
-  // but if you'd like to disable the execution on the leading edge, pass
-  // `{leading: false}`. To disable execution on the trailing edge, ditto.
-  _.throttle = function(func, wait, options) {
-    var context, args, result;
-    var timeout = null;
-    var previous = 0;
-    if (!options) options = {};
-    var later = function() {
-      previous = options.leading === false ? 0 : _.now();
-      timeout = null;
-      result = func.apply(context, args);
-      if (!timeout) context = args = null;
-    };
-    return function() {
-      var now = _.now();
-      if (!previous && options.leading === false) previous = now;
-      var remaining = wait - (now - previous);
-      context = this;
-      args = arguments;
-      if (remaining <= 0 || remaining > wait) {
-        if (timeout) {
-          clearTimeout(timeout);
-          timeout = null;
-        }
-        previous = now;
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      } else if (!timeout && options.trailing !== false) {
-        timeout = setTimeout(later, remaining);
-      }
-      return result;
-    };
-  };
-
-  // Returns a function, that, as long as it continues to be invoked, will not
-  // be triggered. The function will be called after it stops being called for
-  // N milliseconds. If `immediate` is passed, trigger the function on the
-  // leading edge, instead of the trailing.
-  _.debounce = function(func, wait, immediate) {
-    var timeout, args, context, timestamp, result;
-
-    var later = function() {
-      var last = _.now() - timestamp;
-
-      if (last < wait && last >= 0) {
-        timeout = setTimeout(later, wait - last);
-      } else {
-        timeout = null;
-        if (!immediate) {
-          result = func.apply(context, args);
-          if (!timeout) context = args = null;
-        }
-      }
-    };
-
-    return function() {
-      context = this;
-      args = arguments;
-      timestamp = _.now();
-      var callNow = immediate && !timeout;
-      if (!timeout) timeout = setTimeout(later, wait);
-      if (callNow) {
-        result = func.apply(context, args);
-        context = args = null;
-      }
-
-      return result;
-    };
-  };
-
-  // Returns the first function passed as an argument to the second,
-  // allowing you to adjust arguments, run code before and after, and
-  // conditionally execute the original function.
-  _.wrap = function(func, wrapper) {
-    return _.partial(wrapper, func);
-  };
-
-  // Returns a negated version of the passed-in predicate.
-  _.negate = function(predicate) {
-    return function() {
-      return !predicate.apply(this, arguments);
-    };
-  };
-
-  // Returns a function that is the composition of a list of functions, each
-  // consuming the return value of the function that follows.
-  _.compose = function() {
-    var args = arguments;
-    var start = args.length - 1;
-    return function() {
-      var i = start;
-      var result = args[start].apply(this, arguments);
-      while (i--) result = args[i].call(this, result);
-      return result;
-    };
-  };
-
-  // Returns a function that will only be executed on and after the Nth call.
-  _.after = function(times, func) {
-    return function() {
-      if (--times < 1) {
-        return func.apply(this, arguments);
-      }
-    };
-  };
-
-  // Returns a function that will only be executed up to (but not including) the Nth call.
-  _.before = function(times, func) {
-    var memo;
-    return function() {
-      if (--times > 0) {
-        memo = func.apply(this, arguments);
-      }
-      if (times <= 1) func = null;
-      return memo;
-    };
-  };
-
-  // Returns a function that will be executed at most one time, no matter how
-  // often you call it. Useful for lazy initialization.
-  _.once = _.partial(_.before, 2);
-
-  // Object Functions
-  // ----------------
-
-  // Keys in IE < 9 that won't be iterated by `for key in ...` and thus missed.
-  var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
-  var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
-                      'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
-
-  function collectNonEnumProps(obj, keys) {
-    var nonEnumIdx = nonEnumerableProps.length;
-    var constructor = obj.constructor;
-    var proto = (_.isFunction(constructor) && constructor.prototype) || ObjProto;
-
-    // Constructor is a special case.
-    var prop = 'constructor';
-    if (_.has(obj, prop) && !_.contains(keys, prop)) keys.push(prop);
-
-    while (nonEnumIdx--) {
-      prop = nonEnumerableProps[nonEnumIdx];
-      if (prop in obj && obj[prop] !== proto[prop] && !_.contains(keys, prop)) {
-        keys.push(prop);
-      }
-    }
-  }
-
-  // Retrieve the names of an object's own properties.
-  // Delegates to **ECMAScript 5**'s native `Object.keys`
-  _.keys = function(obj) {
-    if (!_.isObject(obj)) return [];
-    if (nativeKeys) return nativeKeys(obj);
-    var keys = [];
-    for (var key in obj) if (_.has(obj, key)) keys.push(key);
-    // Ahem, IE < 9.
-    if (hasEnumBug) collectNonEnumProps(obj, keys);
-    return keys;
-  };
-
-  // Retrieve all the property names of an object.
-  _.allKeys = function(obj) {
-    if (!_.isObject(obj)) return [];
-    var keys = [];
-    for (var key in obj) keys.push(key);
-    // Ahem, IE < 9.
-    if (hasEnumBug) collectNonEnumProps(obj, keys);
-    return keys;
-  };
-
-  // Retrieve the values of an object's properties.
-  _.values = function(obj) {
-    var keys = _.keys(obj);
-    var length = keys.length;
-    var values = Array(length);
-    for (var i = 0; i < length; i++) {
-      values[i] = obj[keys[i]];
-    }
-    return values;
-  };
-
-  // Returns the results of applying the iteratee to each element of the object
-  // In contrast to _.map it returns an object
-  _.mapObject = function(obj, iteratee, context) {
-    iteratee = cb(iteratee, context);
-    var keys =  _.keys(obj),
-          length = keys.length,
-          results = {},
-          currentKey;
-      for (var index = 0; index < length; index++) {
-        currentKey = keys[index];
-        results[currentKey] = iteratee(obj[currentKey], currentKey, obj);
-      }
-      return results;
-  };
-
-  // Convert an object into a list of `[key, value]` pairs.
-  _.pairs = function(obj) {
-    var keys = _.keys(obj);
-    var length = keys.length;
-    var pairs = Array(length);
-    for (var i = 0; i < length; i++) {
-      pairs[i] = [keys[i], obj[keys[i]]];
-    }
-    return pairs;
-  };
-
-  // Invert the keys and values of an object. The values must be serializable.
-  _.invert = function(obj) {
-    var result = {};
-    var keys = _.keys(obj);
-    for (var i = 0, length = keys.length; i < length; i++) {
-      result[obj[keys[i]]] = keys[i];
-    }
-    return result;
-  };
-
-  // Return a sorted list of the function names available on the object.
-  // Aliased as `methods`
-  _.functions = _.methods = function(obj) {
-    var names = [];
-    for (var key in obj) {
-      if (_.isFunction(obj[key])) names.push(key);
-    }
-    return names.sort();
-  };
-
-  // Extend a given object with all the properties in passed-in object(s).
-  _.extend = createAssigner(_.allKeys);
-
-  // Assigns a given object with all the own properties in the passed-in object(s)
-  // (https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
-  _.extendOwn = _.assign = createAssigner(_.keys);
-
-  // Returns the first key on an object that passes a predicate test
-  _.findKey = function(obj, predicate, context) {
-    predicate = cb(predicate, context);
-    var keys = _.keys(obj), key;
-    for (var i = 0, length = keys.length; i < length; i++) {
-      key = keys[i];
-      if (predicate(obj[key], key, obj)) return key;
-    }
-  };
-
-  // Return a copy of the object only containing the whitelisted properties.
-  _.pick = function(object, oiteratee, context) {
-    var result = {}, obj = object, iteratee, keys;
-    if (obj == null) return result;
-    if (_.isFunction(oiteratee)) {
-      keys = _.allKeys(obj);
-      iteratee = optimizeCb(oiteratee, context);
-    } else {
-      keys = flatten(arguments, false, false, 1);
-      iteratee = function(value, key, obj) { return key in obj; };
-      obj = Object(obj);
-    }
-    for (var i = 0, length = keys.length; i < length; i++) {
-      var key = keys[i];
-      var value = obj[key];
-      if (iteratee(value, key, obj)) result[key] = value;
-    }
-    return result;
-  };
-
-   // Return a copy of the object without the blacklisted properties.
-  _.omit = function(obj, iteratee, context) {
-    if (_.isFunction(iteratee)) {
-      iteratee = _.negate(iteratee);
-    } else {
-      var keys = _.map(flatten(arguments, false, false, 1), String);
-      iteratee = function(value, key) {
-        return !_.contains(keys, key);
-      };
-    }
-    return _.pick(obj, iteratee, context);
-  };
-
-  // Fill in a given object with default properties.
-  _.defaults = createAssigner(_.allKeys, true);
-
-  // Creates an object that inherits from the given prototype object.
-  // If additional properties are provided then they will be added to the
-  // created object.
-  _.create = function(prototype, props) {
-    var result = baseCreate(prototype);
-    if (props) _.extendOwn(result, props);
-    return result;
-  };
-
-  // Create a (shallow-cloned) duplicate of an object.
-  _.clone = function(obj) {
-    if (!_.isObject(obj)) return obj;
-    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
-  };
-
-  // Invokes interceptor with the obj, and then returns obj.
-  // The primary purpose of this method is to "tap into" a method chain, in
-  // order to perform operations on intermediate results within the chain.
-  _.tap = function(obj, interceptor) {
-    interceptor(obj);
-    return obj;
-  };
-
-  // Returns whether an object has a given set of `key:value` pairs.
-  _.isMatch = function(object, attrs) {
-    var keys = _.keys(attrs), length = keys.length;
-    if (object == null) return !length;
-    var obj = Object(object);
-    for (var i = 0; i < length; i++) {
-      var key = keys[i];
-      if (attrs[key] !== obj[key] || !(key in obj)) return false;
-    }
-    return true;
-  };
-
-
-  // Internal recursive comparison function for `isEqual`.
-  var eq = function(a, b, aStack, bStack) {
-    // Identical objects are equal. `0 === -0`, but they aren't identical.
-    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
-    if (a === b) return a !== 0 || 1 / a === 1 / b;
-    // A strict comparison is necessary because `null == undefined`.
-    if (a == null || b == null) return a === b;
-    // Unwrap any wrapped objects.
-    if (a instanceof _) a = a._wrapped;
-    if (b instanceof _) b = b._wrapped;
-    // Compare `[[Class]]` names.
-    var className = toString.call(a);
-    if (className !== toString.call(b)) return false;
-    switch (className) {
-      // Strings, numbers, regular expressions, dates, and booleans are compared by value.
-      case '[object RegExp]':
-      // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
-      case '[object String]':
-        // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
-        // equivalent to `new String("5")`.
-        return '' + a === '' + b;
-      case '[object Number]':
-        // `NaN`s are equivalent, but non-reflexive.
-        // Object(NaN) is equivalent to NaN
-        if (+a !== +a) return +b !== +b;
-        // An `egal` comparison is performed for other numeric values.
-        return +a === 0 ? 1 / +a === 1 / b : +a === +b;
-      case '[object Date]':
-      case '[object Boolean]':
-        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
-        // millisecond representations. Note that invalid dates with millisecond representations
-        // of `NaN` are not equivalent.
-        return +a === +b;
-    }
-
-    var areArrays = className === '[object Array]';
-    if (!areArrays) {
-      if (typeof a != 'object' || typeof b != 'object') return false;
-
-      // Objects with different constructors are not equivalent, but `Object`s or `Array`s
-      // from different frames are.
-      var aCtor = a.constructor, bCtor = b.constructor;
-      if (aCtor !== bCtor && !(_.isFunction(aCtor) && aCtor instanceof aCtor &&
-                               _.isFunction(bCtor) && bCtor instanceof bCtor)
-                          && ('constructor' in a && 'constructor' in b)) {
-        return false;
-      }
-    }
-    // Assume equality for cyclic structures. The algorithm for detecting cyclic
-    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
-
-    // Initializing stack of traversed objects.
-    // It's done here since we only need them for objects and arrays comparison.
-    aStack = aStack || [];
-    bStack = bStack || [];
-    var length = aStack.length;
-    while (length--) {
-      // Linear search. Performance is inversely proportional to the number of
-      // unique nested structures.
-      if (aStack[length] === a) return bStack[length] === b;
-    }
-
-    // Add the first object to the stack of traversed objects.
-    aStack.push(a);
-    bStack.push(b);
-
-    // Recursively compare objects and arrays.
-    if (areArrays) {
-      // Compare array lengths to determine if a deep comparison is necessary.
-      length = a.length;
-      if (length !== b.length) return false;
-      // Deep compare the contents, ignoring non-numeric properties.
-      while (length--) {
-        if (!eq(a[length], b[length], aStack, bStack)) return false;
-      }
-    } else {
-      // Deep compare objects.
-      var keys = _.keys(a), key;
-      length = keys.length;
-      // Ensure that both objects contain the same number of properties before comparing deep equality.
-      if (_.keys(b).length !== length) return false;
-      while (length--) {
-        // Deep compare each member
-        key = keys[length];
-        if (!(_.has(b, key) && eq(a[key], b[key], aStack, bStack))) return false;
-      }
-    }
-    // Remove the first object from the stack of traversed objects.
-    aStack.pop();
-    bStack.pop();
-    return true;
-  };
-
-  // Perform a deep comparison to check if two objects are equal.
-  _.isEqual = function(a, b) {
-    return eq(a, b);
-  };
-
-  // Is a given array, string, or object empty?
-  // An "empty" object has no enumerable own-properties.
-  _.isEmpty = function(obj) {
-    if (obj == null) return true;
-    if (isArrayLike(obj) && (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) return obj.length === 0;
-    return _.keys(obj).length === 0;
-  };
-
-  // Is a given value a DOM element?
-  _.isElement = function(obj) {
-    return !!(obj && obj.nodeType === 1);
-  };
-
-  // Is a given value an array?
-  // Delegates to ECMA5's native Array.isArray
-  _.isArray = nativeIsArray || function(obj) {
-    return toString.call(obj) === '[object Array]';
-  };
-
-  // Is a given variable an object?
-  _.isObject = function(obj) {
-    var type = typeof obj;
-    return type === 'function' || type === 'object' && !!obj;
-  };
-
-  // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp, isError.
-  _.each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'], function(name) {
-    _['is' + name] = function(obj) {
-      return toString.call(obj) === '[object ' + name + ']';
-    };
-  });
-
-  // Define a fallback version of the method in browsers (ahem, IE < 9), where
-  // there isn't any inspectable "Arguments" type.
-  if (!_.isArguments(arguments)) {
-    _.isArguments = function(obj) {
-      return _.has(obj, 'callee');
-    };
-  }
-
-  // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
-  // IE 11 (#1621), and in Safari 8 (#1929).
-  if (typeof /./ != 'function' && typeof Int8Array != 'object') {
-    _.isFunction = function(obj) {
-      return typeof obj == 'function' || false;
-    };
-  }
-
-  // Is a given object a finite number?
-  _.isFinite = function(obj) {
-    return isFinite(obj) && !isNaN(parseFloat(obj));
-  };
-
-  // Is the given value `NaN`? (NaN is the only number which does not equal itself).
-  _.isNaN = function(obj) {
-    return _.isNumber(obj) && obj !== +obj;
-  };
-
-  // Is a given value a boolean?
-  _.isBoolean = function(obj) {
-    return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
-  };
-
-  // Is a given value equal to null?
-  _.isNull = function(obj) {
-    return obj === null;
-  };
-
-  // Is a given variable undefined?
-  _.isUndefined = function(obj) {
-    return obj === void 0;
-  };
-
-  // Shortcut function for checking if an object has a given property directly
-  // on itself (in other words, not on a prototype).
-  _.has = function(obj, key) {
-    return obj != null && hasOwnProperty.call(obj, key);
-  };
-
-  // Utility Functions
-  // -----------------
-
-  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
-  // previous owner. Returns a reference to the Underscore object.
-  _.noConflict = function() {
-    root._ = previousUnderscore;
-    return this;
-  };
-
-  // Keep the identity function around for default iteratees.
-  _.identity = function(value) {
-    return value;
-  };
-
-  // Predicate-generating functions. Often useful outside of Underscore.
-  _.constant = function(value) {
-    return function() {
-      return value;
-    };
-  };
-
-  _.noop = function(){};
-
-  _.property = property;
-
-  // Generates a function for a given object that returns a given property.
-  _.propertyOf = function(obj) {
-    return obj == null ? function(){} : function(key) {
-      return obj[key];
-    };
-  };
-
-  // Returns a predicate for checking whether an object has a given set of
-  // `key:value` pairs.
-  _.matcher = _.matches = function(attrs) {
-    attrs = _.extendOwn({}, attrs);
-    return function(obj) {
-      return _.isMatch(obj, attrs);
-    };
-  };
-
-  // Run a function **n** times.
-  _.times = function(n, iteratee, context) {
-    var accum = Array(Math.max(0, n));
-    iteratee = optimizeCb(iteratee, context, 1);
-    for (var i = 0; i < n; i++) accum[i] = iteratee(i);
-    return accum;
-  };
-
-  // Return a random integer between min and max (inclusive).
-  _.random = function(min, max) {
-    if (max == null) {
-      max = min;
-      min = 0;
-    }
-    return min + Math.floor(Math.random() * (max - min + 1));
-  };
-
-  // A (possibly faster) way to get the current timestamp as an integer.
-  _.now = Date.now || function() {
-    return new Date().getTime();
-  };
-
-   // List of HTML entities for escaping.
-  var escapeMap = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#x27;',
-    '`': '&#x60;'
-  };
-  var unescapeMap = _.invert(escapeMap);
-
-  // Functions for escaping and unescaping strings to/from HTML interpolation.
-  var createEscaper = function(map) {
-    var escaper = function(match) {
-      return map[match];
-    };
-    // Regexes for identifying a key that needs to be escaped
-    var source = '(?:' + _.keys(map).join('|') + ')';
-    var testRegexp = RegExp(source);
-    var replaceRegexp = RegExp(source, 'g');
-    return function(string) {
-      string = string == null ? '' : '' + string;
-      return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
-    };
-  };
-  _.escape = createEscaper(escapeMap);
-  _.unescape = createEscaper(unescapeMap);
-
-  // If the value of the named `property` is a function then invoke it with the
-  // `object` as context; otherwise, return it.
-  _.result = function(object, property, fallback) {
-    var value = object == null ? void 0 : object[property];
-    if (value === void 0) {
-      value = fallback;
-    }
-    return _.isFunction(value) ? value.call(object) : value;
-  };
-
-  // Generate a unique integer id (unique within the entire client session).
-  // Useful for temporary DOM ids.
-  var idCounter = 0;
-  _.uniqueId = function(prefix) {
-    var id = ++idCounter + '';
-    return prefix ? prefix + id : id;
-  };
-
-  // By default, Underscore uses ERB-style template delimiters, change the
-  // following template settings to use alternative delimiters.
-  _.templateSettings = {
-    evaluate    : /<%([\s\S]+?)%>/g,
-    interpolate : /<%=([\s\S]+?)%>/g,
-    escape      : /<%-([\s\S]+?)%>/g
-  };
-
-  // When customizing `templateSettings`, if you don't want to define an
-  // interpolation, evaluation or escaping regex, we need one that is
-  // guaranteed not to match.
-  var noMatch = /(.)^/;
-
-  // Certain characters need to be escaped so that they can be put into a
-  // string literal.
-  var escapes = {
-    "'":      "'",
-    '\\':     '\\',
-    '\r':     'r',
-    '\n':     'n',
-    '\u2028': 'u2028',
-    '\u2029': 'u2029'
-  };
-
-  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
-
-  var escapeChar = function(match) {
-    return '\\' + escapes[match];
-  };
-
-  // JavaScript micro-templating, similar to John Resig's implementation.
-  // Underscore templating handles arbitrary delimiters, preserves whitespace,
-  // and correctly escapes quotes within interpolated code.
-  // NB: `oldSettings` only exists for backwards compatibility.
-  _.template = function(text, settings, oldSettings) {
-    if (!settings && oldSettings) settings = oldSettings;
-    settings = _.defaults({}, settings, _.templateSettings);
-
-    // Combine delimiters into one regular expression via alternation.
-    var matcher = RegExp([
-      (settings.escape || noMatch).source,
-      (settings.interpolate || noMatch).source,
-      (settings.evaluate || noMatch).source
-    ].join('|') + '|$', 'g');
-
-    // Compile the template source, escaping string literals appropriately.
-    var index = 0;
-    var source = "__p+='";
-    text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
-      source += text.slice(index, offset).replace(escaper, escapeChar);
-      index = offset + match.length;
-
-      if (escape) {
-        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
-      } else if (interpolate) {
-        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
-      } else if (evaluate) {
-        source += "';\n" + evaluate + "\n__p+='";
-      }
-
-      // Adobe VMs need the match returned to produce the correct offest.
-      return match;
-    });
-    source += "';\n";
-
-    // If a variable is not specified, place data values in local scope.
-    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
-
-    source = "var __t,__p='',__j=Array.prototype.join," +
-      "print=function(){__p+=__j.call(arguments,'');};\n" +
-      source + 'return __p;\n';
-
-    try {
-      var render = new Function(settings.variable || 'obj', '_', source);
-    } catch (e) {
-      e.source = source;
-      throw e;
-    }
-
-    var template = function(data) {
-      return render.call(this, data, _);
-    };
-
-    // Provide the compiled source as a convenience for precompilation.
-    var argument = settings.variable || 'obj';
-    template.source = 'function(' + argument + '){\n' + source + '}';
-
-    return template;
-  };
-
-  // Add a "chain" function. Start chaining a wrapped Underscore object.
-  _.chain = function(obj) {
-    var instance = _(obj);
-    instance._chain = true;
-    return instance;
-  };
-
-  // OOP
-  // ---------------
-  // If Underscore is called as a function, it returns a wrapped object that
-  // can be used OO-style. This wrapper holds altered versions of all the
-  // underscore functions. Wrapped objects may be chained.
-
-  // Helper function to continue chaining intermediate results.
-  var result = function(instance, obj) {
-    return instance._chain ? _(obj).chain() : obj;
-  };
-
-  // Add your own custom functions to the Underscore object.
-  _.mixin = function(obj) {
-    _.each(_.functions(obj), function(name) {
-      var func = _[name] = obj[name];
-      _.prototype[name] = function() {
-        var args = [this._wrapped];
-        push.apply(args, arguments);
-        return result(this, func.apply(_, args));
-      };
-    });
-  };
-
-  // Add all of the Underscore functions to the wrapper object.
-  _.mixin(_);
-
-  // Add all mutator Array functions to the wrapper.
-  _.each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
-    var method = ArrayProto[name];
-    _.prototype[name] = function() {
-      var obj = this._wrapped;
-      method.apply(obj, arguments);
-      if ((name === 'shift' || name === 'splice') && obj.length === 0) delete obj[0];
-      return result(this, obj);
-    };
-  });
-
-  // Add all accessor Array functions to the wrapper.
-  _.each(['concat', 'join', 'slice'], function(name) {
-    var method = ArrayProto[name];
-    _.prototype[name] = function() {
-      return result(this, method.apply(this._wrapped, arguments));
-    };
-  });
-
-  // Extracts the result from a wrapped and chained object.
-  _.prototype.value = function() {
-    return this._wrapped;
-  };
-
-  // Provide unwrapping proxy for some methods used in engine operations
-  // such as arithmetic and JSON stringification.
-  _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;
-
-  _.prototype.toString = function() {
-    return '' + this._wrapped;
-  };
-
-  // AMD registration happens at the end for compatibility with AMD loaders
-  // that may not enforce next-turn semantics on modules. Even though general
-  // practice for AMD registration is to be anonymous, underscore registers
-  // as a named module because, like jQuery, it is a base library that is
-  // popular enough to be bundled in a third party lib, but not be part of
-  // an AMD load request. Those cases could generate an error when an
-  // anonymous define() is called outside of a loader request.
-  if (typeof define === 'function' && define.amd) {
-    define('underscore', [], function() {
-      return _;
-    });
-  }
-}.call(this));
-
-},{}],15:[function(require,module,exports){
+},{"jquery":15,"underscore":16}],15:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -14020,8 +12600,1556 @@ return jQuery;
 }));
 
 },{}],16:[function(require,module,exports){
-arguments[4][14][0].apply(exports,arguments)
-},{"dup":14}]},{},[5])
+//     Underscore.js 1.8.3
+//     http://underscorejs.org
+//     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+//     Underscore may be freely distributed under the MIT license.
+
+(function() {
+
+  // Baseline setup
+  // --------------
+
+  // Establish the root object, `window` in the browser, or `exports` on the server.
+  var root = this;
+
+  // Save the previous value of the `_` variable.
+  var previousUnderscore = root._;
+
+  // Save bytes in the minified (but not gzipped) version:
+  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
+
+  // Create quick reference variables for speed access to core prototypes.
+  var
+    push             = ArrayProto.push,
+    slice            = ArrayProto.slice,
+    toString         = ObjProto.toString,
+    hasOwnProperty   = ObjProto.hasOwnProperty;
+
+  // All **ECMAScript 5** native function implementations that we hope to use
+  // are declared here.
+  var
+    nativeIsArray      = Array.isArray,
+    nativeKeys         = Object.keys,
+    nativeBind         = FuncProto.bind,
+    nativeCreate       = Object.create;
+
+  // Naked function reference for surrogate-prototype-swapping.
+  var Ctor = function(){};
+
+  // Create a safe reference to the Underscore object for use below.
+  var _ = function(obj) {
+    if (obj instanceof _) return obj;
+    if (!(this instanceof _)) return new _(obj);
+    this._wrapped = obj;
+  };
+
+  // Export the Underscore object for **Node.js**, with
+  // backwards-compatibility for the old `require()` API. If we're in
+  // the browser, add `_` as a global object.
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = _;
+    }
+    exports._ = _;
+  } else {
+    root._ = _;
+  }
+
+  // Current version.
+  _.VERSION = '1.8.3';
+
+  // Internal function that returns an efficient (for current engines) version
+  // of the passed-in callback, to be repeatedly applied in other Underscore
+  // functions.
+  var optimizeCb = function(func, context, argCount) {
+    if (context === void 0) return func;
+    switch (argCount == null ? 3 : argCount) {
+      case 1: return function(value) {
+        return func.call(context, value);
+      };
+      case 2: return function(value, other) {
+        return func.call(context, value, other);
+      };
+      case 3: return function(value, index, collection) {
+        return func.call(context, value, index, collection);
+      };
+      case 4: return function(accumulator, value, index, collection) {
+        return func.call(context, accumulator, value, index, collection);
+      };
+    }
+    return function() {
+      return func.apply(context, arguments);
+    };
+  };
+
+  // A mostly-internal function to generate callbacks that can be applied
+  // to each element in a collection, returning the desired result — either
+  // identity, an arbitrary callback, a property matcher, or a property accessor.
+  var cb = function(value, context, argCount) {
+    if (value == null) return _.identity;
+    if (_.isFunction(value)) return optimizeCb(value, context, argCount);
+    if (_.isObject(value)) return _.matcher(value);
+    return _.property(value);
+  };
+  _.iteratee = function(value, context) {
+    return cb(value, context, Infinity);
+  };
+
+  // An internal function for creating assigner functions.
+  var createAssigner = function(keysFunc, undefinedOnly) {
+    return function(obj) {
+      var length = arguments.length;
+      if (length < 2 || obj == null) return obj;
+      for (var index = 1; index < length; index++) {
+        var source = arguments[index],
+            keys = keysFunc(source),
+            l = keys.length;
+        for (var i = 0; i < l; i++) {
+          var key = keys[i];
+          if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
+        }
+      }
+      return obj;
+    };
+  };
+
+  // An internal function for creating a new object that inherits from another.
+  var baseCreate = function(prototype) {
+    if (!_.isObject(prototype)) return {};
+    if (nativeCreate) return nativeCreate(prototype);
+    Ctor.prototype = prototype;
+    var result = new Ctor;
+    Ctor.prototype = null;
+    return result;
+  };
+
+  var property = function(key) {
+    return function(obj) {
+      return obj == null ? void 0 : obj[key];
+    };
+  };
+
+  // Helper for collection methods to determine whether a collection
+  // should be iterated as an array or as an object
+  // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength
+  // Avoids a very nasty iOS 8 JIT bug on ARM-64. #2094
+  var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
+  var getLength = property('length');
+  var isArrayLike = function(collection) {
+    var length = getLength(collection);
+    return typeof length == 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
+  };
+
+  // Collection Functions
+  // --------------------
+
+  // The cornerstone, an `each` implementation, aka `forEach`.
+  // Handles raw objects in addition to array-likes. Treats all
+  // sparse array-likes as if they were dense.
+  _.each = _.forEach = function(obj, iteratee, context) {
+    iteratee = optimizeCb(iteratee, context);
+    var i, length;
+    if (isArrayLike(obj)) {
+      for (i = 0, length = obj.length; i < length; i++) {
+        iteratee(obj[i], i, obj);
+      }
+    } else {
+      var keys = _.keys(obj);
+      for (i = 0, length = keys.length; i < length; i++) {
+        iteratee(obj[keys[i]], keys[i], obj);
+      }
+    }
+    return obj;
+  };
+
+  // Return the results of applying the iteratee to each element.
+  _.map = _.collect = function(obj, iteratee, context) {
+    iteratee = cb(iteratee, context);
+    var keys = !isArrayLike(obj) && _.keys(obj),
+        length = (keys || obj).length,
+        results = Array(length);
+    for (var index = 0; index < length; index++) {
+      var currentKey = keys ? keys[index] : index;
+      results[index] = iteratee(obj[currentKey], currentKey, obj);
+    }
+    return results;
+  };
+
+  // Create a reducing function iterating left or right.
+  function createReduce(dir) {
+    // Optimized iterator function as using arguments.length
+    // in the main function will deoptimize the, see #1991.
+    function iterator(obj, iteratee, memo, keys, index, length) {
+      for (; index >= 0 && index < length; index += dir) {
+        var currentKey = keys ? keys[index] : index;
+        memo = iteratee(memo, obj[currentKey], currentKey, obj);
+      }
+      return memo;
+    }
+
+    return function(obj, iteratee, memo, context) {
+      iteratee = optimizeCb(iteratee, context, 4);
+      var keys = !isArrayLike(obj) && _.keys(obj),
+          length = (keys || obj).length,
+          index = dir > 0 ? 0 : length - 1;
+      // Determine the initial value if none is provided.
+      if (arguments.length < 3) {
+        memo = obj[keys ? keys[index] : index];
+        index += dir;
+      }
+      return iterator(obj, iteratee, memo, keys, index, length);
+    };
+  }
+
+  // **Reduce** builds up a single result from a list of values, aka `inject`,
+  // or `foldl`.
+  _.reduce = _.foldl = _.inject = createReduce(1);
+
+  // The right-associative version of reduce, also known as `foldr`.
+  _.reduceRight = _.foldr = createReduce(-1);
+
+  // Return the first value which passes a truth test. Aliased as `detect`.
+  _.find = _.detect = function(obj, predicate, context) {
+    var key;
+    if (isArrayLike(obj)) {
+      key = _.findIndex(obj, predicate, context);
+    } else {
+      key = _.findKey(obj, predicate, context);
+    }
+    if (key !== void 0 && key !== -1) return obj[key];
+  };
+
+  // Return all the elements that pass a truth test.
+  // Aliased as `select`.
+  _.filter = _.select = function(obj, predicate, context) {
+    var results = [];
+    predicate = cb(predicate, context);
+    _.each(obj, function(value, index, list) {
+      if (predicate(value, index, list)) results.push(value);
+    });
+    return results;
+  };
+
+  // Return all the elements for which a truth test fails.
+  _.reject = function(obj, predicate, context) {
+    return _.filter(obj, _.negate(cb(predicate)), context);
+  };
+
+  // Determine whether all of the elements match a truth test.
+  // Aliased as `all`.
+  _.every = _.all = function(obj, predicate, context) {
+    predicate = cb(predicate, context);
+    var keys = !isArrayLike(obj) && _.keys(obj),
+        length = (keys || obj).length;
+    for (var index = 0; index < length; index++) {
+      var currentKey = keys ? keys[index] : index;
+      if (!predicate(obj[currentKey], currentKey, obj)) return false;
+    }
+    return true;
+  };
+
+  // Determine if at least one element in the object matches a truth test.
+  // Aliased as `any`.
+  _.some = _.any = function(obj, predicate, context) {
+    predicate = cb(predicate, context);
+    var keys = !isArrayLike(obj) && _.keys(obj),
+        length = (keys || obj).length;
+    for (var index = 0; index < length; index++) {
+      var currentKey = keys ? keys[index] : index;
+      if (predicate(obj[currentKey], currentKey, obj)) return true;
+    }
+    return false;
+  };
+
+  // Determine if the array or object contains a given item (using `===`).
+  // Aliased as `includes` and `include`.
+  _.contains = _.includes = _.include = function(obj, item, fromIndex, guard) {
+    if (!isArrayLike(obj)) obj = _.values(obj);
+    if (typeof fromIndex != 'number' || guard) fromIndex = 0;
+    return _.indexOf(obj, item, fromIndex) >= 0;
+  };
+
+  // Invoke a method (with arguments) on every item in a collection.
+  _.invoke = function(obj, method) {
+    var args = slice.call(arguments, 2);
+    var isFunc = _.isFunction(method);
+    return _.map(obj, function(value) {
+      var func = isFunc ? method : value[method];
+      return func == null ? func : func.apply(value, args);
+    });
+  };
+
+  // Convenience version of a common use case of `map`: fetching a property.
+  _.pluck = function(obj, key) {
+    return _.map(obj, _.property(key));
+  };
+
+  // Convenience version of a common use case of `filter`: selecting only objects
+  // containing specific `key:value` pairs.
+  _.where = function(obj, attrs) {
+    return _.filter(obj, _.matcher(attrs));
+  };
+
+  // Convenience version of a common use case of `find`: getting the first object
+  // containing specific `key:value` pairs.
+  _.findWhere = function(obj, attrs) {
+    return _.find(obj, _.matcher(attrs));
+  };
+
+  // Return the maximum element (or element-based computation).
+  _.max = function(obj, iteratee, context) {
+    var result = -Infinity, lastComputed = -Infinity,
+        value, computed;
+    if (iteratee == null && obj != null) {
+      obj = isArrayLike(obj) ? obj : _.values(obj);
+      for (var i = 0, length = obj.length; i < length; i++) {
+        value = obj[i];
+        if (value > result) {
+          result = value;
+        }
+      }
+    } else {
+      iteratee = cb(iteratee, context);
+      _.each(obj, function(value, index, list) {
+        computed = iteratee(value, index, list);
+        if (computed > lastComputed || computed === -Infinity && result === -Infinity) {
+          result = value;
+          lastComputed = computed;
+        }
+      });
+    }
+    return result;
+  };
+
+  // Return the minimum element (or element-based computation).
+  _.min = function(obj, iteratee, context) {
+    var result = Infinity, lastComputed = Infinity,
+        value, computed;
+    if (iteratee == null && obj != null) {
+      obj = isArrayLike(obj) ? obj : _.values(obj);
+      for (var i = 0, length = obj.length; i < length; i++) {
+        value = obj[i];
+        if (value < result) {
+          result = value;
+        }
+      }
+    } else {
+      iteratee = cb(iteratee, context);
+      _.each(obj, function(value, index, list) {
+        computed = iteratee(value, index, list);
+        if (computed < lastComputed || computed === Infinity && result === Infinity) {
+          result = value;
+          lastComputed = computed;
+        }
+      });
+    }
+    return result;
+  };
+
+  // Shuffle a collection, using the modern version of the
+  // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
+  _.shuffle = function(obj) {
+    var set = isArrayLike(obj) ? obj : _.values(obj);
+    var length = set.length;
+    var shuffled = Array(length);
+    for (var index = 0, rand; index < length; index++) {
+      rand = _.random(0, index);
+      if (rand !== index) shuffled[index] = shuffled[rand];
+      shuffled[rand] = set[index];
+    }
+    return shuffled;
+  };
+
+  // Sample **n** random values from a collection.
+  // If **n** is not specified, returns a single random element.
+  // The internal `guard` argument allows it to work with `map`.
+  _.sample = function(obj, n, guard) {
+    if (n == null || guard) {
+      if (!isArrayLike(obj)) obj = _.values(obj);
+      return obj[_.random(obj.length - 1)];
+    }
+    return _.shuffle(obj).slice(0, Math.max(0, n));
+  };
+
+  // Sort the object's values by a criterion produced by an iteratee.
+  _.sortBy = function(obj, iteratee, context) {
+    iteratee = cb(iteratee, context);
+    return _.pluck(_.map(obj, function(value, index, list) {
+      return {
+        value: value,
+        index: index,
+        criteria: iteratee(value, index, list)
+      };
+    }).sort(function(left, right) {
+      var a = left.criteria;
+      var b = right.criteria;
+      if (a !== b) {
+        if (a > b || a === void 0) return 1;
+        if (a < b || b === void 0) return -1;
+      }
+      return left.index - right.index;
+    }), 'value');
+  };
+
+  // An internal function used for aggregate "group by" operations.
+  var group = function(behavior) {
+    return function(obj, iteratee, context) {
+      var result = {};
+      iteratee = cb(iteratee, context);
+      _.each(obj, function(value, index) {
+        var key = iteratee(value, index, obj);
+        behavior(result, value, key);
+      });
+      return result;
+    };
+  };
+
+  // Groups the object's values by a criterion. Pass either a string attribute
+  // to group by, or a function that returns the criterion.
+  _.groupBy = group(function(result, value, key) {
+    if (_.has(result, key)) result[key].push(value); else result[key] = [value];
+  });
+
+  // Indexes the object's values by a criterion, similar to `groupBy`, but for
+  // when you know that your index values will be unique.
+  _.indexBy = group(function(result, value, key) {
+    result[key] = value;
+  });
+
+  // Counts instances of an object that group by a certain criterion. Pass
+  // either a string attribute to count by, or a function that returns the
+  // criterion.
+  _.countBy = group(function(result, value, key) {
+    if (_.has(result, key)) result[key]++; else result[key] = 1;
+  });
+
+  // Safely create a real, live array from anything iterable.
+  _.toArray = function(obj) {
+    if (!obj) return [];
+    if (_.isArray(obj)) return slice.call(obj);
+    if (isArrayLike(obj)) return _.map(obj, _.identity);
+    return _.values(obj);
+  };
+
+  // Return the number of elements in an object.
+  _.size = function(obj) {
+    if (obj == null) return 0;
+    return isArrayLike(obj) ? obj.length : _.keys(obj).length;
+  };
+
+  // Split a collection into two arrays: one whose elements all satisfy the given
+  // predicate, and one whose elements all do not satisfy the predicate.
+  _.partition = function(obj, predicate, context) {
+    predicate = cb(predicate, context);
+    var pass = [], fail = [];
+    _.each(obj, function(value, key, obj) {
+      (predicate(value, key, obj) ? pass : fail).push(value);
+    });
+    return [pass, fail];
+  };
+
+  // Array Functions
+  // ---------------
+
+  // Get the first element of an array. Passing **n** will return the first N
+  // values in the array. Aliased as `head` and `take`. The **guard** check
+  // allows it to work with `_.map`.
+  _.first = _.head = _.take = function(array, n, guard) {
+    if (array == null) return void 0;
+    if (n == null || guard) return array[0];
+    return _.initial(array, array.length - n);
+  };
+
+  // Returns everything but the last entry of the array. Especially useful on
+  // the arguments object. Passing **n** will return all the values in
+  // the array, excluding the last N.
+  _.initial = function(array, n, guard) {
+    return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));
+  };
+
+  // Get the last element of an array. Passing **n** will return the last N
+  // values in the array.
+  _.last = function(array, n, guard) {
+    if (array == null) return void 0;
+    if (n == null || guard) return array[array.length - 1];
+    return _.rest(array, Math.max(0, array.length - n));
+  };
+
+  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
+  // Especially useful on the arguments object. Passing an **n** will return
+  // the rest N values in the array.
+  _.rest = _.tail = _.drop = function(array, n, guard) {
+    return slice.call(array, n == null || guard ? 1 : n);
+  };
+
+  // Trim out all falsy values from an array.
+  _.compact = function(array) {
+    return _.filter(array, _.identity);
+  };
+
+  // Internal implementation of a recursive `flatten` function.
+  var flatten = function(input, shallow, strict, startIndex) {
+    var output = [], idx = 0;
+    for (var i = startIndex || 0, length = getLength(input); i < length; i++) {
+      var value = input[i];
+      if (isArrayLike(value) && (_.isArray(value) || _.isArguments(value))) {
+        //flatten current level of array or arguments object
+        if (!shallow) value = flatten(value, shallow, strict);
+        var j = 0, len = value.length;
+        output.length += len;
+        while (j < len) {
+          output[idx++] = value[j++];
+        }
+      } else if (!strict) {
+        output[idx++] = value;
+      }
+    }
+    return output;
+  };
+
+  // Flatten out an array, either recursively (by default), or just one level.
+  _.flatten = function(array, shallow) {
+    return flatten(array, shallow, false);
+  };
+
+  // Return a version of the array that does not contain the specified value(s).
+  _.without = function(array) {
+    return _.difference(array, slice.call(arguments, 1));
+  };
+
+  // Produce a duplicate-free version of the array. If the array has already
+  // been sorted, you have the option of using a faster algorithm.
+  // Aliased as `unique`.
+  _.uniq = _.unique = function(array, isSorted, iteratee, context) {
+    if (!_.isBoolean(isSorted)) {
+      context = iteratee;
+      iteratee = isSorted;
+      isSorted = false;
+    }
+    if (iteratee != null) iteratee = cb(iteratee, context);
+    var result = [];
+    var seen = [];
+    for (var i = 0, length = getLength(array); i < length; i++) {
+      var value = array[i],
+          computed = iteratee ? iteratee(value, i, array) : value;
+      if (isSorted) {
+        if (!i || seen !== computed) result.push(value);
+        seen = computed;
+      } else if (iteratee) {
+        if (!_.contains(seen, computed)) {
+          seen.push(computed);
+          result.push(value);
+        }
+      } else if (!_.contains(result, value)) {
+        result.push(value);
+      }
+    }
+    return result;
+  };
+
+  // Produce an array that contains the union: each distinct element from all of
+  // the passed-in arrays.
+  _.union = function() {
+    return _.uniq(flatten(arguments, true, true));
+  };
+
+  // Produce an array that contains every item shared between all the
+  // passed-in arrays.
+  _.intersection = function(array) {
+    var result = [];
+    var argsLength = arguments.length;
+    for (var i = 0, length = getLength(array); i < length; i++) {
+      var item = array[i];
+      if (_.contains(result, item)) continue;
+      for (var j = 1; j < argsLength; j++) {
+        if (!_.contains(arguments[j], item)) break;
+      }
+      if (j === argsLength) result.push(item);
+    }
+    return result;
+  };
+
+  // Take the difference between one array and a number of other arrays.
+  // Only the elements present in just the first array will remain.
+  _.difference = function(array) {
+    var rest = flatten(arguments, true, true, 1);
+    return _.filter(array, function(value){
+      return !_.contains(rest, value);
+    });
+  };
+
+  // Zip together multiple lists into a single array -- elements that share
+  // an index go together.
+  _.zip = function() {
+    return _.unzip(arguments);
+  };
+
+  // Complement of _.zip. Unzip accepts an array of arrays and groups
+  // each array's elements on shared indices
+  _.unzip = function(array) {
+    var length = array && _.max(array, getLength).length || 0;
+    var result = Array(length);
+
+    for (var index = 0; index < length; index++) {
+      result[index] = _.pluck(array, index);
+    }
+    return result;
+  };
+
+  // Converts lists into objects. Pass either a single array of `[key, value]`
+  // pairs, or two parallel arrays of the same length -- one of keys, and one of
+  // the corresponding values.
+  _.object = function(list, values) {
+    var result = {};
+    for (var i = 0, length = getLength(list); i < length; i++) {
+      if (values) {
+        result[list[i]] = values[i];
+      } else {
+        result[list[i][0]] = list[i][1];
+      }
+    }
+    return result;
+  };
+
+  // Generator function to create the findIndex and findLastIndex functions
+  function createPredicateIndexFinder(dir) {
+    return function(array, predicate, context) {
+      predicate = cb(predicate, context);
+      var length = getLength(array);
+      var index = dir > 0 ? 0 : length - 1;
+      for (; index >= 0 && index < length; index += dir) {
+        if (predicate(array[index], index, array)) return index;
+      }
+      return -1;
+    };
+  }
+
+  // Returns the first index on an array-like that passes a predicate test
+  _.findIndex = createPredicateIndexFinder(1);
+  _.findLastIndex = createPredicateIndexFinder(-1);
+
+  // Use a comparator function to figure out the smallest index at which
+  // an object should be inserted so as to maintain order. Uses binary search.
+  _.sortedIndex = function(array, obj, iteratee, context) {
+    iteratee = cb(iteratee, context, 1);
+    var value = iteratee(obj);
+    var low = 0, high = getLength(array);
+    while (low < high) {
+      var mid = Math.floor((low + high) / 2);
+      if (iteratee(array[mid]) < value) low = mid + 1; else high = mid;
+    }
+    return low;
+  };
+
+  // Generator function to create the indexOf and lastIndexOf functions
+  function createIndexFinder(dir, predicateFind, sortedIndex) {
+    return function(array, item, idx) {
+      var i = 0, length = getLength(array);
+      if (typeof idx == 'number') {
+        if (dir > 0) {
+            i = idx >= 0 ? idx : Math.max(idx + length, i);
+        } else {
+            length = idx >= 0 ? Math.min(idx + 1, length) : idx + length + 1;
+        }
+      } else if (sortedIndex && idx && length) {
+        idx = sortedIndex(array, item);
+        return array[idx] === item ? idx : -1;
+      }
+      if (item !== item) {
+        idx = predicateFind(slice.call(array, i, length), _.isNaN);
+        return idx >= 0 ? idx + i : -1;
+      }
+      for (idx = dir > 0 ? i : length - 1; idx >= 0 && idx < length; idx += dir) {
+        if (array[idx] === item) return idx;
+      }
+      return -1;
+    };
+  }
+
+  // Return the position of the first occurrence of an item in an array,
+  // or -1 if the item is not included in the array.
+  // If the array is large and already in sort order, pass `true`
+  // for **isSorted** to use binary search.
+  _.indexOf = createIndexFinder(1, _.findIndex, _.sortedIndex);
+  _.lastIndexOf = createIndexFinder(-1, _.findLastIndex);
+
+  // Generate an integer Array containing an arithmetic progression. A port of
+  // the native Python `range()` function. See
+  // [the Python documentation](http://docs.python.org/library/functions.html#range).
+  _.range = function(start, stop, step) {
+    if (stop == null) {
+      stop = start || 0;
+      start = 0;
+    }
+    step = step || 1;
+
+    var length = Math.max(Math.ceil((stop - start) / step), 0);
+    var range = Array(length);
+
+    for (var idx = 0; idx < length; idx++, start += step) {
+      range[idx] = start;
+    }
+
+    return range;
+  };
+
+  // Function (ahem) Functions
+  // ------------------
+
+  // Determines whether to execute a function as a constructor
+  // or a normal function with the provided arguments
+  var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {
+    if (!(callingContext instanceof boundFunc)) return sourceFunc.apply(context, args);
+    var self = baseCreate(sourceFunc.prototype);
+    var result = sourceFunc.apply(self, args);
+    if (_.isObject(result)) return result;
+    return self;
+  };
+
+  // Create a function bound to a given object (assigning `this`, and arguments,
+  // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
+  // available.
+  _.bind = function(func, context) {
+    if (nativeBind && func.bind === nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
+    if (!_.isFunction(func)) throw new TypeError('Bind must be called on a function');
+    var args = slice.call(arguments, 2);
+    var bound = function() {
+      return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));
+    };
+    return bound;
+  };
+
+  // Partially apply a function by creating a version that has had some of its
+  // arguments pre-filled, without changing its dynamic `this` context. _ acts
+  // as a placeholder, allowing any combination of arguments to be pre-filled.
+  _.partial = function(func) {
+    var boundArgs = slice.call(arguments, 1);
+    var bound = function() {
+      var position = 0, length = boundArgs.length;
+      var args = Array(length);
+      for (var i = 0; i < length; i++) {
+        args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];
+      }
+      while (position < arguments.length) args.push(arguments[position++]);
+      return executeBound(func, bound, this, this, args);
+    };
+    return bound;
+  };
+
+  // Bind a number of an object's methods to that object. Remaining arguments
+  // are the method names to be bound. Useful for ensuring that all callbacks
+  // defined on an object belong to it.
+  _.bindAll = function(obj) {
+    var i, length = arguments.length, key;
+    if (length <= 1) throw new Error('bindAll must be passed function names');
+    for (i = 1; i < length; i++) {
+      key = arguments[i];
+      obj[key] = _.bind(obj[key], obj);
+    }
+    return obj;
+  };
+
+  // Memoize an expensive function by storing its results.
+  _.memoize = function(func, hasher) {
+    var memoize = function(key) {
+      var cache = memoize.cache;
+      var address = '' + (hasher ? hasher.apply(this, arguments) : key);
+      if (!_.has(cache, address)) cache[address] = func.apply(this, arguments);
+      return cache[address];
+    };
+    memoize.cache = {};
+    return memoize;
+  };
+
+  // Delays a function for the given number of milliseconds, and then calls
+  // it with the arguments supplied.
+  _.delay = function(func, wait) {
+    var args = slice.call(arguments, 2);
+    return setTimeout(function(){
+      return func.apply(null, args);
+    }, wait);
+  };
+
+  // Defers a function, scheduling it to run after the current call stack has
+  // cleared.
+  _.defer = _.partial(_.delay, _, 1);
+
+  // Returns a function, that, when invoked, will only be triggered at most once
+  // during a given window of time. Normally, the throttled function will run
+  // as much as it can, without ever going more than once per `wait` duration;
+  // but if you'd like to disable the execution on the leading edge, pass
+  // `{leading: false}`. To disable execution on the trailing edge, ditto.
+  _.throttle = function(func, wait, options) {
+    var context, args, result;
+    var timeout = null;
+    var previous = 0;
+    if (!options) options = {};
+    var later = function() {
+      previous = options.leading === false ? 0 : _.now();
+      timeout = null;
+      result = func.apply(context, args);
+      if (!timeout) context = args = null;
+    };
+    return function() {
+      var now = _.now();
+      if (!previous && options.leading === false) previous = now;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      if (remaining <= 0 || remaining > wait) {
+        if (timeout) {
+          clearTimeout(timeout);
+          timeout = null;
+        }
+        previous = now;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+      } else if (!timeout && options.trailing !== false) {
+        timeout = setTimeout(later, remaining);
+      }
+      return result;
+    };
+  };
+
+  // Returns a function, that, as long as it continues to be invoked, will not
+  // be triggered. The function will be called after it stops being called for
+  // N milliseconds. If `immediate` is passed, trigger the function on the
+  // leading edge, instead of the trailing.
+  _.debounce = function(func, wait, immediate) {
+    var timeout, args, context, timestamp, result;
+
+    var later = function() {
+      var last = _.now() - timestamp;
+
+      if (last < wait && last >= 0) {
+        timeout = setTimeout(later, wait - last);
+      } else {
+        timeout = null;
+        if (!immediate) {
+          result = func.apply(context, args);
+          if (!timeout) context = args = null;
+        }
+      }
+    };
+
+    return function() {
+      context = this;
+      args = arguments;
+      timestamp = _.now();
+      var callNow = immediate && !timeout;
+      if (!timeout) timeout = setTimeout(later, wait);
+      if (callNow) {
+        result = func.apply(context, args);
+        context = args = null;
+      }
+
+      return result;
+    };
+  };
+
+  // Returns the first function passed as an argument to the second,
+  // allowing you to adjust arguments, run code before and after, and
+  // conditionally execute the original function.
+  _.wrap = function(func, wrapper) {
+    return _.partial(wrapper, func);
+  };
+
+  // Returns a negated version of the passed-in predicate.
+  _.negate = function(predicate) {
+    return function() {
+      return !predicate.apply(this, arguments);
+    };
+  };
+
+  // Returns a function that is the composition of a list of functions, each
+  // consuming the return value of the function that follows.
+  _.compose = function() {
+    var args = arguments;
+    var start = args.length - 1;
+    return function() {
+      var i = start;
+      var result = args[start].apply(this, arguments);
+      while (i--) result = args[i].call(this, result);
+      return result;
+    };
+  };
+
+  // Returns a function that will only be executed on and after the Nth call.
+  _.after = function(times, func) {
+    return function() {
+      if (--times < 1) {
+        return func.apply(this, arguments);
+      }
+    };
+  };
+
+  // Returns a function that will only be executed up to (but not including) the Nth call.
+  _.before = function(times, func) {
+    var memo;
+    return function() {
+      if (--times > 0) {
+        memo = func.apply(this, arguments);
+      }
+      if (times <= 1) func = null;
+      return memo;
+    };
+  };
+
+  // Returns a function that will be executed at most one time, no matter how
+  // often you call it. Useful for lazy initialization.
+  _.once = _.partial(_.before, 2);
+
+  // Object Functions
+  // ----------------
+
+  // Keys in IE < 9 that won't be iterated by `for key in ...` and thus missed.
+  var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
+  var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
+                      'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
+
+  function collectNonEnumProps(obj, keys) {
+    var nonEnumIdx = nonEnumerableProps.length;
+    var constructor = obj.constructor;
+    var proto = (_.isFunction(constructor) && constructor.prototype) || ObjProto;
+
+    // Constructor is a special case.
+    var prop = 'constructor';
+    if (_.has(obj, prop) && !_.contains(keys, prop)) keys.push(prop);
+
+    while (nonEnumIdx--) {
+      prop = nonEnumerableProps[nonEnumIdx];
+      if (prop in obj && obj[prop] !== proto[prop] && !_.contains(keys, prop)) {
+        keys.push(prop);
+      }
+    }
+  }
+
+  // Retrieve the names of an object's own properties.
+  // Delegates to **ECMAScript 5**'s native `Object.keys`
+  _.keys = function(obj) {
+    if (!_.isObject(obj)) return [];
+    if (nativeKeys) return nativeKeys(obj);
+    var keys = [];
+    for (var key in obj) if (_.has(obj, key)) keys.push(key);
+    // Ahem, IE < 9.
+    if (hasEnumBug) collectNonEnumProps(obj, keys);
+    return keys;
+  };
+
+  // Retrieve all the property names of an object.
+  _.allKeys = function(obj) {
+    if (!_.isObject(obj)) return [];
+    var keys = [];
+    for (var key in obj) keys.push(key);
+    // Ahem, IE < 9.
+    if (hasEnumBug) collectNonEnumProps(obj, keys);
+    return keys;
+  };
+
+  // Retrieve the values of an object's properties.
+  _.values = function(obj) {
+    var keys = _.keys(obj);
+    var length = keys.length;
+    var values = Array(length);
+    for (var i = 0; i < length; i++) {
+      values[i] = obj[keys[i]];
+    }
+    return values;
+  };
+
+  // Returns the results of applying the iteratee to each element of the object
+  // In contrast to _.map it returns an object
+  _.mapObject = function(obj, iteratee, context) {
+    iteratee = cb(iteratee, context);
+    var keys =  _.keys(obj),
+          length = keys.length,
+          results = {},
+          currentKey;
+      for (var index = 0; index < length; index++) {
+        currentKey = keys[index];
+        results[currentKey] = iteratee(obj[currentKey], currentKey, obj);
+      }
+      return results;
+  };
+
+  // Convert an object into a list of `[key, value]` pairs.
+  _.pairs = function(obj) {
+    var keys = _.keys(obj);
+    var length = keys.length;
+    var pairs = Array(length);
+    for (var i = 0; i < length; i++) {
+      pairs[i] = [keys[i], obj[keys[i]]];
+    }
+    return pairs;
+  };
+
+  // Invert the keys and values of an object. The values must be serializable.
+  _.invert = function(obj) {
+    var result = {};
+    var keys = _.keys(obj);
+    for (var i = 0, length = keys.length; i < length; i++) {
+      result[obj[keys[i]]] = keys[i];
+    }
+    return result;
+  };
+
+  // Return a sorted list of the function names available on the object.
+  // Aliased as `methods`
+  _.functions = _.methods = function(obj) {
+    var names = [];
+    for (var key in obj) {
+      if (_.isFunction(obj[key])) names.push(key);
+    }
+    return names.sort();
+  };
+
+  // Extend a given object with all the properties in passed-in object(s).
+  _.extend = createAssigner(_.allKeys);
+
+  // Assigns a given object with all the own properties in the passed-in object(s)
+  // (https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+  _.extendOwn = _.assign = createAssigner(_.keys);
+
+  // Returns the first key on an object that passes a predicate test
+  _.findKey = function(obj, predicate, context) {
+    predicate = cb(predicate, context);
+    var keys = _.keys(obj), key;
+    for (var i = 0, length = keys.length; i < length; i++) {
+      key = keys[i];
+      if (predicate(obj[key], key, obj)) return key;
+    }
+  };
+
+  // Return a copy of the object only containing the whitelisted properties.
+  _.pick = function(object, oiteratee, context) {
+    var result = {}, obj = object, iteratee, keys;
+    if (obj == null) return result;
+    if (_.isFunction(oiteratee)) {
+      keys = _.allKeys(obj);
+      iteratee = optimizeCb(oiteratee, context);
+    } else {
+      keys = flatten(arguments, false, false, 1);
+      iteratee = function(value, key, obj) { return key in obj; };
+      obj = Object(obj);
+    }
+    for (var i = 0, length = keys.length; i < length; i++) {
+      var key = keys[i];
+      var value = obj[key];
+      if (iteratee(value, key, obj)) result[key] = value;
+    }
+    return result;
+  };
+
+   // Return a copy of the object without the blacklisted properties.
+  _.omit = function(obj, iteratee, context) {
+    if (_.isFunction(iteratee)) {
+      iteratee = _.negate(iteratee);
+    } else {
+      var keys = _.map(flatten(arguments, false, false, 1), String);
+      iteratee = function(value, key) {
+        return !_.contains(keys, key);
+      };
+    }
+    return _.pick(obj, iteratee, context);
+  };
+
+  // Fill in a given object with default properties.
+  _.defaults = createAssigner(_.allKeys, true);
+
+  // Creates an object that inherits from the given prototype object.
+  // If additional properties are provided then they will be added to the
+  // created object.
+  _.create = function(prototype, props) {
+    var result = baseCreate(prototype);
+    if (props) _.extendOwn(result, props);
+    return result;
+  };
+
+  // Create a (shallow-cloned) duplicate of an object.
+  _.clone = function(obj) {
+    if (!_.isObject(obj)) return obj;
+    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
+  };
+
+  // Invokes interceptor with the obj, and then returns obj.
+  // The primary purpose of this method is to "tap into" a method chain, in
+  // order to perform operations on intermediate results within the chain.
+  _.tap = function(obj, interceptor) {
+    interceptor(obj);
+    return obj;
+  };
+
+  // Returns whether an object has a given set of `key:value` pairs.
+  _.isMatch = function(object, attrs) {
+    var keys = _.keys(attrs), length = keys.length;
+    if (object == null) return !length;
+    var obj = Object(object);
+    for (var i = 0; i < length; i++) {
+      var key = keys[i];
+      if (attrs[key] !== obj[key] || !(key in obj)) return false;
+    }
+    return true;
+  };
+
+
+  // Internal recursive comparison function for `isEqual`.
+  var eq = function(a, b, aStack, bStack) {
+    // Identical objects are equal. `0 === -0`, but they aren't identical.
+    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
+    if (a === b) return a !== 0 || 1 / a === 1 / b;
+    // A strict comparison is necessary because `null == undefined`.
+    if (a == null || b == null) return a === b;
+    // Unwrap any wrapped objects.
+    if (a instanceof _) a = a._wrapped;
+    if (b instanceof _) b = b._wrapped;
+    // Compare `[[Class]]` names.
+    var className = toString.call(a);
+    if (className !== toString.call(b)) return false;
+    switch (className) {
+      // Strings, numbers, regular expressions, dates, and booleans are compared by value.
+      case '[object RegExp]':
+      // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
+      case '[object String]':
+        // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
+        // equivalent to `new String("5")`.
+        return '' + a === '' + b;
+      case '[object Number]':
+        // `NaN`s are equivalent, but non-reflexive.
+        // Object(NaN) is equivalent to NaN
+        if (+a !== +a) return +b !== +b;
+        // An `egal` comparison is performed for other numeric values.
+        return +a === 0 ? 1 / +a === 1 / b : +a === +b;
+      case '[object Date]':
+      case '[object Boolean]':
+        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
+        // millisecond representations. Note that invalid dates with millisecond representations
+        // of `NaN` are not equivalent.
+        return +a === +b;
+    }
+
+    var areArrays = className === '[object Array]';
+    if (!areArrays) {
+      if (typeof a != 'object' || typeof b != 'object') return false;
+
+      // Objects with different constructors are not equivalent, but `Object`s or `Array`s
+      // from different frames are.
+      var aCtor = a.constructor, bCtor = b.constructor;
+      if (aCtor !== bCtor && !(_.isFunction(aCtor) && aCtor instanceof aCtor &&
+                               _.isFunction(bCtor) && bCtor instanceof bCtor)
+                          && ('constructor' in a && 'constructor' in b)) {
+        return false;
+      }
+    }
+    // Assume equality for cyclic structures. The algorithm for detecting cyclic
+    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
+
+    // Initializing stack of traversed objects.
+    // It's done here since we only need them for objects and arrays comparison.
+    aStack = aStack || [];
+    bStack = bStack || [];
+    var length = aStack.length;
+    while (length--) {
+      // Linear search. Performance is inversely proportional to the number of
+      // unique nested structures.
+      if (aStack[length] === a) return bStack[length] === b;
+    }
+
+    // Add the first object to the stack of traversed objects.
+    aStack.push(a);
+    bStack.push(b);
+
+    // Recursively compare objects and arrays.
+    if (areArrays) {
+      // Compare array lengths to determine if a deep comparison is necessary.
+      length = a.length;
+      if (length !== b.length) return false;
+      // Deep compare the contents, ignoring non-numeric properties.
+      while (length--) {
+        if (!eq(a[length], b[length], aStack, bStack)) return false;
+      }
+    } else {
+      // Deep compare objects.
+      var keys = _.keys(a), key;
+      length = keys.length;
+      // Ensure that both objects contain the same number of properties before comparing deep equality.
+      if (_.keys(b).length !== length) return false;
+      while (length--) {
+        // Deep compare each member
+        key = keys[length];
+        if (!(_.has(b, key) && eq(a[key], b[key], aStack, bStack))) return false;
+      }
+    }
+    // Remove the first object from the stack of traversed objects.
+    aStack.pop();
+    bStack.pop();
+    return true;
+  };
+
+  // Perform a deep comparison to check if two objects are equal.
+  _.isEqual = function(a, b) {
+    return eq(a, b);
+  };
+
+  // Is a given array, string, or object empty?
+  // An "empty" object has no enumerable own-properties.
+  _.isEmpty = function(obj) {
+    if (obj == null) return true;
+    if (isArrayLike(obj) && (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) return obj.length === 0;
+    return _.keys(obj).length === 0;
+  };
+
+  // Is a given value a DOM element?
+  _.isElement = function(obj) {
+    return !!(obj && obj.nodeType === 1);
+  };
+
+  // Is a given value an array?
+  // Delegates to ECMA5's native Array.isArray
+  _.isArray = nativeIsArray || function(obj) {
+    return toString.call(obj) === '[object Array]';
+  };
+
+  // Is a given variable an object?
+  _.isObject = function(obj) {
+    var type = typeof obj;
+    return type === 'function' || type === 'object' && !!obj;
+  };
+
+  // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp, isError.
+  _.each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'], function(name) {
+    _['is' + name] = function(obj) {
+      return toString.call(obj) === '[object ' + name + ']';
+    };
+  });
+
+  // Define a fallback version of the method in browsers (ahem, IE < 9), where
+  // there isn't any inspectable "Arguments" type.
+  if (!_.isArguments(arguments)) {
+    _.isArguments = function(obj) {
+      return _.has(obj, 'callee');
+    };
+  }
+
+  // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
+  // IE 11 (#1621), and in Safari 8 (#1929).
+  if (typeof /./ != 'function' && typeof Int8Array != 'object') {
+    _.isFunction = function(obj) {
+      return typeof obj == 'function' || false;
+    };
+  }
+
+  // Is a given object a finite number?
+  _.isFinite = function(obj) {
+    return isFinite(obj) && !isNaN(parseFloat(obj));
+  };
+
+  // Is the given value `NaN`? (NaN is the only number which does not equal itself).
+  _.isNaN = function(obj) {
+    return _.isNumber(obj) && obj !== +obj;
+  };
+
+  // Is a given value a boolean?
+  _.isBoolean = function(obj) {
+    return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
+  };
+
+  // Is a given value equal to null?
+  _.isNull = function(obj) {
+    return obj === null;
+  };
+
+  // Is a given variable undefined?
+  _.isUndefined = function(obj) {
+    return obj === void 0;
+  };
+
+  // Shortcut function for checking if an object has a given property directly
+  // on itself (in other words, not on a prototype).
+  _.has = function(obj, key) {
+    return obj != null && hasOwnProperty.call(obj, key);
+  };
+
+  // Utility Functions
+  // -----------------
+
+  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
+  // previous owner. Returns a reference to the Underscore object.
+  _.noConflict = function() {
+    root._ = previousUnderscore;
+    return this;
+  };
+
+  // Keep the identity function around for default iteratees.
+  _.identity = function(value) {
+    return value;
+  };
+
+  // Predicate-generating functions. Often useful outside of Underscore.
+  _.constant = function(value) {
+    return function() {
+      return value;
+    };
+  };
+
+  _.noop = function(){};
+
+  _.property = property;
+
+  // Generates a function for a given object that returns a given property.
+  _.propertyOf = function(obj) {
+    return obj == null ? function(){} : function(key) {
+      return obj[key];
+    };
+  };
+
+  // Returns a predicate for checking whether an object has a given set of
+  // `key:value` pairs.
+  _.matcher = _.matches = function(attrs) {
+    attrs = _.extendOwn({}, attrs);
+    return function(obj) {
+      return _.isMatch(obj, attrs);
+    };
+  };
+
+  // Run a function **n** times.
+  _.times = function(n, iteratee, context) {
+    var accum = Array(Math.max(0, n));
+    iteratee = optimizeCb(iteratee, context, 1);
+    for (var i = 0; i < n; i++) accum[i] = iteratee(i);
+    return accum;
+  };
+
+  // Return a random integer between min and max (inclusive).
+  _.random = function(min, max) {
+    if (max == null) {
+      max = min;
+      min = 0;
+    }
+    return min + Math.floor(Math.random() * (max - min + 1));
+  };
+
+  // A (possibly faster) way to get the current timestamp as an integer.
+  _.now = Date.now || function() {
+    return new Date().getTime();
+  };
+
+   // List of HTML entities for escaping.
+  var escapeMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '`': '&#x60;'
+  };
+  var unescapeMap = _.invert(escapeMap);
+
+  // Functions for escaping and unescaping strings to/from HTML interpolation.
+  var createEscaper = function(map) {
+    var escaper = function(match) {
+      return map[match];
+    };
+    // Regexes for identifying a key that needs to be escaped
+    var source = '(?:' + _.keys(map).join('|') + ')';
+    var testRegexp = RegExp(source);
+    var replaceRegexp = RegExp(source, 'g');
+    return function(string) {
+      string = string == null ? '' : '' + string;
+      return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
+    };
+  };
+  _.escape = createEscaper(escapeMap);
+  _.unescape = createEscaper(unescapeMap);
+
+  // If the value of the named `property` is a function then invoke it with the
+  // `object` as context; otherwise, return it.
+  _.result = function(object, property, fallback) {
+    var value = object == null ? void 0 : object[property];
+    if (value === void 0) {
+      value = fallback;
+    }
+    return _.isFunction(value) ? value.call(object) : value;
+  };
+
+  // Generate a unique integer id (unique within the entire client session).
+  // Useful for temporary DOM ids.
+  var idCounter = 0;
+  _.uniqueId = function(prefix) {
+    var id = ++idCounter + '';
+    return prefix ? prefix + id : id;
+  };
+
+  // By default, Underscore uses ERB-style template delimiters, change the
+  // following template settings to use alternative delimiters.
+  _.templateSettings = {
+    evaluate    : /<%([\s\S]+?)%>/g,
+    interpolate : /<%=([\s\S]+?)%>/g,
+    escape      : /<%-([\s\S]+?)%>/g
+  };
+
+  // When customizing `templateSettings`, if you don't want to define an
+  // interpolation, evaluation or escaping regex, we need one that is
+  // guaranteed not to match.
+  var noMatch = /(.)^/;
+
+  // Certain characters need to be escaped so that they can be put into a
+  // string literal.
+  var escapes = {
+    "'":      "'",
+    '\\':     '\\',
+    '\r':     'r',
+    '\n':     'n',
+    '\u2028': 'u2028',
+    '\u2029': 'u2029'
+  };
+
+  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
+
+  var escapeChar = function(match) {
+    return '\\' + escapes[match];
+  };
+
+  // JavaScript micro-templating, similar to John Resig's implementation.
+  // Underscore templating handles arbitrary delimiters, preserves whitespace,
+  // and correctly escapes quotes within interpolated code.
+  // NB: `oldSettings` only exists for backwards compatibility.
+  _.template = function(text, settings, oldSettings) {
+    if (!settings && oldSettings) settings = oldSettings;
+    settings = _.defaults({}, settings, _.templateSettings);
+
+    // Combine delimiters into one regular expression via alternation.
+    var matcher = RegExp([
+      (settings.escape || noMatch).source,
+      (settings.interpolate || noMatch).source,
+      (settings.evaluate || noMatch).source
+    ].join('|') + '|$', 'g');
+
+    // Compile the template source, escaping string literals appropriately.
+    var index = 0;
+    var source = "__p+='";
+    text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
+      source += text.slice(index, offset).replace(escaper, escapeChar);
+      index = offset + match.length;
+
+      if (escape) {
+        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
+      } else if (interpolate) {
+        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
+      } else if (evaluate) {
+        source += "';\n" + evaluate + "\n__p+='";
+      }
+
+      // Adobe VMs need the match returned to produce the correct offest.
+      return match;
+    });
+    source += "';\n";
+
+    // If a variable is not specified, place data values in local scope.
+    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+
+    source = "var __t,__p='',__j=Array.prototype.join," +
+      "print=function(){__p+=__j.call(arguments,'');};\n" +
+      source + 'return __p;\n';
+
+    try {
+      var render = new Function(settings.variable || 'obj', '_', source);
+    } catch (e) {
+      e.source = source;
+      throw e;
+    }
+
+    var template = function(data) {
+      return render.call(this, data, _);
+    };
+
+    // Provide the compiled source as a convenience for precompilation.
+    var argument = settings.variable || 'obj';
+    template.source = 'function(' + argument + '){\n' + source + '}';
+
+    return template;
+  };
+
+  // Add a "chain" function. Start chaining a wrapped Underscore object.
+  _.chain = function(obj) {
+    var instance = _(obj);
+    instance._chain = true;
+    return instance;
+  };
+
+  // OOP
+  // ---------------
+  // If Underscore is called as a function, it returns a wrapped object that
+  // can be used OO-style. This wrapper holds altered versions of all the
+  // underscore functions. Wrapped objects may be chained.
+
+  // Helper function to continue chaining intermediate results.
+  var result = function(instance, obj) {
+    return instance._chain ? _(obj).chain() : obj;
+  };
+
+  // Add your own custom functions to the Underscore object.
+  _.mixin = function(obj) {
+    _.each(_.functions(obj), function(name) {
+      var func = _[name] = obj[name];
+      _.prototype[name] = function() {
+        var args = [this._wrapped];
+        push.apply(args, arguments);
+        return result(this, func.apply(_, args));
+      };
+    });
+  };
+
+  // Add all of the Underscore functions to the wrapper object.
+  _.mixin(_);
+
+  // Add all mutator Array functions to the wrapper.
+  _.each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
+    var method = ArrayProto[name];
+    _.prototype[name] = function() {
+      var obj = this._wrapped;
+      method.apply(obj, arguments);
+      if ((name === 'shift' || name === 'splice') && obj.length === 0) delete obj[0];
+      return result(this, obj);
+    };
+  });
+
+  // Add all accessor Array functions to the wrapper.
+  _.each(['concat', 'join', 'slice'], function(name) {
+    var method = ArrayProto[name];
+    _.prototype[name] = function() {
+      return result(this, method.apply(this._wrapped, arguments));
+    };
+  });
+
+  // Extracts the result from a wrapped and chained object.
+  _.prototype.value = function() {
+    return this._wrapped;
+  };
+
+  // Provide unwrapping proxy for some methods used in engine operations
+  // such as arithmetic and JSON stringification.
+  _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;
+
+  _.prototype.toString = function() {
+    return '' + this._wrapped;
+  };
+
+  // AMD registration happens at the end for compatibility with AMD loaders
+  // that may not enforce next-turn semantics on modules. Even though general
+  // practice for AMD registration is to be anonymous, underscore registers
+  // as a named module because, like jQuery, it is a base library that is
+  // popular enough to be bundled in a third party lib, but not be part of
+  // an AMD load request. Those cases could generate an error when an
+  // anonymous define() is called outside of a loader request.
+  if (typeof define === 'function' && define.amd) {
+    define('underscore', [], function() {
+      return _;
+    });
+  }
+}.call(this));
+
+},{}]},{},[7])
 
 
 //# sourceMappingURL=index.js.map

@@ -2,17 +2,19 @@ Backbone = require('backbone')
 $ = Backbone.$
 _ = require('underscore')
 
+Policies = require('../Policies')
+
 module.exports = class QuestionView extends Backbone.View
   className: 'question'
   template: _.template('''
     <button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">
       <span class="inner">
-        <%- policy1.get('en') %>
+        <%- policy1.en %>
       </a>
     </button>
     <button class="choice" data-policy-id="<%- policy2.id %>" data-other-policy-id="<%- policy1.id %>">
       <span class="inner">
-        <%- policy2.get('en') %>
+        <%- policy2.en %>
       </span>
     </button>
   ''')
@@ -21,12 +23,23 @@ module.exports = class QuestionView extends Backbone.View
     'click button': '_onClickButton'
 
   initialize: (options) ->
-    throw new Error('Must pass options.policies, a Policies') if !options.policies?
+    throw 'Must pass options.province, the user\'s Province' if 'province' not of options
 
-    @policies = options.policies
-    @unseenPolicies = @policies.shuffle()
+    @province = options.province
+    @unseenPolicies = []
+
+  _policyAppliesInProvince: (policy) ->
+    for party in policy.parties
+      return true if !party.onlyInProvince? || party.onlyInProvince == @province
+    false
 
   pick2: ->
+    if @unseenPolicies.length < 2
+      # More policies!
+      @unseenPolicies = @unseenPolicies.concat(_.shuffle(
+        Policies.all.slice()
+          .filter((p) => @_policyAppliesInProvince(p))
+      ))
     [ @unseenPolicies.pop(), @unseenPolicies.pop() ]
 
   render: ->
@@ -36,4 +49,4 @@ module.exports = class QuestionView extends Backbone.View
   _onClickButton: (e) ->
     policyId = $(e.currentTarget).attr('data-policy-id')
     otherPolicyId = $(e.currentTarget).attr('data-other-policy-id')
-    @trigger('user-prefers-policy', @policies.get(policyId), @policies.get(otherPolicyId))
+    @trigger('user-prefers-policy', Policies.byId[policyId], Policies.byId[otherPolicyId])

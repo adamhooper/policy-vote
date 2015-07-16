@@ -139,8 +139,8 @@ h1, h2 {
 
   thead th {
     border-bottom: 1px solid #999;
-    &.for { text-align: left; }
-    &.against { text-align: right; }
+    &.user-says-yay { text-align: left; }
+    &.user-says-nay { text-align: right; }
   }
 
   th {
@@ -164,11 +164,11 @@ h1, h2 {
     white-space: nowrap;
   }
 
-  th.against, td.against {
+  th.user-says-nay, td.user-says-nay {
     border-right: 1px solid #999;
   }
 
-  td.for {
+  td.user-says-yay {
     .policy {
       float: left;
       margin-left: .5rem;
@@ -176,7 +176,7 @@ h1, h2 {
     .policy-marker { background: #8a8; }
   }
 
-  td.against {
+  td.user-says-nay {
     .policy {
       float: right;
       margin-right: .5rem;

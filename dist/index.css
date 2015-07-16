@@ -122,10 +122,10 @@ h2 {
 .for-against thead th {
   border-bottom: 1px solid #999;
 }
-.for-against thead th.for {
+.for-against thead th.user-says-yay {
   text-align: left;
 }
-.for-against thead th.against {
+.for-against thead th.user-says-nay {
   text-align: right;
 }
 .for-against th {
@@ -142,22 +142,22 @@ h2 {
   width: 0;
   white-space: nowrap;
 }
-.for-against th.against,
-.for-against td.against {
+.for-against th.user-says-nay,
+.for-against td.user-says-nay {
   border-right: 1px solid #999;
 }
-.for-against td.for .policy {
+.for-against td.user-says-yay .policy {
   float: left;
   margin-left: .5rem;
 }
-.for-against td.for .policy-marker {
+.for-against td.user-says-yay .policy-marker {
   background: #8a8;
 }
-.for-against td.against .policy {
+.for-against td.user-says-nay .policy {
   float: right;
   margin-right: .5rem;
 }
-.for-against td.against .policy-marker {
+.for-against td.user-says-nay .policy-marker {
   background: #a88;
 }
 .for-against .policy-list {

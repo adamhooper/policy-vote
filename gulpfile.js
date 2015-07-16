@@ -4,7 +4,6 @@ var assign = require('lodash.assign');
 var browserify = require('browserify');
 var buffer = require('vinyl-buffer');
 var gulp = require('gulp');
-var rename = require('gulp-rename');
 var gutil = require('gulp-util');
 var less = require('gulp-less');
 var plumber = require('gulp-plumber');
