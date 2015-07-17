@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIR="$(dirname "$0")"/..
+DIR="$(pwd)"/"$(dirname "$0")"/..
 
 set -x
 set -e
