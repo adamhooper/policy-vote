@@ -2,6 +2,7 @@ readline = require('readline')
 Lazy = require('lazy')
 
 User = require('./models/User')
+PolicyIds = require('../lib/Policies').byId
 
 userToCsvBuffer = (user) ->
   new Buffer([
@@ -48,19 +49,38 @@ module.exports = class Database
 
     @_nUsers = 0
     @_nVotes = 0
+    @_nVotesByPolicyId = {}
     @_users = {}
 
     @usersCsvOutputStream = options.usersCsvOutputStream
     @votesCsvOutputStream = options.votesCsvOutputStream
 
+  # Adds the vote, but doesn't write to CSV.
+  #
+  # Returns true if the vote is new
+  _addVote: (userId, betterPolicyId, worsePolicyId) ->
+    # Don't write invalid policy IDs: that would let one user ruin the
+    # experience for everybody.
+    #
+    # Don't allow invalid userIds. This is more questionable, since we assume
+    # the request came from a valid user, or otherwise where did the request's
+    # (unspoofable) userId come from? But whatever -- arbitrary decision.
+    if userId of @_users && betterPolicyId of PolicyIds && worsePolicyId of PolicyIds
+      @_nVotes++
+      @_nVotesByPolicyId[betterPolicyId] ?= 0
+      @_nVotesByPolicyId[betterPolicyId]++
+      @_nVotesByPolicyId[worsePolicyId] ?= 0
+      @_nVotesByPolicyId[worsePolicyId]--
+      true
+    else
+      false
+
   # Adds a Vote to the database for the given User.
   addVote: (userId, betterPolicyId, worsePolicyId) ->
-    timestamp = new Date()
-    throw new Error("User #{userId} does not exist") if userId not of @_users
-    @_nVotes++
-    @votesCsvOutputStream.write(voteToCsvBuffer(userId, timestamp, betterPolicyId, worsePolicyId))
-
-    undefined
+    if @_addVote(userId, betterPolicyId, worsePolicyId)
+      @votesCsvOutputStream.write(voteToCsvBuffer(userId, new Date(), betterPolicyId, worsePolicyId))
+    else
+      console.log('skipped', userId, betterPolicyId, worsePolicyId)
 
   # Returns the total number of votes.
   getNVotes: -> @_nVotes
@@ -83,6 +103,12 @@ module.exports = class Database
   #
   # Useful for testing. DO NOT USE in production, as it does not scale.
   getUsers: -> user for __, user of @_users
+
+  # Returns an Object mapping policy ID (stringified) to a Number of votes.
+  #
+  # The Number returned is the number of *aye* votes minus the number of *nay*
+  # votes.
+  getNVotesByPolicyId: -> @_nVotesByPolicyId
 
   # Populates the database from previously-written CSV files.
   #
@@ -108,5 +134,6 @@ module.exports = class Database
     new Lazy(votesCsv)
       .lines
       .forEach (line) =>
-        @_nVotes++
+        [ userId, __, betterPolicyId, worsePolicyId ] = line.toString('utf-8').split(',')
+        @_addVote(userId, betterPolicyId, worsePolicyId)
     votesCsv.on('end', done)

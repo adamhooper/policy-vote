@@ -25,7 +25,7 @@ function watchJs() {
   var opts = assign({}, watchify.args, customOpts);
   var b = watchify(browserify(opts));
   b.transform(require('coffeeify'));
-  b.transform(require('node-csvify'));
+  b.transform(require('brfs'));
   b.on('update', function() { return runBrowserify(b); }); // on any dep update, runs the bundler
   b.on('log', gutil.log); // output build logs to terminal
   return runBrowserify(b);
@@ -34,7 +34,7 @@ function compileJsOnce() {
   var opts = customOpts;
   var b = browserify(opts);
   b.transform(require('coffeeify'));
-  b.transform(require('node-csvify'));
+  b.transform(require('brfs'));
   b.on('log', gutil.log); // output build logs to terminal
   return runBrowserify(b);
 }

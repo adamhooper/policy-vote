@@ -4,6 +4,7 @@ Readable = require('stream').Readable
 
 User = require('../app/models/User')
 Vote = require('../app/models/Vote')
+Policies = require('../lib/Policies')
 
 describe 'database', ->
   beforeEach ->
@@ -14,6 +15,9 @@ describe 'database', ->
       votesCsvOutputStream: @votesCsv
     @userId1 = 'ed84d06c-cf8f-42a3-8010-7f5e38952a34'
     @userId2 = 'ed5574c6-f060-40e9-a48d-e8c2f0ed69e6'
+    @policy1 = Policies.all[0]
+    @policy2 = Policies.all[1]
+    @policy3 = Policies.all[2]
     @clock = sinon.useFakeTimers()
 
   afterEach ->
@@ -54,36 +58,44 @@ describe 'database', ->
       @database.addUser(@userId1, 'en', null)
       @database.addUser(@userId2, 'fr', null)
 
-    it 'should throw an Error if there is no User', ->
-      id = '8d955ef6-3f38-4aef-8075-147325c36ed5'
-      expect(=> @database.addVote(id, 123, 234)).to.throw("User #{id} does not exist")
-
-    it 'should write the vote to votesCsv', ->
-      @clock.tick(new Date('2015-07-09T18:18:10.123Z').getTime())
-      @database.addVote(@userId1, 123, 234)
-      expect(@votesCsv.getContentsAsString('utf8')).to.eq(
-        'ed84d06c-cf8f-42a3-8010-7f5e38952a34,2015-07-09T18:18:10.123Z,123,234\n'
-      )
-
-    it 'should write one line to votesCsv for every vote, even from the same user', ->
-      @clock.tick(new Date('2015-07-09T18:18:10.123Z').getTime())
-      @database.addVote(@userId1, 123, 234)
-      @clock.tick(1)
-      @database.addVote(@userId2, 234, 123)
-      @clock.tick(1) # No output should end with 125ms.
-      @database.addVote(@userId1, 345, 456)
-      expect(@votesCsv.getContentsAsString('utf8')).to.eq([
-        'ed84d06c-cf8f-42a3-8010-7f5e38952a34,2015-07-09T18:18:10.123Z,123,234\n'
-        'ed5574c6-f060-40e9-a48d-e8c2f0ed69e6,2015-07-09T18:18:10.124Z,234,123\n'
-        'ed84d06c-cf8f-42a3-8010-7f5e38952a34,2015-07-09T18:18:10.125Z,345,456\n'
-      ].join(''))
-
     it 'should increment nVotes', ->
       expect(@database.getNVotes()).to.eq(0)
-      @database.addVote(@userId1, 123, 234)
+      @database.addVote(@userId1, @policy1.id, @policy2.id)
       expect(@database.getNVotes()).to.eq(1)
-      @database.addVote(@userId1, 234, 134)
+      @database.addVote(@userId1, @policy2.id, @policy3.id)
       expect(@database.getNVotes()).to.eq(2)
+
+    it 'should be a no-op if userId does not point to a User', ->
+      @database.addVote('8d955ef6-3f38-4aef-8075-147325c36ed5', @policy1.id, @policy2.id)
+      expect(@database.getNVotes()).to.eq(0)
+
+    it 'should be a no-op if betterPolicyId does not point to a Policy', ->
+      @database.addVote(@userId1, 123456789, @policy2.id)
+      expect(@database.getNVotes()).to.eq(0)
+
+    it 'should be a no-op if worsePolicyId does not point to a Policy', ->
+      @database.addVote(@userId1, @policy1.id, 123456789)
+      expect(@database.getNVotes()).to.eq(0)
+
+    it 'should write the vote to votesCsv', ->
+      dateString = '2015-07-09T18:18:10.123Z'
+      @clock.tick(new Date(dateString).getTime())
+      @database.addVote(@userId1, @policy1.id, @policy2.id)
+      expect(@votesCsv.getContentsAsString('utf8')).to.eq(
+        [ @userId1, dateString, @policy1.id, @policy2.id ].join(',') + '\n'
+      )
+
+    it 'should increment nVotes for one policy and decrement for the other', ->
+      o = {}
+      expect(@database.getNVotesByPolicyId()).to.deep.eq(o)
+      @database.addVote(@userId1, @policy1.id, @policy2.id)
+      o[@policy1.id] = 1
+      o[@policy2.id] = -1
+      expect(@database.getNVotesByPolicyId()).to.deep.eq(o)
+      @database.addVote(@userId1, @policy2.id, @policy3.id)
+      o[@policy2.id] = 0
+      o[@policy3.id] = -1
+      expect(@database.getNVotesByPolicyId()).to.deep.eq(o)
 
   describe 'getUser', ->
     # it 'should return a User' ... is tested by #addUser() tests
@@ -117,11 +129,16 @@ describe 'database', ->
       @database.load usersCsv, votesCsv, (err) =>
         expect(err).not.to.exist
         expect(@database.getNVotes()).to.eq(3)
+        o = {}
+        o[@policy1.id] = 2
+        o[@policy2.id] = 0
+        o[@policy3.id] = -2
+        expect(@database.getNVotesByPolicyId()).to.deep.eq(o)
         done()
       usersCsv.push("#{@userId1},2015-07-09T18:18:10.123Z\n")
       usersCsv.push("#{@userId2},2015-07-09T18:18:10.124Z\n")
       usersCsv.push(null)
-      votesCsv.push("#{@userId1},2015-07-09T18:18:11.000Z,123,234\n")
-      votesCsv.push("#{@userId2},2015-07-09T18:18:12.001Z,123,235\n")
-      votesCsv.push("#{@userId1},2015-07-09T18:18:13.002Z,124,235\n")
+      votesCsv.push("#{@userId1},2015-07-09T18:18:11.000Z,#{@policy1.id},#{@policy2.id}\n")
+      votesCsv.push("#{@userId2},2015-07-09T18:18:12.001Z,#{@policy1.id},#{@policy3.id}\n")
+      votesCsv.push("#{@userId1},2015-07-09T18:18:13.002Z,#{@policy2.id},#{@policy3.id}\n")
       votesCsv.push(null)

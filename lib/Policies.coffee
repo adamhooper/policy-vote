@@ -1,21 +1,21 @@
+fs = require('fs')
 Parties = require('./Parties')
+csvrow = require('csvrow')
 
 class Policy
   constructor: (@id, @en, @fr, @parties) ->
 
-All = require('../data/policies.csv')
-  .map (obj, i) ->
-    parties = for partyId in obj.partyIds.split(',')
-      if partyId not of Parties.byId
-        throw new Error("Invalid partyId #{partyId} near row #{i} of policies.csv")
-      Parties.byId[partyId]
+Contents = fs.readFileSync(__dirname + '/../data/policies.csv', 'utf-8')
+Lines = Contents.split(/\r?\n/)
 
-    new Policy(
-      obj.id,
-      obj.en,
-      obj.fr,
-      parties
-    )
+All = for line, i in Lines.slice(1) when line.length > 0
+  [ id, en, fr, partyIds ] = csvrow.parse(line)
+  parties = for partyId in partyIds.split(',')
+    if partyId not of Parties.byId
+      throw new Error("Invalid partyId #{partyId} near row #{i} of policies.csv")
+    Parties.byId[partyId]
+
+  new Policy(id, en, fr, parties)
 
 ById = {}
 (ById[policy.id] = policy) for policy in All
