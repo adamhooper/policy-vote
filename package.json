@@ -37,6 +37,7 @@
     "lodash.assign": "^3.2.0",
     "mocha": "^2.2.5",
     "node-csvify": "0.0.4",
+    "pm2": "^0.14.3",
     "request": "^2.58.0",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
