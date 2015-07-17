@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Deploy the latest version of this plugin
+# Deploy the latest version of this app
 #
 # The server (whose DNS name is in ecosystem.json) must have been provisioned
 # using script/provision-ec2.sh.
