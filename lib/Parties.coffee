@@ -1,4 +1,4 @@
-Provinces = require('../app/provinces')
+Provinces = require('../lib/Provinces')
 
 class Party
   constructor: (@id, @en, @fr, @onlyInProvince) ->

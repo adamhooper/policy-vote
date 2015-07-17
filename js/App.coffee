@@ -6,7 +6,7 @@ DoneView = require('./views/DoneView')
 StatisticsView = require('./views/StatisticsView')
 UserProfileView = require('./views/UserProfileView')
 
-Provinces = require('../app/provinces')
+Provinces = require('../lib/Provinces')
 
 module.exports = class App extends Backbone.View
   initialize: (options) ->

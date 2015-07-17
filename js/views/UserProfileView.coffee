@@ -1,7 +1,7 @@
 _ = require('underscore')
 Backbone = require('backbone')
 
-Provinces = require('../../app/provinces').all
+Provinces = require('../../lib/Provinces').all
 
 module.exports = class UserProfileView extends Backbone.View
   tagName: 'form'

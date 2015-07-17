@@ -4,8 +4,8 @@
 
 router = require('express').Router()
 
-ValidLanguageCodes = require('./languages').byCode
-ValidProvinceCodes = require('./provinces').byCode
+ValidLanguageCodes = require('../lib/Languages').byCode
+ValidProvinceCodes = require('../lib/Provinces').byCode
 
 module.exports = (database) ->
   router.post '/', (req, res) ->

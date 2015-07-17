@@ -2,7 +2,7 @@ _ = require('underscore')
 Backbone = require('backbone')
 $ = Backbone.$
 
-Parties = require('../Parties')
+Parties = require('../../lib/Parties')
 
 module.exports = class ForAgainstView extends Backbone.View
   className: 'for-against'

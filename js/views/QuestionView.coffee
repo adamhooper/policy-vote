@@ -2,7 +2,7 @@ Backbone = require('backbone')
 $ = Backbone.$
 _ = require('underscore')
 
-Policies = require('../Policies')
+Policies = require('../../lib/Policies')
 
 module.exports = class QuestionView extends Backbone.View
   className: 'question'
