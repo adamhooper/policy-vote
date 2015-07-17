@@ -13,4 +13,5 @@ npm install --production
 node_modules/.bin/gulp
 
 export APPLICATION_SECRET="$(cat /opt/policy-vote/APPLICATION_SECRET)"
-pm2 startOrReload ecosystem.json --env production -i 1"
+
+pm2 startOrReload ecosystem.json --env production -i 1
