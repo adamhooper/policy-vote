@@ -25,12 +25,4 @@ module.exports = (database) ->
 
     res.status(201).send("")
 
-  router.get '/', (req, res) ->
-    userId = req.policyVoteSession.userId
-
-    return res.status(400).send(code: 'cookie-not-set') if !userId
-
-    user = database.getUser(userId)
-    res.status(200).send(user)
-
   router

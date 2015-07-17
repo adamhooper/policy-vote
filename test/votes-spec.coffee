@@ -9,37 +9,6 @@ describe '/votes', ->
   afterEach ->
     @sandbox.restore()
 
-  describe 'GET /votes', ->
-    it 'should return BadRequest when a cookie is not set', ->
-      supertest(app)
-        .get('/votes')
-        .set('Accept', 'application/json')
-        .expect(400).then((res) -> expect(res.body).to.have.property('code', 'cookie-not-set'))
-
-    describe 'with a cookie set', ->
-      beforeEach ->
-        @agent = supertest.agent(app)
-        @agent.get('/').expect(200) # set cookie
-
-      it 'should return an empty set when there are no votes', ->
-        app.database.getUser.returns(votes: [])
-        @agent.get('/votes')
-          .expect(200)
-          .then((res) -> expect(res.body.votes).to.deep.eq([]))
-
-      it 'should return votes when there are votes', ->
-        app.database.getUser.returns(votes: [
-          new Vote(new Date(), 123, 234)
-          new Vote(new Date(), 235, 345)
-        ])
-        @agent.get('/votes')
-          .expect(200)
-          .then (res) ->
-            votes = res.body.votes
-            expect(votes.map((v) -> v.betterPolicyId)).to.deep.eq([ 123, 235 ])
-            expect(votes.map((v) -> v.worsePolicyId)).to.deep.eq([ 234, 345 ])
-            expect(votes[0].createdAt).to.be.at.most(votes[1].createdAt) # just testing they're set
-
   describe 'POST /votes', ->
     it 'should return BadRequest when a cookie is not set', ->
       supertest(app)
