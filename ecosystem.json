@@ -15,7 +15,7 @@
       "ref": "origin/master",
       "repo": "git@github.com:adamhooper/policy-vote.git",
       "path": "/opt/policy-vote/code",
-      "post-deploy": "npm install && node_modules/.bin/gulp && touch /mnt/policy-vote/users.csv /mnt/policy-vote/votes.csv && ln -sv /mnt/policy-vote/users.csv data/users.csv && ln -sv /mnt/policy-vote/votes.csv data/votes.csv && APPLICATION_SECRET=`cat /opt/policy-vote/APPLICATION_SECRET` pm2 startOrReload ecosystem.json --env production -i 1"
+      "post-deploy": "deploy/post-deploy-hook.sh"
     }
   }
 }
