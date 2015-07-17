@@ -22,6 +22,6 @@ module.exports = (database) ->
     if !database.getUser(userId)
       database.addUser(userId, languageCode, provinceCode)
 
-    res.status(201).send()
+    res.status(201).send("")
 
   router

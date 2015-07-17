@@ -23,7 +23,7 @@ module.exports = (database) ->
 
     database.addVote(userId, betterPolicyId, worsePolicyId)
 
-    res.status(201).send()
+    res.status(201).send("")
 
   router.get '/', (req, res) ->
     userId = req.policyVoteSession.userId
