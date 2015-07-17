@@ -15,7 +15,7 @@
       "ref": "origin/master",
       "repo": "git@github.com:adamhooper/policy-vote.git",
       "path": "/opt/policy-vote/code",
-      "post-deploy": "npm install --production && pm2 startOrReload ecosystem.json --env production -i 1"
+      "post-deploy": "npm install && node_modules/.bin/gulp && pm2 startOrReload ecosystem.json --env production -i 1"
     }
   }
 }

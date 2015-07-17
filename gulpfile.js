@@ -13,6 +13,7 @@ var request = require('request');
 var watchify = require('watchify');
 var watch = require('gulp-watch');
 
+// inspired by
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
 // add custom browserify options here
 var customOpts = {
@@ -20,17 +21,24 @@ var customOpts = {
   extensions: [ '.coffee', '.js', '.csv' ],
   debug: true
 };
-var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts)); 
-// add transformations here
-b.transform(require('coffeeify'));
-b.transform(require('node-csvify'));
-
-gulp.task('js', [ 'policies-csv' ], bundle); // so you can run `gulp js` to build the file
-b.on('update', bundle); // on any dep update, runs the bundler
-b.on('log', gutil.log); // output build logs to terminal
-
-function bundle() {
+function watchJs() {
+  var opts = assign({}, watchify.args, customOpts);
+  var b = watchify(browserify(opts));
+  b.transform(require('coffeeify'));
+  b.transform(require('node-csvify'));
+  b.on('update', function() { return runBrowserify(b); }); // on any dep update, runs the bundler
+  b.on('log', gutil.log); // output build logs to terminal
+  return runBrowserify(b);
+}
+function compileJsOnce() {
+  var opts = customOpts;
+  var b = browserify(opts);
+  b.transform(require('coffeeify'));
+  b.transform(require('node-csvify'));
+  b.on('log', gutil.log); // output build logs to terminal
+  return runBrowserify(b);
+}
+function runBrowserify(b) {
   return b.bundle()
     // log errors if they happen
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
@@ -67,4 +75,10 @@ gulp.task('watch-less', [ 'less' ], function() {
   gulp.watch([ './less/**/*' ], [ 'less' ]);
 });
 
-gulp.task('default', [ 'watch-less', 'js' ]);
+gulp.task('js', compileJsOnce);
+
+gulp.task('watch-js', watchJs);
+
+gulp.task('watch', [ 'watch-less', 'watch-js' ]);
+
+gulp.task('default', [ 'less', 'js' ]);
