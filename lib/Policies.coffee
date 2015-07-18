@@ -15,7 +15,7 @@ All = for line, i in Lines.slice(1) when line.length > 0
       throw new Error("Invalid partyId #{partyId} near row #{i} of policies.csv")
     Parties.byId[partyId]
 
-  new Policy(id, en, fr, parties)
+  new Policy(+id, en, fr, parties)
 
 ById = {}
 (ById[policy.id] = policy) for policy in All

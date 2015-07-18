@@ -1,0 +1,75 @@
+.user-profile {
+  .province-code:disabled { display: none; }
+  .actions:disabled { display: none; }
+  &:not(.saving) .spinner-overlay { display: none; }
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    display: none; // radios are ugly
+  }
+
+  input:checked + label {
+    font-weight: bold;
+  }
+
+  ul.language-code {
+    display: -webkit-flex;
+    display: flex;
+
+    li {
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+      text-align: center;
+
+      border: .25em solid transparent;
+
+      label {
+        display: block;
+        border: 1px solid #666;
+        background: #f7f7f7;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+      input:checked + label {
+        background: #e7f7e7;
+      }
+    }
+  }
+
+  ul.province-code {
+    li {
+      display: block;
+    }
+
+    label {
+      display: block;
+      padding: .5rem 1rem;
+      text-align: center;
+      border: 1px solid transparent;
+    }
+    input:checked + label {
+      background: #e7f7e7;
+      border: 1px solid #666;
+      border-radius: 1rem;
+    }
+  }
+
+  .actions {
+    margin: 0;
+    padding: 0;
+    border: .5rem solid transparent;
+
+    button {
+      display: block;
+      width: 100%;
+      padding: .5rem;
+      border-radius: 1rem;
+      background: #cec;
+    }
+  }
+}

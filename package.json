@@ -40,6 +40,7 @@
     "coffee-script": "^1.9.3",
     "coffeeify": "^1.1.0",
     "csvrow": "^0.1.0",
+    "d3": "^3.5.6",
     "express": "^4.13.0",
     "gulp": "^3.9.0",
     "gulp-less": "^3.0.3",

@@ -25,6 +25,7 @@ module.exports = class App extends Backbone.View
   render: ->
     @$el.empty()
 
+    @userProfile.languageCode = 'en' # FIXME remove this. Just debuggin'.
     if !@userProfile.languageCode?
       @userProfileView.render()
       @$el.append(@userProfileView.el)
@@ -42,6 +43,7 @@ module.exports = class App extends Backbone.View
         childView.el
       @$el.append($els)
       @overlay = null
+
     @
 
   _onUserPrefersPolicy: (policy, otherPolicy) ->
