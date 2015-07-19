@@ -67,10 +67,10 @@ module.exports = class Database
     # (unspoofable) userId come from? But whatever -- arbitrary decision.
     if userId of @_users && betterPolicyId of PolicyIds && worsePolicyId of PolicyIds
       @_nVotes++
-      @_nVotesByPolicyId[betterPolicyId] ?= 0
-      @_nVotesByPolicyId[betterPolicyId]++
-      @_nVotesByPolicyId[worsePolicyId] ?= 0
-      @_nVotesByPolicyId[worsePolicyId]--
+      @_nVotesByPolicyId[betterPolicyId] ?= { aye: 0, nay: 0 }
+      @_nVotesByPolicyId[betterPolicyId].aye++
+      @_nVotesByPolicyId[worsePolicyId] ?= { aye: 0, nay: 0 }
+      @_nVotesByPolicyId[worsePolicyId].nay++
       true
     else
       false

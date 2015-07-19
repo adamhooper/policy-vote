@@ -11,22 +11,9 @@ module.exports = class PolicyScoreView extends Backbone.View
     loading: _.template('''<i class="icon-spinner"></i>''')
     error: _.template('') # Pretend all is well
     main: _.template('''
-      <h2>Readers' policy preferences</h2>
-      <p class="explanation">A score of <tt>+2</tt> means the policy was chosen twice more than it was <em>not</em> chosen.</p>
-      <ul class="parties">
-        <% parties.forEach(function(party) { %>
-          <li class="party">
-            <h4><%- party.en %></h4>
-            <ul class="policies">
-              <% party.policies.forEach(function(policy) { %>
-                <li class="policy" data-policy-id="<%- policy.id %>" style="left: <%- policy.left %>%">
-                  <div class="policy-marker"></div>
-                </li>
-              <% }); %>
-            </ul>
-          </li>
-        <% }); %>
-      </ul>
+      <h2>Policy preferences of all readers</h2>
+      <p class="explanation">A score of <tt>50%</tt> means half the readers who saw a policy picked it.</p>
+      <div class="chart"></div>
     ''')
 
   initialize: (options) ->
@@ -86,14 +73,16 @@ module.exports = class PolicyScoreView extends Backbone.View
         id: rawPolicy.id
         en: rawPolicy.en
         fr: rawPolicy.fr
-        score: score
+        nAye: score.aye
+        nNay: score.nay
+        fractionAye: score.aye / (score.aye + score.nay) # assume aye+nay is >0, otherwise json wouldn't contain it
 
       for party in rawPolicy.parties
         partyById[party.id]?.policies?.push(augmentedPolicy)
 
       augmentedPolicy
 
-    policies.sort((a, b) -> a.score - b.score || a.id - b.id)
+    policies.sort((a, b) -> a.fractionAye - b.fractionAye || a.id - b.id)
 
     # We'll show one dot per party*policy
     partiesXPolicies = []
@@ -101,16 +90,19 @@ module.exports = class PolicyScoreView extends Backbone.View
       for policy in party.policies
         partiesXPolicies.push(party: party, policy: policy)
 
-    @$el.html('')
+    @$el.html(@templates.main())
+    $chart = @$('.chart')
     margin = { top: 20, right: 20, bottom: 20, left: 120 }
-    width = @$el.width() - margin.right - margin.left
-    height = @$el.height() - margin.top - margin.bottom
+    width = $chart.width() - margin.right - margin.left
+    height = $chart.height() - margin.top - margin.bottom
 
     xScale = d3.scale.linear()
-      .domain([ policies[0].score - 1, policies[policies.length - 1].score + 1 ])
+      .domain([ 0, 1 ])
       .rangeRound([ 0, width ])
     xAxis = d3.svg.axis().scale(xScale).orient('bottom')
-      .tickSize(-height, 0, 0)
+      .tickValues([ 0, 0.5, 1 ])
+      .tickSize(-height, 0)
+      .tickFormat(d3.format('%'))
 
     yScale = d3.scale.ordinal()
       .domain(party.id for party in parties)
@@ -118,7 +110,7 @@ module.exports = class PolicyScoreView extends Backbone.View
     yAxis = d3.svg.axis().scale(yScale).orient('left')
       .tickFormat((partyId) -> partyById[partyId].en)
 
-    svg = d3.select(@el).append('svg')
+    svg = d3.select($chart.get(0)).append('svg')
       .attr('width', '100%')
       .attr('height', '100%')
       .append('g')
@@ -141,8 +133,8 @@ module.exports = class PolicyScoreView extends Backbone.View
       .enter().append('circle')
         .attr('class', 'policy')
         .attr('data-policy-id', (d) -> d.policy.id)
-        .attr('r', 5)
-        .attr('cx', (d) -> xScale(d.policy.score))
+        .attr('r', 6)
+        .attr('cx', (d) -> xScale(d.policy.fractionAye))
         .attr('cy', (d) -> yScale(d.party.id))
         .style('fill', '#abcdef')
         .attr('opacity', '.7')

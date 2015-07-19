@@ -89,12 +89,12 @@ describe 'database', ->
       o = {}
       expect(@database.getNVotesByPolicyId()).to.deep.eq(o)
       @database.addVote(@userId1, @policy1.id, @policy2.id)
-      o[@policy1.id] = 1
-      o[@policy2.id] = -1
+      o[@policy1.id] = { aye: 1, nay: 0 }
+      o[@policy2.id] = { aye: 0, nay: 1 }
       expect(@database.getNVotesByPolicyId()).to.deep.eq(o)
       @database.addVote(@userId1, @policy2.id, @policy3.id)
-      o[@policy2.id] = 0
-      o[@policy3.id] = -1
+      o[@policy2.id] = { aye: 1, nay: 1 }
+      o[@policy3.id] = { aye: 0, nay: 1 }
       expect(@database.getNVotesByPolicyId()).to.deep.eq(o)
 
   describe 'getUser', ->
@@ -130,9 +130,9 @@ describe 'database', ->
         expect(err).not.to.exist
         expect(@database.getNVotes()).to.eq(3)
         o = {}
-        o[@policy1.id] = 2
-        o[@policy2.id] = 0
-        o[@policy3.id] = -2
+        o[@policy1.id] = { aye: 2, nay: 0 }
+        o[@policy2.id] = { aye: 1, nay: 1 }
+        o[@policy3.id] = { aye: 0, nay: 2 }
         expect(@database.getNVotesByPolicyId()).to.deep.eq(o)
         done()
       usersCsv.push("#{@userId1},2015-07-09T18:18:10.123Z\n")

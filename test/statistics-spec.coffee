@@ -12,7 +12,7 @@ describe '/statistics', ->
 
   describe 'GET /statistics/n-votes-by-policy-id', ->
     it 'should return nVotesByPolicyId', ->
-      nVotesByPolicyId = { 1: 1, 2: 0, 3: -1 }
+      nVotesByPolicyId = { 1: { aye: 2, nay: 3 }, 2: { aye: 1, nay: 1 }, 3: { aye: 2, nay: 1 } }
       app.database.getNVotesByPolicyId.returns(nVotesByPolicyId)
 
       @agent.get('/statistics/n-votes-by-policy-id')
