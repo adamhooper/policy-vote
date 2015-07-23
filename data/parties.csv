@@ -1,6 +1,6 @@
-id,en,fr,onlyInProvinceCode
-B,Bloc,bloc,qc
-C,Conservative,conservateur,
-G,Green,vert,
-L,Liberal,libéral,
-N,NDP,NPD,
+id,en,fr,color,onlyInProvinceCode
+B,Bloc,bloc,#0000ff,qc
+C,Conservative,conservateur,#0d60af
+G,Green,vert,#80bc41
+L,Liberal,libéral,#e82931
+N,NDP,NPD,#f9a132

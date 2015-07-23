@@ -12,8 +12,9 @@ module.exports = class PolicyScoreView extends Backbone.View
     error: _.template('') # Pretend all is well
     main: _.template('''
       <h2>Policy preferences of all readers</h2>
-      <p class="explanation">A score of <tt>50%</tt> means half the readers who saw a policy picked it.</p>
       <div class="chart"></div>
+      <p class="explanation">A score of <tt>50%</tt> means half the readers who saw a policy picked it.</p>
+      <p class="explanation">A colored policy is endorsed by only one party.</p>
     ''')
 
   initialize: (options) ->
@@ -52,6 +53,7 @@ module.exports = class PolicyScoreView extends Backbone.View
       id: party.id
       en: party.en
       fr: party.fr
+      color: party.color
       policies: []
 
     partyById = {}
@@ -79,6 +81,11 @@ module.exports = class PolicyScoreView extends Backbone.View
 
       for party in rawPolicy.parties
         partyById[party.id]?.policies?.push(augmentedPolicy)
+
+      augmentedPolicy.color = if rawPolicy.parties.length == 1
+        rawPolicy.parties[0].color
+      else
+        '#898a8e'
 
       augmentedPolicy
 
@@ -126,6 +133,8 @@ module.exports = class PolicyScoreView extends Backbone.View
     svg.append('g')
       .attr('class', 'y-axis')
       .call(yAxis)
+      .selectAll('text')
+        .style('fill', (partyId) -> partyById[partyId].color)
 
     # Dots
     svg.selectAll('.policy')
@@ -136,5 +145,5 @@ module.exports = class PolicyScoreView extends Backbone.View
         .attr('r', 6)
         .attr('cx', (d) -> xScale(d.policy.fractionAye))
         .attr('cy', (d) -> yScale(d.party.id))
-        .style('fill', '#abcdef')
-        .attr('opacity', '.7')
+        .style('fill', (d) -> d.policy.color)
+        .attr('opacity', '.5')
