@@ -1,10 +1,9 @@
 Backbone = require('backbone')
+pym = require('pym.js');
 
-HeadingView = require('./views/HeadingView')
-QuestionView = require('./views/QuestionView')
-DoneView = require('./views/DoneView')
-StatisticsView = require('./views/StatisticsView')
 UserProfileView = require('./views/UserProfileView')
+QuestionView = require('./views/QuestionView')
+StatisticsView = require('./views/StatisticsView')
 
 Provinces = require('../lib/Provinces')
 
@@ -13,8 +12,12 @@ module.exports = class App extends Backbone.View
     @votes = [] # Array of [ betterPolicy, worsePolicy ]
     @userProfile = { languageCode: null, provinceCode: null } # languageCode=null means user hasn't chosen
 
+    @pymChild = new pym.Child()
+
     @userProfileView = new UserProfileView()
     @listenTo(@userProfileView, 'user-set-profile', @_onUserSetProfile)
+    @listenTo(@userProfileView, 'user-clicked', => @pymChild.sendHeight())
+    @showStatistics = false
 
   getUserProvince: ->
     if @userProfile.provinceCode?
@@ -28,20 +31,19 @@ module.exports = class App extends Backbone.View
     if !@userProfile.languageCode?
       @userProfileView.render()
       @$el.append(@userProfileView.el)
+    else if !@showStatistics
+      if !@questionView?
+        @questionView = new QuestionView(province: @getUserProvince())
+        @listenTo(@questionView, 'user-prefers-policy', @_onUserPrefersPolicy)
+        @listenTo(@questionView, 'show-statistics', @_onClickShowStatistics)
+      @$el.append(@questionView.render().el)
     else
-      @headingView?.remove()
-      @questionView?.remove()
-      @doneView?.remove()
-      @headingView = new HeadingView()
-      @questionView = new QuestionView(province: @getUserProvince())
-      @doneView = new DoneView()
-      @listenTo(@questionView, 'user-prefers-policy', @_onUserPrefersPolicy)
-      @listenTo(@doneView, 'show-statistics', @showStatistics)
-      $els = for childView in [ @headingView, @questionView, @doneView ]
-        childView.render()
-        childView.el
-      @$el.append($els)
-      @overlay = null
+      if !@statisticsView?
+        @statisticsView = new StatisticsView(province: @getUserProvince(), votes: @votes)
+        @listenTo(@statisticsView, 'rendered', => @pymChild.sendHeight())
+      @$el.append(@statisticsView.render().el)
+
+    @pymChild.sendHeight()
 
     @
 
@@ -54,15 +56,13 @@ module.exports = class App extends Backbone.View
       contentType: 'application/json'
       success: -> #console.log('Voted!')
       error: (xhr, textStatus, errorThrown) -> console.log('Error during vote', textStatus, errorThrown)
-    @questionView?.render()
+    @questionView.render()
+    @pymChild.sendHeight()
 
   _onUserSetProfile: (profile) ->
     @userProfile = profile
     @render()
 
-  showStatistics: ->
-    return if @overlay?
-    view = new StatisticsView(province: @getUserProvince(), votes: @votes)
-    view.render()
-    @$el.append(view.el)
-    @overlay = view
+  _onClickShowStatistics: ->
+    @showStatistics = true
+    @render()

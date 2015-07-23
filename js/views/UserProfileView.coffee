@@ -56,8 +56,14 @@ module.exports = class UserProfileView extends Backbone.View
     @$el.html(@template(provinces: Provinces))
     @
 
-  _onChangeLanguageCode: -> @$('fieldset.province-code').prop('disabled', false)
-  _onChangeProvinceCode: -> @$('fieldset.actions').prop('disabled', false)
+  _onChangeLanguageCode: ->
+    @$('fieldset.province-code').prop('disabled', false)
+    @trigger('user-clicked')
+
+  _onChangeProvinceCode: ->
+    @$('fieldset.actions').prop('disabled', false)
+    @trigger('user-clicked')
+
   _onSubmit: (e) ->
     e.preventDefault()
     @$el.addClass('saving')

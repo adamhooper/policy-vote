@@ -16,6 +16,12 @@ module.exports = class StatisticsView extends Backbone.View
     @province = options.province
     @votes = options.votes
 
+    @forAgainstView = new ForAgainstView(province: @province, votes: @votes)
+    @policyScoreView = new PolicyScoreView(province: @province)
+
+    @listenTo(@forAgainstView, 'rendered', => @trigger('rendered'))
+    @listenTo(@policyScoreView, 'rendered', => @trigger('rendered'))
+
   templates:
     policyDetails: _.template('''
       <div class="policy-details">
@@ -49,8 +55,8 @@ module.exports = class StatisticsView extends Backbone.View
     'mouseout [data-policy-id]': '_onMouseoutPolicy'
 
   render: ->
-    @$el.append(new ForAgainstView(province: @province, votes: @votes).render().el)
-    @$el.append(new PolicyScoreView(province: @province).render().el)
+    @$el.append(@forAgainstView.render().el)
+    @$el.append(@policyScoreView.render().el)
     @$el.append(@$tooltip = $('<div class="policy-tooltip"></div>'))
     @tooltipTarget = null
     @tooltipTargetClassName = null

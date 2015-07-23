@@ -46,10 +46,10 @@ app.use (req, res, next) ->
     req.policyVoteSession.userId = uuid.v1()
   next()
 
-app.use(express.static('data')) # FIXME remove this! Just for showing stuff to clients
 app.use('/votes', require('./votes')(app.database))
 app.use('/user', require('./user')(app.database))
 app.use('/statistics', require('./statistics')(app.database))
+app.get('/pym.js', (req, res) -> res.sendFile('/node_modules/pym.js/dist/pym.min.js', root: __dirname + '/..'))
 app.use(express.static('dist'))
 
 module.exports = app

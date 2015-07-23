@@ -54,6 +54,7 @@
     "lodash.assign": "^3.2.0",
     "morgan": "^1.6.1",
     "node-uuid": "^1.4.3",
+    "pym.js": "^0.4.5",
     "split": "^1.0.0",
     "stream-buffers": "^2.2.0",
     "underscore": "^1.8.3",
