@@ -14,7 +14,7 @@ module.exports = class PolicyScoreView extends Backbone.View
       <h2>Policy preferences of all readers</h2>
       <div class="chart"></div>
       <p class="explanation">A score of <tt>50%</tt> means half the readers who saw a policy picked it.</p>
-      <p class="explanation">A colored policy is endorsed by only one party.</p>
+      <p class="explanation">A coloured policy is endorsed by only one party.</p>
     ''')
 
   initialize: (options) ->
