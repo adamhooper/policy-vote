@@ -4,6 +4,7 @@ csvrow = require('csvrow')
 
 class Policy
   constructor: (@id, @en, @fr, @parties) ->
+    @color = if @parties.length == 1 then @parties[0].color else '#898a8e'
 
 Contents = fs.readFileSync(__dirname + '/../data/policies.csv', 'utf-8')
 Lines = Contents.split(/\r?\n/)

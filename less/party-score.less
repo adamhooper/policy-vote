@@ -1,0 +1,54 @@
+.party-score {
+  h2.nay {
+    margin-top: 3rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .chart {
+    ul.parties {
+      display: flex;
+    }
+
+    li.party {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    .bar-container {
+      height: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .bar {
+        width: 3em;
+      }
+
+      .label {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .party-stance-yay .bar-container {
+      margin-top: 1.5rem; // for the .labels
+      justify-content: flex-end;
+
+      .label { margin-top: -1.5rem; }
+    }
+
+    .party-stance-nay .bar-container {
+      margin-bottom: 1.5rem; // for the .labels
+      justify-content: flex-start;
+
+      .label { order: 3; } // Show label below bar
+    }
+  }
+}

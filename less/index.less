@@ -22,10 +22,15 @@ h1, h2 {
   margin-top: 0;
 }
 
+p.explanation {
+  font-size: .9rem;
+  color: #898a8e;
+}
+
 @import "question.less";
 @import "user-profile.less";
 @import "statistics.less";
-@import "for-against.less";
+@import "party-score.less";
 @import "policy-score.less";
 @import "share.less";
 
@@ -53,6 +58,8 @@ h1, h2 {
 @import "vendor/font-awesome/mixins.less";
 @import "vendor/font-awesome/path.less";
 @import "vendor/font-awesome/core.less";
+// Rather than put *all* the icons in the stylesheet, let's just put the three
+// we want.
 .@{fa-css-prefix}-twitter:before { content: @fa-var-twitter; }
 .@{fa-css-prefix}-facebook:before { content: @fa-var-facebook; }
 .@{fa-css-prefix}-google-plus:before { content: @fa-var-google-plus; }

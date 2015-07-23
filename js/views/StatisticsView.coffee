@@ -3,7 +3,7 @@ Backbone = require('backbone')
 $ = Backbone.$
 
 Policies = require('../../lib/Policies')
-ForAgainstView = require('./ForAgainstView')
+PartyScoreView = require('./PartyScoreView')
 PolicyScoreView = require('./PolicyScoreView')
 ShareView = require('./ShareView')
 
@@ -17,11 +17,11 @@ module.exports = class StatisticsView extends Backbone.View
     @province = options.province
     @votes = options.votes
 
-    @forAgainstView = new ForAgainstView(province: @province, votes: @votes)
+    @partyScoreView = new PartyScoreView(province: @province, votes: @votes)
     @policyScoreView = new PolicyScoreView(province: @province)
     @shareView = new ShareView()
 
-    @listenTo(@forAgainstView, 'rendered', => @trigger('rendered'))
+    @listenTo(@partyScoreView, 'rendered', => @trigger('rendered'))
     @listenTo(@policyScoreView, 'rendered', => @trigger('rendered'))
 
   templates:
@@ -57,7 +57,7 @@ module.exports = class StatisticsView extends Backbone.View
     'mouseout [data-policy-id]': '_onMouseoutPolicy'
 
   render: ->
-    @$el.append(@forAgainstView.render().el)
+    @$el.append(@partyScoreView.render().el)
     @$el.append(@policyScoreView.render().el)
     @$el.append(@shareView.render().el)
     @$el.append(@$tooltip = $('<div class="policy-tooltip"></div>'))

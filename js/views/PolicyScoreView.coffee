@@ -75,17 +75,13 @@ module.exports = class PolicyScoreView extends Backbone.View
         id: rawPolicy.id
         en: rawPolicy.en
         fr: rawPolicy.fr
+        color: rawPolicy.color
         nAye: score.aye
         nNay: score.nay
         fractionAye: score.aye / (score.aye + score.nay) # assume aye+nay is >0, otherwise json wouldn't contain it
 
       for party in rawPolicy.parties
         partyById[party.id]?.policies?.push(augmentedPolicy)
-
-      augmentedPolicy.color = if rawPolicy.parties.length == 1
-        rawPolicy.parties[0].color
-      else
-        '#898a8e'
 
       augmentedPolicy
 
