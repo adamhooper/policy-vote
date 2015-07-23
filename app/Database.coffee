@@ -1,5 +1,5 @@
 readline = require('readline')
-Lazy = require('lazy')
+split = require('split')
 
 User = require('./models/User')
 PolicyIds = require('../lib/Policies').byId
@@ -121,19 +121,18 @@ module.exports = class Database
       @_loadVotesCsv(votesCsv, done)
 
   _loadUsersCsv: (usersCsv, done) ->
-    index = 0
-    new Lazy(usersCsv)
-      .lines
-      .forEach (line) =>
+    usersCsv
+      .pipe(split(/\n/, null, trailing: false))
+      .on 'data', (line) =>
         [ userId, createdAt, languageCode, provinceCode ] = line.toString('utf8').split(',')
         @_nUsers++
         @_users[userId] = new User(userId, new Date(createdAt), languageCode, provinceCode || null)
-    usersCsv.on('end', done)
+      .on('end', done)
 
   _loadVotesCsv: (votesCsv, done) ->
-    new Lazy(votesCsv)
-      .lines
-      .forEach (line) =>
+    votesCsv
+      .pipe(split(/\n/, null, trailing: false))
+      .on 'data', (line) =>
         [ userId, __, betterPolicyId, worsePolicyId ] = line.toString('utf-8').split(',')
         @_addVote(userId, betterPolicyId, worsePolicyId)
-    votesCsv.on('end', done)
+      .on('end', done)
