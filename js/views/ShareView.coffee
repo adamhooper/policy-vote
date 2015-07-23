@@ -36,6 +36,6 @@ module.exports = class ShareView extends Backbone.View
 
   render: ->
     if Url
-      html = @template(text: 'Tweet', url: Url)
+      html = @template(text: 'So you like a party. Do you like its policies? Quiz yourself. #cdnpoli', url: Url)
       @$el.html(html)
     @
