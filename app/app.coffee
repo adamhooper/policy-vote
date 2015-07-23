@@ -23,8 +23,8 @@ databaseOptions = if process.env.NODE_ENV == 'test'
   usersCsvOutputStream: new IgnoreWritable
   votesCsvOutputStream: new IgnoreWritable
 else
-  usersCsvOutputStream: fs.createWriteStream('./data/users.csv', flags: 'a')
-  votesCsvOutputStream: fs.createWriteStream('./data/votes.csv', flags: 'a')
+  usersCsvOutputStream: fs.createWriteStream(__dirname + '/../data/users.csv', flags: 'a')
+  votesCsvOutputStream: fs.createWriteStream(__dirname + '/../data/votes.csv', flags: 'a')
 
 ApplicationSecret = process.env.APPLICATION_SECRET || 'not a secret'
 if ApplicationSecret == 'not a secret' && process.env.NODE_ENV not in [ 'development', 'test' ]

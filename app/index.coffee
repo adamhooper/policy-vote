@@ -25,7 +25,7 @@ app = require('./app')
 #   a row to users.csv (or delete a vote from votes.csv).
 #
 # ... but these are worst-case scenarios. We don't expect them to ever happen.
-app.database.load fs.createReadStream('./data/users.csv'), fs.createReadStream('./data/votes.csv'), (err) ->
+app.database.load fs.createReadStream(__dirname + '/../data/users.csv'), fs.createReadStream(__dirname + '/../data/votes.csv'), (err) ->
   throw err if err?
   port = process.env['PORT'] || '3000'
   app.listen(port)
