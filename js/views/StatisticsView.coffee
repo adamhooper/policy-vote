@@ -2,9 +2,10 @@ _ = require('underscore')
 Backbone = require('backbone')
 $ = Backbone.$
 
+Policies = require('../../lib/Policies')
 ForAgainstView = require('./ForAgainstView')
 PolicyScoreView = require('./PolicyScoreView')
-Policies = require('../../lib/Policies')
+ShareView = require('./ShareView')
 
 module.exports = class StatisticsView extends Backbone.View
   className: 'statistics'
@@ -18,6 +19,7 @@ module.exports = class StatisticsView extends Backbone.View
 
     @forAgainstView = new ForAgainstView(province: @province, votes: @votes)
     @policyScoreView = new PolicyScoreView(province: @province)
+    @shareView = new ShareView()
 
     @listenTo(@forAgainstView, 'rendered', => @trigger('rendered'))
     @listenTo(@policyScoreView, 'rendered', => @trigger('rendered'))
@@ -57,6 +59,7 @@ module.exports = class StatisticsView extends Backbone.View
   render: ->
     @$el.append(@forAgainstView.render().el)
     @$el.append(@policyScoreView.render().el)
+    @$el.append(@shareView.render().el)
     @$el.append(@$tooltip = $('<div class="policy-tooltip"></div>'))
     @tooltipTarget = null
     @tooltipTargetClassName = null

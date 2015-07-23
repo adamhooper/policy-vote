@@ -27,6 +27,7 @@ h1, h2 {
 @import "statistics.less";
 @import "for-against.less";
 @import "policy-score.less";
+@import "share.less";
 
 .spinner-overlay {
   position: absolute;
@@ -44,3 +45,14 @@ h1, h2 {
 }
 
 @import (inline) "spinner-loader.css";
+
+// Font-awesome
+@import "vendor/font-awesome/variables.less";
+@fa-font-path: "/fonts";
+@fa-css-prefix: icon;
+@import "vendor/font-awesome/mixins.less";
+@import "vendor/font-awesome/path.less";
+@import "vendor/font-awesome/core.less";
+.@{fa-css-prefix}-twitter:before { content: @fa-var-twitter; }
+.@{fa-css-prefix}-facebook:before { content: @fa-var-facebook; }
+.@{fa-css-prefix}-google-plus:before { content: @fa-var-google-plus; }
