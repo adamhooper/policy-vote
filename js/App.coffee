@@ -59,7 +59,7 @@ module.exports = class App extends Backbone.View
         provinceCode: @userProfile.provinceCode
       contentType: 'application/json'
       success: -> #console.log('Voted!')
-      error: (xhr, textStatus, errorThrown) -> console.log('Error during vote', textStatus, errorThrown)
+      error: (xhr, textStatus, errorThrown) -> console.log("Server didn't register your vote", textStatus, errorThrown)
     @questionView.render()
     @pymChild.sendHeight()
 
