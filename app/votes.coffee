@@ -18,14 +18,14 @@ module.exports = (database) ->
     languageCode = req.body?.languageCode
     provinceCode = req.body?.provinceCode
 
-    if betterPolicyId not of PolicyIds || worsePolicyId not of PolicyIds || languageCode not of LanguageCodes || (provinceCode != '' && provinceCode not of ProvinceCodes)
+    if betterPolicyId not of PolicyIds || worsePolicyId not of PolicyIds || languageCode not of LanguageCodes || (provinceCode != null && provinceCode not of ProvinceCodes)
       return res.status(400).send(code: 'illegal-arguments')
 
     database.addVote
       betterPolicyId: betterPolicyId
       worsePolicyId: worsePolicyId
       languageCode: languageCode
-      provinceCode: provinceCode
+      provinceCode: provinceCode ? ''
       userId: userId
       ip: req.ip
 
