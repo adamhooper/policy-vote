@@ -66,15 +66,7 @@ module.exports = class UserProfileView extends Backbone.View
 
   _onSubmit: (e) ->
     e.preventDefault()
-    @$el.addClass('saving')
 
-    profile =
+    @trigger 'user-set-profile',
       languageCode: @$('input[name="languageCode"]:checked').val()
       provinceCode: @$('input[name="provinceCode"]:checked').val() || null
-    Backbone.ajax
-      type: 'POST'
-      url: '/user'
-      data: JSON.stringify(profile)
-      contentType: 'application/json'
-      success: => @trigger('user-set-profile', profile)
-      error: (xhr, textStatus, errorThrown) -> console.log('Error saving profile', textStatus, errorThrown)
