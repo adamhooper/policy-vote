@@ -7,7 +7,7 @@ Policies = require('../../lib/Policies')
 module.exports = class QuestionView extends Backbone.View
   className: 'question'
   template: _.template('''
-    <header><h1>Pick the idea you prefer:</h1></header>
+    <header><h1>Pick the idea you prefer</h1></header>
     <div class="choices">
       <button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">
         <span class="inner">
@@ -21,8 +21,8 @@ module.exports = class QuestionView extends Backbone.View
       </button>
     </div>
     <div class="done">
-      <button class="show-statistics">I'm done. Party time!</button>
       <p class="explanation"><%- nVotesMessage %></p>
+      <button class="show-statistics">I'm done. Party time!</button>
     </div>
   ''')
 

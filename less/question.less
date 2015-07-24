@@ -1,15 +1,24 @@
 .question {
+
+  .choices {
+    display: flex;
+  }
+
   button.choice {
+    flex: 0 1 auto;
+    min-width: 20em;
     display: block;
     text-align: left;
     width: 100%;
-    border: 1px solid gray;
     border-radius: .5em;
     padding: 1.5rem;
     background: #eee;
     margin: 1.5rem 0;
     line-height: 4.5rem;
     vertical-align: middle;
+    border: 1px solid hsl(206, 12%, 73%);
+    background: hsl(192, 20%, 95%);
+    // FIXME do on-click color
   }
 
   .inner {
@@ -18,7 +27,18 @@
     line-height: 1.5rem;
   }
 
-  button.show-statistics {
-    float: right;
+  .done {
+    text-align: center;
+
+    button {
+      border: 0;
+      padding: 1rem;
+      border-radius: .5rem;
+      color: white;
+      background: #7b67ac;
+      font: inherit;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
   }
 }

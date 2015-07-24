@@ -12,9 +12,9 @@ module.exports = class PolicyScoreView extends Backbone.View
     error: _.template('') # Pretend all is well
     main: _.template('''
       <h2>Policy preferences of all readers</h2>
+      <p class="explanation">[LEGEND] A coloured policy is endorsed by only one party.</p>
       <div class="chart"></div>
       <p class="explanation">A score of <tt>50%</tt> means half the readers who saw a policy picked it.</p>
-      <p class="explanation">A coloured policy is endorsed by only one party.</p>
     ''')
 
   initialize: (options) ->
@@ -95,7 +95,7 @@ module.exports = class PolicyScoreView extends Backbone.View
 
     @$el.html(@templates.main())
     $chart = @$('.chart')
-    margin = { top: 20, right: 20, bottom: 20, left: 120 }
+    margin = { top: 20, right: 20, bottom: 20, left: 50 }
     width = $chart.width() - margin.right - margin.left
     height = $chart.height() - margin.top - margin.bottom
 

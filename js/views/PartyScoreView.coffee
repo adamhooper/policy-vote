@@ -17,30 +17,21 @@ module.exports = class PartyScoreView extends Backbone.View
     #   * yay (see partyStance)
     #   * nay (see partyStance)
     main: _.template('''
-      <h2 class="yay">You agree with</h2>
-      <div class="chart">
-        <ul class="parties">
-          <% parties.forEach(function(party) { %>
-            <li class="party party-<%- party.id %>">
-              <div class="party-stance party-stance-yay"><%= renderPartyStance(party.yay) %></div>
-              <div class="party-name" style="color: <%- party.color %>;"><%- party.en %></div>
-            </li>
-          <% }); %>
-        </ul>
+      <div class="charts">
+        <div class="half">
+          <h2 class="yay">You agree with</h2>
+          <div class="chart">
+            <ul class="parties">
+              <% parties.forEach(function(party) { %>
+                <li class="party party-<%- party.id %>">
+                  <div class="party-stance party-stance-yay"><%= renderPartyStance(party.yay) %></div>
+                  <div class="party-name" style="color: <%- party.color %>;"><%- party.en %></div>
+                </li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
       </div>
-      <h2 class="nay">You disagree with</h2>
-      <div class="chart">
-        <ul class="parties">
-          <% parties.forEach(function(party) { %>
-            <li class="party party-<%- party.id %>">
-              <div class="party-name" style="color: <%- party.color %>;"><%- party.en %></div>
-              <div class="party-stance party-stance-nay"><%= renderPartyStance(party.nay) %></div>
-            </li>
-          <% }); %>
-        </ul>
-      </div>
-      <p class="explanation">A score of <tt>50%</tt> means you chose half the policies the party backed.</p>
-      <p class="explanation">A coloured policy is endorsed by only one party.</p>
     ''')
 
     # Renders the stuff a party agrees/disagrees with (just one). Input has:

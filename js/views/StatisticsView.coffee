@@ -2,6 +2,7 @@ _ = require('underscore')
 Backbone = require('backbone')
 $ = Backbone.$
 
+ForAgainstView = require('./ForAgainstView')
 Policies = require('../../lib/Policies')
 PartyScoreView = require('./PartyScoreView')
 PolicyScoreView = require('./PolicyScoreView')
@@ -18,10 +19,12 @@ module.exports = class StatisticsView extends Backbone.View
     @votes = options.votes
 
     @partyScoreView = new PartyScoreView(province: @province, votes: @votes)
+    @forAgainstView = new ForAgainstView(province: @province, votes: @votes)
     @policyScoreView = new PolicyScoreView(province: @province)
     @shareView = new ShareView()
 
     @listenTo(@partyScoreView, 'rendered', => @trigger('rendered'))
+    @listenTo(@forAgainstView, 'rendered', => @trigger('rendered'))
     @listenTo(@policyScoreView, 'rendered', => @trigger('rendered'))
 
   templates:
@@ -31,7 +34,7 @@ module.exports = class StatisticsView extends Backbone.View
         <div class="policy-party">Promised by <strong><%- policy.parties.map(function(p) { return p.en; }).join(', ') %></strong></div>
         <% if (policy.userSaysYayOver.length) { %>
           <div class="policy-better-than">
-            <p>You chose this policy over:</p>
+            <p><strong>You chose this policy over:</strong></p>
             <ul>
               <% policy.userSaysYayOver.forEach(function(otherPolicy) { %>
                 <li><%- otherPolicy.en %></li>
@@ -41,7 +44,7 @@ module.exports = class StatisticsView extends Backbone.View
         <% } %>
         <% if (policy.userSaysNayOver.length) { %>
           <div class="policy-worse-than">
-            <p>You disliked this policy compared to:</p>
+            <p><strong>You disliked this policy compared to:</strong></p>
             <ul>
               <% policy.userSaysNayOver.forEach(function(otherPolicy) { %>
                 <li><%- otherPolicy.en %></li>
@@ -58,6 +61,7 @@ module.exports = class StatisticsView extends Backbone.View
 
   render: ->
     @$el.append(@partyScoreView.render().el)
+    @$el.append(@forAgainstView.render().el)
     @$el.append(@policyScoreView.render().el)
     @$el.append(@shareView.render().el)
     @$el.append(@$tooltip = $('<div class="policy-tooltip"></div>'))

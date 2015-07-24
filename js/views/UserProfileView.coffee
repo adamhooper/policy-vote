@@ -24,19 +24,12 @@ module.exports = class UserProfileView extends Backbone.View
     <fieldset class="province-code" disabled>
       <legend>Where you live</legend>
 
-      <ul class="province-code">
+      <select id="province-code" name="provinceCode" value="">
+        <option value="">I prefer not to say</option>
         <% provinces.forEach(function(province) { %>
-          <li>
-            <input id="province-code-<%- province.code %>" type="radio" name="provinceCode" value="<%- province.code %>">
-            <label for="province-code-<%- province.code %>"><%- province.en %></label>
-          </li>
+          <option value="<%- province.code %>"><%- province.en %></option>
         <% }); %>
-        <li class="province-code-null">
-          <input id="province-code-null" type="radio" name="provinceCode" value="">
-          <label for="province-code-null">I'm not Canadian / I prefer not to say</label>
-        </li>
-      </ul>
-      </label>
+      </select>
     </fieldset>
     <fieldset class="actions" disabled>
       <button type="submit" class="submit">I'm ready</button>
@@ -49,7 +42,6 @@ module.exports = class UserProfileView extends Backbone.View
 
   events:
     'change input[name="languageCode"]': '_onChangeLanguageCode'
-    'change input[name="provinceCode"]': '_onChangeProvinceCode'
     'click button.submit': '_onSubmit'
 
   render: ->
@@ -57,11 +49,7 @@ module.exports = class UserProfileView extends Backbone.View
     @
 
   _onChangeLanguageCode: ->
-    @$('fieldset.province-code').prop('disabled', false)
-    @trigger('user-clicked')
-
-  _onChangeProvinceCode: ->
-    @$('fieldset.actions').prop('disabled', false)
+    @$('fieldset').prop('disabled', false)
     @trigger('user-clicked')
 
   _onSubmit: (e) ->
@@ -69,4 +57,4 @@ module.exports = class UserProfileView extends Backbone.View
 
     @trigger 'user-set-profile',
       languageCode: @$('input[name="languageCode"]:checked').val()
-      provinceCode: @$('input[name="provinceCode"]:checked').val() || null
+      provinceCode: @$('input[name="provinceCode"]').val() || null
