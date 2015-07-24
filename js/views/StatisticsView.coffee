@@ -105,20 +105,45 @@ module.exports = class StatisticsView extends Backbone.View
       .attr('class', 'policy-tooltip above') # Make it visible so we can calculate the height
     # Show tooltip _above_ the target, if possible -- nicer on mobile
     margin = 10 # 10px between item top and tooltip bottom
-    targetTop = $target.offset().top - $(window).scrollTop()
-    if @$tooltip.height() < targetTop - margin
-      @$tooltip
-        .attr('class', 'policy-tooltip above')
-        .css(top: $target.position().top - margin - @$tooltip.height())
+
+    targetOffset = $target.offset()
+    targetSize = if target.hasAttribute('r') # svg <circle>
+      d = +target.getAttribute('r') << 1
+      width: d
+      height: d
     else
-      targetHeight = if target.hasAttribute('r') # svg <circle>
-        +target.getAttribute('r') * 2
-      else
-        $target.height()
-      console.log($target.position().top, targetHeight, margin)
-      @$tooltip
-        .attr('class', 'policy-tooltip below')
-        .css(top: $target.position().top + targetHeight + margin)
+      width: $target.width()
+      height: $target.height()
+
+    className = null
+    css = {}
+
+    # Figure out vertical alignment
+    #
+    # Go above target if there's space; otherwise, below
+    tooltipHeight = @$tooltip.outerHeight()
+    if targetOffset.top - $(window).scrollTop() > tooltipHeight
+      className = 'above'
+      css.top = targetOffset.top - margin - tooltipHeight
+    else
+      className = 'below'
+      css.top = targetOffset.top + targetSize.height + margin
+
+    # Align tooltip horizontally
+    #
+    # Center over target; ensure margin px from edges
+    tooltipWidth = @$tooltip.outerWidth()
+    rightLimit = @$el.width()
+    left = targetOffset.left + (targetSize.width / 2) - (tooltipWidth / 2)
+    if left + tooltipWidth + margin > rightLimit
+      left = rightLimit - tooltipWidth - margin
+    else if left < margin
+      left = margin
+    css.left = left
+
+    @$tooltip
+      .attr('class', "policy-tooltip #{className}")
+      .css(css)
 
   _onMouseoutPolicy: (e) ->
     @tooltipTarget?.setAttribute('class', @tooltipTargetClassName)

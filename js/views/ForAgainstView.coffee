@@ -19,7 +19,7 @@ module.exports = class ForAgainstView extends Backbone.View
       <tbody>
         <% parties.forEach(function(party) { %>
           <tr>
-            <th class="party"><%- party.en %></th>
+            <th class="party" style="color: <%- party.color %>"><%- party.en %></th>
             <td class="user-says-nay">
               <ul class="policy-list">
                 <% party.userSaysNay.forEach(function(policy) { %>
@@ -51,6 +51,8 @@ module.exports = class ForAgainstView extends Backbone.View
     # We'll build an Array of parties that look like:
     #
     #     {
+    #       id: 'L'
+    #       color: '#abcdef'
     #       en: 'Liberal'
     #       fr: 'libéral'
     #       userSaysYay: [ policy, policy, policy, ... ]
@@ -64,6 +66,7 @@ module.exports = class ForAgainstView extends Backbone.View
       continue if party.onlyInProvince? && party.onlyInProvince != @province
       augmentedPartiesById[party.id] =
         id: party.id
+        color: party.color
         en: party.en
         fr: party.fr
         userSaysYay: []

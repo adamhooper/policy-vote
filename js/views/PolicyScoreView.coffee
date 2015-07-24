@@ -142,6 +142,5 @@ module.exports = class PolicyScoreView extends Backbone.View
         .attr('cx', (d) -> xScale(d.policy.fractionAye))
         .attr('cy', (d) -> yScale(d.party.id))
         .style('fill', (d) -> d.policy.color)
-        .attr('opacity', '.5')
 
     @trigger('rendered')
