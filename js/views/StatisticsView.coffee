@@ -124,3 +124,10 @@ module.exports = class StatisticsView extends Backbone.View
     @tooltipTarget?.setAttribute('class', @tooltipTargetClassName)
     @tooltipTarget = null
     @$tooltip.attr('class', 'policy-tooltip hide')
+
+  # The element will only be added to the DOM *after* it's rendered, but before
+  # we figure out whether the label fits. Whoever owns this view will need to
+  # call `tidyRenderGlitches()` right after inserting the element into the DOM,
+  # _and_ on window resize.
+  tidyRenderGlitches: ->
+    @partyScoreView.tidyRenderGlitches()

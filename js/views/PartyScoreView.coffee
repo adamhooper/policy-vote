@@ -14,41 +14,24 @@ module.exports = class PartyScoreView extends Backbone.View
     #   * id
     #   * en (or fr)
     #   * color
-    #   * yay (see partyStance)
-    #   * nay (see partyStance)
+    #   * percent: 0-100 integer describing how much the user agrees/disagrees
+    #   * fraction: 0-1 float describing percent/(maximum percent for all parties)
     main: _.template('''
-      <div class="charts">
-        <div class="half">
-          <h2 class="yay">You agree with</h2>
-          <div class="chart">
-            <ul class="parties">
-              <% parties.forEach(function(party) { %>
-                <li class="party party-<%- party.id %>">
-                  <div class="party-stance party-stance-yay"><%= renderPartyStance(party.yay) %></div>
-                  <div class="party-name" style="color: <%- party.color %>;"><%- party.en %></div>
-                </li>
-              <% }); %>
-            </ul>
-          </div>
-        </div>
+      <h2 class="yay">You agree with</h2>
+      <div class="chart">
+        <ul class="parties">
+          <% parties.forEach(function(party) { %>
+            <li data-party-id="<%- party.id %>" class="party party-<%- party.id %>">
+              <div class="party-name" style="color: <%- party.color %>;"><%- party.en %></div>
+              <div class="bar-container">
+                <div class="bar" style="width: <%- 100 * party.fraction %>%; background: <%- party.color %>;">
+                  <div class="label"><%- party.percent %>%</div>
+                </div>
+              </div>
+            </li>
+          <% }); %>
+        </ul>
       </div>
-    ''')
-
-    # Renders the stuff a party agrees/disagrees with (just one). Input has:
-    #
-    # * policies: Array of { id, color } Objects
-    # * percent: 0-100 integer describing how much the user agrees/disagrees
-    # * height: 0-1 float describing percent/(maximum percent for all parties)
-    partyStance: _.template('''
-      <div class="bar-container">
-        <div class="label"><%- percent %>%</div>
-        <div class="bar" style="height: <%- 100 * height %>%; background: <%- color %>;"></div>
-      </div>
-      <ul class="policies">
-        <% policies.forEach(function(policy) { %>
-          <li class="policy" data-policy-id="<%- policy.id %>" style="background: <%- policy.color %>;"></li>
-        <% }); %>
-      </ul>
     ''')
 
   initialize: (options) ->
@@ -68,38 +51,47 @@ module.exports = class PartyScoreView extends Backbone.View
       color: party.color
       en: party.en
       fr: party.fr
-      yay: { policies: [], color: party.color, labelPosition: 'above' } # lazy, hence copying color
-      nay: { policies: [], color: party.color, labelPosition: 'below' }
+      nYayPolicies: 0
+      nPolicies: 0
 
     idToParty = {}
     (idToParty[party.id] = party) for party in parties
 
     for [ yayPolicy, nayPolicy ] in @votes
       for party in yayPolicy.parties when party.id of idToParty
-        idToParty[party.id].yay.policies.push(yayPolicy)
+        idToParty[party.id].nYayPolicies++
+        idToParty[party.id].nPolicies++
       for party in nayPolicy.parties when party.id of idToParty
-        idToParty[party.id].nay.policies.push(nayPolicy)
+        idToParty[party.id].nPolicies++
 
-    fillStancePercent = (stance, otherStance) ->
-      stance.percent = if stance.policies.length == 0
+    maxPercent = null
+    for party in parties
+      percent = if party.nPolicies == 0
         0
       else
-        Math.round(100 * stance.policies.length / (stance.policies.length + otherStance.policies.length))
-    for party in parties
-      fillStancePercent(party.yay, party.nay)
-      fillStancePercent(party.nay, party.yay)
-
-    maxPercentYay = _.max(parties.map((p) -> p.yay.percent))
-    maxPercentNay = _.max(parties.map((p) -> p.nay.percent))
+        Math.round(100 * party.nYayPolicies / party.nPolicies)
+      party.percent = percent
+      maxPercent = percent if !maxPercent? || percent > maxPercent
 
     for party in parties
-      party.yay.height = party.yay.percent / maxPercentYay
-      party.nay.height = party.nay.percent / maxPercentNay
+      party.fraction = party.percent / maxPercent
 
-    parties.sort((p1, p2) -> p2.yay.percent - p1.yay.percent || p1.en.charCodeAt(0) - p2.en.charCodeAt(0))
+    parties.sort((p1, p2) -> p2.fraction - p1.fraction || p1.en.charCodeAt(0) - p2.en.charCodeAt(0))
 
     console.log(parties)
 
-    html = @templates.main(parties: parties, renderPartyStance: @templates.partyStance)
+    html = @templates.main(parties: parties)
     @$el.html(html)
     @
+
+  # The element will only be added to the DOM *after* it's rendered, but before
+  # we figure out whether the label fits. Whoever owns this view will need to
+  # call `tidyRenderGlitches()` right after inserting the element into the DOM,
+  # _and_ on window resize.
+  tidyRenderGlitches: ->
+    for label in @$('.label')
+      $label = Backbone.$(label)
+      $label.removeClass('next-to-bar')
+      console.log($label.position())
+      if $label.position().left < 0
+        $label.addClass('next-to-bar')

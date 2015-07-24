@@ -42,6 +42,7 @@ module.exports = class App extends Backbone.View
         @statisticsView = new StatisticsView(province: @getUserProvince(), votes: @votes)
         @listenTo(@statisticsView, 'rendered', => @pymChild.sendHeight())
       @$el.append(@statisticsView.render().el)
+      @statisticsView.tidyRenderGlitches()
 
     @pymChild.sendHeight()
 

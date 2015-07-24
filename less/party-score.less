@@ -5,41 +5,48 @@
     padding: 0;
   }
 
-  .charts {
-    display: flex;
-    justify-content: space-around;
-  }
-
   .chart {
     max-width: 40rem;
-    ul.parties {
+
+    li.party {
       display: flex;
     }
 
-    li.party {
-      flex: 1 1 auto;
-      text-align: center;
+    .party-name {
+      flex: 0 0 auto;
+      width: 5rem;
+
+      // line text up with .label (vertically)
+      margin: 1.5rem 0;
+      line-height: 1rem;
     }
 
     .bar-container {
-      height: 10rem;
+      flex: 1 1 auto;
       display: flex;
-      flex-direction: column;
       align-items: center;
       position: relative;
-      margin-top: 1.5rem; // for the .labels
-      justify-content: flex-end;
+      justify-content: flex-start;
 
       .bar {
-        width: 3rem;
-        margin: 0 .5rem;
+        height: 3rem;
+        margin: .5rem 0;
+        position: relative;
       }
 
       .label {
         position: absolute;
-        margin-top: -1.5rem;
-        text-align: center;
-        width: 100%;
+        padding: 1rem .5rem;
+        line-height: 1rem;
+        color: white;
+        right: 0;
+
+        &.next-to-bar {
+          // If JavaScript determines the bar isn't wide enough to hold the
+          // text, move it to the right
+          left: 100%;
+          color: #484e4d;
+        }
       }
     }
   }
