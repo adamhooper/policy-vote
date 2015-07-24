@@ -3,9 +3,8 @@
 set -x
 set -e
 
-rm -f data/users.csv data/votes.csv
-touch /mnt/policy-vote/users.csv /mnt/policy-vote/votes.csv
-ln -s /mnt/policy-vote/users.csv data/users.csv
+rm -f data/votes.csv
+touch /mnt/policy-vote/votes.csv
 ln -s /mnt/policy-vote/votes.csv data/votes.csv
 
 npm install --production
