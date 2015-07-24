@@ -1,5 +1,4 @@
 readline = require('readline')
-split = require('split')
 
 PolicyIds = require('../lib/Policies').byId
 
@@ -92,9 +91,22 @@ module.exports = class Database
   load: (csv, done) ->
     throw new Error('The database is not empty. DO NOT call load() now.') if @_nVotes > 0
 
+    lastPartialLine = ''
+
     csv
-      .pipe(split(/\n/, null, trailing: false))
-      .on 'data', (line) =>
-        [ betterPolicyId, worsePolicyId ] = line.split(',', 2)
+      .on 'data', (chunk) =>
+        lines = chunk.split('\n')
+        lines[0] = lastPartialLine + lines[0]
+        if chunk[chunk.length - 1] == '\n'
+          lastPartialLine = ''
+        else
+          lastPartialLine = lines.pop()
+
+        for line in lines
+          [ betterPolicyId, worsePolicyId ] = line.split(',', 2)
+          @_addVote(betterPolicyId, worsePolicyId)
+      .on 'end', =>
+        [ betterPolicyId, worsePolicyId ] = lastPartialLine.split(',', 2)
         @_addVote(betterPolicyId, worsePolicyId)
-      .on('end', done)
+
+        done()

@@ -6,7 +6,7 @@ Policies = require('../lib/Policies')
 
 describe 'database', ->
   beforeEach ->
-    @csv = new streamBuffers.WritableStreamBuffer()
+    @csv = new streamBuffers.WritableStreamBuffer(encoding: 'utf-8')
     @database = new Database(csvOutputStream: @csv)
     @userId1 = 'ed84d06c-cf8f-42a3-8010-7f5e38952a34'
     @userId2 = 'ed5574c6-f060-40e9-a48d-e8c2f0ed69e6'
@@ -69,7 +69,7 @@ describe 'database', ->
 
   describe 'load', ->
     it 'should populate votes', (done) ->
-      csv = new Readable()
+      csv = new Readable(encoding: 'utf-8')
       csv._read = -> {}
       @database.load csv, (err) =>
         expect(err).not.to.exist
