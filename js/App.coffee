@@ -1,5 +1,6 @@
 Backbone = require('backbone')
 pym = require('pym.js');
+$ = Backbone.$
 
 UserProfileView = require('./views/UserProfileView')
 QuestionView = require('./views/QuestionView')
@@ -71,3 +72,9 @@ module.exports = class App extends Backbone.View
   _onClickShowStatistics: ->
     @showStatistics = true
     @render()
+
+App.installOnPageLoad = ->
+  $ ->
+    $main = $('<div id="main"></div>').appendTo('body')
+    app = new App(el: $main)
+    app.render()
