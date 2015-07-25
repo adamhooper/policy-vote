@@ -4,6 +4,8 @@ qs = require('querystring')
 
 Url = qs.parse(window.location.search.slice(1))['share-url']
 
+M = global.Messages.ShareView
+
 # Shows social-media share buttons.
 #
 # It looks to the query parameters to find out what URL to share it. So when
@@ -13,29 +15,31 @@ module.exports = class ShareView extends Backbone.View
   tagName: 'ul'
   className: 'share'
 
-  template: _.template('''
+  template: _.template("""
     <li class="twitter">
-      <a target="_blank" href="https://twitter.com/intent/tweet?status=<%= encodeURIComponent(text + ' ' + url) %>">
+      <a target="_blank" href="https://twitter.com/intent/tweet?status=<%= encodeURIComponent(text) %>">
         <i class="icon icon-twitter"></i>
-        Tweet
+        #{M.twitter}
       </a>
     </li>
     <li class="facebook">
       <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(url) %>">
         <i class="icon icon-facebook"></i>
-        Share
+        #{M.facebook}
       </a>
     </li>
     <li class="google-plus">
       <a target="_blank" href="https://plus.google.com/share?url=<%= encodeURIComponent(url) %>">
         <i class="icon icon-google-plus"></i>
-        Share
+        #{M.googlePlus}
       </a>
     </li>
-  ''')
+  """)
 
   render: ->
     if Url
-      html = @template(text: 'So you like a party. Do you like its policies? Quiz yourself. #cdnpoli', url: Url)
+      html = @template
+        url: Url
+        text: M.tweetText.replace('{}', Url)
       @$el.html(html)
     @

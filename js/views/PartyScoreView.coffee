@@ -5,6 +5,8 @@ d3 = require('d3')
 Parties = require('../../lib/Parties')
 Policies = require('../../lib/Policies')
 
+M = global.Messages.PartyScoreView
+
 module.exports = class PartyScoreView extends Backbone.View
   className: 'party-score'
   templates:
@@ -16,8 +18,8 @@ module.exports = class PartyScoreView extends Backbone.View
     #   * color
     #   * percent: 0-100 integer describing how much the user agrees/disagrees
     #   * fraction: 0-1 float describing percent/(maximum percent for all parties)
-    main: _.template('''
-      <h2 class="yay">You agree with</h2>
+    main: _.template("""
+      <h2 class="yay">#{M.title}</h2>
       <div class="chart">
         <ul class="parties">
           <% parties.forEach(function(party) { %>
@@ -32,7 +34,7 @@ module.exports = class PartyScoreView extends Backbone.View
           <% }); %>
         </ul>
       </div>
-    ''')
+    """)
 
   initialize: (options) ->
     throw 'must pass options.province, a Province' if 'province' not of options

@@ -2,10 +2,6 @@ Backbone = require('backbone')
 pym = require('pym.js');
 $ = Backbone.$
 
-UserProfileView = require('./views/UserProfileView')
-QuestionView = require('./views/QuestionView')
-StatisticsView = require('./views/StatisticsView')
-
 Provinces = require('../lib/Provinces')
 
 module.exports = class App extends Backbone.View
@@ -18,6 +14,7 @@ module.exports = class App extends Backbone.View
 
     @pymChild = new pym.Child()
 
+    UserProfileView = require('./views/UserProfileView')
     @userProfileView = new UserProfileView()
     @listenTo(@userProfileView, 'user-set-profile', @_onUserSetProfile)
     @listenTo(@userProfileView, 'user-clicked', => @pymChild.sendHeight())
@@ -37,12 +34,14 @@ module.exports = class App extends Backbone.View
       @$el.append(@userProfileView.el)
     else if !@showStatistics
       if !@questionView?
+        QuestionView = require('./views/QuestionView')
         @questionView = new QuestionView(province: @getUserProvince())
         @listenTo(@questionView, 'user-prefers-policy', @_onUserPrefersPolicy)
         @listenTo(@questionView, 'show-statistics', @_onClickShowStatistics)
       @$el.append(@questionView.render().el)
     else
       if !@statisticsView?
+        StatisticsView = require('./views/StatisticsView')
         @statisticsView = new StatisticsView(province: @getUserProvince(), votes: @votes)
         @listenTo(@statisticsView, 'rendered', => @pymChild.sendHeight())
       @$el.append(@statisticsView.render().el)
@@ -60,7 +59,7 @@ module.exports = class App extends Backbone.View
       data: JSON.stringify
         betterPolicyId: +policy.id
         worsePolicyId: +otherPolicy.id
-        languageCode: @userProfile.languageCode
+        languageCode: global.languageCode
         provinceCode: @userProfile.provinceCode
       contentType: 'application/json'
       success: -> #console.log('Voted!')
@@ -79,6 +78,8 @@ module.exports = class App extends Backbone.View
 
 App.setLanguage = (languageCode) ->
   global.languageCode = languageCode
+  # Set global.Messages before require()-ing any Views. That lets use use a
+  # global variable ... yay!
   global.Messages = require('./Messages')(languageCode)
   (o.name = o[languageCode]) for o in require('../lib/Parties').all
   (o.name = o[languageCode]) for o in require('../lib/Provinces').all

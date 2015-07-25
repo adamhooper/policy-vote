@@ -4,10 +4,13 @@ _ = require('underscore')
 
 Policies = require('../../lib/Policies')
 
+M = global.Messages.QuestionView
+Numeral = global.Messages.Numeral
+
 module.exports = class QuestionView extends Backbone.View
   className: 'question'
-  template: _.template('''
-    <header><h1>Pick the idea you prefer</h1></header>
+  template: _.template("""
+    <header><h1>#{M.title}</h1></header>
     <div class="choices">
       <button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">
         <span class="inner">
@@ -22,9 +25,9 @@ module.exports = class QuestionView extends Backbone.View
     </div>
     <div class="done">
       <p class="explanation"><%- nVotesMessage %></p>
-      <button class="show-statistics">I'm done. Party time!</button>
+      <button class="show-statistics">#{M.done}</button>
     </div>
-  ''')
+  """)
 
   events:
     'click button.choice': '_onClickChoice'
@@ -43,17 +46,16 @@ module.exports = class QuestionView extends Backbone.View
     false
 
   _buildNVotesMessage: ->
-    numbers = [ null, null, 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine' ]
     if @nVotes < 2
-      "Pick policies. We'll chart your vision."
+      M.progress['<2']
     else if @nVotes < 10
-      "You picked #{numbers[@nVotes]} policies. Aim for at least 10."
+      M.progress['<10'].replace('{}', Numeral[String(@nVotes)])
     else if @nVotes < 20
-      "You picked #{@nVotes} policies. For nicer charts, pick 20."
+      M.progress['<20'].replace('{}', String(@nVotes))
     else if @nVotes < 30
-      "Great! You picked #{@nVotes} policies. Your charts will be nice."
+      M.progress['<30'].replace('{}', String(@nVotes))
     else
-      "You picked #{@nVotes} policies. Fabulous charts await."
+      M.progress.else.replace('{}', String(@nVotes))
 
   pick2: ->
     if @unseenPolicies.length < 2

@@ -5,16 +5,18 @@ $ = Backbone.$
 DotColorLegend = require('./DotColorLegend')
 Parties = require('../../lib/Parties')
 
+M = global.Messages.ForAgainstView
+
 module.exports = class ForAgainstView extends Backbone.View
   className: 'for-against'
-  template: _.template('''
-    <h2>Breakdown by policy</h2>
+  template: _.template("""
+    <h2>#{M.title}</h2>
     <table class="parties">
       <thead>
         <tr>
-          <th class="party">Party</th>
-          <th class="user-says-nay">you rejected</th>
-          <th class="user-says-yay">you chose</th>
+          <th class="party"></th>
+          <th class="user-says-nay">#{M.th.rejected}</th>
+          <th class="user-says-yay">#{M.th.chosen}</th>
         </tr>
       </thead>
       <tbody>
@@ -39,7 +41,7 @@ module.exports = class ForAgainstView extends Backbone.View
         <% }) %>
       </tbody>
     </table>
-  ''')
+  """)
 
   initialize: (options) ->
     throw 'must pass options.province, a Province' if 'province' not of options

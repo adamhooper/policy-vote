@@ -3,6 +3,8 @@ Backbone = require('backbone')
 
 Parties = require('../../lib/Parties').all
 
+M = global.Messages.DotColorLegend
+
 module.exports = class DotColorLegend extends Backbone.View
   className: 'policy-color-legend'
 
@@ -11,12 +13,12 @@ module.exports = class DotColorLegend extends Backbone.View
 
     @province = options.province
 
-  template: _.template('''
+  template: _.template("""
     <div class="multi-party-policy">
       <ul>
         <li class="policy"></li>
       </ul>
-      <span class="label">Policy</span>
+      <span class="label">#{M.multiPartyPolicy}</span>
     </div>
     <div class="one-party-policies">
       <ul>
@@ -24,9 +26,9 @@ module.exports = class DotColorLegend extends Backbone.View
           <li class="policy" style="background: <%- party.color %>;"></li>
         <% }); %>
       </ul>
-      <span class="label">Policy only one party supports</span>
+      <span class="label">#{M.onePartyPolicy}</span>
     </div>
-  ''')
+  """)
 
   render: ->
     parties = (p for p in Parties when !p.onlyInProvince || p.onlyInProvince == @province)

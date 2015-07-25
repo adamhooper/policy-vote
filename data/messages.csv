@@ -1,1 +1,34 @@
-key,en,fr,explanation
+key,en,fr,notes-for-translators
+UserProfileView.whereYouLive,Where you live,FR - Where you live
+UserProfileView.preferNotToSay,I prefer not to say,FR - I prefer not to say
+UserProfileView.ready,I'm ready,FR - I'm ready
+StatisticsView.promisedBy,Promised by,FR - Promised by,This looks like 'Promised by •NDP •Lib •Cons'
+StatisticsView.youChoseThisOver,You chose this policy over:,FR - You chose this policy over:
+StatisticsView.youDislikedThisComparedTo,You disliked this policy compared to:,FR - You disliked this policy compared to:
+ForAgainstView.title,Every choice you made,FR - Every choice you made
+ForAgainstView.th.rejected,you rejected,FR - you rejected
+ForAgainstView.th.chosen,you chose,FR - you chose
+PartyScoreView.title,Parties you agree with,FR - Parties you agree with
+QuestionView.title,Choose the policy you prefer,FR - Choose the policy you prefer
+QuestionView.done,I'm done. Party time!,FR - I'm done. Party time!
+QuestionView.progress.<2,Pick policies. We'll chart your vision.,FR - Pick policies. We'll chart your vision.
+QuestionView.progress.<10,You picked {} policies. Aim for at least 10.,FR - You picked {} policies. Aim for at least 10.,'{}' will be replaced with a numeral: 'two' ... 'nine' or 'deux' ... 'neuf'.
+QuestionView.progress.<20,You picked {} policies. For nicer charts, pick 20.,FR - You picked {} policies. For nicer charts, pick 20.,'{}' will be replaced with a number: 10...19.
+QuestionView.progress.<30,Great! You picked {} policies. Your charts will be nice.,FR - Great! You picked {} policies. Your charts will be nice.
+QuestionView.progress.else,You picked {} policies. Fabulous charts await.,FR - You picked {} policies. Fabulous charts await.
+Numeral.2,two,deux
+Numeral.3,three,trois
+Numeral.4,four,quatre
+Numeral.5,five,cinq
+Numeral.6,six,six
+Numeral.7,seven,sept
+Numeral.8,eight,huit
+Numeral.9,nine,neuf
+PolicyScoreView.title,Policy preferences of all readers,FR - Policy preferences of all readers
+PolicyScoreView.explanation,A score of 50% means half the readers who saw a policy picked it,FR - A score of 50% means half the readers who saw a policy picked it
+DotColorLegend.multiPartyPolicy,Policy,FR - Policy
+DotColorLegend.onePartyPolicy,Policy only one party supports,FR - Policy only one party supports
+ShareView.twitter,Tweet,FR - Tweet
+ShareView.tweetText,So you like a party. Do you like its policies? Quiz yourself. {} #elxn2015,FR - So you like a party. Do you like its policies? Quiz yourself. {} #elxn2015,The '{}' is replaced with the URL being shared.
+ShareView.facebook,Share,Partager
+ShareView.googlePlus,Share,Partager

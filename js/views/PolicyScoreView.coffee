@@ -6,16 +6,18 @@ Parties = require('../../lib/Parties')
 Policies = require('../../lib/Policies')
 DotColorLegend = require('./DotColorLegend')
 
+M = global.Messages.PolicyScoreView
+
 module.exports = class PolicyScoreView extends Backbone.View
   className: 'policy-score'
   templates:
     loading: _.template('''<i class="icon-spinner"></i>''')
     error: _.template('') # Pretend all is well
-    main: _.template('''
-      <h2>Policy preferences of all readers</h2>
+    main: _.template("""
+      <h2>#{M.title}</h2>
       <div class="chart"></div>
-      <p class="explanation">A score of <tt>50%</tt> means half the readers who saw a policy picked it.</p>
-    ''')
+      <p class="explanation">#{M.explanation}</p>
+    """)
 
   initialize: (options) ->
     throw 'must pass options.province, a Province' if 'province' not of options

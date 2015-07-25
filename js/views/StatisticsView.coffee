@@ -8,6 +8,8 @@ PartyScoreView = require('./PartyScoreView')
 PolicyScoreView = require('./PolicyScoreView')
 ShareView = require('./ShareView')
 
+M = global.Messages.StatisticsView
+
 module.exports = class StatisticsView extends Backbone.View
   className: 'statistics'
 
@@ -28,13 +30,13 @@ module.exports = class StatisticsView extends Backbone.View
     @listenTo(@policyScoreView, 'rendered', => @trigger('rendered'))
 
   templates:
-    policyDetails: _.template('''
+    policyDetails: _.template("""
       <div class="policy-details">
         <h4 class="policy-policy"><%- policy.name %></h4>
-        <div class="policy-party">Promised by <strong><%- policy.parties.map(function(p) { return p.name; }).join(', ') %></strong></div>
+        <div class="policy-party">#{M.promisedBy} <strong><%- policy.parties.map(function(p) { return p.name; }).join(', ') %></strong></div>
         <% if (policy.userSaysYayOver.length) { %>
           <div class="policy-better-than">
-            <p><strong>You chose this policy over:</strong></p>
+            <p><strong>#{M.youChoseThisOver}</strong></p>
             <ul>
               <% policy.userSaysYayOver.forEach(function(otherPolicy) { %>
                 <li><%- otherPolicy.name %></li>
@@ -44,7 +46,7 @@ module.exports = class StatisticsView extends Backbone.View
         <% } %>
         <% if (policy.userSaysNayOver.length) { %>
           <div class="policy-worse-than">
-            <p><strong>You disliked this policy compared to:</strong></p>
+            <p><strong>#{M.youDislikedThisComparedTo}</strong></p>
             <ul>
               <% policy.userSaysNayOver.forEach(function(otherPolicy) { %>
                 <li><%- otherPolicy.name %></li>
@@ -53,7 +55,7 @@ module.exports = class StatisticsView extends Backbone.View
           </div>
         <% } %>
       </div>
-    ''')
+    """)
 
   events:
     'mouseover [data-policy-id]': '_onMouseoverPolicy'
