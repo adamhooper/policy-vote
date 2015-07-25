@@ -1,4 +1,3 @@
-
 .policy-dot() {
   display: inline-block;
   width: .75rem;
@@ -14,6 +13,28 @@
   }
 }
 
+.button-default() {
+  display: inline-block;
+  width: 100%;
+  max-width: 20rem;
+  border-radius: .5em;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214 (copied from Bootstrap, clearly)
+
+  padding: 1.5rem;
+  margin: 1rem;
+  line-height: 4.5rem;
+  vertical-align: middle;
+  border: 1px solid @gray-light;
+  background: @gray-lighter;
+
+  &:active {
+    outline: 0;
+    background-color: @gray-light;
+  }
+}
+
 .button-primary() {
   border: 0;
   padding: 1rem;
@@ -23,4 +44,7 @@
   font: inherit;
   font-size: 1.25rem;
   font-weight: bold;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214 (copied from Bootstrap, clearly)
 }
