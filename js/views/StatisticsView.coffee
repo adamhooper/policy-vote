@@ -90,6 +90,10 @@ module.exports = class StatisticsView extends Backbone.View
   events:
     'mouseover [data-policy-id]': '_onMouseoverPolicy'
     'mouseout [data-policy-id]': '_onMouseoutPolicy'
+    'touchstart': '_onTouchstart'
+    'touchmove': '_onTouchmove'
+    'touchend': '_onTouchEnd'
+    'touchcancel': '_onTouchCancel'
     'click .back-to-questions button': '_onClickBackToQuestions'
 
   render: ->
@@ -124,8 +128,7 @@ module.exports = class StatisticsView extends Backbone.View
 
     @templates.policyDetails(policy: policy)
 
-  _onMouseoverPolicy: (e) ->
-    target = e.currentTarget
+  _setTooltipTarget: (target) ->
     $target = $(target)
 
     if target != @tooltipTarget
@@ -181,10 +184,28 @@ module.exports = class StatisticsView extends Backbone.View
       .attr('class', "policy-tooltip #{className}")
       .css(css)
 
-  _onMouseoutPolicy: (e) ->
+  _hideTooltip: ->
     @tooltipTarget?.setAttribute('class', @tooltipTargetClassName)
     @tooltipTarget = null
     @$tooltip.attr('class', 'policy-tooltip hide')
+
+  _handleTouch: (e) ->
+    touch = e.originalEvent.touches[0]
+    x = touch.pageX
+    y = touch.pageY
+    el = document.elementFromPoint?(x, y)
+    if el.hasAttribute('data-policy-id')
+      @_setTooltipTarget(el)
+    else
+      @_hideTooltip()
+
+  _onTouchstart: (e) -> @_handleTouch(e)
+  _onTouchmove: (e) -> @_handleTouch(e)
+  _onTouchCancel: -> @_hideTooltip()
+  _onTouchEnd: -> @_hideTooltip()
+
+  _onMouseoverPolicy: (e) -> @_setTooltipTarget(e.currentTarget)
+  _onMouseoutPolicy: -> @_hideTooltip()
 
   _onClickBackToQuestions: (e) -> @trigger('clicked-back-to-questions')
 
