@@ -7,13 +7,13 @@ Parties = require('../../lib/Parties')
 module.exports = class ForAgainstView extends Backbone.View
   className: 'for-against'
   template: _.template('''
-    <h2>Your choices, by party:</h2>
+    <h2>Breakdown by policy</h2>
     <table class="parties">
       <thead>
         <tr>
           <th class="party">Party</th>
-          <th class="user-says-nay">nay</th>
-          <th class="user-says-yay">yay</th>
+          <th class="user-says-nay">you rejected</th>
+          <th class="user-says-yay">you chose</th>
         </tr>
       </thead>
       <tbody>
@@ -23,14 +23,14 @@ module.exports = class ForAgainstView extends Backbone.View
             <td class="user-says-nay">
               <ul class="policy-list">
                 <% party.userSaysNay.forEach(function(policy) { %>
-                  <li class="policy" data-policy-id="<%- policy.id %>"></li>
+                  <li class="policy" style="background: <%- policy.color %>" data-policy-id="<%- policy.id %>"></li>
                 <% }); %>
               </ul>
             </td>
             <td class="user-says-yay">
               <ul class="policy-list">
                 <% party.userSaysYay.forEach(function(policy) { %>
-                  <li class="policy" data-policy-id="<%- policy.id %>"></li>
+                  <li class="policy" style="background: <%- policy.color %>" data-policy-id="<%- policy.id %>"></li>
                 <% }); %>
               </ul>
             </td>
@@ -86,6 +86,7 @@ module.exports = class ForAgainstView extends Backbone.View
     getOrSetAugmentedPolicy = (policy) ->
       augmentedPoliciesById[policy.id] ||=
         id: policy.id
+        color: policy.color
         en: policy.en
         fr: policy.fr
         parties: augmentedPartiesById[party.id] for party in policy.parties when party.id of augmentedPartiesById
