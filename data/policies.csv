@@ -1,7 +1,7 @@
-deficit,en,fr,partyIds
+id,en,fr,partyIds
 1,Restore diplomatic relations with Iran,Rétablir les relations diplomatiques avec l’Iran,L
 2,Lift the visa requirement on Mexican visitors to Canada,Mettre fin à l'imposition des visas pour les ressortissants mexicains,L
-3,Continue Canada's combat mission against ISIS in Irak and Syria,Poursuivre la mission militaire contre le groupe État islamique en Irak et en Syrie,C
+3,Continue Canada's combat mission against ISIS in Iraq and Syria,Poursuivre la mission militaire contre le groupe État islamique en Irak et en Syrie,C
 4,Maintain sanctions against Iran despite the Iranian nuclear deal,Maintenir les sanctions contre l’Iran en dépit de l'accord sur le dossier nucléaire iranien,C
 5,Oppose the Trans-Pacific Partnership,Annuler le Partenariat transpacifique,G
 6,Reopen the Canada-China foreign investor agreement,Rouvrir l'accord Canada-Chine visant à protéger les investissements étrangers ,"G,N"
@@ -10,7 +10,7 @@ deficit,en,fr,partyIds
 9,Give Quebec authority over employment insurance in the province,Confier au Québec la gestion du programme d’assurance-emploi pour les Québécois,B
 10,"Make admission to National Parks free in 2017, the 150th anniversary of Confederation",Offrir l’entrée gratuite dans les parcs nationaux en 2017 pour le 150e anniversaire de la Confédération,L
 11,Ban face coverings such as niqabs or burqas for people swearing their oath of citizenship,Interdire le port du niqab ou de la burqa pendant la prestation du serment de citoyenneté canadienne,C
-12,"Force labour unions to publicly disclosure on all spending on outside activities above $5,000 and salaries above $100 000/year",Obliger les syndicats à rendre publiques les dépenses de plus de 5 000 $ et les salaires de plus de 100 000 $,C
+12,"Force labour unions to disclose all spending on outside activities above $5,000 and salaries above $100,000/year",Obliger les syndicats à rendre publiques les dépenses de plus de 5 000 $ et les salaires de plus de 100 000 $,C
 13,Establish a youth corps that will provide federal minimum wage employment,Mettre en place une brigade jeunesse qui offrira des emplois au salaire minimum,G
 14,Ban discrimination based on the results of genetic tests,Interdire la discrimination fondée sur les résultats de tests génétiques,C
 15,Restore the $115 million cut from the budgets of CBC/Radio-Canada,Reverser à CBC/Radio-Canada les 115 millions $ dont son budget a été amputé,"L,N"
@@ -19,118 +19,113 @@ deficit,en,fr,partyIds
 18,Withdraw Canadian soldiers from the military mission in Iraq and Syria,Rapatrier les militaires qui prennent part à la mission canadienne en Irak et en Syrie,"G,N"
 19,End the Canadian bombing mission against ISIS in Iraq and Syria,Mettre fin à la mission de bombardement contre l’État islamique en Irak et en Syrie,"G,L,N"
 20,Increase military funding by $11.8-billion over 10 years,"Augmenter le financement des Forces canadiennes de plus de 11,8 milliards $ sur 10 ans",C
-21,EN-Amener Internet à haute vitesse dans les régions éloignées du Canada,Amener Internet à haute vitesse dans les régions éloignées du Canada,"G,L,N"
-22,EN-Annuler la hausse de cotisations à 10 000 $ du CELI,Annuler la hausse de cotisations à 10 000 $ du CELI,"G,L,N"
-23,EN-Rétablir l’âge de la retraite à 65 ans plutôt que 67 ans,Rétablir l’âge de la retraite à 65 ans plutôt que 67 ans,"B,L,N"
-24,EN-Hausser le Supplément de revenu garanti pour les prestataires de la Sécurité de la vieillesse ayant un faible revenu,Hausser le Supplément de revenu garanti pour les prestataires de la Sécurité de la vieillesse ayant un faible revenu,N
-25,EN-Réinstaurer le crédit d’impôt de 15 % pour les investissements dans les fonds de travailleurs,Réinstaurer le crédit d’impôt de 15 % pour les investissements dans les fonds de travailleurs,"L,N"
-26,EN-Réduire le taux d’imposition des PME de 11 % à 9 %,Réduire le taux d’imposition des PME de 11 % à 9 %,"C,G,N"
-27,EN-Augmenter le taux d’imposition des grandes entreprises,Augmenter le taux d’imposition des grandes entreprises,"G,N"
-28,EN-Interdire aux banques d’imposer des frais supplémentaires lorsqu’on effectue des paiements,Interdire aux banques d’imposer des frais supplémentaires lorsqu’on effectue des paiements,N
-29,EN-Annuler le régime de fractionnement du revenu,Annuler le régime de fractionnement du revenu,"G,L,N"
-30,EN-Réduire de 7 % le taux d’imposition pour les Canadiens qui gagnent entre 44 700 $ et 89 401 $,Réduire de 7 % le taux d’imposition pour les Canadiens qui gagnent entre 44 700 $ et 89 401 $,L
-31,EN-Introduire une nouvelle tranche d’imposition de 33 % pour les revenus de plus de 200 000 $,Introduire une nouvelle tranche d’imposition de 33 % pour les revenus de plus de 200 000 $,L
-32,EN-S’attaquer à l’écart de prix pour un même produit au Canada et aux États-Unis,S’attaquer à l’écart de prix pour un même produit au Canada et aux États-Unis,C
-33,"EN-Participer aux négociations du Pacte transpacifique, une entente de libre-échange plus importante que l'ALÉNA","Participer aux négociations du Pacte transpacifique, une entente de libre-échange plus importante que l'ALÉNA",C
-34,EN-Défendre le système de gestion de l’offre dans la production agricole,Défendre le système de gestion de l’offre dans la production agricole,"B,N"
-35,EN-Maintenir l’équilibre budgétaire pour l’année en cours,Maintenir l’équilibre budgétaire pour l’année en cours,"C,N"
-36,EN-Ratifier et mettre en œuvre le traité de libre-échange avec l'Union européenne,Ratifier et mettre en œuvre le traité de libre-échange avec l'Union européenne,"C,L"
-37,"EN-Interdire les déficits, sauf dans des circonstances exceptionnelles, telles qu’une récession, une guerre ou une catastrophe naturelle","Interdire les déficits, sauf dans des circonstances exceptionnelles, telles qu’une récession, une guerre ou une catastrophe naturelle",C
+21,Provide broadband Internet access to remote areas of Canada,Amener Internet à haute vitesse dans les régions éloignées du Canada,"G,L,N"
+22,"Eliminate the increase to $10,000 in TFSA contribution limits",Annuler la hausse de cotisations à 10 000 $ du CELI,"G,L,N"
+23,Restore the retirement age to 65 rather than 67,Rétablir l’âge de la retraite à 65 ans plutôt que 67 ans,"B,L,N"
+24,Increase the Guaranteed Income Supplement for low-income retirees,Hausser le Supplément de revenu garanti pour les retraités ayant un faible revenu,N
+25,Restore the 15% tax credit for investments in labour-sponsored funds,Réinstaurer le crédit d’impôt de 15 % pour les investissements dans les fonds de travailleurs,"L,N"
+26,Decrease the small business tax rate from 11% to 9%,Réduire le taux d’imposition des PME de 11 % à 9 %,"C,G,N"
+28,Prohibit banks from imposing additional fees to make payments,Interdire aux banques d’imposer des frais supplémentaires lorsqu’on effectue des paiements,N
+29,Eliminate income splitting,Annuler le régime de fractionnement du revenu,"G,L,N"
+30,"Reduce the tax rate for earnings between $44,401 and $89,401 from 22 per cent to 20.5 per cent","Réduire le taux d’imposition pour les revenus entre 44 700 $ et 89 401 $ de 22 % à 20,5 %",L
+31,"Create a new tax bracket for earnings above $200,000, with a tax rate of 33%",Introduire une nouvelle tranche d’imposition de 33 % pour les revenus de plus de 200 000 $,L
+32,Narrow the price gap between goods sold in Canada and the United States,S’attaquer à l’écart de prix pour un même produit au Canada et aux États-Unis,C
+33,"Take part in negotiations for the Transpacific Partnership, the world's largest free trade deal","Participer aux négociations du Pacte transpacifique, la plus importante entente de libre-échange au monde",C
+35,Commit to a balancing this year's budget,Maintenir l’équilibre budgétaire pour l’année en cours,"C,N"
+36,Ratify and implement the free trade agreement with the European Union,Ratifier et mettre en œuvre le traité de libre-échange avec l'Union européenne,"C,L"
+37,"Forbid future governments from running deficits, except in cases of recession, war or natural disaster","Interdire les déficits, sauf dans des circonstances exceptionnelles, telles qu’une récession, une guerre ou une catastrophe naturelle",C
 38,Eliminate the Universal Child Care Benefit,Éliminer la Prestation universelle pour la garde d’enfants (PUGE),"G,L"
 39,Regulate payday loan activities,Réglementer l’industrie des prêts sur salaire,"C,G,N"
 40,Eliminate the Temporary Foreign Worker program,Éliminer le Programme des travailleurs étrangers temporaires,G
 41,Replace various social transfers with a guaranteed basic income,Remplacer les différentes prestations gouvernementales par un revenu minimum garanti,G
-42,Raise corporate taxes,Augmenter l’impôt des entreprises,"G,N"
+42,Raise corporate taxes,Augmenter le taux d’imposition des grandes entreprises,"G,N"
 43,Support the implementation of a globally co-ordinated tax on financial transactions,Établir une taxe sur les transactions internationales,"G,N"
-44,EN-Augmenter les prestations du Régime de pensions du Canada,Augmenter les prestations du Régime de pensions du Canada,"L,N"
+44,Increase Canada Pension Plan benefits,Augmenter les prestations du Régime de pensions du Canada,"L,N"
 45,Pay the first two years' tuition for postsecondary students,Payer les droits de scolarité des deux premières années d’études postsecondaires,G
-46,EN-Interdire les microbilles de plastique dans les produits de consommation pour éviter qu’elles ne contaminent les cours d’eau,Interdire les microbilles de plastique dans les produits de consommation pour éviter qu’elles ne contaminent les cours d’eau,"C,L,N"
-47,EN-Mettre un frein au projet d’oléoduc Keystone XL,Mettre un frein au projet d’oléoduc Keystone XL,"G,N"
-48,EN-Mettre un frein au projet d’oléoduc Northern Gateway,Mettre un frein au projet d’oléoduc Northern Gateway,"G,L,N"
-49,EN-Appuyer le projet d’oléoduc Keystone XL,Appuyer le projet d’oléoduc Keystone XL,"C,L"
-50,EN-Augmenter le nombre de zones marines et côtières protégées à 5 % d’ici 2017 et à 10 % d’ici 2020,Augmenter le nombre de zones marines et côtières protégées à 5 % d’ici 2017 et à 10 % d’ici 2020,L
-51,EN-Investir dans les énergies vertes,Investir dans les énergies vertes,"G,L,N"
-52,EN-Mettre un frein au projet de pipeline Énergie-Est,Mettre un frein au projet de pipeline Énergie-Est,"B,G,L,N"
-53,EN-Appuyer le projet de pipeline Énergie-Est,Appuyer le projet de pipeline Énergie-Est,C
-54,EN-Appuyer le projet de pipeline Northern Gateway,Appuyer le projet de pipeline Northern Gateway,C
-55,EN-Attendre que les États-Unis réglementent les émissions de GES provenant du secteur pétrolier avant de faire pareil au Canada,Attendre que les États-Unis réglementent les émissions de GES provenant du secteur pétrolier avant de faire pareil au Canada,C
+46,Ban the use of plastic microbeads in consumer products to prevent them from polluting water streams,Interdire les microbilles de plastique dans les produits de consommation pour éviter qu’elles ne contaminent les cours d’eau,"C,G,L,N"
+47,Oppose the Keystone XL pipeline project,Mettre un frein au projet d’oléoduc Keystone XL,"G,N"
+48,Oppose the Northern Gateway pipeline project,Mettre un frein au projet d’oléoduc Northern Gateway,"G,L,N"
+49,Support the Keystone XL pipeline project,Appuyer le projet d’oléoduc Keystone XL,"C,L"
+50,"Increase the amount of protected marine and coastal areas from 1.3% to 5% by 2017, and 10% by 2020","Augmenter le nombre de zones marines et côtières protégées de 1,3 % à 5 % d’ici 2017 et à 10 % d’ici 2020",L
+51,Invest in green energy projects,Investir dans les énergies vertes,"G,L,N"
+52,Oppose the Energy-East pipeline project,Mettre un frein au projet de pipeline Énergie-Est,"B,G,L,N"
+53,Support the Energy-East pipeline project,Appuyer le projet de pipeline Énergie-Est,C
+54,Support the Northern Gateway pipeline project,Appuyer le projet de pipeline Northern Gateway,C
 56,Create a carbon-neutral Canada by 2100,Afficher un bilan neutre en carbone d’ici 2100,G
-57,EN-Verser 500 millions $ par an dans le Fonds vert pour le climat,Verser 500 millions $ par an dans le Fonds vert pour le climat,G
+57,Contribute $500 million annually to the UN's Green Climate Fund,Verser 500 millions $ par an dans le Fonds vert pour le climat des Nations Unies,G
 58,End cosmetic pesticide use by 2016,Interdire l’utilisation de pesticides à des fins esthétiques d’ici 2016,G
 59,Make killing a protected species a criminal offence,Criminaliser le fait de tuer une espèce protégée,G
 60,Create a home energy retrofit program,Créer un programme de rénovation axé sur l’efficacité énergétique,"G,N"
-61,EN-Imposer un tarif sur le carbone,Imposer un tarif sur le carbone,"B,G,L,N"
-62,EN-Éliminer les subventions aux combustibles fossiles,Éliminer les subventions aux combustibles fossiles,"B,G,L,N"
-63,EN-Instaurer un système universel de garderies subventionnées à moins de 15 $ par jour par enfant,Instaurer un système universel de garderies subventionnées à moins de 15 $ par jour par enfant,N
-64,EN-Remplacer la prestation universelle pour la garde d’enfants (PUGE) par une allocation selon le revenu,Remplacer la prestation universelle pour la garde d’enfants (PUGE) par une allocation selon le revenu,L
-65,EN-Revoir le processus de nomination des juges à la Cour suprême,Revoir le processus de nomination des juges à la Cour suprême,N
-66,EN-Confier aux élus la supervision du Service canadien du renseignement de sécurité,Confier aux élus la supervision du Service canadien du renseignement de sécurité,"G,L,N"
-67,EN-Créer un guichet unique en ligne pour tous les services gouvernementaux,Créer un guichet unique en ligne pour tous les services gouvernementaux,L
-68,EN-Rendre accessibles au public les travaux scientifiques du gouvernement,Rendre accessibles au public les travaux scientifiques du gouvernement,L
-69,EN-Rétablir le formulaire long obligatoire du recensement de Statistique Canada,Rétablir le formulaire long obligatoire du recensement de Statistique Canada,"G,L,N"
-70,EN-Donner au commissaire à l’information le pouvoir d’exiger que des données du gouvernement soient divulguées,Donner au commissaire à l’information le pouvoir d’exiger que des données du gouvernement soient divulguées,"L,N"
-71,EN-Éliminer tous les frais supplémentaires exigés lors des demandes d’accès à l’information,Éliminer tous les frais supplémentaires exigés lors des demandes d’accès à l’information,L
-72,EN-Confier à un comité parlementaire l’évaluation de différents modes de scrutin,Confier à un comité parlementaire l’évaluation de différents modes de scrutin,L
-73,EN-Adopter un mode de scrutin proportionnel mixte avant les prochaines élections,Adopter un mode de scrutin proportionnel mixte avant les prochaines élections,"G,N"
-74,EN-Instaurer la parité hommes-femmes au Cabinet ministériel,Instaurer la parité hommes-femmes au Cabinet ministériel,L
-75,EN-Accroître le nombre de votes libres à la Chambre,Accroître le nombre de votes libres à la Chambre,L
-76,EN-Inscrire les jeunes de 18 ans sur les listes électorales dans le cadre de leurs programmes d’études secondaires,Inscrire les jeunes de 18 ans sur les listes électorales dans le cadre de leurs programmes d’études secondaires,L
-77,EN-Créer un nouveau processus non partisan pour conseiller le premier ministre dans les nominations de sénateurs,Créer un nouveau processus non partisan pour conseiller le premier ministre dans les nominations de sénateurs,L
-78,EN-Rendre obligatoire la maîtrise des deux langues officielles pour les juges de la Cour suprême,Rendre obligatoire la maîtrise des deux langues officielles pour les juges de la Cour suprême,"B,L,N"
-79,EN-Alourdir les peines relatives aux infractions intentionnelles aux lois électorales,Alourdir les peines relatives aux infractions intentionnelles aux lois électorales,L
-80,EN-Resserrer les règles entourant l’inscription sur la liste électorale des Canadiens vivant à l’extérieur du pays,Resserrer les règles entourant l’inscription sur la liste électorale des Canadiens vivant à l’extérieur du pays,C
+61,Put a price on carbon,Imposer un tarif sur le carbone,"B,G,L,N"
+62,Eliminate fossil fuel industry subsidies,Éliminer les subventions aux combustibles fossiles,"B,G,L,N"
+63,Create a universal child care system costing no more than $15 per child per day,Instaurer un système universel de garderies subventionnées à moins de 15 $ par jour par enfant,N
+64,Replace the Univesal Child Care Benefit with an allowance based on family income,Remplacer la prestation universelle pour la garde d’enfants (PUGE) par une allocation selon le revenu familial,L
+66,Put Parliament in charge of overseeing national security and intelligence agencies,Confier aux élus la supervision des agences de renseignement et de sécurité nationale,"G,L,N"
+67,Create a single window for all government services,Créer un guichet unique en ligne pour tous les services gouvernementaux,L
+68,Consolidate government science so that it is available to the public,Rendre accessibles au public les travaux scientifiques du gouvernement,L
+69,Restore the mandatory long-form census,Rétablir le formulaire long obligatoire du recensement de Statistique Canada,"G,L,N"
+70,Give the Information Commissioner the authority to issue binding orders for disclosure,Donner au commissaire à l’information le pouvoir d’exiger que des données du gouvernement soient divulguées,"L,N"
+71,Eliminate additional fees associated with Access to Information requests,Éliminer tous les frais supplémentaires exigés lors des demandes d’accès à l’information,L
+72,Task a parliamentary committee with reviewing various electoral reform measures,Confier à un comité parlementaire l’évaluation de différents modes de scrutin,L
+73,Introduce a proportional representation system after the next election,Adopter un mode de scrutin proportionnel mixte après les prochaines élections,"G,N"
+74,Commit to gender parity in Cabinet nominations,Instaurer la parité hommes-femmes au Cabinet ministériel,L
+75,Increase the number of free votes in the House of Commons,Accroître le nombre de votes libres à la Chambre,L
+76,Register 18-year-old students to vote as part of their high school curriculum,Inscrire les jeunes de 18 ans sur les listes électorales dans le cadre de leurs programmes d’études secondaires,L
+77,Install a non-partisan public process for appointing Senators,Créer un processus transparent et non partisan pour les nominations de sénateurs,L
+78,Ensure judicial appointments to the Supreme Court are functionally bilingual,Rendre obligatoire la maîtrise des deux langues officielles pour les juges de la Cour suprême,"B,L,N"
+79,Increase penalties for violation of election laws,Alourdir les peines relatives aux infractions aux lois électorales,L
+80,Make it harder for Canadians abroad to register to vote,Resserrer les règles entourant l’inscription sur la liste électorale des Canadiens vivant à l’extérieur du pays,C
 81,Hold a national referendum on Senate reform,Tenir un référendum national sur la réforme du Sénat,G
 82,Appoint a chief science advisor as an officer of Parliament,Nommer un conseiller parlementaire des sciences en tant qu’agent du Parlement,G
-83,EN-Faire du Québec un pays indépendant,Faire du Québec un pays indépendant,B
-84,EN-Abolir la monarchie,Abolir la monarchie,B
-85,EN-Faire du Québec l’unique mandataire du développement des régions québécoises,Faire du Québec l’unique mandataire du développement des régions québécoises,B
-86,"EN-Créer une déclaration de revenus unique au Québec, gérée par le gouvernement québécois","Créer une déclaration de revenus unique au Québec, gérée par le gouvernement québécois",B
-87,EN-Appliquer la loi sur les normes du travail et le Code du travail du Québec aux entreprises et organismes fédéraux sur le territoire québécois,Appliquer la loi sur les normes du travail et le Code du travail du Québec aux entreprises et organismes fédéraux sur le territoire québécois,B
-88,EN-Nommer un ministre des Affaires urbaines,Nommer un ministre des Affaires urbaines,N
-89,EN-Imposer des limites aux dépenses des partis politiques entre les élections,Imposer des limites aux dépenses des partis politiques entre les élections,L
+83,Make Quebec an independent country,Faire du Québec un pays indépendant,B
+84,Abolish the Monarchy,Abolir la monarchie,B
+85,Give Quebec sole responsibility over regional development in the province,Faire du Québec l’unique mandataire du développement des régions québécoises,B
+86,Hand over federal tax collection authority in Quebec to the provincial government,Donner au gouvernement québécois la responsabilité de collecter les impôts fédéraux,B
+87,Apply provincial labour laws to federally regulated companies and institutions in Quebec,Appliquer la loi sur les normes du travail et le Code du travail du Québec aux entreprises et organismes fédéraux sur le territoire québécois,B
+88,Appoint a minister of urban affairs,Nommer un ministre des Affaires urbaines,N
+89,Impose limits on political party spending between elections,Imposer des limites aux dépenses des partis politiques entre les élections,L
 90,Create a federal tourism department,Créer un ministère fédéral du Tourisme,G
-91,EN-Permettre aux travailleurs étrangers temporaires qui ont fait une demande de résidence permanente de rester au Canada,Permettre aux travailleurs étrangers temporaires qui ont fait une demande de résidence permanente de rester au Canada,N
-92,EN-Verser aux municipalités un cent de plus le litre de la taxe sur l’essence pour investir dans les infrastructures,Verser aux municipalités un cent de plus le litre de la taxe sur l’essence pour investir dans les infrastructures,N
-93,EN-Verser aux municipalités 5 cents de plus le litre de la taxe sur l’essence pour investir dans les infrastructures,Verser aux municipalités 5 cents de plus le litre de la taxe sur l’essence pour investir dans les infrastructures,G
-94,EN-Financer les projets d’infrastructures des petites villes avec des fonds de pension,Financer les projets d’infrastructures des petites villes avec des fonds de pension,L
-95,EN-Rétablir la livraison du courrier à domicile dans toutes les collectivités touchées par les réformes de décembre 2013 ,Rétablir la livraison du courrier à domicile dans toutes les collectivités touchées par les réformes de décembre 2013 ,"L,N"
-96,"EN-Forcer, au moyen d’une loi, le Canadien National (CN) à peindre le pont de Québec","Forcer, au moyen d’une loi, le Canadien National (CN) à peindre le pont de Québec",N
-97,EN-Investir 150 millions $ sur deux ans pour la réfection d’infrastructures communautaires,Investir 150 millions $ sur deux ans pour la réfection d’infrastructures communautaires,C
-98,EN-Créer le premier parc national en milieu urbain à Toronto,Créer le premier parc national en milieu urbain à Toronto,C
-99,EN-Décriminaliser la marijuana,Décriminaliser la marijuana,N
-100,EN-Tenir une enquête nationale sur la disparition et l’assassinat de femmes et de filles autochtones,Tenir une enquête nationale sur la disparition et l’assassinat de femmes et de filles autochtones,"G,L,N"
-101,EN-Réintroduire le registre des armes d’épaule,Réintroduire le registre des armes d’épaule,N
-102,EN-Légaliser la marijuana,Légaliser la marijuana,"G,L"
-103,EN-Créer une base de données nationale accessible au public comprenant les noms des pédophiles à risque élevé,Créer une base de données nationale accessible au public comprenant les noms des pédophiles à risque élevé,C
-104,EN-Faciliter et accélérer le renvoi de ressortissants étrangers et de résidents permanents qui commettent des crimes graves au Canada,Faciliter et accélérer le renvoi de ressortissants étrangers et de résidents permanents qui commettent des crimes graves au Canada,C
-105,EN-Rendre obligatoires des peines d’emprisonnement à vie sans possibilité de libération conditionnelle pour certains crimes graves,Rendre obligatoires des peines d’emprisonnement à vie sans possibilité de libération conditionnelle pour certains crimes graves,C
-106,EN-Augmenter les peines imposées pour conduite en état d’ébriété,Augmenter les peines imposées pour conduite en état d’ébriété,C
-107,EN-Augmenter les délais avant que des récidivistes déclarés coupables de crimes violents puissent accéder à une libération conditionnelle,Augmenter les délais avant que des récidivistes déclarés coupables de crimes violents puissent accéder à une libération conditionnelle,C
-108,EN-Imposer des peines minimales pour la possession illégale d’arme à feu,Imposer des peines minimales pour la possession illégale d’arme à feu,C
-109,EN-Interdire les signes religieux ostentatoires dans la fonction publique,Interdire les signes religieux ostentatoires dans la fonction publique,B
-110,EN-Appliquer la loi 101 dans les organismes fédéraux au Québec,Appliquer la loi 101 dans les organismes fédéraux au Québec,"B,N"
-111,EN-Investir dans la création de logements abordables,Investir dans la création de logements abordables,"B,G,L,N"
-112,EN-Créer un programme éducatif sur les origines historiques et les difficultés vécues par les peuples autochtones,Créer un programme éducatif sur les origines historiques et les difficultés vécues par les peuples autochtones,L
+91,Allow temporary foreign workers who have apply for permanent residence to stay in Canada,Permettre aux travailleurs étrangers temporaires qui ont fait une demande de résidence permanente de rester au Canada,N
+92,Give municipalities an additional cent per litre from the gas tax,Verser aux municipalités un cent de plus le litre de la taxe sur l’essence,N
+93,Give municipalities an additional five cents per litre from the gas tax,Verser aux municipalités 5 cents de plus le litre de la taxe sur l’essence,G
+94,Encourage pension funds to invest in infrastructure projects, Encourager les fonds de pension à investir dans les projets d’infrastructures,L
+95,Reinstate door-to-door mail delivery in all communities affected by cuts announced in December 2013,Rétablir la livraison du courrier à domicile dans toutes les collectivités touchées par les réformes de décembre 2013 ,"L,N"
+96,Force Canadien National (CN) to paint the Quebec Bridge,Forcer le Canadien National (CN) à peindre le pont de Québec,N
+97,Invest $150 million over two years in community infrastructure,Investir 150 millions $ sur deux ans pour la réfection d’infrastructures communautaires,C
+98,Create Canada's first urban national park in Toronto,Créer le premier parc national en milieu urbain à Toronto,C
+99,Decriminalize the possession of marijuana,Décriminaliser la possession de marijuana,N
+100,Launch a national inquiry on missing and murdered Indigenous women,Tenir une enquête nationale sur la disparition et l’assassinat de femmes et de filles autochtones,"G,L,N"
+101,Bring back the long-gun registry,Réintroduire le registre des armes d’épaule,N
+102,Legalize marijuana,Légaliser la marijuana,"G,L"
+103,Create a publicly accessible database of high-risk child sex offenders,Créer une base de données nationale accessible au public comprenant les noms des pédophiles à risque élevé,C
+104,Speed up the process of removing foreign nationals and permanent residents who have committed serious crimes in Canada,Accélérer le renvoi de ressortissants étrangers et de résidents permanents qui commettent des crimes graves au Canada,C
+105,Eliminate parole for those convicted of certain serious crimes,Rendre obligatoires des peines d’emprisonnement à vie sans possibilité de libération conditionnelle pour certains crimes graves,C
+106,Stiffen penalties for drunk driving-related offences,Augmenter les peines imposées pour conduite en état d’ébriété,C
+107,Restrict statutory release for repeat offenders convicted of serious crimes,Limiter les possibilités de libération conditionnelle des délinquants récidivistes reconnus coupables de crimes graves,C
+108,Impose mandatory minimum sentences for gun crimes,Imposer des peines minimales pour la possession illégale d’arme à feu,C
+109,Forbid public servants from wearing or displaying ostentatious religious symbols,Interdire les signes religieux ostentatoires dans la fonction publique,B
+110,Apply Bill 101 to federally regulated institutions in Quebec,Appliquer la loi 101 dans les organismes fédéraux au Québec,"B,N"
+111,Invest more money in affordable housing,Investir davantage dans la création de logements abordables,"B,G,L,N"
 113,Abolish the Indian Act,Abolir la Loi sur les Indiens,"C,G"
-114,"EN-Augmenter la portée du programme Nutrition Nord Canada, qui facilite l’accès à des aliments dans les régions isolées","Augmenter la portée du programme Nutrition Nord Canada, qui facilite l’accès à des aliments dans les régions isolées",N
-115,"EN-Construire une route vers Shoal Lake, un village des Premières Nations reclus qui fait l’objet d’un avis d’ébullition d’eau","Construire une route vers Shoal Lake, un village des Premières Nations reclus qui fait l’objet d’un avis d’ébullition d’eau",L
-116,EN-Exiger la fermeture de dispensaires non autorisés de marijuana médicale,Exiger la fermeture de dispensaires non autorisés de marijuana médicale,C
-117,EN-S’opposer à l’ouverture de nouveaux centres d’injections supervisées,S’opposer à l’ouverture de nouveaux centres d’injections supervisées,C
+114,Expand the number of communities eligible for aid under the Nutrition North Canada program,"Augmenter la portée du programme Nutrition Nord Canada, qui facilite l’accès à des aliments dans les régions isolées",N
+115,"Build a road to Shoal Lake 40 First Nation, an isolated community under a boil-water advisory","Construire une route vers Shoal Lake, un village des Premières Nations reclus qui fait l’objet d’un avis d’ébullition d’eau",L
+116,Shut down unauthorized medical marijuana dispensaries,Exiger la fermeture de dispensaires non autorisés de marijuana médicale,C
+117,Oppose the opening of new supervised injection sites,S’opposer à l’ouverture de nouveaux centres d’injections supervisées,C
 118,Make GMO labels mandatory,Rendre obligatoire l’étiquetage des OGM ,"G,N"
 119,Develop and implement a national pharmacare program,Mettre sur pied un programme national d’assurance médicaments ,"G,N"
 120,Create a national school food program,Créer un programme national d’alimentation dans les écoles,G
 121,Regulate assisted human reproduction,Réglementer la procréation assistée,G
-122,EN-Décriminaliser l’aide médicale à mourir ,Décriminaliser l’aide médicale à mourir ,B
+122,Decriminalize doctor-assisted suicide,Décriminaliser l’aide médicale à mourir ,B
 123,Ensure that every Canadian has an e-health record,S'assurer que chaque Canadien possède un dossier médical numérique,G
-124,EN-Améliorer le partage d’information entre les forces policières et la sécurité frontalière,Améliorer le partage d’information entre les forces policières et la sécurité frontalière,C
+124,Increase information sharing between police and border services,Améliorer le partage d’information entre les forces policières et la sécurité frontalière,C
 125,Repeal the Anti-Terrorism Act (C-51),Abroger la loi antiterroriste C-51,"G,N"
-126,EN-Faire respecter la «neutralité du Net»,Faire respecter la «neutralité du Net»,"G,L,N"
-127,EN-Encadrer le mandat de VIA Rail pour freiner l’abandon de liens ferroviaires en région,Encadrer le mandat de VIA Rail pour freiner l’abandon de liens ferroviaires en région,N
-128,EN-S’engager à ne pas imposer de péage sur le pont Champlain,S’engager à ne pas imposer de péage sur le pont Champlain,"L,N"
-129,EN-Imposer un système de péage sur le futur pont Champlain,Imposer un système de péage sur le futur pont Champlain,C
-130,"EN-Investir annuellement 1,3 milliard $ au cours des 20 prochaines années pour développer le transport en commun dans les villes","Investir annuellement 1,3 milliard $ au cours des 20 prochaines années pour développer le transport en commun dans les villes",N
-131,EN-Investir un milliard $ par année dans des projets de transport en commun réalisés par des partenariats public-privé,Investir un milliard $ par année dans des projets de transport en commun réalisés par des partenariats public-privé,C
-132,EN-Offrir aux stagiaires en milieu de travail les mêmes protections légales que celles des employés rémunérés,Offrir aux stagiaires en milieu de travail les mêmes protections légales que celles des employés rémunérés,N
-133,EN-Porter à 15 $ le salaire horaire minimal des employés fédéraux,Porter à 15 $ le salaire horaire minimal des employés fédéraux,"G,N"
-134,EN-Envisager la formation d'une coalition en cas de gouvernement minoritaire,Envisager la formation d'une coalition en cas de gouvernement minoritaire,"G,N"
-135,Abolish the Senate,Abolir le Sénat,"C,N"
+126,Enforce net neutrality,Faire respecter la «neutralité du Net»,"G,L,N"
+127,Ensure that VIA Rail maintains minimum service levels to remote regions,Encadrer le mandat de VIA Rail pour freiner l’abandon de liens ferroviaires en région,N
+128,Commit to not implementing a toll on the Champlain Bridge in Montreal,S’engager à ne pas imposer de péage sur le pont Champlain,"L,N"
+129,Implement a toll on the Champlain Bridge in Montreal,Imposer un système de péage sur le futur pont Champlain,C
+130,Provide $1.3 billion annually over the next 20 years in public transit funding for municipalities,"Investir annuellement 1,3 milliard $ au cours des 20 prochaines années pour développer le transport en commun dans les villes",N
+131,Invest $1 billion per year in public transit projects structured as public-private partnerships,Investir un milliard $ par année dans des projets de transport en commun réalisés par des partenariats public-privé,C
+132,Extend workplace protections to unpaid interns,Offrir aux stagiaires en milieu de travail les mêmes protections légales que celles des employés rémunérés,N
+133,Increase the federal minimum wage to $15 per hour,Porter à 15 $ le salaire horaire minimal des employés fédéraux,"G,N"
+134,Consider forming a coalition with one or more political parties in the event of a minority government,Envisager la formation d'une coalition formelle avec d'autres partis en cas de gouvernement minoritaire,"G,N"
+135,Abolish the Senate,Abolir le Sénat,N
