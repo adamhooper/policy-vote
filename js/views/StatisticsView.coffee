@@ -60,9 +60,15 @@ module.exports = class StatisticsView extends Backbone.View
     'mouseout [data-policy-id]': '_onMouseoutPolicy'
 
   render: ->
-    @$el.append(@partyScoreView.render().el)
-    @$el.append(@forAgainstView.render().el)
-    @$el.append(@policyScoreView.render().el)
+    @$el.html('''
+      <div class="user-charts"></div>
+      <div class="all-users-charts"></div>
+    ''')
+    @$('.user-charts')
+      .append(@partyScoreView.render().el)
+      .append(@forAgainstView.render().el)
+    @$('.all-users-charts')
+      .append(@policyScoreView.render().el)
     @$el.append(@shareView.render().el)
     @$el.append(@$tooltip = $('<div class="policy-tooltip"></div>'))
     @tooltipTarget = null

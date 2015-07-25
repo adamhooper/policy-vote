@@ -1,6 +1,17 @@
 .statistics {
   background: white;
 
+  &>.user-charts {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>* {
+      margin: 1rem;
+      flex: 1 1 auto;
+      min-width: 20em;
+    }
+  }
+
   .policy-tooltip {
     position: absolute;
     left: 5%;
