@@ -1,8 +1,4 @@
 .user-profile {
-  .province-code:disabled { display: none; }
-  .actions:disabled { display: none; }
-  &:not(.saving) .spinner-overlay { display: none; }
-
   fieldset {
     border: 0;
     margin: 0;
@@ -27,30 +23,6 @@
 
   input:checked + label {
     font-weight: bold;
-  }
-
-  ul.language-code {
-    display: flex;
-    justify-content: center;
-
-    li {
-      text-align: center;
-
-      border: .25em solid transparent;
-
-      label {
-        display: block;
-        border: 0;
-        padding: 1rem;
-        border-radius: .5rem;
-        border: 1px solid hsl(206, 12%, 73%);
-        background: hsl(192, 20%, 95%);
-        // FIXME do on-click color
-      }
-      input:checked + label {
-        background: #484e4d;
-      }
-    }
   }
 
   fieldset.province-code {

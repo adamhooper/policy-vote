@@ -12,7 +12,7 @@ module.exports = class PartyScoreView extends Backbone.View
     #
     # * `parties`: a sorted Array of Parties. Each party has:
     #   * id
-    #   * en (or fr)
+    #   * name
     #   * color
     #   * percent: 0-100 integer describing how much the user agrees/disagrees
     #   * fraction: 0-1 float describing percent/(maximum percent for all parties)
@@ -22,7 +22,7 @@ module.exports = class PartyScoreView extends Backbone.View
         <ul class="parties">
           <% parties.forEach(function(party) { %>
             <li data-party-id="<%- party.id %>" class="party party-<%- party.id %>">
-              <div class="party-name" style="color: <%- party.color %>;"><%- party.en %></div>
+              <div class="party-name" style="color: <%- party.color %>;"><%- party.name %></div>
               <div class="bar-container">
                 <div class="bar" style="width: <%- 100 * party.fraction %>%; background: <%- party.color %>;">
                   <div class="label"><%- party.percent %>%</div>
@@ -49,8 +49,7 @@ module.exports = class PartyScoreView extends Backbone.View
       continue if party.onlyInProvince? && party.onlyInProvince != @province
       id: party.id
       color: party.color
-      en: party.en
-      fr: party.fr
+      name: party.name
       nYayPolicies: 0
       nPolicies: 0
 
@@ -76,7 +75,7 @@ module.exports = class PartyScoreView extends Backbone.View
     for party in parties
       party.fraction = party.percent / maxPercent
 
-    parties.sort((p1, p2) -> p2.fraction - p1.fraction || p1.en.charCodeAt(0) - p2.en.charCodeAt(0))
+    parties.sort((p1, p2) -> p2.fraction - p1.fraction || p1.name.charCodeAt(0) - p2.name.charCodeAt(0))
 
     console.log(parties)
 

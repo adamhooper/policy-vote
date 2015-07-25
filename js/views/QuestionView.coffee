@@ -11,12 +11,12 @@ module.exports = class QuestionView extends Backbone.View
     <div class="choices">
       <button class="choice" data-policy-id="<%- policy1.id %>" data-other-policy-id="<%- policy2.id %>">
         <span class="inner">
-          <%- policy1.en %>
+          <%- policy1.name %>
         </span>
       </button>
       <button class="choice" data-policy-id="<%- policy2.id %>" data-other-policy-id="<%- policy1.id %>">
         <span class="inner">
-          <%- policy2.en %>
+          <%- policy2.name %>
         </span>
       </button>
     </div>

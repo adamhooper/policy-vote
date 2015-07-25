@@ -13,7 +13,8 @@ module.exports = class App extends Backbone.View
     throw 'Must call App.setLanguage() first with "en" or "fr"' if !global.languageCode
 
     @votes = [] # Array of [ betterPolicy, worsePolicy ]
-    @userProfile = { languageCode: null, provinceCode: null } # languageCode=null means user hasn't chosen
+    @userSetProfile = false
+    @userProfile = { provinceCode: null }
 
     @pymChild = new pym.Child()
 
@@ -31,7 +32,7 @@ module.exports = class App extends Backbone.View
   render: ->
     @$el.empty()
 
-    if !@userProfile.languageCode?
+    if !@userSetProfile
       @userProfileView.render()
       @$el.append(@userProfileView.el)
     else if !@showStatistics
@@ -68,6 +69,7 @@ module.exports = class App extends Backbone.View
     @pymChild.sendHeight()
 
   _onUserSetProfile: (profile) ->
+    @userSetProfile = true
     @userProfile = profile
     @render()
 
@@ -77,6 +79,7 @@ module.exports = class App extends Backbone.View
 
 App.setLanguage = (languageCode) ->
   global.languageCode = languageCode
+  global.Messages = require('./Messages')(languageCode)
   (o.name = o[languageCode]) for o in require('../lib/Parties').all
   (o.name = o[languageCode]) for o in require('../lib/Provinces').all
   (o.name = o[languageCode]) for o in require('../lib/Policies').all

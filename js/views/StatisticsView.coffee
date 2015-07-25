@@ -30,14 +30,14 @@ module.exports = class StatisticsView extends Backbone.View
   templates:
     policyDetails: _.template('''
       <div class="policy-details">
-        <h4 class="policy-policy"><%- policy.en %></h4>
-        <div class="policy-party">Promised by <strong><%- policy.parties.map(function(p) { return p.en; }).join(', ') %></strong></div>
+        <h4 class="policy-policy"><%- policy.name %></h4>
+        <div class="policy-party">Promised by <strong><%- policy.parties.map(function(p) { return p.name; }).join(', ') %></strong></div>
         <% if (policy.userSaysYayOver.length) { %>
           <div class="policy-better-than">
             <p><strong>You chose this policy over:</strong></p>
             <ul>
               <% policy.userSaysYayOver.forEach(function(otherPolicy) { %>
-                <li><%- otherPolicy.en %></li>
+                <li><%- otherPolicy.name %></li>
               <% }) %>
             </ul>
           </div>
@@ -47,7 +47,7 @@ module.exports = class StatisticsView extends Backbone.View
             <p><strong>You disliked this policy compared to:</strong></p>
             <ul>
               <% policy.userSaysNayOver.forEach(function(otherPolicy) { %>
-                <li><%- otherPolicy.en %></li>
+                <li><%- otherPolicy.name %></li>
               <% }) %>
             </ul>
           </div>
@@ -82,8 +82,7 @@ module.exports = class StatisticsView extends Backbone.View
     # Return a wrapper with userSaysYayOver and userSaysNayOver
     policy =
       id: policy.id
-      en: policy.en
-      fr: policy.fr
+      name: policy.name
       parties: policy.parties
       userSaysYayOver: []
       userSaysNayOver: []

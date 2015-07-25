@@ -20,7 +20,7 @@ module.exports = class ForAgainstView extends Backbone.View
       <tbody>
         <% parties.forEach(function(party) { %>
           <tr>
-            <th class="party" style="color: <%- party.color %>"><%- party.en %></th>
+            <th class="party" style="color: <%- party.color %>"><%- party.name %></th>
             <td class="user-says-nay">
               <ul class="policy-list">
                 <% party.userSaysNay.forEach(function(policy) { %>
@@ -56,8 +56,7 @@ module.exports = class ForAgainstView extends Backbone.View
     #     {
     #       id: 'L'
     #       color: '#abcdef'
-    #       en: 'Liberal'
-    #       fr: 'libéral'
+    #       name: 'Liberal'
     #       userSaysYay: [ policy, policy, policy, ... ]
     #       userSaysNay: [ policy, policy, policy, ... ]
     #     }
@@ -70,8 +69,7 @@ module.exports = class ForAgainstView extends Backbone.View
       augmentedPartiesById[party.id] =
         id: party.id
         color: party.color
-        en: party.en
-        fr: party.fr
+        name: party.name
         userSaysYay: []
         userSaysNay: []
 
@@ -79,8 +77,7 @@ module.exports = class ForAgainstView extends Backbone.View
     #
     #     {
     #       id: 123
-    #       en: 'Do something'
-    #       fr: 'faites quelque chose'
+    #       name: 'Do something'
     #       userSaysNayOver: [ policy, policy ]
     #       userSaysYayOver: [ policy, policy ]
     #     }
@@ -90,8 +87,7 @@ module.exports = class ForAgainstView extends Backbone.View
       augmentedPoliciesById[policy.id] ||=
         id: policy.id
         color: policy.color
-        en: policy.en
-        fr: policy.fr
+        name: policy.name
         parties: augmentedPartiesById[party.id] for party in policy.parties when party.id of augmentedPartiesById
         userSaysYayOver: []
         userSaysNayOver: []

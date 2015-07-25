@@ -40,19 +40,16 @@ module.exports = class PolicyScoreView extends Backbone.View
     #
     #     {
     #       id: <party ID>
-    #       en: <party name>
-    #       fr: <party name>
+    #       name: <party name>
     #       policies: [ {
     #         id: <policy ID>
-    #         en: <policy description>
-    #         fr: <policy description>
+    #         name: <policy description>
     #         score: <policy score>
     #       }, ... ]
     #     }
     parties = for party in Parties.all when !party.onlyInProvince? || party.onlyInProvince == @province
       id: party.id
-      en: party.en
-      fr: party.fr
+      name: party.name
       color: party.color
       policies: []
 
@@ -73,8 +70,7 @@ module.exports = class PolicyScoreView extends Backbone.View
 
       augmentedPolicy =
         id: rawPolicy.id
-        en: rawPolicy.en
-        fr: rawPolicy.fr
+        name: rawPolicy.name
         color: rawPolicy.color
         nAye: score.aye
         nNay: score.nay
@@ -112,7 +108,7 @@ module.exports = class PolicyScoreView extends Backbone.View
       .domain(party.id for party in parties)
       .rangeRoundPoints([ height, 0 ], 1)
     yAxis = d3.svg.axis().scale(yScale).orient('left')
-      .tickFormat((partyId) -> partyById[partyId].en)
+      .tickFormat((partyId) -> partyById[partyId].name)
 
     svg = d3.select($chart.get(0)).append('svg')
       .attr('width', '100%')
