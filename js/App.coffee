@@ -38,12 +38,17 @@ module.exports = class App extends Backbone.View
         @questionView = new QuestionView(province: @getUserProvince())
         @listenTo(@questionView, 'user-prefers-policy', @_onUserPrefersPolicy)
         @listenTo(@questionView, 'show-statistics', @_onClickShowStatistics)
-      @$el.append(@questionView.render().el)
+        @questionView.render()
+      else
+        @questionView.delegateEvents()
+      @$el.append(@questionView.el)
     else
-      if !@statisticsView?
-        StatisticsView = require('./views/StatisticsView')
-        @statisticsView = new StatisticsView(province: @getUserProvince(), votes: @votes)
-        @listenTo(@statisticsView, 'rendered', => @pymChild.sendHeight())
+      @statisticsView?.remove()
+
+      StatisticsView = require('./views/StatisticsView')
+      @statisticsView = new StatisticsView(province: @getUserProvince(), votes: @votes)
+      @listenTo(@statisticsView, 'rendered', => @pymChild.sendHeight())
+      @listenTo(@statisticsView, 'clicked-back-to-questions', @_onClickBackToQuestions)
       @$el.append(@statisticsView.render().el)
       @statisticsView.tidyRenderGlitches()
 
@@ -74,6 +79,12 @@ module.exports = class App extends Backbone.View
 
   _onClickShowStatistics: ->
     @showStatistics = true
+    @render()
+
+  _onClickBackToQuestions: ->
+    @showStatistics = false
+    @statisticsView.remove()
+    @statisticsView = null
     @render()
 
 App.setLanguage = (languageCode) ->

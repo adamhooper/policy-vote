@@ -30,6 +30,18 @@ module.exports = class StatisticsView extends Backbone.View
     @listenTo(@policyScoreView, 'rendered', => @trigger('rendered'))
 
   templates:
+    main: _.template("""
+      <div class="user-charts"></div>
+      <div class="back-to-questions">
+        <% if (votes.length == 0) { %>
+          <p>#{M.backToQuestions['0']}</p>
+        <% } else { %>
+          <p>#{M.backToQuestions.else}</p>
+        <% } %>
+        <button type="button">#{M.backToQuestions.button}</button>
+      </div>
+      <div class="all-users-charts"></div>
+    """)
     policyDetails: _.template("""
       <div class="policy-details">
         <h4 class="policy-policy"><%- policy.name %></h4>
@@ -60,12 +72,10 @@ module.exports = class StatisticsView extends Backbone.View
   events:
     'mouseover [data-policy-id]': '_onMouseoverPolicy'
     'mouseout [data-policy-id]': '_onMouseoutPolicy'
+    'click .back-to-questions button': '_onClickBackToQuestions'
 
   render: ->
-    @$el.html('''
-      <div class="user-charts"></div>
-      <div class="all-users-charts"></div>
-    ''')
+    @$el.html(@templates.main(votes: @votes))
     @$('.user-charts')
       .append(@partyScoreView.render().el)
       .append(@forAgainstView.render().el)
@@ -156,6 +166,8 @@ module.exports = class StatisticsView extends Backbone.View
     @tooltipTarget?.setAttribute('class', @tooltipTargetClassName)
     @tooltipTarget = null
     @$tooltip.attr('class', 'policy-tooltip hide')
+
+  _onClickBackToQuestions: (e) -> @trigger('clicked-back-to-questions')
 
   # The element will only be added to the DOM *after* it's rendered, but before
   # we figure out whether the label fits. Whoever owns this view will need to
