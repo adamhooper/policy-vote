@@ -2,6 +2,7 @@ _ = require('underscore')
 Backbone = require('backbone')
 $ = Backbone.$
 
+DotColorLegend = require('./DotColorLegend')
 Parties = require('../../lib/Parties')
 
 module.exports = class ForAgainstView extends Backbone.View
@@ -48,6 +49,8 @@ module.exports = class ForAgainstView extends Backbone.View
     @province = options.province
 
   render: ->
+    return @ if !@votes.length
+
     # We'll build an Array of parties that look like:
     #
     #     {
@@ -114,5 +117,6 @@ module.exports = class ForAgainstView extends Backbone.View
     html = @template(parties: parties)
 
     @$el.html(html)
+    @$('h2').after(new DotColorLegend(province: @province).render().el)
     @_expandedEl = null # li.policy HTMLElement, or null
     @
