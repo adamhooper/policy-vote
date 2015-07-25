@@ -17,32 +17,32 @@ var watch = require('gulp-watch');
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md
 // add custom browserify options here
 var customOpts = {
-  entries: ['./js/index.coffee'],
   extensions: [ '.coffee', '.js', '.csv' ],
   debug: true
 };
-function watchJs() {
-  var opts = assign({}, watchify.args, customOpts);
+function basenameToEntries(basename) { return [ './js/' + basename + '.coffee' ]; }
+function watchJs(basename) {
+  var opts = assign({ entries: basenameToEntries(basename) }, watchify.args, customOpts);
   var b = watchify(browserify(opts));
   b.transform(require('coffeeify'));
   b.transform(require('brfs'));
-  b.on('update', function() { return runBrowserify(b); }); // on any dep update, runs the bundler
+  b.on('update', function() { return runBrowserify(b, basename); }); // on any dep update, runs the bundler
   b.on('log', gutil.log); // output build logs to terminal
-  return runBrowserify(b);
+  return runBrowserify(b, basename);
 }
-function compileJsOnce() {
-  var opts = customOpts;
+function compileJsOnce(basename) {
+  var opts = assign({ entries: basenameToEntries(basename) }, customOpts);
   var b = browserify(opts);
   b.transform(require('coffeeify'));
   b.transform(require('brfs'));
   b.on('log', gutil.log); // output build logs to terminal
-  return runBrowserify(b);
+  return runBrowserify(b, basename);
 }
-function runBrowserify(b) {
+function runBrowserify(b, basename) {
   return b.bundle()
     // log errors if they happen
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
-    .pipe(source('index.js'))
+    .pipe(source(basename + '.js'))
     // optional, remove if you don't need to buffer file contents
     .pipe(buffer())
     // optional, remove if you dont want sourcemaps
@@ -75,10 +75,13 @@ gulp.task('watch-less', [ 'less' ], function() {
   gulp.watch([ './less/**/*' ], [ 'less' ]);
 });
 
-gulp.task('js', compileJsOnce);
+gulp.task('js', [ 'js-en', 'js-fr' ]);
+gulp.task('watch-js', [ 'watch-js-en', 'watch-js-fr' ]);
 
-gulp.task('watch-js', watchJs);
-
-gulp.task('watch', [ 'watch-less', 'watch-js' ]);
+gulp.task('js-en', function() { return compileJsOnce('index.en'); });
+gulp.task('js-fr', function() { return compileJsOnce('index.fr'); });
+gulp.task('watch-js-en', function() { return watchJs('index.en'); });
+gulp.task('watch-js-fr', function() { return watchJs('index.fr'); });
 
 gulp.task('default', [ 'less', 'js' ]);
+gulp.task('watch', [ 'watch-less', 'watch-js' ]);

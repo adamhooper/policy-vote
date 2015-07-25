@@ -10,6 +10,8 @@ Provinces = require('../lib/Provinces')
 
 module.exports = class App extends Backbone.View
   initialize: (options) ->
+    throw 'Must call App.setLanguage() first with "en" or "fr"' if !global.languageCode
+
     @votes = [] # Array of [ betterPolicy, worsePolicy ]
     @userProfile = { languageCode: null, provinceCode: null } # languageCode=null means user hasn't chosen
 
@@ -72,6 +74,12 @@ module.exports = class App extends Backbone.View
   _onClickShowStatistics: ->
     @showStatistics = true
     @render()
+
+App.setLanguage = (languageCode) ->
+  global.languageCode = languageCode
+  (o.name = o[languageCode]) for o in require('../lib/Parties').all
+  (o.name = o[languageCode]) for o in require('../lib/Provinces').all
+  (o.name = o[languageCode]) for o in require('../lib/Policies').all
 
 App.installOnPageLoad = ->
   $ ->
