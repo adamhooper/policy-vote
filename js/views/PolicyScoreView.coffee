@@ -30,7 +30,6 @@ module.exports = class PolicyScoreView extends Backbone.View
     Backbone.$.ajax
       url: '/statistics/n-votes-by-policy-id'
       failure: (a, b, c) =>
-        console.log('Failure', a, b, c)
         @$el.html(@templates.error())
       success: (json) =>
         @_renderServerResponse(json)

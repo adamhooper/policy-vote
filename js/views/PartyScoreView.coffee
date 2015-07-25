@@ -79,8 +79,6 @@ module.exports = class PartyScoreView extends Backbone.View
 
     parties.sort((p1, p2) -> p2.fraction - p1.fraction || p1.name.charCodeAt(0) - p2.name.charCodeAt(0))
 
-    console.log(parties)
-
     html = @templates.main(parties: parties)
     @$el.html(html)
     @
@@ -93,6 +91,5 @@ module.exports = class PartyScoreView extends Backbone.View
     for label in @$('.label')
       $label = Backbone.$(label)
       $label.removeClass('next-to-bar')
-      console.log($label.position())
       if $label.position().left < 0
         $label.addClass('next-to-bar')
