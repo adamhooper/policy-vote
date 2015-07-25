@@ -56,6 +56,7 @@
     "node-uuid": "^1.4.3",
     "pym.js": "^0.4.5",
     "stream-buffers": "^2.2.0",
+    "uglifyify": "^3.0.1",
     "underscore": "^1.8.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"

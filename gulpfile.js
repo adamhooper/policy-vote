@@ -35,6 +35,7 @@ function compileJsOnce(basename) {
   var b = browserify(opts);
   b.transform(require('coffeeify'));
   b.transform(require('brfs'));
+  b.transform(require('uglifyify'));
   b.on('log', gutil.log); // output build logs to terminal
   return runBrowserify(b, basename);
 }
