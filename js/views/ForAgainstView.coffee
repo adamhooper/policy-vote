@@ -102,10 +102,12 @@ module.exports = class ForAgainstView extends Backbone.View
 
     # Now, turn augmentedPartiesById into an Array
     parties = (party for __, party of augmentedPartiesById)
-    parties.sort (a, b) ->
+    sortScore = (party) ->
+      nPolicies = party.userSaysYay.length + party.userSaysNay.length
+      if nPolicies == 0 then 0 else party.userSaysYay.length / nPolicies
+    parties.sort (a, b) -> # This is the same order as PartyScore. Important!
       (
-        (b.userSaysYay.length - b.userSaysNay.length) - (a.userSaysYay.length - a.userSaysNay.length) ||
-        (b.userSaysYay.length - a.userSaysYay.length) ||
+        sortScore(b) - sortScore(a) ||
         (if a.id < b.id then -1 else if b.id < a.id then 1 else 0)
       )
 
