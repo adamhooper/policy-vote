@@ -1,12 +1,16 @@
 'use strict';
 
 var assign = require('lodash.assign');
+var autoprefixer = require('autoprefixer')
 var browserify = require('browserify');
 var buffer = require('vinyl-buffer');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var less = require('gulp-less');
+var minifyCss = require('gulp-minify-css')
 var plumber = require('gulp-plumber');
+var postcss = require('gulp-postcss');
+var minifyCss = require('gulp-minify-css')
 var sourcemaps = require('gulp-sourcemaps');
 var source = require('vinyl-source-stream');
 var request = require('request');
@@ -76,6 +80,8 @@ gulp.task('less', function() {
       }
     }))
     .pipe(less({}))
+    .pipe(postcss([ autoprefixer({ browsers: [ 'last 1 version' ] }) ]))
+    .pipe(minifyCss({ advanced: false }))
     .pipe(gulp.dest('./dist'));
 });
 
