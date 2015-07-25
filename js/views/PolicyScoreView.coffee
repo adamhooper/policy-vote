@@ -4,6 +4,7 @@ d3 = require('d3')
 
 Parties = require('../../lib/Parties')
 Policies = require('../../lib/Policies')
+DotColorLegend = require('./DotColorLegend')
 
 module.exports = class PolicyScoreView extends Backbone.View
   className: 'policy-score'
@@ -12,7 +13,6 @@ module.exports = class PolicyScoreView extends Backbone.View
     error: _.template('') # Pretend all is well
     main: _.template('''
       <h2>Policy preferences of all readers</h2>
-      <p class="explanation">[LEGEND] A coloured policy is endorsed by only one party.</p>
       <div class="chart"></div>
       <p class="explanation">A score of <tt>50%</tt> means half the readers who saw a policy picked it.</p>
     ''')
@@ -94,6 +94,7 @@ module.exports = class PolicyScoreView extends Backbone.View
         partiesXPolicies.push(party: party, policy: policy)
 
     @$el.html(@templates.main())
+    @$('h2').after(new DotColorLegend(province: @province).render().el)
     $chart = @$('.chart')
     margin = { top: 20, right: 20, bottom: 20, left: 50 }
     width = $chart.width() - margin.right - margin.left
