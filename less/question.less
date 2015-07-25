@@ -1,23 +1,23 @@
 .question {
-
   .choices {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   button.choice {
-    flex: 0 1 auto;
-    min-width: 20em;
+    flex: 1 1 auto;
+    max-width: 20rem;
     display: block;
     text-align: left;
     width: 100%;
     border-radius: .5em;
     padding: 1.5rem;
-    background: #eee;
-    margin: 1.5rem 0;
+    margin: 1rem;
     line-height: 4.5rem;
     vertical-align: middle;
-    border: 1px solid hsl(206, 12%, 73%);
-    background: hsl(192, 20%, 95%);
+    border: 1px solid @gray-light;
+    background: @gray-lighter;
     // FIXME do on-click color
   }
 

@@ -45,13 +45,24 @@ module.exports = class StatisticsView extends Backbone.View
     policyDetails: _.template("""
       <div class="policy-details">
         <h4 class="policy-policy"><%- policy.name %></h4>
-        <div class="policy-party">#{M.promisedBy} <strong><%- policy.parties.map(function(p) { return p.name; }).join(', ') %></strong></div>
+        <div class="policy-party">
+          #{M.promisedBy}
+          <ul class="parties">
+            <% policy.parties.forEach(function(party) { %>
+              <li class="party"><i style="background: <%- party.color %>;"></i> <%- party.name %></li>
+            <% }); %>
+          </ul>
         <% if (policy.userSaysYayOver.length) { %>
           <div class="policy-better-than">
             <p><strong>#{M.youChoseThisOver}</strong></p>
             <ul>
               <% policy.userSaysYayOver.forEach(function(otherPolicy) { %>
-                <li><%- otherPolicy.name %></li>
+                <li>
+                  <% otherPolicy.parties.forEach(function(otherParty) { %>
+                    <i style="background: <%- otherParty.color %>;"></i>
+                  <% }); %>
+                  <%- otherPolicy.name %>
+                </li>
               <% }) %>
             </ul>
           </div>
@@ -61,7 +72,12 @@ module.exports = class StatisticsView extends Backbone.View
             <p><strong>#{M.youDislikedThisComparedTo}</strong></p>
             <ul>
               <% policy.userSaysNayOver.forEach(function(otherPolicy) { %>
-                <li><%- otherPolicy.name %></li>
+                <li>
+                  <% otherPolicy.parties.forEach(function(otherParty) { %>
+                    <i style="background: <%- otherParty.color %>;"></i>
+                  <% }); %>
+                  <%- otherPolicy.name %>
+                </li>
               <% }) %>
             </ul>
           </div>
