@@ -31,7 +31,9 @@ module.exports = class StatisticsView extends Backbone.View
 
   templates:
     main: _.template("""
-      <div class="user-charts"></div>
+      <% if (votes.length > 0) { %>
+        <div class="user-charts"></div>
+      <% } %>
       <div class="back-to-questions">
         <% if (votes.length == 0) { %>
           <p>#{M.backToQuestions['0']}</p>
@@ -92,9 +94,10 @@ module.exports = class StatisticsView extends Backbone.View
 
   render: ->
     @$el.html(@templates.main(votes: @votes))
-    @$('.user-charts')
-      .append(@partyScoreView.render().el)
-      .append(@forAgainstView.render().el)
+    if @votes.length > 0
+      @$('.user-charts')
+        .append(@partyScoreView.render().el)
+        .append(@forAgainstView.render().el)
     @$('.all-users-charts')
       .append(@policyScoreView.render().el)
     @$el.append(@shareView.render().el)

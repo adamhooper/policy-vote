@@ -20,11 +20,15 @@ input, table {
   position: relative;
 }
 
-h1, h2 {
+p, h1, h2 {
+  // margins are an issue within an iframe: they prevent pym.js from
+  // calculating the correct height. Solution: make all top margins 0. That's
+  // the ideal anyway, because people need to scroll down to this point in the
+  // iframe and there's already spacing above.
   margin-top: 0;
 }
 
-h1 {
+h1, h2 {
   font-size: 1.5rem;
   text-align: center;
 }
