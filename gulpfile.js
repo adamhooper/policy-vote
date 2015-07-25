@@ -60,6 +60,13 @@ gulp.task('policies-csv', function() {
     .pipe(gulp.dest('./data'));
 });
 
+gulp.task('messages-csv', function() {
+  var url = 'https://docs.google.com/spreadsheets/d/1H09ZnN088wRCfwOzZItn8SGIa9626f33tWshSZrknec/pub?gid=0&single=true&output=csv';
+  request(url)
+    .pipe(source('messages.csv'))
+    .pipe(gulp.dest('./data'));
+});
+
 gulp.task('less', function() {
   return gulp.src('./less/index.less')
     .pipe(plumber({
