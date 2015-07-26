@@ -56,3 +56,18 @@
     color: @gray-light;
   }
 }
+
+.tooltip() {
+  position: absolute;
+  // JavaScript will set `top` and `left` for us
+  max-width: 90%;
+
+  border: 0.5px solid black;
+  border-radius: .5rem;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.6);
+  background: white;
+  padding: 1rem;
+  z-index: 1;
+
+  line-height: 1.5rem;
+}

@@ -7,6 +7,7 @@ Policies = require('../../lib/Policies')
 PartyScoreView = require('./PartyScoreView')
 PolicyScoreView = require('./PolicyScoreView')
 ShareView = require('./ShareView')
+positionTooltip = require('../positionTooltip')
 
 M = global.Messages.StatisticsView
 
@@ -44,6 +45,7 @@ module.exports = class StatisticsView extends Backbone.View
       </div>
       <div class="all-users-charts"></div>
     """)
+
     policyDetails: _.template("""
       <div class="policy-details">
         <h4 class="policy-policy"><%- policy.name %></h4>
@@ -88,11 +90,11 @@ module.exports = class StatisticsView extends Backbone.View
     """)
 
   events:
-    'mouseover [data-policy-id]': '_onMouseoverPolicy'
-    'mouseout [data-policy-id]': '_onMouseoutPolicy'
+    'mouseenter [data-policy-id]': '_onMouseenterPolicy'
+    'mouseleave [data-policy-id]': '_onMouseleavePolicy'
     'touchstart': '_onTouchstart'
     'touchmove': '_onTouchmove'
-    'touchend': '_onTouchEnd'
+    'touchend': '_onTouchend'
     'touchcancel': '_onTouchCancel'
     'click .back-to-questions button': '_onClickBackToQuestions'
 
@@ -129,8 +131,6 @@ module.exports = class StatisticsView extends Backbone.View
     @templates.policyDetails(policy: policy)
 
   _setTooltipTarget: (target) ->
-    $target = $(target)
-
     if target != @tooltipTarget
       # Something that works with both SVG and HTML
       @tooltipTarget?.setAttribute('class', @tooltipTargetClassName)
@@ -138,51 +138,12 @@ module.exports = class StatisticsView extends Backbone.View
       @tooltipTargetClassName = target.getAttribute('class')
       @tooltipTarget.setAttribute('class', @tooltipTargetClassName + ' hovering')
 
-    policyId = $target.attr('data-policy-id')
+    policyId = target.getAttribute('data-policy-id')
     @$tooltip
       .html(@_policyTooltipHtml(policyId))
-      .attr('class', 'policy-tooltip above') # Make it visible so we can calculate the height
-    # Show tooltip _above_ the target, if possible -- nicer on mobile
-    margin = 10 # 10px between item top and tooltip bottom
+      .attr('class', 'policy-tooltip') # Make it visible so we can calculate the height
 
-    targetOffset = $target.offset()
-    targetSize = if target.hasAttribute('r') # svg <circle>
-      d = +target.getAttribute('r') << 1
-      width: d
-      height: d
-    else
-      width: $target.width()
-      height: $target.height()
-
-    className = null
-    css = {}
-
-    # Figure out vertical alignment
-    #
-    # Go above target if there's space; otherwise, below
-    tooltipHeight = @$tooltip.outerHeight()
-    if targetOffset.top - $(window).scrollTop() > tooltipHeight
-      className = 'above'
-      css.top = targetOffset.top - margin - tooltipHeight
-    else
-      className = 'below'
-      css.top = targetOffset.top + targetSize.height + margin
-
-    # Align tooltip horizontally
-    #
-    # Center over target; ensure margin px from edges
-    tooltipWidth = @$tooltip.outerWidth()
-    rightLimit = @$el.width()
-    left = targetOffset.left + (targetSize.width / 2) - (tooltipWidth / 2)
-    if left + tooltipWidth + margin > rightLimit
-      left = rightLimit - tooltipWidth - margin
-    else if left < margin
-      left = margin
-    css.left = left
-
-    @$tooltip
-      .attr('class', "policy-tooltip #{className}")
-      .css(css)
+    positionTooltip(target, @$tooltip.get(0))
 
   _hideTooltip: ->
     @tooltipTarget?.setAttribute('class', @tooltipTargetClassName)
@@ -202,10 +163,10 @@ module.exports = class StatisticsView extends Backbone.View
   _onTouchstart: (e) -> @_handleTouch(e)
   _onTouchmove: (e) -> @_handleTouch(e)
   _onTouchCancel: -> @_hideTooltip()
-  _onTouchEnd: -> @_hideTooltip()
+  _onTouchend: -> @_hideTooltip()
 
-  _onMouseoverPolicy: (e) -> @_setTooltipTarget(e.currentTarget)
-  _onMouseoutPolicy: -> @_hideTooltip()
+  _onMouseenterPolicy: (e) -> @_setTooltipTarget(e.currentTarget)
+  _onMouseleavePolicy: -> @_hideTooltip()
 
   _onClickBackToQuestions: (e) -> @trigger('clicked-back-to-questions')
 

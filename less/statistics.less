@@ -10,12 +10,10 @@
   }
 
   .policy-tooltip {
-    position: absolute;
-    left: 5%;
-    // JavaScript will set `top` for us
-    width: 25em;
-    max-width: 90%;
+    .tooltip();
     &.hide { display: none; }
+
+    width: 25em; // on desktop, make it wrap
 
     i {
       .policy-dot();
@@ -25,14 +23,6 @@
     }
 
     .policy-details {
-      border: 0.5px solid black;
-      border-radius: .5rem;
-      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.6);
-      background: white;
-      padding: 1rem;
-      z-index: 1;
-
-      line-height: 1.5rem;
 
       h4 {
         margin: 0;

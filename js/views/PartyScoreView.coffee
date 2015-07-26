@@ -1,9 +1,11 @@
 _ = require('underscore')
 Backbone = require('backbone')
 d3 = require('d3')
+$ = Backbone.$
 
 Parties = require('../../lib/Parties')
 Policies = require('../../lib/Policies')
+positionTooltip = require('../positionTooltip')
 
 M = global.Messages.PartyScoreView
 
@@ -36,12 +38,25 @@ module.exports = class PartyScoreView extends Backbone.View
       </div>
     """)
 
+    tooltip: _.template("""
+      <div class="tooltip"><p><%- message %></p></div>
+    """)
+
+  events:
+    'mouseenter [data-party-id]': '_onMouseenterParty'
+    'mouseleave [data-party-id]': '_onMouseleaveParty'
+    'touchstart [data-party-id]': '_onTouchstartParty'
+    'touchend': '_onTouchend'
+    'touchcancel': '_onTouchcancel'
+
   initialize: (options) ->
     throw 'must pass options.province, a Province' if 'province' not of options
     throw 'must pass options.votes, an Array[[Policy,Policy]] of better/worse policies' if !options.votes
 
     @votes = options.votes
     @province = options.province
+    @tooltipPartyId = null
+    @$tooltip = null
 
   render: ->
     return @ if @votes.length == 0
@@ -76,12 +91,59 @@ module.exports = class PartyScoreView extends Backbone.View
 
     for party in parties
       party.fraction = party.percent / maxPercent
-
+    # FIXME resume coding here.
     parties.sort((p1, p2) -> p2.fraction - p1.fraction || p1.name.charCodeAt(0) - p2.name.charCodeAt(0))
 
     html = @templates.main(parties: parties)
     @$el.html(html)
     @
+
+  _onMouseenterParty: (e) -> @_showTooltip(e.currentTarget)
+  _onMouseleaveParty: -> @_showTooltip(null)
+  _onTouchstartParty: (e) -> @_showTooltip(e.currentTarget)
+  _onTouchend: -> @_showTooltip(null)
+  _onTouchcancel: -> @_showTooltip(null)
+
+  _showTooltip: (target) ->
+    partyId = target?.getAttribute('data-party-id')
+    return if @tooltipPartyId == partyId
+
+    @$tooltip?.remove()
+    @$('li.party').removeClass('hover')
+    @tooltipPartyId = partyId
+    return if !partyId?
+
+    party = Parties.byId[partyId]
+    nYay = 0
+    nTotal = 0
+
+    for [ yayPolicy, nayPolicy ] in @votes
+      for otherParty in yayPolicy.parties when otherParty == party
+        nYay++
+        nTotal++
+      for otherParty in nayPolicy.parties when otherParty == party
+        nTotal++
+
+    return if nTotal == 0 # There's no message when the user didn't choose a single policy
+
+    message = @_getTooltipMessage(nYay, nTotal, party.name)
+    html = @templates.tooltip(message: message)
+    @$tooltip = $(html)
+
+    @$el.append(@$tooltip)
+    positionTooltip($(target).find('.bar')[0], @$tooltip.get())
+    $(target).closest('li.party').addClass('hover')
+
+  _getTooltipMessage: (nYay, nTotal, partyName) ->
+    m = global.Messages
+    nYayText = if nYay < 10 then m.Numeral[String(nYay)] else String(nYay)
+    nTotalText = if nTotal < 10 then m.Numeral[String(nTotal)] else String(nTotal)
+    policiesText = if nTotal == 1 then m.Policies['1'] else m.Policies.else
+    M.tooltip
+      .replace('{N}', nYayText)
+      .replace('{D}', nTotalText)
+      .replace('{party}', partyName)
+      .replace('{policies}', policiesText)
 
   # The element will only be added to the DOM *after* it's rendered, but before
   # we figure out whether the label fits. Whoever owns this view will need to

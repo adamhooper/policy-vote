@@ -7,6 +7,11 @@
     padding: 0;
   }
 
+  .tooltip {
+    .tooltip();
+    p { margin: 0; }
+  }
+
   .chart {
     li.party {
       display: flex;
@@ -28,26 +33,31 @@
       align-items: center;
       position: relative;
       justify-content: flex-start;
+    }
 
-      .bar {
-        height: 3rem;
-        margin: .5rem 0;
-        position: relative;
-      }
+    .bar {
+      height: 3rem;
+      margin: .5rem 0;
+      border: 1px solid transparent;
+      position: relative;
+    }
 
-      .label {
-        position: absolute;
-        padding: 1rem .5rem;
-        line-height: 1rem;
-        color: white;
-        right: 0;
+    li.party.hover .bar {
+      border-color: @gray-dark;
+    }
 
-        &.next-to-bar {
-          // If JavaScript determines the bar isn't wide enough to hold the
-          // text, move it to the right
-          left: 100%;
-          color: #484e4d;
-        }
+    .label {
+      position: absolute;
+      padding: 1rem .5rem;
+      line-height: 1rem;
+      color: white;
+      right: 0;
+
+      &.next-to-bar {
+        // If JavaScript determines the bar isn't wide enough to hold the
+        // text, move it to the right
+        left: 100%;
+        color: #484e4d;
       }
     }
   }

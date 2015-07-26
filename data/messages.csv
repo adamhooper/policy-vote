@@ -1,9 +1,11 @@
 key,en,fr,notes-for-translators
 DotColorLegend.multiPartyPolicy,Policy,FR - Policy,
-DotColorLegend.onePartyPolicy,Policy only one party supports,FR - Policy only one party supports,
-ForAgainstView.title,Every choice you made,FR - Every choice you made,
-ForAgainstView.th.chosen,you chose,FR - you chose,
-ForAgainstView.th.rejected,you rejected,FR - you rejected,
+DotColorLegend.onePartyPolicy,Policy supported by a single party,FR - Policy only one party supports,
+ForAgainstView.title,Here's every choice you made,FR - Every choice you made,
+ForAgainstView.th.chosen,Chosen,FR - you chose,
+ForAgainstView.th.rejected,Rejected,FR - you rejected,
+Numeral.0,zero,FR - zero,
+Numeral.1,one,FR - one,"Same gender as the word ""policy"" -- e.g,. ""one policy""."
 Numeral.2,two,deux,
 Numeral.3,three,trois,
 Numeral.4,four,quatre,
@@ -12,7 +14,10 @@ Numeral.6,six,six,
 Numeral.7,seven,sept,
 Numeral.8,eight,huit,
 Numeral.9,nine,neuf,
+Policies.1,policy,FR - policy,"This will go next to a party name: e.g., ""one Liberal policy"""
+Policies.else,policies,FR - policies,"This will go next to a party name: e.g., ""three Liberal policies"""
 PartyScoreView.title,Parties you agree with,FR - Parties you agree with,
+PartyScoreView.tooltip,You chose {N} of {D} {party} {policies} we showed you.,FR - You chose {N} of {D} {party} {policies} we showed you.,"""{N}"" is the number of policies the user chose. ""{D}"" is the number we showed. ""{party}"" is the name of the political party. ""{policies}"" is either the word ""policy"" or the word ""policies"", depending on D. So the english will be, ""You chose two of five liberal policies we showed you."""
 PolicyScoreView.title,Policy preferences of all readers,FR - Policy preferences of all readers,
 PolicyScoreView.explanation,A score of 50% means half the readers who saw a policy picked it,FR - A score of 50% means half the readers who saw a policy picked it,
 QuestionView.title,Choose the policy you prefer,FR - Choose the policy you prefer,
