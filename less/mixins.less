@@ -13,19 +13,24 @@
   }
 }
 
-.button-default() {
+.button() {
   display: inline-block;
-  width: 100%;
-  max-width: 20rem;
-  border-radius: .5em;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214 (copied from Bootstrap, clearly)
+  max-width: 20rem;
+  border-radius: .5em;
+}
+
+.button-default() {
+  .button();
 
   padding: 1.5rem;
   margin: 1rem;
   line-height: 4.5rem;
   vertical-align: middle;
+
+  color: black;
   border: 1px solid @gray-light;
   background: @gray-lighter;
 
@@ -36,15 +41,18 @@
 }
 
 .button-primary() {
+  .button();
   border: 0;
   padding: 1rem;
-  border-radius: .5rem;
+
   color: white;
-  background: #7b67ac;
+  background: @button-color;
   font: inherit;
   font-size: 1.25rem;
   font-weight: bold;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214 (copied from Bootstrap, clearly)
+
+  &:active {
+    outline: 0;
+    color: @gray-light;
+  }
 }
