@@ -3,37 +3,30 @@
     border: 0;
     margin: 0;
     padding: 0;
+    text-align: center;
   }
 
   legend {
     display: block;
+    font: inherit;
+    width: 100%; // Firefox assigns a different width
     font-weight: bold;
     text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
   }
 
-  ul, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  input {
-    display: none; // radios are ugly
-  }
-
-  input:checked + label {
-    font-weight: bold;
-  }
-
-  fieldset.province-code {
-    text-align: center;
+  select {
+    font: inherit;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 1px solid @gray-light;
+    border-radius: .5rem;
+    background: @gray-lighter;
   }
 
   fieldset.actions {
-    margin: 0;
     margin-top: 1.5rem;
-    padding: 0;
-    text-align: center;
 
     button { .button-primary(); }
   }
