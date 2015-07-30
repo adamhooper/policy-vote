@@ -40,17 +40,12 @@ module.exports = class StatisticsView extends Backbone.View
   templates:
     main: _.template("""
       <% if (votes.length > 0) { %>
-        <div class="user-charts"></div>
+        <div class="party-score"></div>
+        <button class="back-to-questions" type="button"><i class="icon icon-caret-left"></i> <%- backToQuestions %></button>
+        <div class="for-against"></div>
       <% } %>
-      <div class="back-to-questions">
-        <% if (votes.length == 0) { %>
-          <p>#{M.backToQuestions['0']}</p>
-        <% } else { %>
-          <p>#{M.backToQuestions.else}</p>
-        <% } %>
-        <button type="button"><i class="icon icon-caret-left"></i> #{M.backToQuestions.button}</button>
-      </div>
-      <div class="all-users-charts"></div>
+      <button class="back-to-questions" type="button"><i class="icon icon-caret-left"></i> <%- backToQuestions %></button>
+      <div class="policy-score"></div>
     """)
 
     policyDetails: _.template("""
@@ -99,16 +94,21 @@ module.exports = class StatisticsView extends Backbone.View
   events:
     'mouseenter [data-policy-id]': '_onMouseenterPolicy'
     'mouseleave [data-policy-id]': '_onMouseleavePolicy'
-    'click .back-to-questions button': '_onClickBackToQuestions'
+    'click .back-to-questions': '_onClickBackToQuestions'
 
   render: ->
-    @$el.html(@templates.main(votes: @votes))
-    if @votes.length > 0
-      @$('.user-charts')
-        .append(@partyScoreView.render().el)
-        .append(@forAgainstView.render().el)
-    @$('.all-users-charts')
-      .append(@policyScoreView.render().el)
+    backToQuestions = if @votes.length == 0
+      M.backToQuestions['0']
+    else
+      M.backToQuestions.else
+
+    @$el.html(@templates.main(votes: @votes, backToQuestions: backToQuestions))
+    if ($el = @$('.party-score')).length
+      $el.replaceWith(@partyScoreView.render().el)
+    if ($el = @$('.for-against')).length
+      $el.replaceWith(@forAgainstView.render().el)
+    if ($el = @$('.policy-score')).length
+      $el.replaceWith(@policyScoreView.render().el)
     @$el.append(@shareView.render().el)
     @$el.append(@$tooltip = $('<div class="policy-tooltip hide"></div>'))
     @tooltipTarget = null
@@ -209,7 +209,7 @@ module.exports = class StatisticsView extends Backbone.View
     else
       @_hideTooltip()
 
-  _onClickBackToQuestions: (e) -> @trigger('clicked-back-to-questions')
+  _onClickBackToQuestions: -> @trigger('clicked-back-to-questions')
 
   # The element will only be added to the DOM *after* it's rendered, but before
   # we figure out whether the label fits. Whoever owns this view will need to
