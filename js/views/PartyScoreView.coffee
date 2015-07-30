@@ -145,13 +145,23 @@ module.exports = class PartyScoreView extends Backbone.View
       .replace('{party}', partyName)
       .replace('{policies}', policiesText)
 
-  # The element will only be added to the DOM *after* it's rendered, but before
-  # we figure out whether the label fits. Whoever owns this view will need to
-  # call `tidyRenderGlitches()` right after inserting the element into the DOM,
-  # _and_ on window resize.
+  # Make the chart look better. Call this after inserting the element into the
+  # DOM, and after window resize.
   tidyRenderGlitches: ->
+    # Make all the labels the same width
+    maxWidth = 0
+    $partyNames = @$('.party-name')
+    for el in $partyNames
+      w = $(el).width()
+      maxWidth = w if w > maxWidth
+    $partyNames.width(maxWidth)
+
+    # The "30%" labels ought to be within their bars. If the bars are too thin,
+    # place the labels beside the bars.
     for label in @$('.label')
       $label = Backbone.$(label)
+      # Undo any previous iteration...
       $label.removeClass('next-to-bar')
+      # And then move the label if we need to
       if $label.position().left < 0
         $label.addClass('next-to-bar')

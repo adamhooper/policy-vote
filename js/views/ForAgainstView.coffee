@@ -24,17 +24,17 @@ module.exports = class ForAgainstView extends Backbone.View
           <tr>
             <td class="user-says-nay">
               <ul class="policy-list">
-                <% party.userSaysNay.forEach(function(policy) { %>
-                  <li class="policy" style="background: <%- policy.color %>" data-policy-id="<%- policy.id %>"></li>
-                <% }); %>
+                <% party.userSaysNay.forEach(function(policy) {
+                  %><li class="policy" style="background: <%- policy.color %>" data-policy-id="<%- policy.id %>"></li
+                ><% }); %>
               </ul>
             </td>
-            <th class="party" style="color: <%- party.color %>"><%- party.name %></th>
+            <th class="party" style="color: <%- party.color %>" data-party-name="<%- party.name %>" data-party-abbr="<%- party.abbr %>"><%- party.name %></th>
             <td class="user-says-yay">
               <ul class="policy-list">
-                <% party.userSaysYay.forEach(function(policy) { %>
-                  <li class="policy" style="background: <%- policy.color %>" data-policy-id="<%- policy.id %>"></li>
-                <% }); %>
+                <% party.userSaysYay.forEach(function(policy) {
+                  %><li class="policy" style="background: <%- policy.color %>" data-policy-id="<%- policy.id %>"></li
+                ><% }); %>
               </ul>
             </td>
           </li>

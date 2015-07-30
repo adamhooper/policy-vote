@@ -93,6 +93,7 @@ App.setLanguage = (languageCode) ->
   # global variable ... yay!
   global.Messages = require('./Messages')(languageCode)
   (o.name = o[languageCode]) for o in require('../lib/Parties').all
+  (o.abbr = o[languageCode + '_abbr']) for o in require('../lib/Parties').all
   (o.name = o[languageCode]) for o in require('../lib/Provinces').all
   (o.name = o[languageCode]) for o in require('../lib/Policies').all
 

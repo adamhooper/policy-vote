@@ -1,6 +1,6 @@
-id,en,fr,color,onlyInProvinceCode
-B,BQ,bloc,#001b4a,qc
-C,Con,conservateur,#0d60af
-G,Grn,vert,#80bc41
-L,Lib,libéral,#e82931
-N,NDP,NPD,#f9a132
+id,en,fr,en_abbr,fr_abbr,color,onlyInProvinceCode
+B,Bloc Québécois,Bloc Québécois,BQ,BQ,#001b4a,qc
+C,Conservative,conservateur,Con,con,#0d60af
+G,Green,vert,GRN,vert,#80bc41
+L,Liberal,libéral,Lib,lib,#e82931
+N,NDP,NPD,NDP,NPD,#f9a132

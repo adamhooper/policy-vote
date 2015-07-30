@@ -41,7 +41,7 @@ module.exports = class PolicyScoreView extends Backbone.View
     #
     #     {
     #       id: <party ID>
-    #       name: <party name>
+    #       abbr: <party abbr>
     #       policies: [ {
     #         id: <policy ID>
     #         name: <policy description>
@@ -50,7 +50,7 @@ module.exports = class PolicyScoreView extends Backbone.View
     #     }
     parties = for party in Parties.all when !party.onlyInProvince? || party.onlyInProvince == @province
       id: party.id
-      name: party.name
+      abbr: party.abbr
       color: party.color
       policies: []
 
@@ -71,7 +71,7 @@ module.exports = class PolicyScoreView extends Backbone.View
 
       augmentedPolicy =
         id: rawPolicy.id
-        name: rawPolicy.name
+        abbr: rawPolicy.abbr
         color: rawPolicy.color
         nAye: score.aye
         nNay: score.nay
@@ -93,7 +93,7 @@ module.exports = class PolicyScoreView extends Backbone.View
     @$el.html(@templates.main())
     @$('h2').after(new DotColorLegend(province: @province).render().el)
     $chart = @$('.chart')
-    margin = { top: 20, right: 20, bottom: 20, left: 50 }
+    margin = { top: 0, right: 7, bottom: 15, left: 50 }
     width = $chart.width() - margin.right - margin.left
     height = $chart.height() - margin.top - margin.bottom
 
@@ -109,7 +109,7 @@ module.exports = class PolicyScoreView extends Backbone.View
       .domain(party.id for party in parties)
       .rangeRoundPoints([ height, 0 ], 1)
     yAxis = d3.svg.axis().scale(yScale).orient('left')
-      .tickFormat((partyId) -> partyById[partyId].name)
+      .tickFormat((partyId) -> partyById[partyId].abbr)
 
     svg = d3.select($chart.get(0)).append('svg')
       .attr('width', '100%')
@@ -122,12 +122,16 @@ module.exports = class PolicyScoreView extends Backbone.View
       .attr('class', 'x-axis')
       .attr('transform', "translate(0,#{height})")
       .call(xAxis.ticks(4))
+      .selectAll('text')
+        .attr('style', '') # turn off text-anchor: middle and use CSS
 
     # Y-axis
     svg.append('g')
       .attr('class', 'y-axis')
       .call(yAxis)
       .selectAll('text')
+        .attr('style', '') # turn off text-anchor: right and use CSS
+        .attr('x', -margin.left)
         .style('fill', (partyId) -> partyById[partyId].color)
 
     # Dots
@@ -136,7 +140,7 @@ module.exports = class PolicyScoreView extends Backbone.View
       .enter().append('circle')
         .attr('class', 'policy')
         .attr('data-policy-id', (d) -> d.policy.id)
-        .attr('r', 6)
+        .attr('r', 7)
         .attr('cx', (d) -> xScale(d.policy.fractionAye))
         .attr('cy', (d) -> yScale(d.party.id))
         .style('fill', (d) -> d.policy.color)

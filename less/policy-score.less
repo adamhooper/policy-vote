@@ -11,13 +11,23 @@
       fill: none;
     }
 
-    .x-axis line {
-      stroke-width: 1px;
-      stroke: #eee;
+    .x-axis {
+      line {
+        stroke-width: 1px;
+        stroke: #eee;
+      }
+
+      text {
+        fill: @gray-dark;
+      }
+
+      .tick text { text-anchor: middle; }
+      .tick:first-child text { text-anchor: start; }
+      .tick:nth-child(3) text { text-anchor: end; }
     }
 
     .y-axis text {
-      text-anchor: end;
+      text-anchor: start;
       font-weight: bold;
     }
 

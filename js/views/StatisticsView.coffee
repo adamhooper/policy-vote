@@ -107,7 +107,7 @@ module.exports = class StatisticsView extends Backbone.View
     @$('.all-users-charts')
       .append(@policyScoreView.render().el)
     @$el.append(@shareView.render().el)
-    @$el.append(@$tooltip = $('<div class="policy-tooltip"></div>'))
+    @$el.append(@$tooltip = $('<div class="policy-tooltip hide"></div>'))
     @tooltipTarget = null
     @tooltipTargetClassName = null
     @
