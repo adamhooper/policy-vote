@@ -14,7 +14,7 @@ positionTooltip = require('../positionTooltip')
 M = global.Messages.StatisticsView
 Url = qs.parse(window.location.search.slice(1))['share-url']
 
-MaxClickDistance = 30 # ignore clicks that are further than this distance from the center of a policy
+MaxClickDistance = 35 # ignore clicks that are further than this distance from the center of a policy
 
 module.exports = class StatisticsView extends Backbone.View
   className: 'statistics'
