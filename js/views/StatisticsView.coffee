@@ -1,8 +1,10 @@
 _ = require('underscore')
 Backbone = require('backbone')
 $ = Backbone.$
+qs = require('querystring')
 
 ForAgainstView = require('./ForAgainstView')
+Parties = require('../../lib/Parties')
 Policies = require('../../lib/Policies')
 PartyScoreView = require('./PartyScoreView')
 PolicyScoreView = require('./PolicyScoreView')
@@ -10,6 +12,7 @@ ShareView = require('./ShareView')
 positionTooltip = require('../positionTooltip')
 
 M = global.Messages.StatisticsView
+Url = qs.parse(window.location.search.slice(1))['share-url']
 
 MaxClickDistance = 20 # ignore clicks that are further than this distance from the center of a policy
 
@@ -41,10 +44,22 @@ module.exports = class StatisticsView extends Backbone.View
     main: _.template("""
       <% if (votes.length > 0) { %>
         <div class="party-score"></div>
-        <button class="back-to-questions" type="button"><i class="icon icon-caret-left"></i> <%- backToQuestions %></button>
+        <div class="in-between">
+          <button class="back-to-questions" type="button"><i class="icon icon-caret-left"></i> <%- backToQuestions %></button
+          ><a target="_blank" class="tweet" href="https://twitter.com/intent/tweet?status=<%= encodeURIComponent(tweetText) %>"><i class="icon icon-twitter"></i> #{global.Messages.ShareView.twitter}</a>
+        </div>
+
         <div class="for-against"></div>
+        <div class="in-between">
+          <button class="back-to-questions" type="button"><i class="icon icon-caret-left"></i> <%- backToQuestions %></button
+          ><a target="_blank" class="tweet" href="https://twitter.com/intent/tweet?status=<%= encodeURIComponent(tweetText) %>"><i class="icon icon-twitter"></i> #{global.Messages.ShareView.twitter}</a>
+        </div>
+      <% } else { %>
+        <div class="in-between">
+          <button class="back-to-questions" type="button"><i class="icon icon-caret-left"></i> <%- backToQuestions %></button>
+        </div>
       <% } %>
-      <button class="back-to-questions" type="button"><i class="icon icon-caret-left"></i> <%- backToQuestions %></button>
+
       <div class="policy-score"></div>
     """)
 
@@ -96,13 +111,47 @@ module.exports = class StatisticsView extends Backbone.View
     'mouseleave [data-policy-id]': '_onMouseleavePolicy'
     'click .back-to-questions': '_onClickBackToQuestions'
 
+  # Returns special tweet text, if the user chose more than 2 policies for the
+  # top party. Otherwise, returns generic tweet text.
+  _getTweetText: ->
+    partiesById = {} # Hash of id => { nYay, nTotal }
+
+    for [ yayPolicy, nayPolicy ] in @votes
+      for party in yayPolicy.parties when !party.onlyInProvince? || party.onlyInProvince == @province
+        partiesById[party.id] ?= { nYay: 0, nTotal: 0 }
+        partiesById[party.id].nYay++
+        partiesById[party.id].nTotal++
+      for party in nayPolicy.parties when !party.onlyInProvince? || party.onlyInProvince == @province
+        partiesById[party.id] ?= { nYay: 0, nTotal: 0 }
+        partiesById[party.id].nTotal++
+
+    topFraction = -1
+    topPartyId = null
+
+    for id, obj of partiesById
+      fraction = obj.nYay / obj.nTotal # guaranteed, nTotal > 0
+      if fraction > topFraction
+        topFraction = fraction
+        topPartyId = id
+      console.log(fraction, topFraction, topPartyId)
+
+    if topPartyId? && partiesById[topPartyId].nYay > 1
+      M.tweetText
+        .replace('{N}', partiesById[topPartyId].nYay)
+        .replace('{D}', partiesById[topPartyId].nTotal)
+        .replace('{P}', Parties.byId[topPartyId].name)
+        .replace('{}', Url)
+    else
+      global.Messages.ShareView.tweetText
+        .replace('{}', Url)
+
   render: ->
     backToQuestions = if @votes.length == 0
       M.backToQuestions['0']
     else
       M.backToQuestions.else
 
-    @$el.html(@templates.main(votes: @votes, backToQuestions: backToQuestions))
+    @$el.html(@templates.main(votes: @votes, backToQuestions: backToQuestions, tweetText: @_getTweetText()))
     if ($el = @$('.party-score')).length
       $el.replaceWith(@partyScoreView.render().el)
     if ($el = @$('.for-against')).length
