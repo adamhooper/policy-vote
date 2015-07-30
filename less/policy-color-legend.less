@@ -1,15 +1,23 @@
 .policy-color-legend {
-  white-space: nowrap;
   color: #484e4d;
 
-  ul {
-    display: inline;
-    margin: 0;
-    padding: 0 .25rem 0 0;
-    list-style: none;
-  }
+  div {
+    display: flex;
 
-  li.policy {
-    .policy-dot();
+    ul {
+      flex: 0 0 auto;
+      display: inline-block;
+      margin: 0;
+      padding: 0 .25rem 0 0;
+      list-style: none;
+
+      li.policy {
+        .policy-dot();
+      }
+    }
+
+    span.label {
+      display: inline-block; // make it not wrap below policy dots
+    }
   }
 }
