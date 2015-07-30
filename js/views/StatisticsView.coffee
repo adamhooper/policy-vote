@@ -36,7 +36,18 @@ module.exports = class StatisticsView extends Backbone.View
     @listenTo(@policyScoreView, 'rendered', => @trigger('rendered'))
     $(document).on('click.statistics', (e) => @_onClickDocument(e))
 
+    renderOnResize = _.throttle((=>
+      # iPhone changes font sizes on resize, so we'll re-render everything.
+      @partyScoreView.render()
+      @forAgainstView.render()
+
+      # Even non-iPhone needs the svg to re-render.
+      @policyScoreView.render()
+    ), 500)
+    $(window).on('resize.policy-score', renderOnResize)
+
   remove: ->
+    $(window).off('resize.policy-score')
     $(document).off('click.statistics')
     @partyScoreView?.remove()
     @forAgainstView?.remove()

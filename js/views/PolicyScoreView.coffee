@@ -23,26 +23,21 @@ module.exports = class PolicyScoreView extends Backbone.View
   initialize: (options) ->
     throw 'must pass options.province, a Province' if 'province' not of options
 
-    renderOnResize = _.throttle((=> @_renderServerResponse()), 500)
-
-    $(window).on('resize.policy-score', renderOnResize)
-
     @province = options.province
 
-  remove: ->
-    $(window).off('resize.policy-score')
-    Backbone.View.prototype.remove.apply(@)
-
   render: ->
-    @$el.html(@templates.loading())
+    if @json?
+      @_renderServerResponse()
+    else
+      @$el.html(@templates.loading())
 
-    Backbone.$.ajax
-      url: '/statistics/n-votes-by-policy-id'
-      failure: (a, b, c) =>
-        @$el.html(@templates.error())
-      success: (json) =>
-        @json = json
-        @_renderServerResponse()
+      Backbone.$.ajax
+        url: '/statistics/n-votes-by-policy-id'
+        failure: (a, b, c) =>
+          @$el.html(@templates.error())
+        success: (json) =>
+          @json = json
+          @_renderServerResponse()
 
     @
 
