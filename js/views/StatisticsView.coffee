@@ -38,6 +38,9 @@ module.exports = class StatisticsView extends Backbone.View
 
   remove: ->
     $(document).off('click.statistics')
+    @partyScoreView?.remove()
+    @forAgainstView?.remove()
+    @policyScoreView?.remove()
     Backbone.View.prototype.remove.apply(@)
 
   templates:

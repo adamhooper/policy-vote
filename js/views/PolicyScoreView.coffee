@@ -1,5 +1,6 @@
 _ = require('underscore')
 Backbone = require('backbone')
+$ = Backbone.$
 d3 = require('d3')
 
 Parties = require('../../lib/Parties')
@@ -22,7 +23,15 @@ module.exports = class PolicyScoreView extends Backbone.View
   initialize: (options) ->
     throw 'must pass options.province, a Province' if 'province' not of options
 
+    renderOnResize = _.throttle((=> @_renderServerResponse()), 500)
+
+    $(window).on('resize.policy-score', renderOnResize)
+
     @province = options.province
+
+  remove: ->
+    $(window).off('resize.policy-score')
+    Backbone.View.prototype.remove.apply(@)
 
   render: ->
     @$el.html(@templates.loading())
@@ -32,11 +41,12 @@ module.exports = class PolicyScoreView extends Backbone.View
       failure: (a, b, c) =>
         @$el.html(@templates.error())
       success: (json) =>
-        @_renderServerResponse(json)
+        @json = json
+        @_renderServerResponse()
 
     @
 
-  _renderServerResponse: (json) ->
+  _renderServerResponse: ->
     # Pass the template an Array of
     #
     #     {
@@ -66,7 +76,7 @@ module.exports = class PolicyScoreView extends Backbone.View
           return true if !party.onlyInProvince? || party.onlyInProvince == @province
       false
 
-    policies = for policyId, score of json when isUsefulPolicyId(policyId)
+    policies = for policyId, score of @json when isUsefulPolicyId(policyId)
       rawPolicy = Policies.byId[policyId]
 
       augmentedPolicy =
