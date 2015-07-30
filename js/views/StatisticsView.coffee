@@ -43,6 +43,8 @@ module.exports = class StatisticsView extends Backbone.View
 
       # Even non-iPhone needs the svg to re-render.
       @policyScoreView.render()
+
+      @tidyRenderGlitches()
     ), 500)
     $(window).on('resize.policy-score', renderOnResize)
 
