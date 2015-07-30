@@ -186,7 +186,7 @@ module.exports = class StatisticsView extends Backbone.View
     policy =
       id: policy.id
       name: policy.name
-      parties: policy.parties
+      parties: party for party in policy.parties when !party.onlyInProvince? || party.onlyInProvince == @province
       userSaysYayOver: []
       userSaysNayOver: []
 
