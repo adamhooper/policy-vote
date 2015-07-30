@@ -16,15 +16,13 @@ module.exports = class DotColorLegend extends Backbone.View
   template: _.template("""
     <div class="multi-party-policy">
       <ul>
-        <li class="policy"></li>
+        <li class="policy"></li><li class="policy"></li><li class="policy"></li><li class="policy"></li>
       </ul>
       <span class="label">#{M.multiPartyPolicy}</span>
     </div>
     <div class="one-party-policies">
       <ul>
-        <% parties.forEach(function(party) { %>
-          <li class="policy" style="background: <%- party.color %>;"></li>
-        <% }); %>
+        <% parties.forEach(function(party) { %><li class="policy" style="background: <%- party.color %>;"></li><% }); %>
       </ul>
       <span class="label">#{M.onePartyPolicy}</span>
     </div>
