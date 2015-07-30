@@ -24,7 +24,7 @@ PartyScoreView.blurb,EN - You picked {Npolicies}. The percentages below tell you
 PolicyScoreView.title,Our readers' overall picks,Les choix des internautes,
 PolicyScoreView.blurb,EN - Do your priorities match the choices of the rest of our readers? Find out on this snapshot of each proposal’s overall popularity. A policy that scores 50 per cent was chosen by half our readers.,FR - Do your priorities match the choices of the rest of our readers? Find out on this snapshot of each proposal’s overall popularity. Un résultat de 50 % signifie que la moitié des internautes ont sélectionné cette proposition.,
 QuestionView.title,Which proposal do you prefer?,"Parmi les deux propositions suivantes, laquelle préférez-vous ?",
-QuestionView.done,I'm done. Party time!,Mes résultats,
+QuestionView.done,EN - Charts,Mes résultats,
 QuestionView.progress.<2,Pick your priority. We'll chart your preferences.,Faites un choix. Nous analyserons vos préférences.,
 QuestionView.progress.<10,You've picked {} proposals. Aim for at least 10.,Vous avez sélectionné {} propositions. Visez-en au moins 10 !,"""{}"" will be replaced with a numeral: 'two' ... 'nine' or 'deux' ... 'neuf'."
 QuestionView.progress.<20,You've picked {} proposals. Pick 20 for better results.,Vous avez sélectionné {} propositions. Rendez-vous à 20 pour de meilleurs résultats.,"""{}"" will be replaced with a number: 10...19."
@@ -37,8 +37,8 @@ ShareView.twitter,Tweet,Tweeter,
 StatisticsView.promisedBy,Promised by,Promis par,This looks like 'Promised by •NDP •Lib •Cons'
 StatisticsView.youChoseThisOver,You chose this proposal over:,Vous avez choisi cette proposition plutôt que :,
 StatisticsView.youDislikedThisComparedTo,You disliked this proposal compared to:,Vous avez rejeté cette proposition et choisi :,
-StatisticsView.backToQuestions.0,EN - Pick proposals,FR - Pick proposals,
-StatisticsView.backToQuestions.else,EN - Pick more proposals,FR - Pick more proposals,
+StatisticsView.backToQuestions.0,EN - Back to proposals,FR - Pick proposals,
+StatisticsView.backToQuestions.else,EN - More proposals,FR - Pick more proposals,
 UserProfileView.preferNotToSay,I'd prefer not to say,Je préfère ne pas répondre,
 UserProfileView.ready,I'm ready,Commencez ici,
 UserProfileView.whereYouLive,Where will you vote?,Dans quelle province voterez-vous ?,
