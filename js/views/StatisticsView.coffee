@@ -41,7 +41,7 @@ module.exports = class StatisticsView extends Backbone.View
         <% } else { %>
           <p>#{M.backToQuestions.else}</p>
         <% } %>
-        <button type="button">#{M.backToQuestions.button}</button>
+        <button type="button"><i class="icon icon-caret-left"></i> #{M.backToQuestions.button}</button>
       </div>
       <div class="all-users-charts"></div>
     """)

@@ -25,7 +25,7 @@ module.exports = class QuestionView extends Backbone.View
     </div>
     <div class="done">
       <p class="explanation"><%- nVotesMessage %></p>
-      <button class="show-statistics">#{M.done}</button>
+      <button class="show-statistics">#{M.done} <i class="icon icon-caret-right"></i></button>
     </div>
   """)
 
