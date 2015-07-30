@@ -14,15 +14,14 @@ module.exports = class ForAgainstView extends Backbone.View
     <table class="parties">
       <thead>
         <tr>
-          <th class="party"></th>
           <th class="user-says-nay">#{M.th.rejected}</th>
+          <th class="party"></th>
           <th class="user-says-yay">#{M.th.chosen}</th>
         </tr>
       </thead>
       <tbody>
         <% parties.forEach(function(party) { %>
           <tr>
-            <th class="party" style="color: <%- party.color %>"><%- party.name %></th>
             <td class="user-says-nay">
               <ul class="policy-list">
                 <% party.userSaysNay.forEach(function(policy) { %>
@@ -30,6 +29,7 @@ module.exports = class ForAgainstView extends Backbone.View
                 <% }); %>
               </ul>
             </td>
+            <th class="party" style="color: <%- party.color %>"><%- party.name %></th>
             <td class="user-says-yay">
               <ul class="policy-list">
                 <% party.userSaysYay.forEach(function(policy) { %>
