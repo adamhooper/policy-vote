@@ -2,6 +2,7 @@ key,en,fr,notes-for-translators
 DotColorLegend.multiPartyPolicy,Proposals with multi-party support,Propositions défendues par plusieurs partis,
 DotColorLegend.onePartyPolicy,Proposals supported by a single party,Propositions défendues par un seul parti,
 ForAgainstView.title,Here are your picks,Voici vos choix,
+ForAgainstView.blurb,EN - Check out which parties support both your favourite proposals and the ideas you rejected.,FR - Check out which parties support both your favourite proposals and the ideas you rejected.,
 ForAgainstView.th.chosen,Chosen,Choisies,
 ForAgainstView.th.rejected,Rejected,Rejetées,
 Numeral.0,zero,zéro,
@@ -14,12 +15,14 @@ Numeral.6,six,six,
 Numeral.7,seven,sept,
 Numeral.8,eight,huit,
 Numeral.9,nine,neuf,
+Policies.0,proposal,propositions,
 Policies.1,proposal,proposition,"This will go next to a party name: e.g., ""one Liberal policy"""
 Policies.else,proposals,propositions,"This will go next to a party name: e.g., ""three Liberal policies"""
 PartyScoreView.title,Results: The parties behind your priorities,Vos résultats : Les partis qui correspondent à vos priorités,
-PartyScoreView.tooltip,You chose {N} of {D} {party} {policies} we showed you.,Vous avez choisi {N} proposition(s) sur {D} du {party}.,"""{N}"" is the number of policies the user chose. ""{D}"" is the number we showed. ""{party}"" is the name of the political party. ""{policies}"" is either the word ""policy"" or the word ""policies"", depending on D. So the english will be, ""You chose two of five Liberal policies we showed you."""
+PartyScoreView.tooltip,You chose {N} of {D} {party} {policiesD} we showed you.,Vous avez choisi {N} {policiesN} sur {D} du {party}.,"""{N}"" is the number of policies the user chose. ""{D}"" is the number we showed. ""{party}"" is the name of the political party. ""{policiesN}"" is either the word ""policy"" or the word ""policies"", depending on N. ""{policiesD}"" is the same, depending on D. So the english will be, ""You chose 2 of 5 Liberal policies we showed you."""
+PartyScoreView.blurb,EN - You picked {Npolicies}. The percentages below tell you how often your own picks matched each party’s proposals.,FR - You picked {Npolicies}. The percentages below tell you how often your own picks matched each party’s proposals.,"""{Npolicies}"" turns into ""one proposal"" or ""zéro propositions""."
 PolicyScoreView.title,Our readers' overall picks,Les choix des internautes,
-PolicyScoreView.explanation,A score of 50 per cent means half of readers picked that proposal,Un résultat de 50 % signifie que la moitié des internautes ont sélectionné cette proposition.,
+PolicyScoreView.blurb,EN - Do your priorities match the choices of the rest of our readers? Find out on this snapshot of each proposal’s overall popularity. A policy that scores 50 per cent was chosen by half our readers.,FR - Do your priorities match the choices of the rest of our readers? Find out on this snapshot of each proposal’s overall popularity. Un résultat de 50 % signifie que la moitié des internautes ont sélectionné cette proposition.,
 QuestionView.title,Which proposal do you prefer?,"Parmi les deux propositions suivantes, laquelle préférez-vous ?",
 QuestionView.done,I'm done. Party time!,Mes résultats,
 QuestionView.progress.<2,Pick your priority. We'll chart your preferences.,Faites un choix. Nous analyserons vos préférences.,

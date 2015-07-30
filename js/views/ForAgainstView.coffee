@@ -11,6 +11,7 @@ module.exports = class ForAgainstView extends Backbone.View
   className: 'for-against'
   template: _.template("""
     <h2>#{M.title}</h2>
+    <p class="blurb">#{M.blurb}</p>
     <table class="parties">
       <thead>
         <tr>
@@ -115,6 +116,6 @@ module.exports = class ForAgainstView extends Backbone.View
     html = @template(parties: parties)
 
     @$el.html(html)
-    @$('h2').after(new DotColorLegend(province: @province).render().el)
+    @$('table').before(new DotColorLegend(province: @province).render().el)
     @_expandedEl = null # li.policy HTMLElement, or null
     @

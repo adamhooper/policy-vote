@@ -22,6 +22,7 @@ module.exports = class PartyScoreView extends Backbone.View
     #   * fraction: 0-1 float describing percent/(maximum percent for all parties)
     main: _.template("""
       <h2 class="yay">#{M.title}</h2>
+      <p class="blurb"><%- blurb %></p>
       <div class="chart">
         <ul class="parties">
           <% parties.forEach(function(party) { %>
@@ -91,7 +92,7 @@ module.exports = class PartyScoreView extends Backbone.View
     # FIXME resume coding here.
     parties.sort((p1, p2) -> p2.fraction - p1.fraction || p1.name.charCodeAt(0) - p2.name.charCodeAt(0))
 
-    html = @templates.main(parties: parties)
+    html = @templates.main(parties: parties, blurb: @_getBlurbMessage())
     @$el.html(html)
     @
 
@@ -128,14 +129,26 @@ module.exports = class PartyScoreView extends Backbone.View
     positionTooltip($(target).find('.bar')[0], @$tooltip.get())
     $(target).closest('li.party').addClass('hover')
 
+  _getBlurbMessage: ->
+    m = global.Messages
+    nText = m.n(@votes.length)
+    nPoliciesText = if @votes.length == 1
+      "#{nText} #{m.Policies['1']}"
+    else
+      "#{nText} #{m.Policies.else}"
+    M.blurb
+      .replace('{Npolicies}', nPoliciesText)
+
   _getTooltipMessage: (nYay, nTotal, partyName) ->
     m = global.Messages
-    policiesText = if nTotal == 1 then m.Policies['1'] else m.Policies.else
+    policiesNText = if nTotal == 0 then m.Policies['0'] else if nTotal == 1 then m.Policies['1'] else m.Policies.else
+    policiesDText = if nTotal == 1 then m.Policies['1'] else m.Policies.else
     M.tooltip
       .replace('{N}', nYay)
       .replace('{D}', nTotal)
       .replace('{party}', partyName)
-      .replace('{policies}', policiesText)
+      .replace('{policiesN}', policiesNText)
+      .replace('{policiesD}', policiesDText)
 
   # Make the chart look better. Call this after inserting the element into the
   # DOM, and after window resize.

@@ -22,4 +22,11 @@ module.exports = (languageCode) ->
     while splitKey.length > 1
       o = (o[splitKey.shift()] ||= {})
     o[splitKey[0]] = if languageCode == 'fr' then fr else en
+
+  ret.n = (n) ->
+    if n < 10
+      ret.Numeral[String(n)]
+    else
+      n
+
   ret
