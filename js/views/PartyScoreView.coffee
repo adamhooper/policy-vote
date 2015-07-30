@@ -45,9 +45,6 @@ module.exports = class PartyScoreView extends Backbone.View
   events:
     'mouseenter [data-party-id]': '_onMouseenterParty'
     'mouseleave [data-party-id]': '_onMouseleaveParty'
-    'touchstart [data-party-id]': '_onTouchstartParty'
-    'touchend': '_onTouchend'
-    'touchcancel': '_onTouchcancel'
 
   initialize: (options) ->
     throw 'must pass options.province, a Province' if 'province' not of options
@@ -100,9 +97,6 @@ module.exports = class PartyScoreView extends Backbone.View
 
   _onMouseenterParty: (e) -> @_showTooltip(e.currentTarget)
   _onMouseleaveParty: -> @_showTooltip(null)
-  _onTouchstartParty: (e) -> @_showTooltip(e.currentTarget)
-  _onTouchend: -> @_showTooltip(null)
-  _onTouchcancel: -> @_showTooltip(null)
 
   _showTooltip: (target) ->
     partyId = target?.getAttribute('data-party-id')
