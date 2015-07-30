@@ -13,7 +13,7 @@ module.exports = class UserProfileView extends Backbone.View
     <fieldset class="province-code">
       <legend>#{M.whereYouLive}</legend>
 
-      <select id="province-code" name="provinceCode" value="">
+      <select id="province-code" name="province-code" value="">
         <option value="">#{M.preferNotToSay}</option>
         <% provinces.forEach(function(province) { %>
           <option value="<%- province.code %>"><%- province.name %></option>
@@ -42,4 +42,4 @@ module.exports = class UserProfileView extends Backbone.View
     e.preventDefault()
 
     @trigger 'user-set-profile',
-      provinceCode: @$('input[name="provinceCode"]').val() || null
+      provinceCode: @$('[name="province-code"]').val() || null
