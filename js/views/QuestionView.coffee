@@ -7,6 +7,8 @@ Policies = require('../../lib/Policies')
 M = global.Messages.QuestionView
 Numeral = global.Messages.Numeral
 
+ClickDelay = 400 # ms after a policy goes away before another comes
+
 module.exports = class QuestionView extends Backbone.View
   className: 'question'
   template: _.template("""
@@ -69,12 +71,19 @@ module.exports = class QuestionView extends Backbone.View
   render: ->
     [ policy1, policy2 ] = @pick2()
     @$el.html(@template(policy1: policy1, policy2: policy2, nVotesMessage: @_buildNVotesMessage()))
+    @$('button.choice')
+      .css(opacity: 0)
+      .animate({ opacity: 1 }, duration: 100)
     @
 
   _onClickChoice: (e) ->
-    policyId = $(e.currentTarget).attr('data-policy-id')
-    otherPolicyId = $(e.currentTarget).attr('data-other-policy-id')
-    @nVotes++
-    @trigger('user-prefers-policy', Policies.byId[policyId], Policies.byId[otherPolicyId])
+    $(e.currentTarget).addClass('active')
+    @$('button.choice')
+      .prop('disabled', true)
+      .animate { opacity: 0 }, duration: ClickDelay, easing: 'linear', complete: =>
+        policyId = $(e.currentTarget).attr('data-policy-id')
+        otherPolicyId = $(e.currentTarget).attr('data-other-policy-id')
+        @nVotes++
+        @trigger('user-prefers-policy', Policies.byId[policyId], Policies.byId[otherPolicyId])
 
   _onClickShowStatistics: -> @trigger('show-statistics')
