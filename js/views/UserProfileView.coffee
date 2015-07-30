@@ -14,19 +14,21 @@ module.exports = class UserProfileView extends Backbone.View
       <legend>#{M.whereYouLive}</legend>
 
       <select id="province-code" name="province-code" value="">
-        <option value="">#{M.preferNotToSay}</option>
+        <option value="-">#{M.selectProvince}</option>
         <% provinces.forEach(function(province) { %>
           <option value="<%- province.code %>"><%- province.name %></option>
         <% }); %>
+        <option value="">#{M.preferNotToSay}</option>
       </select>
     </fieldset>
     <fieldset class="actions">
-      <button type="submit" class="submit">#{M.ready}</button>
+      <button disabled="disabled" type="submit" class="submit">#{M.ready}</button>
     </fieldset>
   """)
 
   events:
     'submit': '_onSubmit'
+    'change [name=province-code]': '_onChangeProvince'
 
   render: ->
     provinces = Provinces.all.slice()
@@ -39,7 +41,12 @@ module.exports = class UserProfileView extends Backbone.View
     @trigger('user-clicked')
 
   _onSubmit: (e) ->
+    return if @$('[name="province-code"]').val() == '-'
+
     e.preventDefault()
 
     @trigger 'user-set-profile',
       provinceCode: @$('[name="province-code"]').val() || null
+
+  _onChangeProvince: ->
+    @$('button').prop('disabled', @$('[name="province-code"]').val() == '-')
