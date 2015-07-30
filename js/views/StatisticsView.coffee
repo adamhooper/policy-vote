@@ -11,6 +11,8 @@ positionTooltip = require('../positionTooltip')
 
 M = global.Messages.StatisticsView
 
+MaxClickDistance = 20 # ignore clicks that are further than this distance from the center of a policy
+
 module.exports = class StatisticsView extends Backbone.View
   className: 'statistics'
 
@@ -29,6 +31,11 @@ module.exports = class StatisticsView extends Backbone.View
     @listenTo(@partyScoreView, 'rendered', => @trigger('rendered'))
     @listenTo(@forAgainstView, 'rendered', => @trigger('rendered'))
     @listenTo(@policyScoreView, 'rendered', => @trigger('rendered'))
+    $(document).on('click.statistics', (e) => @_onClickDocument(e))
+
+  remove: ->
+    $(document).off('click.statistics')
+    super.remove()
 
   templates:
     main: _.template("""
@@ -92,10 +99,6 @@ module.exports = class StatisticsView extends Backbone.View
   events:
     'mouseenter [data-policy-id]': '_onMouseenterPolicy'
     'mouseleave [data-policy-id]': '_onMouseleavePolicy'
-    'touchstart': '_onTouchstart'
-    'touchmove': '_onTouchmove'
-    'touchend': '_onTouchend'
-    'touchcancel': '_onTouchCancel'
     'click .back-to-questions button': '_onClickBackToQuestions'
 
   render: ->
@@ -160,13 +163,51 @@ module.exports = class StatisticsView extends Backbone.View
     else
       @_hideTooltip()
 
-  _onTouchstart: (e) -> @_handleTouch(e)
-  _onTouchmove: (e) -> @_handleTouch(e)
-  _onTouchCancel: -> @_hideTooltip()
-  _onTouchend: -> @_hideTooltip()
-
   _onMouseenterPolicy: (e) -> @_setTooltipTarget(e.currentTarget)
   _onMouseleavePolicy: -> @_hideTooltip()
+
+  _onClickDocument: (e) ->
+    # If the user clicks _near_ a policy, open it. This is for mobile, where
+    # the policies are too small to click.
+    minDistance = MaxClickDistance
+    bestEl = null
+
+    if $(e.target).closest('table.parties').length
+      # Find the policy in the table
+      x = e.originalEvent.clientX
+      y = e.originalEvent.clientY
+
+      for el in @$('table.parties li.policy')
+        bounds = el.getBoundingClientRect()
+        cx = bounds.left + bounds.width / 2
+        cy = bounds.top + bounds.height / 2
+        # Manhattan distance, because who cares?
+        distance = Math.abs(cx - x) + Math.abs(cy - y)
+        if distance < minDistance
+          bestEl = el
+          minDistance = distance
+
+    else if $(e.target).closest('.policy-score .chart').length
+      # Find the policy in the SVG
+      chart = $(e.target).closest('.policy-score .chart').get(0)
+      bounds = chart.getBoundingClientRect()
+      g = chart.querySelector('svg>g')
+      x = e.originalEvent.clientX - bounds.left - g.transform.baseVal[0].matrix.e
+      y = e.originalEvent.clientY - bounds.top
+
+      for el in chart.querySelectorAll('.policy')
+        cx = el.cx.baseVal.value
+        cy = el.cy.baseVal.value
+        # Manhattan distance, because who cares?
+        distance = Math.abs(cx - x) + Math.abs(cy - y)
+        if distance < minDistance
+          bestEl = el
+          minDistance = distance
+
+    if bestEl?
+      @_setTooltipTarget(bestEl)
+    else
+      @_hideTooltip()
 
   _onClickBackToQuestions: (e) -> @trigger('clicked-back-to-questions')
 
