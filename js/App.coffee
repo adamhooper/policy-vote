@@ -43,8 +43,6 @@ module.exports = class App extends Backbone.View
         @questionView.delegateEvents()
       @$el.append(@questionView.el)
     else
-      @statisticsView?.remove()
-
       StatisticsView = require('./views/StatisticsView')
       @statisticsView = new StatisticsView(province: @getUserProvince(), votes: @votes)
       @listenTo(@statisticsView, 'rendered', => @pymChild.sendHeight())

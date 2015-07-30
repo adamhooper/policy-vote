@@ -35,7 +35,7 @@ module.exports = class StatisticsView extends Backbone.View
 
   remove: ->
     $(document).off('click.statistics')
-    super.remove()
+    Backbone.View.prototype.remove.apply(@)
 
   templates:
     main: _.template("""
