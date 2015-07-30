@@ -71,18 +71,20 @@ module.exports = class QuestionView extends Backbone.View
   render: ->
     [ policy1, policy2 ] = @pick2()
     @$el.html(@template(policy1: policy1, policy2: policy2, nVotesMessage: @_buildNVotesMessage()))
-    @$('button.choice')
+    @$('.choices')
       .css(opacity: 0)
       .animate({ opacity: 1 }, duration: 100)
     @
 
   _onClickChoice: (e) ->
     $(e.currentTarget).addClass('active')
-    @$('button.choice')
-      .prop('disabled', true)
+    policyId = $(e.currentTarget).attr('data-policy-id')
+    otherPolicyId = $(e.currentTarget).attr('data-other-policy-id')
+
+    @$('button.choice').prop('disabled', true)
+
+    @$('.choices')
       .animate { opacity: 0 }, duration: ClickDelay, easing: 'linear', complete: =>
-        policyId = $(e.currentTarget).attr('data-policy-id')
-        otherPolicyId = $(e.currentTarget).attr('data-other-policy-id')
         @nVotes++
         @trigger('user-prefers-policy', Policies.byId[policyId], Policies.byId[otherPolicyId])
 
