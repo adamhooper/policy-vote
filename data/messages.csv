@@ -2,7 +2,7 @@ key,en,fr,notes-for-translators
 DotColorLegend.multiPartyPolicy,Proposals with multi-party support,Propositions défendues par plusieurs partis,
 DotColorLegend.onePartyPolicy,Proposals supported by a single party,Propositions défendues par un seul parti,
 ForAgainstView.title,Here are your picks,Voici vos choix,
-ForAgainstView.blurb,Check out which parties support both your favourite proposals and the ideas you rejected.,Découvrez quel(s) parti(s) appuie(nt) à la fois vos propositions préférées et celles que vous avez rejetées.,
+ForAgainstView.blurb,Check out which parties support both your favourite proposals and the ideas you rejected.,Découvrez quels partis appuient à la fois vos propositions préférées et celles que vous avez rejetées.,
 ForAgainstView.th.chosen,Chosen,Choisies,
 ForAgainstView.th.rejected,Rejected,Rejetées,
 Numeral.0,zero,zéro,
