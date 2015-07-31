@@ -37,6 +37,7 @@ module.exports = class PartyScoreView extends Backbone.View
           <% }); %>
         </ul>
       </div>
+      <p class="blurb">#{M.blurb2 || ''}</p>
     """)
 
     tooltip: _.template("""
