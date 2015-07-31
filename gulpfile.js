@@ -13,7 +13,6 @@ var postcss = require('gulp-postcss');
 var minifyCss = require('gulp-minify-css')
 var sourcemaps = require('gulp-sourcemaps');
 var source = require('vinyl-source-stream');
-var watchify = require('watchify');
 var watch = require('gulp-watch');
 
 // inspired by
@@ -25,6 +24,7 @@ var customOpts = {
 };
 function basenameToEntries(basename) { return [ './js/' + basename + '.coffee' ]; }
 function watchJs(basename) {
+  var watchify = require('watchify');
   var opts = assign({ entries: basenameToEntries(basename) }, watchify.args, customOpts);
   var b = watchify(browserify(opts));
   b.transform(require('coffeeify'));
