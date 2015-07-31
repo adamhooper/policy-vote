@@ -2,7 +2,7 @@ key,en,fr,notes-for-translators
 DotColorLegend.multiPartyPolicy,Proposals with multi-party support,Propositions défendues par plusieurs partis,
 DotColorLegend.onePartyPolicy,Proposals supported by a single party,Propositions défendues par un seul parti,
 ForAgainstView.title,Here are your picks,Voici vos choix,
-ForAgainstView.blurb,Check out which parties support both your favourite proposals and the ideas you rejected.,FR - Check out which parties support both your favourite proposals and the ideas you rejected.,
+ForAgainstView.blurb,Check out which parties support both your favourite proposals and the ideas you rejected.,Découvrez quel(s) parti(s) appuie(nt) à la fois vos propositions préférées et celles que vous avez rejetées.,
 ForAgainstView.th.chosen,Chosen,Choisies,
 ForAgainstView.th.rejected,Rejected,Rejetées,
 Numeral.0,zero,zéro,
@@ -15,14 +15,14 @@ Numeral.6,six,six,
 Numeral.7,seven,sept,
 Numeral.8,eight,huit,
 Numeral.9,nine,neuf,
-Policies.0,proposal,propositions,
+Policies.0,proposal,proposition,
 Policies.1,proposal,proposition,"This will go next to a party name: e.g., ""one Liberal policy"""
 Policies.else,proposals,propositions,"This will go next to a party name: e.g., ""three Liberal policies"""
 PartyScoreView.title,Results: The parties behind your priorities,Vos résultats : Les partis qui correspondent à vos priorités,
-PartyScoreView.tooltip,You chose {N} of {D} {party} {policiesD} we showed you.,Vous avez choisi {N} {policiesN} sur {D} du {party}.,"""{N}"" is the number of policies the user chose. ""{D}"" is the number we showed. ""{party}"" is the name of the political party. ""{policiesN}"" is either the word ""policy"" or the word ""policies"", depending on N. ""{policiesD}"" is the same, depending on D. So the english will be, ""You chose 2 of 5 Liberal policies we showed you."""
-PartyScoreView.blurb,You picked {Npolicies}. The percentages below tell you how often your own picks matched each party’s proposals.,FR - You picked {Npolicies}. The percentages below tell you how often your own picks matched each party’s proposals.,"""{Npolicies}"" turns into ""one proposal"" or ""zéro propositions""."
+PartyScoreView.tooltip,You chose {N} of {D} {party} {policiesD} we showed you.,Vous avez choisi {N} proposition(s) sur {D} du {party}.,"""{N}"" is the number of policies the user chose. ""{D}"" is the number we showed. ""{party}"" is the name of the political party. ""{policiesN}"" is either the word ""policy"" or the word ""policies"", depending on N. ""{policiesD}"" is the same, depending on D. So the english will be, ""You chose 2 of 5 Liberal policies we showed you."""
+PartyScoreView.blurb,You picked {Npolicies}. The percentages below tell you how often your own picks matched each party’s proposals.,Vous avez choisi {Npolicies} proposition(s). Les pourcentages ci-dessous vous indiquent dans quelle proportion elle(s) correspond(ent) à chacun des partis.,"""{Npolicies}"" turns into ""one proposal"" or ""zéro propositions""."
 PolicyScoreView.title,Our readers' overall picks,Les choix des internautes,
-PolicyScoreView.blurb,Do your priorities match the choices of the rest of our readers? Find out on this snapshot of each proposal’s overall popularity. A policy that scores 50 per cent was chosen by half our readers.,FR - Do your priorities match the choices of the rest of our readers? Find out on this snapshot of each proposal’s overall popularity. Un résultat de 50 % signifie que la moitié des internautes ont sélectionné cette proposition.,
+PolicyScoreView.blurb,Do your priorities match the choices of the rest of our readers? Find out on this snapshot of each proposal’s overall popularity. A policy that scores 50 per cent was chosen by half our readers.,Vos priorités correspondent-elles à celles des autres internautes ? La grille ci-dessous évalue la popularité de chacune des propositions. Un résultat de 50 % signifie que la moitié des internautes ont sélectionné une idée.,
 QuestionView.title,Which proposal do you prefer?,"Parmi les deux propositions suivantes, laquelle préférez-vous ?",
 QuestionView.done,Show my results,Mes résultats,
 QuestionView.progress.<2,Pick your priority. We'll chart your preferences.,Faites un choix. Nous analyserons vos préférences.,
@@ -37,10 +37,10 @@ ShareView.twitter,Tweet,Tweeter,
 StatisticsView.promisedBy,Promised by,Promis par,This looks like 'Promised by •NDP •Lib •Cons'
 StatisticsView.youChoseThisOver,You chose this proposal over:,Vous avez choisi cette proposition plutôt que :,
 StatisticsView.youDislikedThisComparedTo,You disliked this proposal compared to:,Vous avez rejeté cette proposition et choisi :,
-StatisticsView.backToQuestions.0,Pick a proposal,FR - Pick a proposal,
-StatisticsView.backToQuestions.else,Pick more proposals,FR - Pick more proposals,
-StatisticsView.tweetText,EN - I chose {N}/{D} {P} policy proposals. Whose proposals do you prefer? Quiz yourself. {} #elxn42 #macdebate,FR - I chose {N}/{D} {P} policy proposals. Whose proposals do you prefer? Quiz yourself. {} #elxn42 #macdebate,"""{N}"" is number of policies chosen for the top party. ""{D}"" is number shown for the top party. ""{P}"" is the top party. ""{}"" is a URL. N and D are always >= 2."
+StatisticsView.backToQuestions.0,Pick a proposal,Sélectionnez une proposition,
+StatisticsView.backToQuestions.else,Pick more proposals,Sélectionnez plus de propositions,
+StatisticsView.tweetText,I chose {N}/{D} {P} policy proposals. Which party shares your priorities most? Try Maclean's Policy Face-Off Machine: {} #elxn42 #macdebate,J'ai choisi {N} propositions sur {D} du {P}. Quel parti vous ressemble le plus ? Faites le test ! {} #elxn42 #macdebate,"""{N}"" is number of policies chosen for the top party. ""{D}"" is number shown for the top party. ""{P}"" is the top party. ""{}"" is a URL. N and D are always >= 2."
 UserProfileView.preferNotToSay,I'd prefer not to say,Je préfère ne pas répondre,
-UserProfileView.selectProvince,Choose a province,FR - Choose a province,
+UserProfileView.selectProvince,Choose a province,FR - jfnejlfnlwke,
 UserProfileView.ready,I'm ready,Commencez ici,
 UserProfileView.whereYouLive,Where will you vote?,Dans quelle province voterez-vous ?,
