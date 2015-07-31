@@ -39,7 +39,7 @@ StatisticsView.youChoseThisOver,You chose this proposal over:,Vous avez choisi c
 StatisticsView.youDislikedThisComparedTo,You disliked this proposal compared to:,Vous avez rejeté cette proposition et choisi :,
 StatisticsView.backToQuestions.0,Pick a proposal,Sélectionnez une proposition,
 StatisticsView.backToQuestions.else,Pick more proposals,Sélectionnez plus de propositions,
-StatisticsView.tweetText,I chose {N}/{D} {P} policy proposals. Which party shares your priorities most? Try Maclean's Policy Face-Off Machine: {} #elxn42 #macdebate,J'ai choisi {N} propositions sur {D} du {P}. Quel parti vous ressemble le plus ? Faites le test ! {} #elxn42 #macdebate,"""{N}"" is number of policies chosen for the top party. ""{D}"" is number shown for the top party. ""{P}"" is the top party. ""{}"" is a URL. N and D are always >= 2."
+StatisticsView.tweetText,I chose {N}/{D} {P} proposals. Which party shares your priorities? Try our Policy Face-Off Machine: {} #elxn42,J'ai choisi {N} propositions sur {D} du {P}. Quel parti vous ressemble le plus ? Faites le test ! {} #elxn42 #macdebate,"""{N}"" is number of policies chosen for the top party. ""{D}"" is number shown for the top party. ""{P}"" is the top party. ""{}"" is a URL. N and D are always >= 2."
 UserProfileView.preferNotToSay,I'd prefer not to say,Je préfère ne pas répondre,
 UserProfileView.selectProvince,Choose a province,Sélectionnez une province,
 UserProfileView.ready,I'm ready,Commencez ici,
