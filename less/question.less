@@ -11,7 +11,12 @@
     font: inherit;
     .button-default();
     font-size: .9rem;
-    width: 18rem;
+    // On desktop, we don't want the width of buttons to change. But on mobile,
+    // we want 100%. Compromise: on desktop, they may change between 17rem and
+    // 20rem. (17rem happens for a one-line policy.)
+    min-width: 17rem;
+    width: 100%;
+    max-width: 20rem;
   }
 
   .inner {
