@@ -4,13 +4,23 @@
       "name": "macleans-policy-vote-2015",
       "script": "server.js",
       "env": { "PORT": "3000" },
-      "env_production": { "NODE_ENV": "production" }
+      "env_production": { "NODE_ENV": "production" },
+      "env_staging": { "NODE_ENV": "production" }
     }
   ],
   "deploy": {
     "production": {
       "user": "pm2",
       "host": "macleans-policy-vote-2015.adamhooper-projects.com",
+      "forward-agent": "true",
+      "ref": "origin/master",
+      "repo": "git@github.com:adamhooper/policy-vote.git",
+      "path": "/opt/policy-vote/code",
+      "post-deploy": "deploy/post-deploy-hook.sh"
+    },
+    "staging": {
+      "user": "pm2",
+      "host": "macleans-policy-vote-2015-staging.adamhooper-projects.com",
       "forward-agent": "true",
       "ref": "origin/master",
       "repo": "git@github.com:adamhooper/policy-vote.git",

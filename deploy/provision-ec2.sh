@@ -10,12 +10,28 @@ AVAILABILITY_ZONE=us-east-1a
 TAG=macleans-policy-vote-2015
 BASE_IMAGE=ami-1733fc7c # https://cloud-images.ubuntu.com/releases/vivid/release-20150707/ us-east-1 64-bit hvm
 
-VOLUME_ID=vol-e6ec421d # macleans-policy-vote-2015: 40GB GP2 (big so it'll get IOPS)
+[ -z "$DEPLOY_ENV" ] && &>2 echo 'Must be run with DEPLOY_ENV=production or DEPLOY_ENV=staging' && exit 1
+
 VPC_ID=vpc-3bbea35e # macleans: a VPC, 10.1.0.0/16
 SUBNET_ID=subnet-914307c8 # macleans: VPC macleans, zone us-east-1a, 10.1.0.0/24, auto-assign public IP
 # Also need an internet gateway, igw-66bbf203, attached to macleans VPC, added to 0.0.0.0/0 in macleans route table
-ELASTIC_IP_ADDRESS=52.2.169.255
-ELASTIC_IP_ID=eipalloc-29e7b94c
+
+ELASTIC_IP_ADDRESS_production=52.2.169.255
+ELASTIC_IP_ID_production=eipalloc-29e7b94c
+ELASTIC_IP_ADDRESS_staging=52.6.146.132
+ELASTIC_IP_ID_staging=eipalloc-3f65465a
+
+X="ELASTIC_IP_ADDRESS_$DEPLOY_ENV"
+ELASTIC_IP_ADDRESS=${!X}
+X="ELASTIC_IP_ID_$DEPLOY_ENV"
+ELASTIC_IP_ID=${!X}
+
+VOLUME_ID_production=vol-e6ec421d # macleans-policy-vote-2015: 40GB GP2 (big so it'll get IOPS)
+VOLUME_ID_staging=vol-9b3caa60
+
+X="VOLUME_ID_$DEPLOY_ENV"
+VOLUME_ID=${!X}
+
 SECURITY_GROUP_ID=sg-ff449098 # macleans-policy-vote-2015: VPC macleans, inbound HTTP and SSH from Anywhere
 
 wait_for_ssh() {
@@ -61,15 +77,6 @@ wait_for_instance_ip() {
   else
     echo $ip
   fi
-}
-
-get_instance_id() {
-  aws ec2 describe-instances \
-    --filters \
-      "Name=instance.group-name,Values=macleans-policy-vote-2015" \
-      "Name=instance-state-name,Values=pending,running" \
-    --query 'Reservations[*].Instances[*].InstanceId' \
-    --output text
 }
 
 run_server() {
