@@ -83,6 +83,7 @@ module.exports = class App extends Backbone.View
     @showStatistics = false
     @statisticsView.remove()
     @statisticsView = null
+    @pymChild.scrollParentTo('macleans-policy-vote-2015')
     @render()
 
 App.setLanguage = (languageCode) ->
