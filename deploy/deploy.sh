@@ -16,7 +16,5 @@ for f in $(ls "$DIST_DIR"/*.css "$DIST_DIR"/*.js "$DIST_DIR"/*.js.map); do
     --cache-control no-cache
 done
 
-aws s3 cp "$DIR"/*.css "$DIR"/*.js "$DIR"/*.js.map s3://macleans-policy-vote-2015/
-
 (cd "$DIR" && npm install) # make sure pm2 is installed
 (cd "$DIR" && node_modules/.bin/pm2 deploy ecosystem.json production)
