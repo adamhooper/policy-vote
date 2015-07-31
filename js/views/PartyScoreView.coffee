@@ -131,13 +131,10 @@ module.exports = class PartyScoreView extends Backbone.View
 
   _getBlurbMessage: ->
     m = global.Messages
-    nText = m.n(@votes.length)
-    nPoliciesText = if @votes.length == 1
-      "#{nText} #{m.Policies['1']}"
+    if @votes.length == 1
+      M.blurb['1']
     else
-      "#{nText} #{m.Policies.else}"
-    M.blurb
-      .replace('{Npolicies}', nPoliciesText)
+      M.blurb.else.replace('{N}', m.n(@votes.length))
 
   _getTooltipMessage: (nYay, nTotal, partyName) ->
     m = global.Messages
