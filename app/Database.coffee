@@ -71,7 +71,7 @@ module.exports = class Database
         vote.provinceCode,
         vote.userId,
         vote.ip
-      ].join(',') + '\n')
+      ].join(',') + '\n', 'utf-8', (err) -> console.warn(err) if err)
     else
       console.log("Skipped vote with invalid policy(ies): #{JSON.stringify(vote)}")
 
