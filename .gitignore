@@ -4,3 +4,4 @@ data/votes.csv
 dist/index.*.js
 dist/index.*.js.map
 dist/index.css
+dist/*.gz

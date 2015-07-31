@@ -6,6 +6,7 @@ fs = require('fs')
 morgan = require('morgan')
 sessions = require('client-sessions')
 uuid = require('node-uuid')
+zlib = require('zlib')
 
 Database = require('./Database')
 
@@ -30,18 +31,29 @@ if ApplicationSecret == 'not a secret' && process.env.NODE_ENV not in [ 'develop
   throw new Error('You must set an APPLICATION_SECRET environment variable')
 
 Index =
-  en: fs.readFileSync(__dirname + '/../dist/index.html')
-  fr: fs.readFileSync(__dirname + '/../dist/index.fr.html')
+  plain:
+    en: fs.readFileSync(__dirname + '/../dist/index.html')
+    fr: fs.readFileSync(__dirname + '/../dist/index.fr.html')
 
 if process.env.ASSET_BASE
-  en = Index.en.toString('utf-8')
-    .replace('index.css', process.env.ASSET_BASE + '/index.css')
-    .replace('index.en.js', process.env.ASSET_BASE + '/index.en.js')
-  fr = Index.fr.toString('utf-8')
-    .replace('index.css', process.env.ASSET_BASE + '/index.css')
-    .replace('index.fr.js', process.env.ASSET_BASE + '/index.fr.js')
-  Index.en = new Buffer(en, 'utf-8')
-  Index.fr = new Buffer(fr, 'utf-8')
+  for lang, buffer of Index.plain
+    text = buffer.toString('utf-8')
+      .replace('index.css', process.env.ASSET_BASE + '/index.css')
+      .replace("index.#{lang}.js", process.env.ASSET_BASE + "/index.#{lang}.js")
+
+    Index.plain[lang] = new Buffer(text, 'utf-8')
+
+Index.gz = {}
+
+for lang, buffer of Index.plain
+  text = buffer.toString('utf-8')
+
+  if process.env.ASSET_BASE
+    text = text
+      .replace('.css"', '.css.gz"')
+      .replace('.js"', '.js.gz"')
+
+  Index.gz[lang] = zlib.gzipSync(new Buffer(text, 'utf-8'))
 
 app.database = new Database(csvOutputStream: csv)
 
@@ -68,7 +80,12 @@ app.use (req, res, next) ->
     # Set policyVoteSession.userId when users first visit the page
     req.policyVoteSession.userId = uuid.v1()
     res.set('Content-Type', 'text/html; charset=utf-8')
-    res.send(Index[indexKey])
+
+    if req.acceptsEncodings('gzip')
+      res.set('Content-Encoding', 'gzip')
+      res.send(Index.gz[indexKey])
+    else
+      res.send(Index.plain[indexKey])
   else
     next()
 
