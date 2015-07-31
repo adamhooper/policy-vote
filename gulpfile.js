@@ -13,7 +13,6 @@ var postcss = require('gulp-postcss');
 var minifyCss = require('gulp-minify-css')
 var sourcemaps = require('gulp-sourcemaps');
 var source = require('vinyl-source-stream');
-var request = require('request');
 var watchify = require('watchify');
 var watch = require('gulp-watch');
 
@@ -59,6 +58,7 @@ function runBrowserify(b, basename) {
 
 gulp.task('policies-csv', function() {
   var url = 'https://docs.google.com/spreadsheets/d/1pwNglbBgZG9-x_gEypBBFeL-gahBas0ZSuHNoOVpn8c/pub?gid=1636922037&single=true&output=csv';
+  var request = require('request');
   request(url)
     .pipe(source('policies.csv'))
     .pipe(gulp.dest('./data'));
@@ -66,6 +66,7 @@ gulp.task('policies-csv', function() {
 
 gulp.task('messages-csv', function() {
   var url = 'https://docs.google.com/spreadsheets/d/1H09ZnN088wRCfwOzZItn8SGIa9626f33tWshSZrknec/pub?gid=0&single=true&output=csv';
+  var request = require('request');
   request(url)
     .pipe(source('messages.csv'))
     .pipe(gulp.dest('./data'));
