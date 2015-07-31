@@ -76,7 +76,7 @@ module.exports = class StatisticsView extends Backbone.View
         </div>
       <% } %>
 
-      <div class="policy-score"></div>
+      <!--<div class="policy-score"></div>-->
     """)
 
     policyDetails: _.template("""
