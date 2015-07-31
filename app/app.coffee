@@ -41,7 +41,7 @@ app.use(sessions({
 
 # Set policyVoteSession.userId when users first visit the page
 app.use (req, res, next) ->
-  if req.path == '/'
+  if req.path == '/' || req.path == '/index.html' || req.path == '/index.fr.html'
     req.policyVoteSession.userId = uuid.v1()
   next()
 
