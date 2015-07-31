@@ -25,7 +25,7 @@
       "ref": "origin/master",
       "repo": "git@github.com:adamhooper/policy-vote.git",
       "path": "/opt/policy-vote/code",
-      "post-deploy": "deploy/post-deploy-hook.sh"
+      "post-deploy": "deploy/post-deploy-hook-staging.sh"
     }
   }
 }

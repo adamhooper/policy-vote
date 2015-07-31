@@ -10,6 +10,8 @@ DIST_DIR="$DIR"/dist
 
 set -e
 
+(cd "$DIR" && gulp)
+
 for f in $(ls "$DIST_DIR"/*.css "$DIST_DIR"/*.js "$DIST_DIR"/*.js.map); do
   aws s3 cp "$f" "s3://macleans-policy-vote-2015-staging" \
     --acl public-read \
