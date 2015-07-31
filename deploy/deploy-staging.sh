@@ -17,10 +17,12 @@ for f in $(ls "$DIST_DIR"/*.css "$DIST_DIR"/*.js "$DIST_DIR"/*.js.map); do
     --acl public-read \
     --cache-control no-cache
 done
-aws s3 cp "$DIST_DIR"/fonts "s3://macleans-policy-vote-2015-staging/fonts" \
-  --recursive \
-  --acl public-read \
-  --cache-control no-cache
+for f in $(ls "$DIST_DIR"/fonts/*); do
+  aws s3 cp "$f" "s3://macleans-policy-vote-2015-staging/fonts" \
+    --acl public-read \
+    --content-type $(file -b --mime-type "$f") \
+    --cache-control no-cache
+done
 
 (cd "$DIR" && npm install) # make sure pm2 is installed
 (cd "$DIR" && node_modules/.bin/pm2 deploy ecosystem.json staging)
