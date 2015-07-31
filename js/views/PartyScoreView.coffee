@@ -138,7 +138,7 @@ module.exports = class PartyScoreView extends Backbone.View
 
   _getTooltipMessage: (nYay, nTotal, partyName) ->
     m = global.Messages
-    policiesNText = if nTotal == 0 then m.Policies['0'] else if nTotal == 1 then m.Policies['1'] else m.Policies.else
+    policiesNText = if nYay == 0 then m.Policies['0'] else if nYay == 1 then m.Policies['1'] else m.Policies.else
     policiesDText = if nTotal == 1 then m.Policies['1'] else m.Policies.else
     M.tooltip
       .replace('{N}', nYay)
