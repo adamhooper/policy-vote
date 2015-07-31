@@ -58,32 +58,6 @@ apt_sources:
       -----END PGP PUBLIC KEY BLOCK-----
 packages:
   - nodejs
-  - varnish
-write_files:
-  - path: /tmp/varnish.service
-    content: |
-      [Unit]
-      Description=Varnish HTTP accelerator
-
-      [Service]
-      Type=forking
-      LimitNOFILE=131072
-      LimitMEMLOCK=82000
-      ExecStartPre=/usr/sbin/varnishd -C -f /etc/varnish/default.vcl
-      ExecStart=/usr/sbin/varnishd -a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,64m
-      ExecReload=/usr/share/varnish/reload-vcl
-
-      [Install]
-      WantedBy=multi-user.target
-
-  - path: /etc/varnish/default.vcl
-    content: |
-      vcl 4.0;
-
-      backend default {
-        .host = "127.0.0.1";
-        .port = "3000";
-      }
 users:
   - default
   - name: pm2
@@ -101,6 +75,6 @@ runcmd:
   - mkdir /mnt/policy-vote
   - mount /dev/xvdf /mnt/policy-vote
   - chown pm2:pm2 /mnt/policy-vote -R
-  - cp /tmp/varnish.service /etc/systemd/system/multi-user.target.wants/varnish.service
   - mkdir /opt/policy-vote
   - chown pm2:pm2 /opt/policy-vote
+  - iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
