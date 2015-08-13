@@ -26,6 +26,7 @@ PartyScoreView.blurb2,Surprised by your results? Check out the graph below for a
 PolicyScoreView.title,Our readers' overall picks,Les choix des internautes,
 PolicyScoreView.blurb,Do your priorities match the choices of the rest of our readers? Find out on this snapshot of each proposal’s overall popularity. A policy that scores 50 per cent was chosen by half our readers.,Vos priorités correspondent-elles à celles des autres internautes ? La grille ci-dessous évalue la popularité de chacune des propositions. Un résultat de 50 % signifie que la moitié des internautes ont sélectionné une idée.,
 QuestionView.title,Which proposal do you prefer?,"Parmi les deux propositions suivantes, laquelle préférez-vous ?",
+QuestionView.pass,Pass,FR - Pass,
 QuestionView.done,Show my results,Mes résultats,
 QuestionView.progress.<2,Pick your priority. We'll chart your preferences.,Faites un choix. Nous analyserons vos préférences.,
 QuestionView.progress.<13,You've picked {} proposals. Aim for at least 20.,Vous avez sélectionné {} propositions. Visez-en au moins 20 !,"""{}"" will be replaced with a numeral: 'two' ... 'nine' or 'deux' ... 'neuf'."

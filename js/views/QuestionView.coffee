@@ -24,6 +24,9 @@ module.exports = class QuestionView extends Backbone.View
         </span>
       </button>
     </div>
+    <div class="pass">
+      <button class="pass">#{M.pass}</button>
+    </div>
     <div class="done">
       <p class="explanation"><%- nVotesMessage %></p>
       <button class="show-statistics">#{M.done} <i class="icon icon-caret-right"></i></button>
@@ -32,6 +35,7 @@ module.exports = class QuestionView extends Backbone.View
 
   events:
     'click button.choice': '_onClickChoice'
+    'click button.pass': '_onClickPass'
     'click button.show-statistics': '_onClickShowStatistics'
 
   initialize: (options) ->
@@ -85,5 +89,10 @@ module.exports = class QuestionView extends Backbone.View
       .animate { opacity: 0 }, duration: ClickDelay, easing: 'linear', complete: =>
         @nVotes++
         @trigger('user-prefers-policy', Policies.byId[policyId], Policies.byId[otherPolicyId])
+
+  _onClickPass: ->
+    @$('button.choice').prop('disabled', true)
+    @$('.choices')
+      .animate({ opacity: 0 }, duration: ClickDelay, easing: 'linear', complete: => @render())
 
   _onClickShowStatistics: -> @trigger('show-statistics')
