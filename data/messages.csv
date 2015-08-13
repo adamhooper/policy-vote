@@ -28,10 +28,9 @@ PolicyScoreView.blurb,Do your priorities match the choices of the rest of our re
 QuestionView.title,Which proposal do you prefer?,"Parmi les deux propositions suivantes, laquelle préférez-vous ?",
 QuestionView.done,Show my results,Mes résultats,
 QuestionView.progress.<2,Pick your priority. We'll chart your preferences.,Faites un choix. Nous analyserons vos préférences.,
-QuestionView.progress.<10,You've picked {} proposals. Aim for at least 10.,Vous avez sélectionné {} propositions. Visez-en au moins 10 !,"""{}"" will be replaced with a numeral: 'two' ... 'nine' or 'deux' ... 'neuf'."
-QuestionView.progress.<20,You've picked {} proposals. Pick 20 for better results.,Vous avez sélectionné {} propositions. Rendez-vous à 20 pour de meilleurs résultats.,"""{}"" will be replaced with a number: 10...19."
-QuestionView.progress.<30,Great! You picked {} proposals. More picks give even better results.,Bien joué ! Vous avez sélectionné {} propositions. Continuez pour des résultats encore plus précis.,"""{}"" will be replaced with a number: 10...19."
-QuestionView.progress.else,You've picked {} proposals. Fabulous charts await.,Vous avez sélectionné {} propositions. Une analyse détaillée de votre profil politique vous attend.,"""{}"" will be replaced with a number: 10...19."
+QuestionView.progress.<13,You've picked {} proposals. Aim for at least 20.,Vous avez sélectionné {} propositions. Visez-en au moins 20 !,"""{}"" will be replaced with a numeral: 'two' ... 'nine' or 'deux' ... 'neuf'."
+QuestionView.progress.<20,You've picked {} proposals. You're nearly at 20.,Vous avez sélectionné {} propositions. Visez-en au moins 20 !,"""{}"" will be replaced with a number: 10...19."
+QuestionView.progress.else,Great! You've picked {} proposals. Fabulous charts await.,Vous avez sélectionné {} propositions. Une analyse détaillée de votre profil politique vous attend.,"""{}"" will be replaced with a number: 10...19."
 ShareView.facebook,Share,Partager,
 ShareView.googlePlus,Share,Partager,
 ShareView.tweetText,So you like a party. Do you like its proposals? Quiz yourself. {} #elxn42 #macdebate,"Vous aimez un parti, mais aimez-vous ce qu'il propose ? Faites le test ! {} #elxn42 #macdebate","""{}"" will be replaced with the URL being shared."

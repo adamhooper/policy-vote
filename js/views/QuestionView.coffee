@@ -5,7 +5,6 @@ _ = require('underscore')
 Policies = require('../../lib/Policies')
 
 M = global.Messages.QuestionView
-Numeral = global.Messages.Numeral
 
 ClickDelay = 400 # ms after a policy goes away before another comes
 
@@ -50,12 +49,10 @@ module.exports = class QuestionView extends Backbone.View
   _buildNVotesMessage: ->
     if @nVotes < 2
       M.progress['<2']
-    else if @nVotes < 10
-      M.progress['<10'].replace('{}', Numeral[String(@nVotes)])
+    else if @nVotes < 13
+      M.progress['<13'].replace('{}', String(@nVotes))
     else if @nVotes < 20
       M.progress['<20'].replace('{}', String(@nVotes))
-    else if @nVotes < 30
-      M.progress['<30'].replace('{}', String(@nVotes))
     else
       M.progress.else.replace('{}', String(@nVotes))
 
@@ -74,6 +71,7 @@ module.exports = class QuestionView extends Backbone.View
     @$('.choices')
       .css(opacity: 0)
       .animate({ opacity: 1 }, duration: 100)
+    @$('button.show-statistics').prop('disabled', @nVotes < 20)
     @
 
   _onClickChoice: (e) ->
