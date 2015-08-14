@@ -149,7 +149,6 @@ module.exports = class StatisticsView extends Backbone.View
       if fraction > topFraction
         topFraction = fraction
         topPartyId = id
-      console.log(fraction, topFraction, topPartyId)
 
     if topPartyId? && partiesById[topPartyId].nYay > 1
       M.tweetText
