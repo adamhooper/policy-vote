@@ -1,5 +1,5 @@
 ul.share {
-  margin: 1rem;
+  margin: 1rem 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -10,9 +10,12 @@ ul.share {
     margin-left: 1rem;
     border-radius: .5rem;
 
+    &:first-child {
+      margin-left: 0;
+    }
+
     &.twitter {
       background: #55acee;
-      margin-left: 0;
     }
 
     &.facebook {
