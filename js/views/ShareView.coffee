@@ -15,13 +15,13 @@ module.exports = class ShareView extends Backbone.View
   tagName: 'ul'
   className: 'share'
 
-  # <li class="twitter">
-  #   <a target="_blank" href="https://twitter.com/intent/tweet?status=<%= encodeURIComponent(text) %>">
-  #     <i class="icon icon-twitter"></i>
-  #     #{M.twitter}
-  #   </a>
-  # </li>
   template: _.template("""
+    <li class="twitter">
+      <a target="_blank" href="https://twitter.com/intent/tweet?status=<%= encodeURIComponent(text) %>">
+        <i class="icon icon-twitter"></i>
+        #{M.twitter}
+      </a>
+    </li>
     <li class="facebook">
       <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(url) %>">
         <i class="icon icon-facebook"></i>
