@@ -11,23 +11,22 @@ id,en,fr,partyIds
 10,"Make admission to national parks free in 2017, the 150th anniversary of Confederation",Offrir l’entrée gratuite dans les parcs nationaux en 2017 pour le 150e anniversaire de la Confédération,L
 11,Ban face coverings such as niqabs or burkas for people swearing their oath of citizenship,Interdire le port du niqab ou de la burqa pendant la prestation du serment de citoyenneté canadienne,C
 12,"Force labour unions to disclose all spending on outside activities above $5,000 and salaries above $100,000/year",Obliger les syndicats à rendre publiques les dépenses de plus de 5 000 $ et les salaires de plus de 100 000 $,C
-13,Establish a youth corps that will provide federal minimum wage employment,Mettre en place une brigade jeunesse qui offrira des emplois au salaire minimum,G
-14,Ban discrimination based on the results of genetic tests,Interdire la discrimination fondée sur les résultats de tests génétiques,C
+13,Establish a youth corps that would earn $15 federal minimum wage,Mettre en place une brigade jeunesse qui offrira des emplois au salaire minimum,G
+14,Ban discrimination based on the results of genetic tests,Interdire la discrimination fondée sur les résultats de tests génétiques,"C,N"
 15,Restore the $115 million cut from the budgets of CBC/Radio-Canada,Reverser à CBC/Radio-Canada les 115 millions $ dont son budget a été amputé,"L,N"
 18,Withdraw Canadian soldiers from the military missions in Iraq and Syria,Rapatrier les militaires qui prennent part à la mission canadienne en Irak et en Syrie,"G,N"
 19,End the Canadian bombing mission against Islamic State in Iraq and Syria,Mettre fin à la mission de bombardement contre l’État islamique en Irak et en Syrie,"G,L,N"
-20,Increase military funding by $11.8 billion over 10 years,"Augmenter le financement des Forces canadiennes de plus de 11,8 milliards $ sur 10 ans",C
+20,Increase military spending by $11.8 billion over 10 years,"Augmenter le financement des Forces canadiennes de plus de 11,8 milliards $ sur 10 ans",C
 21,Provide broadband Internet access to remote areas of Canada,Amener Internet à haute vitesse dans les régions éloignées du Canada,"G,L,N"
-22,"Eliminate the increase to $10,000 in TFSA contribution limits",Annuler la hausse de cotisations à 10 000 $ du CELI,"G,L,N"
-23,Restore the retirement age to 65 rather than 67,Rétablir l’âge de la retraite à 65 ans plutôt que 67 ans,"B,L,N,G"
-24,Increase the Guaranteed Income Supplement for low-income retirees,Hausser le Supplément de revenu garanti pour les retraités ayant un faible revenu,N
+22,Roll back the recent doubling of TFSA contribution limits,Annuler la hausse de cotisations à 10 000 $ du CELI,"G,L,N"
+23,Restore the retirement age to 65 from 67,Rétablir l’âge de la retraite à 65 ans plutôt que 67 ans,"B,L,N,G"
 26,Reduce the small-business tax rate from 11% to 9%,Réduire le taux d’imposition des PME de 11 % à 9 %,"C,G,N"
-28,Prohibit banks from imposing additional fees to make payments,Interdire aux banques d’imposer des frais supplémentaires lorsqu’on effectue des paiements,N
-29,Eliminate income splitting,Annuler le régime de fractionnement du revenu,"G,L,N"
+28,Prohibit banks from charging fees for transactions,Interdire aux banques d’imposer des frais supplémentaires lorsqu’on effectue des paiements,N
+29,Eliminate income splitting for couples,Annuler le régime de fractionnement du revenu,"G,L,N"
 30,"Reduce the tax rate for earnings between $44,401 and $89,401, from 22 per cent to 20.5 per cent","Réduire le taux d’imposition pour les revenus entre 44 700 $ et 89 401 $ de 22 % à 20,5 %",L
 31,"Create a new tax bracket for earnings above $200,000, with a tax rate of 33%",Introduire une nouvelle tranche d’imposition de 33 % pour les revenus de plus de 200 000 $,L
 32,Narrow the price gap between goods sold in Canada and the United States,S’attaquer à l’écart de prix pour un même produit au Canada et aux États-Unis,C
-33,"Take part in negotiations for the Trans-Pacific Partnership, the world's largest free trade deal","Participer aux négociations du Pacte transpacifique, la plus importante entente de libre-échange au monde",C
+33,Take part in negotiations for the Trans-Pacific Partnership,"Participer aux négociations du Pacte transpacifique, la plus importante entente de libre-échange au monde",C
 35,Commit to balancing this year's budget,Maintenir l’équilibre budgétaire pour l’année en cours,"C,N"
 36,Ratify and implement the free trade agreement with the European Union,Ratifier et mettre en œuvre le traité de libre-échange avec l'Union européenne,"C,L"
 37,"Forbid future governments from running deficits, except in cases of recession, war or natural disaster","Interdire les déficits, sauf dans des circonstances exceptionnelles, telles qu’une récession, une guerre ou une catastrophe naturelle",C
@@ -54,7 +53,7 @@ id,en,fr,partyIds
 64,Replace the Universal Child Care Benefit with an allowance based on family income,Remplacer la prestation universelle pour la garde d’enfants (PUGE) par une allocation selon le revenu familial,L
 66,Put Parliament in charge of overseeing national security and intelligence agencies,Confier aux élus la supervision des agences de renseignement et de sécurité nationale,"G,L,N"
 67,Create a single window for all government services,Créer un guichet unique en ligne pour tous les services gouvernementaux,L
-68,Consolidate government science so that it is available to the public,Rendre accessibles au public les travaux scientifiques du gouvernement,L
+68,Make government-funded science available to the public,Rendre accessibles au public les travaux scientifiques du gouvernement,L
 69,Restore the mandatory long-form census,Rétablir le formulaire long obligatoire du recensement de Statistique Canada,"G,L,N"
 71,Eliminate additional fees associated with Access to Information requests,Éliminer tous les frais supplémentaires exigés lors des demandes d’accès à l’information,L
 72,Task a parliamentary committee with reviewing various electoral reform measures,Confier à un comité parlementaire l’évaluation de différents modes de scrutin,L
@@ -62,8 +61,8 @@ id,en,fr,partyIds
 74,Commit to gender parity in Cabinet nominations,Instaurer la parité hommes-femmes au Cabinet ministériel,L
 75,Increase the number of free votes in the House of Commons,Accroître le nombre de votes libres à la Chambre,L
 76,Register 18-year-old students to vote as part of their high school curriculum,Inscrire les jeunes de 18 ans sur les listes électorales dans le cadre de leurs programmes d’études secondaires,L
-77,Install a non-partisan public process for appointing senators,Créer un processus transparent et non partisan pour les nominations de sénateurs,L
-78,Ensure judicial appointments to the Supreme Court are functionally bilingual,Rendre obligatoire la maîtrise des deux langues officielles pour les juges de la Cour suprême,"B,L,N"
+77,Create a non-partisan public process for appointing senators,Créer un processus transparent et non partisan pour les nominations de sénateurs,L
+78,Ensure Supreme Court justices are functionally bilingual,Rendre obligatoire la maîtrise des deux langues officielles pour les juges de la Cour suprême,"B,L,N"
 79,Increase penalties for violation of election laws,Alourdir les peines relatives aux infractions aux lois électorales,L
 80,Make it harder for Canadians abroad to register to vote,Resserrer les règles entourant l’inscription sur la liste électorale des Canadiens vivant à l’extérieur du pays,C
 81,Hold a national referendum on Senate reform,Tenir un référendum national sur la réforme du Sénat,G
@@ -79,34 +78,33 @@ id,en,fr,partyIds
 92,Give municipalities an additional cent per litre from the gas tax,Verser aux municipalités un cent de plus le litre de la taxe sur l’essence,N
 93,Give municipalities an additional five cents per litre from the gas tax,Verser aux municipalités 5 cents de plus le litre de la taxe sur l’essence,G
 95,Reinstate door-to-door mail delivery in all communities affected by cuts announced in December 2013,Rétablir la livraison du courrier à domicile dans toutes les collectivités touchées par les réformes de décembre 2013 ,"L,N"
-96,Force CN to paint the Pont de Québec,Forcer le Canadien National (CN) à peindre le pont de Québec,N
+96,Force CN to paint the historic Pont de Québec across the St. Lawrence,Forcer le Canadien National (CN) à peindre le pont de Québec,N
 97,Invest $150 million over two years in community infrastructure,Investir 150 millions $ sur deux ans pour la réfection d’infrastructures communautaires,C
 98,Create Canada's first urban national park in Toronto,Créer le premier parc national en milieu urbain à Toronto,C
 99,Decriminalize the possession of marijuana,Décriminaliser la possession de marijuana,N
 100,Launch a national inquiry into missing and murdered Indigenous women,Tenir une enquête nationale sur la disparition et l’assassinat de femmes et de filles autochtones,"G,L,N"
-101,Bring back the long-gun registry,Réintroduire le registre des armes d’épaule,N
+101,Reintroduce a long-gun registry,Réintroduire le registre des armes d’épaule,N
 102,Legalize marijuana,Légaliser la marijuana,"G,L"
 103,Create a publicly accessible database of high-risk child sex offenders,Créer une base de données nationale accessible au public comprenant les noms des pédophiles à risque élevé,C
-104,Speed up the process of removing foreign nationals and permanent residents who have committed serious crimes in Canada,Accélérer le renvoi de ressortissants étrangers et de résidents permanents qui commettent des crimes graves au Canada,C
+104,Speed up the removal of foreign nationals and permanent residents who commit serious crimes,Accélérer le renvoi de ressortissants étrangers et de résidents permanents qui commettent des crimes graves au Canada,C
 105,Eliminate parole for those convicted of certain serious crimes,Rendre obligatoires des peines d’emprisonnement à vie sans possibilité de libération conditionnelle pour certains crimes graves,C
 106,Stiffen penalties for offences related to drunk driving,Augmenter les peines imposées pour conduite en état d’ébriété,C
 107,Restrict statutory release for repeat offenders convicted of serious crimes,Limiter les possibilités de libération conditionnelle des délinquants récidivistes reconnus coupables de crimes graves,C
 108,Impose mandatory minimum sentences for gun crimes,Imposer des peines minimales pour la possession illégale d’arme à feu,C
-109,Forbid public servants from wearing or displaying ostentatious religious symbols,Interdire les signes religieux ostentatoires dans la fonction publique,B
+109,Forbid public servants from wearing or displaying religious symbols,Interdire les signes religieux ostentatoires dans la fonction publique,B
 110,Apply Bill 101 to federally regulated institutions in Quebec,Appliquer la loi 101 dans les organismes fédéraux au Québec,"B,N"
 113,Abolish the Indian Act,Abolir la Loi sur les Indiens,"C,G"
 114,Expand the number of communities eligible for aid under the Nutrition North Canada program,"Augmenter la portée du programme Nutrition Nord Canada, qui facilite l’accès à des aliments dans les régions isolées",N
-115,"Build a road to Shoal Lake 40 First Nation, an isolated community under a boil-water advisory","Construire une route vers Shoal Lake, un village des Premières Nations reclus qui fait l’objet d’un avis d’ébullition d’eau",L
+115,"Build a road to Shoal Lake 40 First Nation, an isolated community east of Winnipeg under a boil-water advisory","Construire une route vers Shoal Lake, un village des Premières Nations reclus qui fait l’objet d’un avis d’ébullition d’eau","L,N"
 116,Shut down unauthorized medical-marijuana dispensaries,Exiger la fermeture de dispensaires non autorisés de marijuana médicale,C
 117,Oppose the opening of new supervised injection sites,S’opposer à l’ouverture de nouveaux centres d’injections supervisées,C
 119,Develop and implement a national pharmacare program,Mettre sur pied un programme national d’assurance médicaments ,"G,N"
 120,Create a national school food program,Créer un programme national d’alimentation dans les écoles,G
 121,Regulate assisted human reproduction,Réglementer la procréation assistée,G
-122,Decriminalize doctor-assisted suicide,Décriminaliser l’aide médicale à mourir ,B
+122,Decriminalize doctor-assisted death,Décriminaliser l’aide médicale à mourir ,B
 123,Ensure that every Canadian has an electronic health record,S'assurer que chaque Canadien possède un dossier médical numérique,G
 125,Repeal the Anti-Terrorism Act (C-51),Abroger la loi antiterroriste C-51,"G,N"
 127,Ensure that VIA Rail maintains minimum service levels to remote regions,Encadrer le mandat de VIA Rail pour freiner l’abandon de liens ferroviaires en région,N
-130,Provide $1.3 billion annually over the next 20 years in public transit funding to municipalities,"Investir annuellement 1,3 milliard $ au cours des 20 prochaines années pour développer le transport en commun dans les villes",N
 131,Invest $1 billion per year in public transit projects structured as public-private partnerships,Investir un milliard $ par année dans des projets de transport en commun réalisés par des partenariats public-privé,C
 132,Extend workplace protections to unpaid interns,Offrir aux stagiaires en milieu de travail les mêmes protections légales que celles des employés rémunérés,N
 133,Increase the federal minimum wage to $15 per hour,Porter à 15 $ le salaire horaire minimal des employés fédéraux,"G,N"
@@ -120,7 +118,7 @@ id,en,fr,partyIds
 143,"Maintain a TFSA contribution limit of $10,000",Maintenir à 10 000 $ le plafond de cotisation au CELI,C
 144,Maintain a retirement age of 67,Maintenir l’âge de la retraite à 67 ans,C
 145,Maintain income splitting for couples,Maintenir le fractionnement du revenu entre conjoints,C
-146,Maintain a corporate tax rate of 15 %,Maintenir à 15 % le taux d’imposition des sociétés,"C,L"
+146,Maintain a corporate tax rate of 15%,Maintenir à 15 % le taux d’imposition des sociétés,"C,L"
 148,Establish a home renovation tax credit worth up to $600 per household,Instaurer un crédit d’impôt à la rénovation domiciliaire pouvant atteindre 600 $ par foyer,C
 149,Increase funding for RCMP anti-drug operations,Augmenter le financement des équipes de lutte antidrogue de la GRC,C
 150,Ban travel to certain conflict zones where terror groups operate,Criminaliser les voyages dans des zones considérées comme des foyers d’activités terroristes,C
