@@ -68,7 +68,7 @@ module.exports = class StatisticsView extends Backbone.View
         <div class="for-against"></div>
         <div class="in-between">
           <button class="back-to-questions" type="button"><i class="icon icon-caret-left"></i> <%- backToQuestions %></button
-          ><!-- <a target="_blank" class="tweet" href="https://twitter.com/intent/tweet?status=<%= encodeURIComponent(tweetText) %>"><i class="icon icon-twitter"></i> #{global.Messages.ShareView.twitter}</a> -->
+          ><a target="_blank" class="tweet" href="https://twitter.com/intent/tweet?status=<%= encodeURIComponent(tweetText) %>"><i class="icon icon-twitter"></i> #{global.Messages.ShareView.twitter}</a>
         </div>
       <% } else { %>
         <div class="in-between">
@@ -76,7 +76,7 @@ module.exports = class StatisticsView extends Backbone.View
         </div>
       <% } %>
 
-      <!--<div class="policy-score"></div>-->
+      <div class="policy-score"></div>
     """)
 
     policyDetails: _.template("""
