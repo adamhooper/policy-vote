@@ -3,7 +3,7 @@ id,en,fr,partyIds
 2,Lift the visa requirement for Mexican visitors to Canada,Mettre fin à l'imposition des visas pour les ressortissants mexicains,L
 3,Continue Canada's combat mission against Islamic State in Iraq and Syria,Poursuivre la mission militaire contre le groupe État islamique en Irak et en Syrie,C
 4,Maintain sanctions against Iran despite the Iranian nuclear deal,Maintenir les sanctions contre l’Iran en dépit de l'accord sur le dossier nucléaire iranien,C
-5,Oppose the Trans-Pacific Partnership,Se retirer des négotiations du Partenariat transpacifique,G
+5,Oppose the Trans-Pacific Partnership,Se retirer des négociations du Partenariat transpacifique,G
 6,Reopen the Canada-China foreign investor agreement,Rouvrir l'accord Canada-Chine visant à protéger les investissements étrangers ,"G,N"
 7,Offer unconditional support for Israel in its conflict with Hamas in Gaza,Offrir un appui sans équivoque à Israël dans son conflit avec le Hamas dans la bande de Gaza,C
 8,Defend supply management in the agricultural sector,Protéger les secteurs agricoles soumis à la gestion de l’offre,"B,C,G,L,N"
@@ -53,13 +53,13 @@ id,en,fr,partyIds
 64,Replace the Universal Child Care Benefit with an allowance based on family income,Remplacer la prestation universelle pour la garde d’enfants (PUGE) par une allocation selon le revenu familial,L
 66,Put Parliament in charge of overseeing national security and intelligence agencies,Confier aux élus la supervision des agences de renseignement et de sécurité nationale,"G,L,N"
 67,Create a single window for all government services,Créer un guichet unique en ligne pour tous les services gouvernementaux,L
-68,Make government-funded science available to the public,Rendre accessibles au public les travaux scientifiques du gouvernement,L
+68,Make government-funded science available to the public,Rendre accessibles au public les travaux scientifiques du gouvernement,"G,L"
 69,Restore the mandatory long-form census,Rétablir le formulaire long obligatoire du recensement de Statistique Canada,"G,L,N"
 71,Eliminate additional fees associated with Access to Information requests,Éliminer tous les frais supplémentaires exigés lors des demandes d’accès à l’information,L
 72,Task a parliamentary committee with reviewing various electoral reform measures,Confier à un comité parlementaire l’évaluation de différents modes de scrutin,L
 73,Introduce a proportional representation system after the next election,Adopter un mode de scrutin proportionnel mixte après les prochaines élections,"G,N"
 74,Commit to gender parity in Cabinet nominations,Instaurer la parité hommes-femmes au Cabinet ministériel,L
-75,Increase the number of free votes in the House of Commons,Accroître le nombre de votes libres à la Chambre,L
+75,Increase the number of free votes in the House of Commons,Accroître le nombre de votes libres à la Chambre,"G,L"
 76,Register 18-year-old students to vote as part of their high school curriculum,Inscrire les jeunes de 18 ans sur les listes électorales dans le cadre de leurs programmes d’études secondaires,L
 77,Create a non-partisan public process for appointing senators,Créer un processus transparent et non partisan pour les nominations de sénateurs,L
 78,Ensure Supreme Court justices are functionally bilingual,Rendre obligatoire la maîtrise des deux langues officielles pour les juges de la Cour suprême,"B,L,N"
@@ -95,7 +95,7 @@ id,en,fr,partyIds
 110,Apply Bill 101 to federally regulated institutions in Quebec,Appliquer la loi 101 dans les organismes fédéraux au Québec,"B,N"
 113,Abolish the Indian Act,Abolir la Loi sur les Indiens,"C,G"
 114,Expand the number of communities eligible for aid under the Nutrition North Canada program,"Augmenter la portée du programme Nutrition Nord Canada, qui facilite l’accès à des aliments dans les régions isolées",N
-115,"Build a road to Shoal Lake 40 First Nation, an isolated community east of Winnipeg under a boil-water advisory","Construire une route vers Shoal Lake, un village des Premières Nations reclus qui fait l’objet d’un avis d’ébullition d’eau","L,N"
+115,"Build a road to Shoal Lake 40 First Nation, an isolated community east of Winnipeg under a boil-water advisory","Construire une route vers Shoal Lake, un village des Premières Nations reclus qui fait l’objet d’un avis d’ébullition d’eau","G,L,N"
 116,Shut down unauthorized medical-marijuana dispensaries,Exiger la fermeture de dispensaires non autorisés de marijuana médicale,C
 117,Oppose the opening of new supervised injection sites,S’opposer à l’ouverture de nouveaux centres d’injections supervisées,C
 119,Develop and implement a national pharmacare program,Mettre sur pied un programme national d’assurance médicaments ,"G,N"
@@ -124,3 +124,13 @@ id,en,fr,partyIds
 150,Ban travel to certain conflict zones where terror groups operate,Criminaliser les voyages dans des zones considérées comme des foyers d’activités terroristes,C
 151,Exempt book purchases from the GST,Abolir la TPS sur les livres,B
 152,Make the Universal Child Care Benefit non-taxable,Rendre non imposable la Prestation universelle pour la garde d'enfants,B
+153,"Boost military reserves to 30,000",Grossir les rangs de la Réserve des Forces canadiennes à 30 000 membres ,C
+154,Collect data on foreign-owned real estate,"Recueillir des données sur les biens immobiliers appartenant à des investisseurs étrangers
+
+",C
+155,Bolster RCMP budget for crack downs on grow-ops and meth labs,Donner plus de moyens à la GRC pour contrer la production illégale de marijuana et les laboratoires clandestins de méthamphétamine,C
+156,Create a payment-protection program for farmers who sell to U.S. customers,Créer un programme de protection des paiements pour les agriculteurs qui font des affaires avec les États-Unis,N
+157,"Hire 2,500 more police officers across Canada",Embaucher 2 500 policiers supplémentaires partout au Canada,"L,N"
+158,Boost the guaranteed income supplement by $400 million,Augmenter le Supplément de revenu garanti de 400 millions $,N
+159,Provide new parents staggered or extended parental leave up to 18 months,Permettre aux parents de prendre un congé parental pouvant atteindre 18 mois ou d'étaler leur congé en plus petits blocs sur une période de 18 mois,L
+160,Reinstate lifelong pensions for veterans,Rétablir les pensions à vie pour les anciens combattants,L
