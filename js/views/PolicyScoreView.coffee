@@ -9,6 +9,8 @@ DotColorLegend = require('./DotColorLegend')
 
 M = global.Messages.PolicyScoreView
 
+MinNVotes = 100 # If fewer than this number of votes has been cast, hide a new policy
+
 module.exports = class PolicyScoreView extends Backbone.View
   className: 'policy-score'
   templates:
@@ -71,7 +73,7 @@ module.exports = class PolicyScoreView extends Backbone.View
           return true if !party.onlyInProvince? || party.onlyInProvince == @province
       false
 
-    policies = for policyId, score of @json when isUsefulPolicyId(policyId)
+    policies = for policyId, score of @json when isUsefulPolicyId(policyId) && score.aye + score.nay > MinNVotes
       rawPolicy = Policies.byId[policyId]
 
       augmentedPolicy =
