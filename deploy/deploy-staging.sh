@@ -53,6 +53,7 @@ upload_with_gzip() {
 upload_with_gzip index.css 'text/css; charset=utf-8'
 upload_with_gzip index.en.js 'application/javascript; charset=utf-8'
 upload_with_gzip index.fr.js 'application/javascript; charset=utf-8'
+upload_with_gzip standalone-policy-score.en.js 'application/javascript; charset=utf-8'
 upload fonts/FontAwesome.otf application/vnd.ms-opentype
 upload fonts/fontawesome-webfont.eot application/vnd.ms-fontobject
 upload fonts/fontawesome-webfont.svg image/svg+xml
