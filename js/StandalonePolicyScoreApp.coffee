@@ -11,15 +11,14 @@ module.exports = class StandalonePolicyScoreApp extends Backbone.View
   render: ->
     child = new StatisticsView(province: 'qc', votes: []) # 'qc' shows all parties; others don't
     child.render()
-    child.$('.in-between, .share').remove()
+
+    cleanThings = -> child.$('.in-between, .share, h2, .blurb').remove()
+    cleanThings()
 
     @listenTo(child, 'rendered', =>
-      child.$('h2, .blurb').remove()
+      cleanThings()
       @pymChild.sendHeight()
     )
-
-    renderOnResize = _.throttle((=> child.render()), 500)
-    $(window).on('resize.policy-score', renderOnResize)
 
     @$el.append(child.el)
     @pymChild.sendHeight()
