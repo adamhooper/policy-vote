@@ -3,24 +3,24 @@ id,en,fr,partyIds
 2,Lift the visa requirement for Mexican visitors to Canada,Mettre fin à l'imposition des visas pour les ressortissants mexicains,L
 3,Continue Canada's combat mission against Islamic State in Iraq and Syria,Poursuivre la mission militaire contre le groupe État islamique en Irak et en Syrie,C
 4,Maintain sanctions against Iran despite the Iranian nuclear deal,Maintenir les sanctions contre l’Iran en dépit de l'accord sur le dossier nucléaire iranien,C
-5,Oppose the Trans-Pacific Partnership,Se retirer des négociations du Partenariat transpacifique,G
+5,Oppose the Trans-Pacific Partnership,Se retirer des négociations du Partenariat transpacifique,"G,N"
 6,Reopen the Canada-China foreign investor agreement,Rouvrir l'accord Canada-Chine visant à protéger les investissements étrangers ,"G,N"
 7,Offer unconditional support for Israel in its conflict with Hamas in Gaza,Offrir un appui sans équivoque à Israël dans son conflit avec le Hamas dans la bande de Gaza,C
 8,Defend supply management in the agricultural sector,Protéger les secteurs agricoles soumis à la gestion de l’offre,"B,C,G,L,N"
 9,Give Quebec authority over employment insurance in the province,Confier au Québec la gestion du programme d’assurance-emploi pour les Québécois,B
 10,"Make admission to national parks free in 2017, the 150th anniversary of Confederation",Offrir l’entrée gratuite dans les parcs nationaux en 2017 pour le 150e anniversaire de la Confédération,L
-11,Ban face coverings such as niqabs or burkas for people swearing their oath of citizenship,Interdire le port du niqab ou de la burqa pendant la prestation du serment de citoyenneté canadienne,C
+11,Ban face coverings such as niqabs or burkas for people swearing their oath of citizenship,Interdire le port du niqab ou de la burqa pendant la prestation du serment de citoyenneté canadienne,"B,C"
 12,"Force labour unions to disclose all spending on outside activities above $5,000 and salaries above $100,000/year",Obliger les syndicats à rendre publiques les dépenses de plus de 5 000 $ et les salaires de plus de 100 000 $,C
 13,Establish a youth corps that would earn $15 federal minimum wage,Mettre en place une brigade jeunesse qui offrira des emplois au salaire minimum,G
 14,Ban discrimination based on the results of genetic tests,Interdire la discrimination fondée sur les résultats de tests génétiques,"C,N"
 15,Restore the $115 million cut from the budgets of CBC/Radio-Canada,Reverser à CBC/Radio-Canada les 115 millions $ dont son budget a été amputé,"L,N"
 18,Withdraw Canadian soldiers from the military missions in Iraq and Syria,Rapatrier les militaires qui prennent part à la mission canadienne en Irak et en Syrie,"G,N"
 19,End the Canadian bombing mission against Islamic State in Iraq and Syria,Mettre fin à la mission de bombardement contre l’État islamique en Irak et en Syrie,"G,L,N"
-20,Increase military spending by $11.8 billion over 10 years,"Augmenter le financement des Forces canadiennes de plus de 11,8 milliards $ sur 10 ans",C
+20,Increase military spending by $11.8 billion over 10 years,"Augmenter le financement des Forces canadiennes de plus de 11,8 milliards $ sur 10 ans","C,L"
 21,Provide broadband Internet access to remote areas of Canada,Amener Internet à haute vitesse dans les régions éloignées du Canada,"G,L,N"
 22,Roll back the recent doubling of TFSA contribution limits,Annuler la hausse de cotisations à 10 000 $ du CELI,"G,L,N"
 23,Restore the retirement age to 65 from 67,Rétablir l’âge de la retraite à 65 ans plutôt que 67 ans,"B,L,N,G"
-26,Reduce the small-business tax rate from 11% to 9%,Réduire le taux d’imposition des PME de 11 % à 9 %,"C,G,N"
+26,Reduce the small-business tax rate from 11% to 9%,Réduire le taux d’imposition des PME de 11 % à 9 %,"C,G,N,L"
 28,Prohibit banks from charging fees for transactions,Interdire aux banques d’imposer des frais supplémentaires lorsqu’on effectue des paiements,N
 29,Eliminate income splitting for couples,Annuler le régime de fractionnement du revenu,"G,L,N"
 30,"Reduce the tax rate for earnings between $44,401 and $89,401, from 22 per cent to 20.5 per cent","Réduire le taux d’imposition pour les revenus entre 44 700 $ et 89 401 $ de 22 % à 20,5 %",L
@@ -53,7 +53,7 @@ id,en,fr,partyIds
 64,Replace the Universal Child Care Benefit with an allowance based on family income,Remplacer la prestation universelle pour la garde d’enfants (PUGE) par une allocation selon le revenu familial,L
 66,Put Parliament in charge of overseeing national security and intelligence agencies,Confier aux élus la supervision des agences de renseignement et de sécurité nationale,"G,L,N"
 67,Create a single window for all government services,Créer un guichet unique en ligne pour tous les services gouvernementaux,L
-68,Make government-funded science available to the public,Rendre accessibles au public les travaux scientifiques du gouvernement,"G,L"
+68,Make government-funded science available to the public,Rendre accessibles au public les travaux scientifiques du gouvernement,"G,L,N"
 69,Restore the mandatory long-form census,Rétablir le formulaire long obligatoire du recensement de Statistique Canada,"G,L,N"
 71,Eliminate additional fees associated with Access to Information requests,Éliminer tous les frais supplémentaires exigés lors des demandes d’accès à l’information,L
 72,Task a parliamentary committee with reviewing various electoral reform measures,Confier à un comité parlementaire l’évaluation de différents modes de scrutin,L
@@ -66,7 +66,7 @@ id,en,fr,partyIds
 79,Increase penalties for violation of election laws,Alourdir les peines relatives aux infractions aux lois électorales,L
 80,Make it harder for Canadians abroad to register to vote,Resserrer les règles entourant l’inscription sur la liste électorale des Canadiens vivant à l’extérieur du pays,C
 81,Hold a national referendum on Senate reform,Tenir un référendum national sur la réforme du Sénat,G
-82,Appoint a chief science adviser as an officer of Parliament,Nommer un conseiller parlementaire des sciences en tant qu’agent du Parlement,G
+82,Appoint a chief science adviser as an officer of Parliament,Nommer un conseiller parlementaire des sciences en tant qu’agent du Parlement,"G,L,N"
 83,Make Quebec an independent country,Faire du Québec un pays indépendant,B
 84,Abolish the monarchy,Abolir la monarchie,B
 85,Give Quebec sole responsibility for regional development in the province,Faire du Québec l’unique mandataire du développement des régions québécoises,B
@@ -125,10 +125,10 @@ id,en,fr,partyIds
 151,Exempt book purchases from the GST,Abolir la TPS sur les livres,B
 152,Make the Universal Child Care Benefit non-taxable,Rendre non imposable la Prestation universelle pour la garde d'enfants,B
 153,"Boost military reserves to 30,000",Grossir les rangs de la Réserve des Forces canadiennes à 30 000 membres ,C
-154,Collect data on foreign-owned real estate,Recueillir des données sur les biens immobiliers appartenant à des investisseurs étrangers,C
+154,Collect data on foreign-owned real estate,Recueillir des données sur les biens immobiliers appartenant à des investisseurs étrangers,"C,L"
 155,Bolster RCMP budget for crack downs on grow-ops and meth labs,Donner plus de moyens à la GRC pour contrer la production illégale de marijuana et les laboratoires clandestins de méthamphétamine,C
 156,Create a payment-protection program for farmers who sell to U.S. customers,Créer un programme de protection des paiements pour les agriculteurs qui font des affaires avec les États-Unis,N
 157,"Hire 2,500 more police officers across Canada",Embaucher 2 500 policiers supplémentaires partout au Canada,"L,N"
 158,Boost the guaranteed income supplement by $400 million,Augmenter le Supplément de revenu garanti de 400 millions $,N
-159,Provide new parents staggered or extended parental leave up to 18 months,Permettre aux parents de prendre un congé parental pouvant atteindre 18 mois ou d'étaler leur congé en plus petits blocs sur une période de 18 mois,L
-160,Reinstate lifelong pensions for veterans,Rétablir les pensions à vie pour les anciens combattants,L
+159,Provide new parents staggered or extended parental leave up to 18 months,Permettre aux parents de prendre un congé parental pouvant atteindre 18 mois ou d'étaler leur congé en plus petits blocs sur une période de 18 mois,"L,C"
+160,Reinstate lifelong pensions for veterans,Rétablir les pensions à vie pour les anciens combattants,"L,C"
