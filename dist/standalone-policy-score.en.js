@@ -80,8 +80,8 @@ module.exports = StandalonePolicyScoreApp = (function(superClass) {
     child.$('.in-between, .share').remove();
     this.listenTo(child, 'rendered', (function(_this) {
       return function() {
-        _this.pymChild.sendHeight();
-        return child.$('h2, .blurb').remove();
+        child.$('h2, .blurb').remove();
+        return _this.pymChild.sendHeight();
       };
     })(this));
     renderOnResize = _.throttle(((function(_this) {
@@ -90,7 +90,8 @@ module.exports = StandalonePolicyScoreApp = (function(superClass) {
       };
     })(this)), 500);
     $(window).on('resize.policy-score', renderOnResize);
-    return this.$el.append(child.el);
+    this.$el.append(child.el);
+    return this.pymChild.sendHeight();
   };
 
   return StandalonePolicyScoreApp;

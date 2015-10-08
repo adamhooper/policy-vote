@@ -14,9 +14,12 @@ module.exports = class StandalonePolicyScoreApp extends Backbone.View
     child.$('.in-between, .share').remove()
 
     @listenTo(child, 'rendered', =>
-      @pymChild.sendHeight()
       child.$('h2, .blurb').remove()
+      @pymChild.sendHeight()
     )
+
     renderOnResize = _.throttle((=> child.render()), 500)
     $(window).on('resize.policy-score', renderOnResize)
+
     @$el.append(child.el)
+    @pymChild.sendHeight()
