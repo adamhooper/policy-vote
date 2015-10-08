@@ -688,7 +688,7 @@ module.exports = PolicyScoreView = (function(superClass) {
   };
 
   PolicyScoreView.prototype._renderServerResponse = function() {
-    var $chart, augmentedPolicy, height, i, isUsefulPolicyId, j, k, len, len1, len2, margin, p, parties, partiesXPolicies, party, partyById, policies, policy, policyId, rawPolicy, ref, score, svg, width, xAxis, xScale, yAxis, yScale;
+    var $chart, augmentedPolicy, height, i, isUsefulPolicyId, j, k, len, len1, len2, margin, max, min, p, parties, partiesXPolicies, party, partyById, policies, policy, policyId, rawPolicy, ref, score, svg, width, xAxis, xScale, yAxis, yScale;
     parties = (function() {
       var i, len, ref, results;
       ref = Parties.all;
@@ -786,8 +786,16 @@ module.exports = PolicyScoreView = (function(superClass) {
     };
     width = $chart.width() - margin.right - margin.left;
     height = $chart.height() - margin.top - margin.bottom;
-    xScale = d3.scale.linear().domain([0, 1]).rangeRound([0, width]);
-    xAxis = d3.svg.axis().scale(xScale).orient('bottom').tickValues([0, 0.5, 1]).tickSize(-height, 0).tickFormat(d3.format('%'));
+    min = Math.floor(policies[0].fractionAye * 100) / 100;
+    max = Math.ceil(policies[policies.length - 1].fractionAye * 100) / 100;
+    if (1 - max < min) {
+      min = 1 - max;
+    }
+    if (1 - min > max) {
+      max = 1 - min;
+    }
+    xScale = d3.scale.linear().domain([min, max]).rangeRound([0, width]);
+    xAxis = d3.svg.axis().scale(xScale).orient('bottom').tickValues([min, 0.5, max]).tickSize(-height, 0).tickFormat(d3.format('%'));
     yScale = d3.scale.ordinal().domain((function() {
       var l, len3, results;
       results = [];

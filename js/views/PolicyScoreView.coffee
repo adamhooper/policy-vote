@@ -104,11 +104,16 @@ module.exports = class PolicyScoreView extends Backbone.View
     width = $chart.width() - margin.right - margin.left
     height = $chart.height() - margin.top - margin.bottom
 
+    min = Math.floor(policies[0].fractionAye * 100) / 100
+    max = Math.ceil(policies[policies.length - 1].fractionAye * 100) / 100
+    min = 1 - max if 1 - max < min
+    max = 1 - min if 1 - min > max
+
     xScale = d3.scale.linear()
-      .domain([ 0, 1 ])
+      .domain([ min, max ])
       .rangeRound([ 0, width ])
     xAxis = d3.svg.axis().scale(xScale).orient('bottom')
-      .tickValues([ 0, 0.5, 1 ])
+      .tickValues([ min, 0.5, max ])
       .tickSize(-height, 0)
       .tickFormat(d3.format('%'))
 
