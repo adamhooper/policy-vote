@@ -1,5 +1,5 @@
 Backbone = require('backbone')
-pym = require('pym.js');
+pym = require('pym.js')
 $ = Backbone.$
 
 Provinces = require('../lib/Provinces')

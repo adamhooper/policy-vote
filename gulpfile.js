@@ -90,13 +90,15 @@ gulp.task('watch-less', [ 'less' ], function() {
   gulp.watch([ './less/**/*' ], [ 'less' ]);
 });
 
-gulp.task('js', [ 'js-en', 'js-fr' ]);
-gulp.task('watch-js', [ 'watch-js-en', 'watch-js-fr' ]);
+gulp.task('js', [ 'js-en', 'js-fr', 'standalone-policy-score-js-en' ]);
+gulp.task('watch-js', [ 'watch-js-en', 'watch-js-fr', 'watch-standalone-policy-score-js-en' ]);
 
 gulp.task('js-en', function() { return compileJsOnce('index.en'); });
 gulp.task('js-fr', function() { return compileJsOnce('index.fr'); });
+gulp.task('standalone-policy-score-js-en', function() { return compileJsOnce('standalone-policy-score.en'); });
 gulp.task('watch-js-en', function() { return watchJs('index.en'); });
 gulp.task('watch-js-fr', function() { return watchJs('index.fr'); });
+gulp.task('watch-standalone-policy-score-js-en', function() { return watchJs('standalone-policy-score.en'); });
 
 gulp.task('default', [ 'less', 'js' ]);
 gulp.task('watch', [ 'watch-less', 'watch-js' ]);
