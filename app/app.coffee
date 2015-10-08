@@ -34,14 +34,15 @@ Index =
   plain:
     en: fs.readFileSync(__dirname + '/../dist/index.html')
     fr: fs.readFileSync(__dirname + '/../dist/index.fr.html')
+    standalonePolicyScore: fs.readFileSync(__dirname + '/../dist/standalone-policy-score.html')
 
 if process.env.ASSET_BASE
-  for lang, buffer of Index.plain
+  for key, buffer of Index.plain
     text = buffer.toString('utf-8')
       .replace('index.css', process.env.ASSET_BASE + '/index.css')
-      .replace("index.#{lang}.js", process.env.ASSET_BASE + "/index.#{lang}.js")
+      .replace(/([-_a-z0-9]+)\.([a-z]{2})\.js/gi, "#{process.env.ASSET_BASE}/$1.$2.js")
 
-    Index.plain[lang] = new Buffer(text, 'utf-8')
+    Index.plain[key] = new Buffer(text, 'utf-8')
 
 Index.gz = {}
 
@@ -73,6 +74,8 @@ app.use (req, res, next) ->
     'en'
   else if req.path == '/index.fr.html'
     'fr'
+  else if req.path == '/standalone-policy-score.html'
+    'standalonePolicyScore'
   else
     null
 
