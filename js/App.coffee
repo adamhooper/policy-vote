@@ -56,17 +56,21 @@ module.exports = class App extends Backbone.View
 
   _onUserPrefersPolicy: (policy, otherPolicy) ->
     @votes.push([ policy, otherPolicy ])
-    Backbone.ajax
-      type: 'POST'
-      url: '/votes'
-      data: JSON.stringify
-        betterPolicyId: +policy.id
-        worsePolicyId: +otherPolicy.id
-        languageCode: global.languageCode
-        provinceCode: @userProfile.provinceCode
-      contentType: 'application/json'
-      success: -> #console.log('Voted!')
-      error: (xhr, textStatus, errorThrown) -> console.log("Server didn't register your vote", textStatus, errorThrown)
+    # 2015-11-07: disabled the server so we can host this site on S3 alone.
+    # This is the only dynamic portion of the project, and it actually has no
+    # visible effect to the user once we have enough votes.
+    #
+    #Backbone.ajax
+    #  type: 'POST'
+    #  url: '/votes'
+    #  data: JSON.stringify
+    #    betterPolicyId: +policy.id
+    #    worsePolicyId: +otherPolicy.id
+    #    languageCode: global.languageCode
+    #    provinceCode: @userProfile.provinceCode
+    #  contentType: 'application/json'
+    #  success: -> #console.log('Voted!')
+    #  error: (xhr, textStatus, errorThrown) -> console.log("Server didn't register your vote", textStatus, errorThrown)
     @questionView.render()
     @pymChild.sendHeight()
 
